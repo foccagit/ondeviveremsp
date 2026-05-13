@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './particle.module.css';
 
-const SVG_URL = '/data/mapa-sp.svg';
+const SVG_URL = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/mapa-sp.svg`;
 const SVG_W = 1200;
 const SVG_H = 1800;
 const SVG_ASPECT = SVG_W / SVG_H;

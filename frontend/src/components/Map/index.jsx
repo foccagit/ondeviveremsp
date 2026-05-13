@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const ALUGUEL_BY_ID = new globalThis.Map(bairrosData.map((b) => [b.id, b.aluguelMedioM2]));
 const getAluguelM2 = (id) => ALUGUEL_BY_ID.get(id);
 
-const SVG_URL = '/data/mapa-sp.svg';
+const SVG_URL = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/mapa-sp.svg`;
 const MATCH_THRESHOLD = 70;
 const FALLBACK_VIEWBOX = '0 0 1200 1800';
 
