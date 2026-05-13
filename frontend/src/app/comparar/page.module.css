@@ -98,13 +98,13 @@
 }
 
 .rowValue {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--color-fg);
 }
 
 .rowValueEmphasized {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
 }
 
 .chartSection {
@@ -181,12 +181,9 @@
 
 .tradeoffMsg {
   font-family: var(--font-body);
-  font-style: italic;
-  font-size: 18px;
+  font-size: 16px;
   line-height: var(--leading-normal);
   color: var(--color-fg);
-  border-left: 2px solid var(--color-fg);
-  padding-left: var(--space-4);
   max-width: 75ch;
 }
 

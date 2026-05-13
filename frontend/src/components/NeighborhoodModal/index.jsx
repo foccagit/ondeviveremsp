@@ -166,8 +166,6 @@ export default function NeighborhoodModal({
           </div>
         </section>
 
-        <div className={styles.sep} />
-
         <footer className={styles.footer}>
           <button
             type="button"
@@ -178,9 +176,6 @@ export default function NeighborhoodModal({
             className={`${styles.primary} ${isSelected ? styles.primaryActive : ''}`}
           >
             {isSelected ? 'Remover da comparação' : isFull ? 'Limite atingido' : 'Adicionar à comparação'}
-          </button>
-          <button type="button" onClick={onClose} className={styles.secondary}>
-            Fechar
           </button>
         </footer>
       </div>
