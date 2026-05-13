@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="78px" viewBox="0 0 256 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Avoa" transform="translate(-71, -411)" fill="currentColor">
+            <g id="Group-5" transform="translate(71, 411)">
+                <polygon id="Fill-1" points="63.4753392 0 0 78 128 78"></polygon>
+                <polygon id="Fill-2" points="191.475339 0 128 78 256 78"></polygon>
+                <path d="M145,26.5 C145,36.1650664 137.165066,44 127.5,44 C117.834934,44 110,36.1650664 110,26.5 C110,16.8349336 117.834934,9 127.5,9 C137.165066,9 145,16.8349336 145,26.5" id="Fill-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

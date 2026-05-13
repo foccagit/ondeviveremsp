@@ -1,0 +1,21 @@
+{
+  "uber": {
+    "tarifaBase": 7,
+    "porKm": 2.8
+  },
+  "metro": {
+    "passagem": 5,
+    "viagensPorMes": 44
+  },
+  "onibus": {
+    "passagem": 5,
+    "viagensPorMes": 44
+  },
+  "carro": {
+    "consumoKmPorLitro": 11,
+    "precoLitroGasolina": 6.20,
+    "custoEstacionamentoMensal": 350,
+    "ipva": 150,
+    "manutencaoPorKm": 0.15
+  }
+}

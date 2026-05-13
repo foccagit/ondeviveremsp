@@ -1,0 +1,19 @@
+.attr {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-muted);
+  padding: var(--space-2) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.link {
+  color: var(--color-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-fg);
+}

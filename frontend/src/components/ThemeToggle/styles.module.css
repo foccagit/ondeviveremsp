@@ -1,0 +1,13 @@
+.toggle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  padding: var(--space-2) var(--space-3);
+  transition: color var(--transition);
+}
+
+.toggle:hover {
+  color: var(--color-fg);
+}

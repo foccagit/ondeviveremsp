@@ -1,0 +1,48 @@
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-border);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.swatch_high {
+  background: var(--color-fg);
+}
+
+.swatch_mid {
+  background: var(--map-medium);
+}
+
+.swatch_low {
+  background: var(--map-far);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+@media (max-width: 767px) {
+  .legend {
+    gap: var(--space-4);
+  }
+}

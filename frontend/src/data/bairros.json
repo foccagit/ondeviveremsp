@@ -1,0 +1,3043 @@
+[
+  {
+    "id": "agua-rasa",
+    "nome": "Água Rasa",
+    "zona": "leste",
+    "aluguelMedioM2": 41,
+    "condominioMedio": 850,
+    "renda": 9323,
+    "populacao": 113323,
+    "seguranca": 54,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Leste residencial, próximo à Mooca.",
+    "lat": -23.5642,
+    "lng": -46.5772,
+    "descricaoLonga": "Leste residencial, próximo à Mooca. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "alto-de-pinheiros",
+    "nome": "Alto de Pinheiros",
+    "zona": "oeste",
+    "aluguelMedioM2": 75,
+    "condominioMedio": 1260,
+    "renda": 15950,
+    "populacao": 102950,
+    "seguranca": 72,
+    "metro": true,
+    "vidaNoturna": 8,
+    "comercio": 9,
+    "parques": 4,
+    "descricao": "Residencial nobre próximo ao Villa-Lobos.",
+    "lat": -23.5468,
+    "lng": -46.7166,
+    "descricaoLonga": "Residencial nobre próximo ao Villa-Lobos. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Madalena"
+      ],
+      "supermercados": 23,
+      "barRestaurantes": 160,
+      "parques": [
+        "Parque Villa-Lobos"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping Villa-Lobos"
+      ]
+    }
+  },
+  {
+    "id": "anhanguera",
+    "nome": "Anhanguera",
+    "zona": "oeste",
+    "aluguelMedioM2": 23,
+    "condominioMedio": 230,
+    "renda": 3790,
+    "populacao": 163490,
+    "seguranca": 44,
+    "metro": false,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 4,
+    "descricao": "Extremo noroeste, atravessada pela rodovia. Mais rural que urbano.",
+    "lat": -23.4518,
+    "lng": -46.784,
+    "descricaoLonga": "Extremo noroeste, atravessada pela rodovia. Mais rural que urbano. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "aricanduva",
+    "nome": "Aricanduva",
+    "zona": "leste",
+    "aluguelMedioM2": 32,
+    "condominioMedio": 640,
+    "renda": 7612,
+    "populacao": 151612,
+    "seguranca": 52,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Shopping Aricanduva, leste comercial.",
+    "lat": -23.571,
+    "lng": -46.5242,
+    "descricaoLonga": "Shopping Aricanduva, leste comercial. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Parque do Carmo"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": [
+        "Shopping Aricanduva"
+      ]
+    }
+  },
+  {
+    "id": "artur-alvim",
+    "nome": "Artur Alvim",
+    "zona": "leste",
+    "aluguelMedioM2": 49,
+    "condominioMedio": 850,
+    "renda": 8063,
+    "populacao": 102063,
+    "seguranca": 60,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Leste com metrô vermelho, residencial popular.",
+    "lat": -23.5399,
+    "lng": -46.4886,
+    "descricaoLonga": "Leste com metrô vermelho, residencial popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Artur Alvim"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "barra-funda",
+    "nome": "Barra Funda",
+    "zona": "oeste",
+    "aluguelMedioM2": 35,
+    "condominioMedio": 640,
+    "renda": 10610,
+    "populacao": 274610,
+    "seguranca": 52,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 7,
+    "parques": 3,
+    "descricao": "Centro-oeste com estação multimodal, polo cultural.",
+    "lat": -23.5247,
+    "lng": -46.6624,
+    "descricaoLonga": "Centro-oeste com estação multimodal, polo cultural. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Barra Funda",
+        "Marechal Deodoro"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [
+        "Parque da Água Branca",
+        "Memorial da América Latina"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping Bourbon"
+      ]
+    }
+  },
+  {
+    "id": "bela-vista",
+    "nome": "Bela Vista",
+    "zona": "centro",
+    "aluguelMedioM2": 89,
+    "condominioMedio": 1080,
+    "renda": 20579,
+    "populacao": 299579,
+    "seguranca": 75,
+    "metro": true,
+    "vidaNoturna": 9,
+    "comercio": 8,
+    "parques": 8,
+    "descricao": "Bixiga, cantinas italianas, teatros. Centro vibrante mas urbano.",
+    "lat": -23.557,
+    "lng": -46.6386,
+    "descricaoLonga": "Bixiga, cantinas italianas, teatros. Centro vibrante mas urbano. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Percepção de segurança alta. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Trianon-MASP",
+        "Brigadeiro",
+        "Paraíso"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 170,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "Hosp. Sírio-Libanês",
+        "Santa Casa"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "belem",
+    "nome": "Belém",
+    "zona": "leste",
+    "aluguelMedioM2": 49,
+    "condominioMedio": 850,
+    "renda": 8397,
+    "populacao": 122397,
+    "seguranca": 66,
+    "metro": true,
+    "vidaNoturna": 5,
+    "comercio": 6,
+    "parques": 5,
+    "descricao": "Centro leste, tradicional, sede do parque Dom Pedro.",
+    "lat": -23.5379,
+    "lng": -46.5942,
+    "descricaoLonga": "Centro leste, tradicional, sede do parque Dom Pedro. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Belém",
+        "Bresser-Mooca"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "bom-retiro",
+    "nome": "Bom Retiro",
+    "zona": "centro",
+    "aluguelMedioM2": 57,
+    "condominioMedio": 710,
+    "renda": 6699,
+    "populacao": 200699,
+    "seguranca": 66,
+    "metro": true,
+    "vidaNoturna": 7,
+    "comercio": 8,
+    "parques": 7,
+    "descricao": "Centro, polo coreano e judaico, comércio têxtil.",
+    "lat": -23.5284,
+    "lng": -46.6398,
+    "descricaoLonga": "Centro, polo coreano e judaico, comércio têxtil. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Tiradentes",
+        "Luz"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "bras",
+    "nome": "Brás",
+    "zona": "centro",
+    "aluguelMedioM2": 48,
+    "condominioMedio": 780,
+    "renda": 8850,
+    "populacao": 132850,
+    "seguranca": 58,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 7,
+    "parques": 3,
+    "descricao": "Centro do comércio popular paulistano, atacadistas roupas.",
+    "lat": -23.5433,
+    "lng": -46.6139,
+    "descricaoLonga": "Centro do comércio popular paulistano, atacadistas roupas. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Brás",
+        "Pedro II"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "brasilandia",
+    "nome": "Brasilândia",
+    "zona": "norte",
+    "aluguelMedioM2": 20,
+    "condominioMedio": 260,
+    "renda": 3651,
+    "populacao": 89851,
+    "seguranca": 38,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Periferia norte com nova linha laranja. Densidade alta e relevo acidentado.",
+    "lat": -23.4637,
+    "lng": -46.6899,
+    "descricaoLonga": "Periferia norte com nova linha laranja. Densidade alta e relevo acidentado. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "butanta",
+    "nome": "Butantã",
+    "zona": "oeste",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 570,
+    "renda": 10165,
+    "populacao": 239165,
+    "seguranca": 60,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 6,
+    "parques": 3,
+    "descricao": "Universitário, próximo à USP. Mistura intelectualidade e ruas residenciais.",
+    "lat": -23.5664,
+    "lng": -46.7188,
+    "descricaoLonga": "Universitário, próximo à USP. Mistura intelectualidade e ruas residenciais. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Butantã"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 53,
+      "parques": [
+        "Parque Previdência",
+        "Praça Pôr do Sol"
+      ],
+      "hospitais": [
+        "Hosp. Universitário USP"
+      ],
+      "shoppings": [
+        "Shopping Continental",
+        "Shopping Butantã"
+      ]
+    }
+  },
+  {
+    "id": "cachoeirinha",
+    "nome": "Cachoeirinha",
+    "zona": "norte",
+    "aluguelMedioM2": 20,
+    "condominioMedio": 260,
+    "renda": 2876,
+    "populacao": 146576,
+    "seguranca": 42,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 2,
+    "descricao": "Periferia norte densa, vida cultural forte, sem metrô direto.",
+    "lat": -23.474,
+    "lng": -46.6621,
+    "descricaoLonga": "Periferia norte densa, vida cultural forte, sem metrô direto. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "cambuci",
+    "nome": "Cambuci",
+    "zona": "centro",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 780,
+    "renda": 7248,
+    "populacao": 86248,
+    "seguranca": 58,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 5,
+    "parques": 6,
+    "descricao": "Centro-sul tradicional, ladeiras e arquitetura antiga.",
+    "lat": -23.5607,
+    "lng": -46.6075,
+    "descricaoLonga": "Centro-sul tradicional, ladeiras e arquitetura antiga. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "São Joaquim"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Parque da Aclimação"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "campo-belo",
+    "nome": "Campo Belo",
+    "zona": "sul",
+    "aluguelMedioM2": 113,
+    "condominioMedio": 1080,
+    "renda": 16096,
+    "populacao": 291096,
+    "seguranca": 78,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 5,
+    "descricao": "Residencial alto padrão, próximo ao aeroporto de Congonhas.",
+    "lat": -23.6164,
+    "lng": -46.6702,
+    "descricaoLonga": "Residencial alto padrão, próximo ao aeroporto de Congonhas. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Percepção de segurança alta. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Brooklin",
+        "Campo Belo"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 140,
+      "parques": [
+        "Parque do Powell"
+      ],
+      "hospitais": [
+        "Hosp. São Luiz"
+      ],
+      "shoppings": [
+        "Shopping Ibirapuera"
+      ]
+    }
+  },
+  {
+    "id": "campo-grande",
+    "nome": "Campo Grande",
+    "zona": "sul",
+    "aluguelMedioM2": 46,
+    "condominioMedio": 570,
+    "renda": 8723,
+    "populacao": 177723,
+    "seguranca": 54,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Sul classe média baixa.",
+    "lat": -23.6532,
+    "lng": -46.6914,
+    "descricaoLonga": "Sul classe média baixa. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "campo-limpo",
+    "nome": "Campo Limpo",
+    "zona": "oeste",
+    "aluguelMedioM2": 45,
+    "condominioMedio": 570,
+    "renda": 9381,
+    "populacao": 108381,
+    "seguranca": 63,
+    "metro": false,
+    "vidaNoturna": 4,
+    "comercio": 6,
+    "parques": 4,
+    "descricao": "Sul periférico denso, metrô lilás.",
+    "lat": -23.624,
+    "lng": -46.7615,
+    "descricaoLonga": "Sul periférico denso, metrô lilás. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Campo Limpo"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 59,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Hosp. Mun. Campo Limpo"
+      ],
+      "shoppings": [
+        "Shopping Campo Limpo"
+      ]
+    }
+  },
+  {
+    "id": "cangaiba",
+    "nome": "Cangaíba",
+    "zona": "leste",
+    "aluguelMedioM2": 40,
+    "condominioMedio": 500,
+    "renda": 6814,
+    "populacao": 130814,
+    "seguranca": 52,
+    "metro": false,
+    "vidaNoturna": 7,
+    "comercio": 7,
+    "parques": 7,
+    "descricao": "Leste perto da Penha, residencial popular.",
+    "lat": -23.5046,
+    "lng": -46.5291,
+    "descricaoLonga": "Leste perto da Penha, residencial popular. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "capao-redondo",
+    "nome": "Capão Redondo",
+    "zona": "oeste",
+    "aluguelMedioM2": 20,
+    "condominioMedio": 320,
+    "renda": 3673,
+    "populacao": 100873,
+    "seguranca": 42,
+    "metro": true,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 3,
+    "descricao": "Periferia sul, forte cena cultural e hip-hop, metrô na borda.",
+    "lat": -23.6524,
+    "lng": -46.7797,
+    "descricaoLonga": "Periferia sul, forte cena cultural e hip-hop, metrô na borda. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Capão Redondo"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [],
+      "hospitais": [
+        "Hosp. Mun. Campo Limpo"
+      ],
+      "shoppings": [
+        "Shopping Campo Limpo"
+      ]
+    }
+  },
+  {
+    "id": "carrao",
+    "nome": "Carrão",
+    "zona": "leste",
+    "aluguelMedioM2": 44,
+    "condominioMedio": 780,
+    "renda": 8530,
+    "populacao": 297530,
+    "seguranca": 55,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 7,
+    "parques": 3,
+    "descricao": "Leste, metrô vermelho, residencial classe média.",
+    "lat": -23.5493,
+    "lng": -46.5429,
+    "descricaoLonga": "Leste, metrô vermelho, residencial classe média. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Carrão"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "casa-verde",
+    "nome": "Casa Verde",
+    "zona": "norte",
+    "aluguelMedioM2": 37,
+    "condominioMedio": 780,
+    "renda": 8312,
+    "populacao": 287312,
+    "seguranca": 52,
+    "metro": true,
+    "vidaNoturna": 5,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Zona norte residencial, ponte para o centro, comércio local forte.",
+    "lat": -23.5117,
+    "lng": -46.6564,
+    "descricaoLonga": "Zona norte residencial, ponte para o centro, comércio local forte. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Portuguesa-Tietê"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Center Norte"
+      ]
+    }
+  },
+  {
+    "id": "cidade-ademar",
+    "nome": "Cidade Ademar",
+    "zona": "sul",
+    "aluguelMedioM2": 20,
+    "condominioMedio": 260,
+    "renda": 2876,
+    "populacao": 293576,
+    "seguranca": 42,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 2,
+    "descricao": "Sul, residencial popular, próximo a Diadema.",
+    "lat": -23.6581,
+    "lng": -46.6566,
+    "descricaoLonga": "Sul, residencial popular, próximo a Diadema. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "cidade-dutra",
+    "nome": "Cidade Dutra",
+    "zona": "sul",
+    "aluguelMedioM2": 24,
+    "condominioMedio": 320,
+    "renda": 3758,
+    "populacao": 103958,
+    "seguranca": 39,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 4,
+    "descricao": "Zona sul extrema, próximo à Billings. Sem metrô.",
+    "lat": -23.6941,
+    "lng": -46.6887,
+    "descricaoLonga": "Zona sul extrema, próximo à Billings. Sem metrô. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "cidade-lider",
+    "nome": "Cidade Líder",
+    "zona": "leste",
+    "aluguelMedioM2": 54,
+    "condominioMedio": 500,
+    "renda": 7284,
+    "populacao": 51284,
+    "seguranca": 63,
+    "metro": false,
+    "vidaNoturna": 7,
+    "comercio": 5,
+    "parques": 7,
+    "descricao": "Leste residencial periférico.",
+    "lat": -23.5597,
+    "lng": -46.5004,
+    "descricaoLonga": "Leste residencial periférico. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "consolacao",
+    "nome": "Consolação",
+    "zona": "centro",
+    "aluguelMedioM2": 68,
+    "condominioMedio": 1260,
+    "renda": 19208,
+    "populacao": 76208,
+    "seguranca": 67,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 7,
+    "parques": 7,
+    "descricao": "Augusta, baladas, cultura LGBTQ+. Vida noturna intensa.",
+    "lat": -23.5502,
+    "lng": -46.6506,
+    "descricaoLonga": "Augusta, baladas, cultura LGBTQ+. Vida noturna intensa. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Consolação",
+        "Higienópolis-Mackenzie"
+      ],
+      "supermercados": 21,
+      "barRestaurantes": 140,
+      "parques": [
+        "Parque Trianon"
+      ],
+      "hospitais": [
+        "Hosp. Samaritano"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "cursino",
+    "nome": "Cursino",
+    "zona": "sul",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 850,
+    "renda": 6361,
+    "populacao": 140361,
+    "seguranca": 60,
+    "metro": false,
+    "vidaNoturna": 4,
+    "comercio": 6,
+    "parques": 4,
+    "descricao": "Sul próximo ao Ipiranga, residencial.",
+    "lat": -23.618,
+    "lng": -46.6189,
+    "descricaoLonga": "Sul próximo ao Ipiranga, residencial. Bairro da zona sul com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Alto do Ipiranga"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 59,
+      "parques": [
+        "Parque do Estado"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "ermelino-matarazzo",
+    "nome": "Ermelino Matarazzo",
+    "zona": "leste",
+    "aluguelMedioM2": 43,
+    "condominioMedio": 780,
+    "renda": 8854,
+    "populacao": 127854,
+    "seguranca": 59,
+    "metro": false,
+    "vidaNoturna": 7,
+    "comercio": 7,
+    "parques": 7,
+    "descricao": "Periferia leste com CPTM. Comércio local.",
+    "lat": -23.5031,
+    "lng": -46.4805,
+    "descricaoLonga": "Periferia leste com CPTM. Comércio local. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "freguesia-do-o",
+    "nome": "Freguesia do Ó",
+    "zona": "oeste",
+    "aluguelMedioM2": 38,
+    "condominioMedio": 570,
+    "renda": 10929,
+    "populacao": 234929,
+    "seguranca": 55,
+    "metro": true,
+    "vidaNoturna": 7,
+    "comercio": 6,
+    "parques": 7,
+    "descricao": "Tradicional zona norte com linha laranja chegando. Comércio popular.",
+    "lat": -23.4969,
+    "lng": -46.6869,
+    "descricaoLonga": "Tradicional zona norte com linha laranja chegando. Comércio popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Freguesia do Ó"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Tietê Plaza Shopping"
+      ]
+    }
+  },
+  {
+    "id": "grajau",
+    "nome": "Grajaú",
+    "zona": "sul",
+    "aluguelMedioM2": 24,
+    "condominioMedio": 230,
+    "renda": 3265,
+    "populacao": 245965,
+    "seguranca": 40,
+    "metro": false,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 3,
+    "descricao": "Maior distrito de SP em população. Próximo à represa Billings.",
+    "lat": -23.7559,
+    "lng": -46.6531,
+    "descricaoLonga": "Maior distrito de SP em população. Próximo à represa Billings. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "guaianases",
+    "nome": "Guaianases",
+    "zona": "leste",
+    "aluguelMedioM2": 21,
+    "condominioMedio": 230,
+    "renda": 3555,
+    "populacao": 70755,
+    "seguranca": 39,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Subcentro leste, CPTM, forte identidade nordestina.",
+    "lat": -23.5557,
+    "lng": -46.4208,
+    "descricaoLonga": "Subcentro leste, CPTM, forte identidade nordestina. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Guaianases"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "iguatemi",
+    "nome": "Iguatemi",
+    "zona": "leste",
+    "aluguelMedioM2": 22,
+    "condominioMedio": 350,
+    "renda": 4089,
+    "populacao": 67289,
+    "seguranca": 44,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 3,
+    "descricao": "Leste extremo próximo à Mogi, sem metrô.",
+    "lat": -23.6033,
+    "lng": -46.4319,
+    "descricaoLonga": "Leste extremo próximo à Mogi, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "ipiranga",
+    "nome": "Ipiranga",
+    "zona": "sul",
+    "aluguelMedioM2": 36,
+    "condominioMedio": 850,
+    "renda": 7015,
+    "populacao": 191015,
+    "seguranca": 52,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 8,
+    "parques": 3,
+    "descricao": "Histórico (independência), residencial tradicional, metrô verde.",
+    "lat": -23.5873,
+    "lng": -46.6044,
+    "descricaoLonga": "Histórico (independência), residencial tradicional, metrô verde. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Sacomã",
+        "Tamanduateí"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [
+        "Parque da Independência"
+      ],
+      "hospitais": [
+        "Hosp. Heliópolis",
+        "Hosp. Ipiranga"
+      ],
+      "shoppings": [
+        "Shopping Plaza Sul"
+      ]
+    }
+  },
+  {
+    "id": "itaim-bibi",
+    "nome": "Itaim Bibi",
+    "zona": "oeste",
+    "aluguelMedioM2": 97,
+    "condominioMedio": 1020,
+    "renda": 16148,
+    "populacao": 237148,
+    "seguranca": 72,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 7,
+    "parques": 7,
+    "descricao": "Coração corporativo e gastronômico. Caro, movimentado, vida noturna intensa.",
+    "lat": -23.5971,
+    "lng": -46.6853,
+    "descricaoLonga": "Coração corporativo e gastronômico. Caro, movimentado, vida noturna intensa. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, alguns bares e restaurantes, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Faria Lima"
+      ],
+      "supermercados": 21,
+      "barRestaurantes": 140,
+      "parques": [
+        "Parque do Povo"
+      ],
+      "hospitais": [
+        "Hosp. São Luiz"
+      ],
+      "shoppings": [
+        "Shopping JK Iguatemi"
+      ]
+    }
+  },
+  {
+    "id": "itaim-paulista",
+    "nome": "Itaim Paulista",
+    "zona": "leste",
+    "aluguelMedioM2": 18,
+    "condominioMedio": 320,
+    "renda": 3913,
+    "populacao": 162613,
+    "seguranca": 32,
+    "metro": false,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 3,
+    "descricao": "Periferia leste, terminal de ônibus, CPTM.",
+    "lat": -23.5061,
+    "lng": -46.4015,
+    "descricaoLonga": "Periferia leste, terminal de ônibus, CPTM. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "itaquera",
+    "nome": "Itaquera",
+    "zona": "leste",
+    "aluguelMedioM2": 39,
+    "condominioMedio": 500,
+    "renda": 10226,
+    "populacao": 119226,
+    "seguranca": 54,
+    "metro": true,
+    "vidaNoturna": 4,
+    "comercio": 7,
+    "parques": 4,
+    "descricao": "Polo da zona leste com Arena, parque do Carmo e metrô vermelho.",
+    "lat": -23.5366,
+    "lng": -46.4623,
+    "descricaoLonga": "Polo da zona leste com Arena, parque do Carmo e metrô vermelho. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Itaquera",
+        "Corinthians-Itaquera"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 59,
+      "parques": [
+        "Parque do Carmo"
+      ],
+      "hospitais": [
+        "Hosp. Santa Marcelina"
+      ],
+      "shoppings": [
+        "Shopping Metrô Itaquera",
+        "Shopping Itaquera"
+      ]
+    }
+  },
+  {
+    "id": "jacana",
+    "nome": "Jaçanã",
+    "zona": "norte",
+    "aluguelMedioM2": 35,
+    "condominioMedio": 640,
+    "renda": 6010,
+    "populacao": 150010,
+    "seguranca": 52,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 7,
+    "parques": 3,
+    "descricao": "Norte, residencial popular, ponte importante do trem-bala.",
+    "lat": -23.4795,
+    "lng": -46.5766,
+    "descricaoLonga": "Norte, residencial popular, ponte importante do trem-bala. Bairro da zona norte com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Jaçanã"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [
+        "Horto Florestal"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "jaguara",
+    "nome": "Jaguara",
+    "zona": "oeste",
+    "aluguelMedioM2": 42,
+    "condominioMedio": 570,
+    "renda": 7637,
+    "populacao": 271637,
+    "seguranca": 56,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 6,
+    "parques": 5,
+    "descricao": "Oeste, residencial perto da Marginal Tietê.",
+    "lat": -23.5177,
+    "lng": -46.7327,
+    "descricaoLonga": "Oeste, residencial perto da Marginal Tietê. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "jaguare",
+    "nome": "Jaguaré",
+    "zona": "oeste",
+    "aluguelMedioM2": 34,
+    "condominioMedio": 710,
+    "renda": 7501,
+    "populacao": 271501,
+    "seguranca": 50,
+    "metro": false,
+    "vidaNoturna": 4,
+    "comercio": 6,
+    "parques": 4,
+    "descricao": "Oeste industrial e residencial, perto da USP.",
+    "lat": -23.5446,
+    "lng": -46.7433,
+    "descricaoLonga": "Oeste industrial e residencial, perto da USP. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 59,
+      "parques": [
+        "Parque Raposo Tavares"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "jaragua",
+    "nome": "Jaraguá",
+    "zona": "oeste",
+    "aluguelMedioM2": 19,
+    "condominioMedio": 350,
+    "renda": 3039,
+    "populacao": 202739,
+    "seguranca": 36,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Pico do Jaraguá, mistura periferia com mata atlântica.",
+    "lat": -23.4625,
+    "lng": -46.7376,
+    "descricaoLonga": "Pico do Jaraguá, mistura periferia com mata atlântica. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Jaraguá"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [
+        "Parque Estadual do Jaraguá"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "jardim-angela",
+    "nome": "Jardim Ângela",
+    "zona": "sul",
+    "aluguelMedioM2": 19,
+    "condominioMedio": 230,
+    "renda": 3110,
+    "populacao": 121310,
+    "seguranca": 32,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 4,
+    "descricao": "Periferia sul extrema. Aluguel entre os mais baixos.",
+    "lat": -23.6923,
+    "lng": -46.7703,
+    "descricaoLonga": "Periferia sul extrema. Aluguel entre os mais baixos. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "jardim-helena",
+    "nome": "Jardim Helena",
+    "zona": "leste",
+    "aluguelMedioM2": 17,
+    "condominioMedio": 320,
+    "renda": 3908,
+    "populacao": 73108,
+    "seguranca": 31,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 2,
+    "descricao": "Periferia leste, longe do centro, sem metrô.",
+    "lat": -23.4987,
+    "lng": -46.4235,
+    "descricaoLonga": "Periferia leste, longe do centro, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "jardim-paulista",
+    "nome": "Jardim Paulista",
+    "zona": "centro",
+    "aluguelMedioM2": 80,
+    "condominioMedio": 1140,
+    "renda": 14454,
+    "populacao": 171454,
+    "seguranca": 72,
+    "metro": true,
+    "vidaNoturna": 8,
+    "comercio": 7,
+    "parques": 8,
+    "descricao": "Endereço clássico da elite. Arborizado, restaurantes estrelados e grifes.",
+    "lat": -23.5631,
+    "lng": -46.6547,
+    "descricaoLonga": "Endereço clássico da elite. Arborizado, restaurantes estrelados e grifes. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Consolação",
+        "Oscar Freire",
+        "Trianon-MASP"
+      ],
+      "supermercados": 21,
+      "barRestaurantes": 160,
+      "parques": [
+        "Parque Trianon"
+      ],
+      "hospitais": [
+        "Hosp. 9 de Julho"
+      ],
+      "shoppings": [
+        "Shopping Iguatemi São Paulo"
+      ]
+    }
+  },
+  {
+    "id": "jardim-sao-luis",
+    "nome": "Jardim São Luís",
+    "zona": "oeste",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 710,
+    "renda": 7957,
+    "populacao": 166957,
+    "seguranca": 59,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 6,
+    "parques": 5,
+    "descricao": "Adjacente ao Jardim Ângela, periferia sul, sem metrô.",
+    "lat": -23.6502,
+    "lng": -46.7456,
+    "descricaoLonga": "Adjacente ao Jardim Ângela, periferia sul, sem metrô. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": [
+        "Shopping Campo Limpo"
+      ]
+    }
+  },
+  {
+    "id": "jose-bonifacio",
+    "nome": "José Bonifácio",
+    "zona": "leste",
+    "aluguelMedioM2": 21,
+    "condominioMedio": 350,
+    "renda": 3919,
+    "populacao": 111119,
+    "seguranca": 33,
+    "metro": false,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 5,
+    "descricao": "Leste residencial periférico, perto de Itaquera.",
+    "lat": -23.5645,
+    "lng": -46.4349,
+    "descricaoLonga": "Leste residencial periférico, perto de Itaquera. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "lajeado",
+    "nome": "Lajeado",
+    "zona": "leste",
+    "aluguelMedioM2": 17,
+    "condominioMedio": 290,
+    "renda": 4012,
+    "populacao": 129212,
+    "seguranca": 32,
+    "metro": false,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 2,
+    "descricao": "Periferia leste, vizinha de Guaianases.",
+    "lat": -23.5358,
+    "lng": -46.4218,
+    "descricaoLonga": "Periferia leste, vizinha de Guaianases. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Guaianases"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [
+        "Parque do Carmo"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "lapa",
+    "nome": "Lapa",
+    "zona": "oeste",
+    "aluguelMedioM2": 60,
+    "condominioMedio": 1200,
+    "renda": 13902,
+    "populacao": 160902,
+    "seguranca": 66,
+    "metro": true,
+    "vidaNoturna": 8,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Comercial e operário-classe média. Mercado da Lapa e CPTM.",
+    "lat": -23.5254,
+    "lng": -46.6926,
+    "descricaoLonga": "Comercial e operário-classe média. Mercado da Lapa e CPTM. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Lapa",
+        "Palmeiras-Barra Funda"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 160,
+      "parques": [
+        "Parque da Água Branca"
+      ],
+      "hospitais": [
+        "Hosp. São Camilo Pompéia"
+      ],
+      "shoppings": [
+        "Bourbon Shopping",
+        "West Plaza"
+      ]
+    }
+  },
+  {
+    "id": "liberdade",
+    "nome": "Liberdade",
+    "zona": "centro",
+    "aluguelMedioM2": 59,
+    "condominioMedio": 640,
+    "renda": 6584,
+    "populacao": 195584,
+    "seguranca": 63,
+    "metro": true,
+    "vidaNoturna": 7,
+    "comercio": 5,
+    "parques": 7,
+    "descricao": "Bairro oriental tradicional. Feira de domingo e cultura asiática.",
+    "lat": -23.5646,
+    "lng": -46.6233,
+    "descricaoLonga": "Bairro oriental tradicional. Feira de domingo e cultura asiática. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Liberdade",
+        "São Joaquim"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "limao",
+    "nome": "Limão",
+    "zona": "norte",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 780,
+    "renda": 8548,
+    "populacao": 227548,
+    "seguranca": 58,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 5,
+    "parques": 6,
+    "descricao": "Norte comercial, perto da Marginal Tietê.",
+    "lat": -23.4993,
+    "lng": -46.6707,
+    "descricaoLonga": "Norte comercial, perto da Marginal Tietê. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Maria"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "mandaqui",
+    "nome": "Mandaqui",
+    "zona": "norte",
+    "aluguelMedioM2": 34,
+    "condominioMedio": 640,
+    "renda": 10222,
+    "populacao": 64222,
+    "seguranca": 54,
+    "metro": true,
+    "vidaNoturna": 5,
+    "comercio": 7,
+    "parques": 5,
+    "descricao": "Norte classe média, perto do Horto Florestal.",
+    "lat": -23.4866,
+    "lng": -46.6379,
+    "descricaoLonga": "Norte classe média, perto do Horto Florestal. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Parada Inglesa"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Horto Florestal"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "marsilac",
+    "nome": "Marsilac",
+    "zona": "sul",
+    "aluguelMedioM2": 18,
+    "condominioMedio": 320,
+    "renda": 3338,
+    "populacao": 166538,
+    "seguranca": 36,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 4,
+    "descricao": "Distrito mais rural de SP, mata atlântica e pequenas chácaras.",
+    "lat": -23.8757,
+    "lng": -46.6922,
+    "descricaoLonga": "Distrito mais rural de SP, mata atlântica e pequenas chácaras. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [
+        "Parque Estadual Serra do Mar"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "moema",
+    "nome": "Moema",
+    "zona": "sul",
+    "aluguelMedioM2": 82,
+    "condominioMedio": 1140,
+    "renda": 19455,
+    "populacao": 68455,
+    "seguranca": 73,
+    "metro": true,
+    "vidaNoturna": 9,
+    "comercio": 7,
+    "parques": 4,
+    "descricao": "Residencial e arborizado, próximo ao Ibirapuera. Famílias de alta renda.",
+    "lat": -23.5906,
+    "lng": -46.6615,
+    "descricaoLonga": "Residencial e arborizado, próximo ao Ibirapuera. Famílias de alta renda. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Moema",
+        "AACD-Servidor",
+        "Eucaliptos"
+      ],
+      "supermercados": 21,
+      "barRestaurantes": 170,
+      "parques": [
+        "Parque do Ibirapuera"
+      ],
+      "hospitais": [
+        "Hosp. Servidor Público"
+      ],
+      "shoppings": [
+        "Shopping Ibirapuera"
+      ]
+    }
+  },
+  {
+    "id": "mooca",
+    "nome": "Mooca",
+    "zona": "leste",
+    "aluguelMedioM2": 39,
+    "condominioMedio": 710,
+    "renda": 8755,
+    "populacao": 77755,
+    "seguranca": 59,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 8,
+    "parques": 3,
+    "descricao": "Tradição italiana, cantinas e clima de bairro com verticalização rápida.",
+    "lat": -23.5543,
+    "lng": -46.6002,
+    "descricaoLonga": "Tradição italiana, cantinas e clima de bairro com verticalização rápida. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Bresser-Mooca",
+        "Belém"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "Hosp. Alemão Oswaldo Cruz"
+      ],
+      "shoppings": [
+        "Mooca Plaza Shopping"
+      ]
+    }
+  },
+  {
+    "id": "morumbi",
+    "nome": "Morumbi",
+    "zona": "oeste",
+    "aluguelMedioM2": 58,
+    "condominioMedio": 1260,
+    "renda": 19001,
+    "populacao": 250001,
+    "seguranca": 66,
+    "metro": false,
+    "vidaNoturna": 7,
+    "comercio": 7,
+    "parques": 5,
+    "descricao": "Verticalizado e elitizado, com favelas vizinhas. Estádio do São Paulo.",
+    "lat": -23.5892,
+    "lng": -46.7049,
+    "descricaoLonga": "Verticalizado e elitizado, com favelas vizinhas. Estádio do São Paulo. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Morumbi"
+      ],
+      "supermercados": 21,
+      "barRestaurantes": 150,
+      "parques": [
+        "Parque Burle Marx"
+      ],
+      "hospitais": [
+        "Hosp. Albert Einstein"
+      ],
+      "shoppings": [
+        "Shopping Morumbi",
+        "Shopping Cidade Jardim"
+      ]
+    }
+  },
+  {
+    "id": "parelheiros",
+    "nome": "Parelheiros",
+    "zona": "sul",
+    "aluguelMedioM2": 24,
+    "condominioMedio": 320,
+    "renda": 3698,
+    "populacao": 292898,
+    "seguranca": 46,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 4,
+    "descricao": "Verde, rural, áreas de proteção ambiental e turismo de natureza.",
+    "lat": -23.7982,
+    "lng": -46.7152,
+    "descricaoLonga": "Verde, rural, áreas de proteção ambiental e turismo de natureza. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [
+        "Parque Estadual Serra do Mar"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "pari",
+    "nome": "Pari",
+    "zona": "centro",
+    "aluguelMedioM2": 41,
+    "condominioMedio": 500,
+    "renda": 6136,
+    "populacao": 280136,
+    "seguranca": 56,
+    "metro": false,
+    "vidaNoturna": 4,
+    "comercio": 5,
+    "parques": 4,
+    "descricao": "Centro, indústria têxtil tradicional, atacadistas.",
+    "lat": -23.531,
+    "lng": -46.6149,
+    "descricaoLonga": "Centro, indústria têxtil tradicional, atacadistas. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Tiradentes"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 59,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "parque-do-carmo",
+    "nome": "Parque do Carmo",
+    "zona": "leste",
+    "aluguelMedioM2": 45,
+    "condominioMedio": 850,
+    "renda": 6343,
+    "populacao": 155343,
+    "seguranca": 57,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Leste com o segundo maior parque da cidade.",
+    "lat": -23.5753,
+    "lng": -46.4796,
+    "descricaoLonga": "Leste com o segundo maior parque da cidade. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "pedreira",
+    "nome": "Pedreira",
+    "zona": "sul",
+    "aluguelMedioM2": 20,
+    "condominioMedio": 320,
+    "renda": 3318,
+    "populacao": 74518,
+    "seguranca": 33,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 4,
+    "descricao": "Sul, residencial periférico, longe do metrô.",
+    "lat": -23.6862,
+    "lng": -46.6508,
+    "descricaoLonga": "Sul, residencial periférico, longe do metrô. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "penha",
+    "nome": "Penha",
+    "zona": "leste",
+    "aluguelMedioM2": 40,
+    "condominioMedio": 500,
+    "renda": 10602,
+    "populacao": 299602,
+    "seguranca": 50,
+    "metro": true,
+    "vidaNoturna": 5,
+    "comercio": 7,
+    "parques": 5,
+    "descricao": "Comercial e religioso. Largo da Penha, metrô vermelho e clima popular.",
+    "lat": -23.5279,
+    "lng": -46.5415,
+    "descricaoLonga": "Comercial e religioso. Largo da Penha, metrô vermelho e clima popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Penha"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Parque Linear do Tiquatira"
+      ],
+      "hospitais": [
+        "Hosp. Santa Marcelina"
+      ],
+      "shoppings": [
+        "Shopping Penha"
+      ]
+    }
+  },
+  {
+    "id": "perdizes",
+    "nome": "Perdizes",
+    "zona": "oeste",
+    "aluguelMedioM2": 80,
+    "condominioMedio": 1200,
+    "renda": 17454,
+    "populacao": 88454,
+    "seguranca": 72,
+    "metro": false,
+    "vidaNoturna": 8,
+    "comercio": 8,
+    "parques": 8,
+    "descricao": "Residencial e tradicional. Boas escolas, padarias clássicas, sem metrô.",
+    "lat": -23.5392,
+    "lng": -46.67,
+    "descricaoLonga": "Residencial e tradicional. Boas escolas, padarias clássicas, sem metrô. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Marechal Deodoro",
+        "Santa Cecília"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 160,
+      "parques": [
+        "Praça Charles Miller"
+      ],
+      "hospitais": [
+        "Hosp. São Camilo Pompéia"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "perus",
+    "nome": "Perus",
+    "zona": "norte",
+    "aluguelMedioM2": 22,
+    "condominioMedio": 290,
+    "renda": 4167,
+    "populacao": 53867,
+    "seguranca": 41,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Extremo norte, núcleo histórico isolado, CPTM funciona.",
+    "lat": -23.4283,
+    "lng": -46.7412,
+    "descricaoLonga": "Extremo norte, núcleo histórico isolado, CPTM funciona. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 21,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "pinheiros",
+    "nome": "Pinheiros",
+    "zona": "oeste",
+    "aluguelMedioM2": 93,
+    "condominioMedio": 1200,
+    "renda": 13063,
+    "populacao": 178063,
+    "seguranca": 74,
+    "metro": true,
+    "vidaNoturna": 9,
+    "comercio": 9,
+    "parques": 7,
+    "descricao": "Boêmio e criativo. Bares, lojas independentes e cafés especiais.",
+    "lat": -23.5637,
+    "lng": -46.6886,
+    "descricaoLonga": "Boêmio e criativo. Bares, lojas independentes e cafés especiais. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Pinheiros",
+        "Faria Lima",
+        "Fradique Coutinho"
+      ],
+      "supermercados": 23,
+      "barRestaurantes": 170,
+      "parques": [
+        "Praça Benedito Calixto"
+      ],
+      "hospitais": [
+        "Hosp. das Clínicas"
+      ],
+      "shoppings": [
+        "Shopping Eldorado"
+      ]
+    }
+  },
+  {
+    "id": "pirituba",
+    "nome": "Pirituba",
+    "zona": "oeste",
+    "aluguelMedioM2": 37,
+    "condominioMedio": 500,
+    "renda": 9728,
+    "populacao": 273728,
+    "seguranca": 54,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 5,
+    "parques": 6,
+    "descricao": "Residencial e popular. CPTM serve mas trânsito é gargalo.",
+    "lat": -23.4892,
+    "lng": -46.7258,
+    "descricaoLonga": "Residencial e popular. CPTM serve mas trânsito é gargalo. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Cardim"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Parque Estadual do Jaraguá"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Tietê Plaza Shopping"
+      ]
+    }
+  },
+  {
+    "id": "ponte-rasa",
+    "nome": "Ponte Rasa",
+    "zona": "leste",
+    "aluguelMedioM2": 31,
+    "condominioMedio": 850,
+    "renda": 9907,
+    "populacao": 253907,
+    "seguranca": 51,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 8,
+    "parques": 5,
+    "descricao": "Leste residencial, próximo à Penha.",
+    "lat": -23.5184,
+    "lng": -46.4996,
+    "descricaoLonga": "Leste residencial, próximo à Penha. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "raposo-tavares",
+    "nome": "Raposo Tavares",
+    "zona": "oeste",
+    "aluguelMedioM2": 47,
+    "condominioMedio": 780,
+    "renda": 10462,
+    "populacao": 154462,
+    "seguranca": 60,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 7,
+    "parques": 5,
+    "descricao": "Oeste próximo à rodovia homônima.",
+    "lat": -23.5865,
+    "lng": -46.783,
+    "descricaoLonga": "Oeste próximo à rodovia homônima. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Parque Raposo Tavares"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "republica",
+    "nome": "República",
+    "zona": "centro",
+    "aluguelMedioM2": 54,
+    "condominioMedio": 500,
+    "renda": 9272,
+    "populacao": 168272,
+    "seguranca": 62,
+    "metro": true,
+    "vidaNoturna": 5,
+    "comercio": 5,
+    "parques": 5,
+    "descricao": "Centro alternativo, ocupações culturais, transporte privilegiado.",
+    "lat": -23.5432,
+    "lng": -46.6328,
+    "descricaoLonga": "Centro alternativo, ocupações culturais, transporte privilegiado. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "República",
+        "Anhangabaú",
+        "São Bento"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "rio-pequeno",
+    "nome": "Rio Pequeno",
+    "zona": "oeste",
+    "aluguelMedioM2": 56,
+    "condominioMedio": 570,
+    "renda": 8173,
+    "populacao": 57173,
+    "seguranca": 62,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 6,
+    "parques": 6,
+    "descricao": "Oeste próximo à Raposo Tavares, residencial popular.",
+    "lat": -23.5695,
+    "lng": -46.756,
+    "descricaoLonga": "Oeste próximo à Raposo Tavares, residencial popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "sacoma",
+    "nome": "Sacomã",
+    "zona": "sul",
+    "aluguelMedioM2": 46,
+    "condominioMedio": 780,
+    "renda": 7640,
+    "populacao": 156640,
+    "seguranca": 56,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 3,
+    "descricao": "Acesso por metrô verde, terminal de ônibus, classe média.",
+    "lat": -23.6111,
+    "lng": -46.5981,
+    "descricaoLonga": "Acesso por metrô verde, terminal de ônibus, classe média. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Sacomã"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 53,
+      "parques": [
+        "Parque do Estado"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "santa-cecilia",
+    "nome": "Santa Cecília",
+    "zona": "centro",
+    "aluguelMedioM2": 61,
+    "condominioMedio": 1200,
+    "renda": 15203,
+    "populacao": 148203,
+    "seguranca": 66,
+    "metro": true,
+    "vidaNoturna": 9,
+    "comercio": 8,
+    "parques": 7,
+    "descricao": "Centro residencial verticalizado, próximo ao Higienópolis.",
+    "lat": -23.5341,
+    "lng": -46.6442,
+    "descricaoLonga": "Centro residencial verticalizado, próximo ao Higienópolis. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Santa Cecília",
+        "Marechal Deodoro"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 170,
+      "parques": [
+        "Praça Marechal Deodoro"
+      ],
+      "hospitais": [
+        "Santa Casa"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "santana",
+    "nome": "Santana",
+    "zona": "norte",
+    "aluguelMedioM2": 55,
+    "condominioMedio": 780,
+    "renda": 9368,
+    "populacao": 238368,
+    "seguranca": 61,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 5,
+    "parques": 6,
+    "descricao": "Coração da zona norte. Linha azul, comércio forte e Parque da Juventude.",
+    "lat": -23.5075,
+    "lng": -46.6305,
+    "descricaoLonga": "Coração da zona norte. Linha azul, comércio forte e Parque da Juventude. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Santana",
+        "Carandiru"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Parque da Juventude",
+        "Horto Florestal"
+      ],
+      "hospitais": [
+        "Hosp. Edmundo Vasconcelos"
+      ],
+      "shoppings": [
+        "Center Norte",
+        "Shopping Santana Parque"
+      ]
+    }
+  },
+  {
+    "id": "santo-amaro",
+    "nome": "Santo Amaro",
+    "zona": "sul",
+    "aluguelMedioM2": 90,
+    "condominioMedio": 900,
+    "renda": 14043,
+    "populacao": 141043,
+    "seguranca": 71,
+    "metro": true,
+    "vidaNoturna": 9,
+    "comercio": 9,
+    "parques": 7,
+    "descricao": "Subcentro do sul, igreja matriz, comércio antigo e Marginal Pinheiros.",
+    "lat": -23.6286,
+    "lng": -46.7046,
+    "descricaoLonga": "Subcentro do sul, igreja matriz, comércio antigo e Marginal Pinheiros. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Estação local"
+      ],
+      "supermercados": 23,
+      "barRestaurantes": 170,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "sao-domingos",
+    "nome": "São Domingos",
+    "zona": "oeste",
+    "aluguelMedioM2": 41,
+    "condominioMedio": 850,
+    "renda": 7157,
+    "populacao": 141157,
+    "seguranca": 59,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 6,
+    "parques": 5,
+    "descricao": "Noroeste residencial popular.",
+    "lat": -23.499,
+    "lng": -46.7531,
+    "descricaoLonga": "Noroeste residencial popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "sao-lucas",
+    "nome": "São Lucas",
+    "zona": "leste",
+    "aluguelMedioM2": 49,
+    "condominioMedio": 850,
+    "renda": 10763,
+    "populacao": 204763,
+    "seguranca": 60,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Bairro de perfil misto da zona leste sem metrô direto. Dados estimados.",
+    "lat": -23.5823,
+    "lng": -46.5427,
+    "descricaoLonga": "Bairro de perfil misto da zona leste sem metrô direto. Dados estimados. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Prudente"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "sao-mateus",
+    "nome": "São Mateus",
+    "zona": "leste",
+    "aluguelMedioM2": 16,
+    "condominioMedio": 350,
+    "renda": 3704,
+    "populacao": 223404,
+    "seguranca": 31,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 2,
+    "descricao": "Subcentro da zona leste, monotrilho prata em construção.",
+    "lat": -23.5933,
+    "lng": -46.492,
+    "descricaoLonga": "Subcentro da zona leste, monotrilho prata em construção. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "São Mateus"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [
+        "Parque do Carmo"
+      ],
+      "hospitais": [
+        "Hosp. Mun. Tide Setúbal"
+      ],
+      "shoppings": [
+        "Shopping Aricanduva"
+      ]
+    }
+  },
+  {
+    "id": "sao-miguel-paulista",
+    "nome": "São Miguel Paulista",
+    "zona": "leste",
+    "aluguelMedioM2": 44,
+    "condominioMedio": 570,
+    "renda": 9147,
+    "populacao": 278147,
+    "seguranca": 58,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 8,
+    "parques": 5,
+    "descricao": "Subcentro leste com CPTM e comércio forte.",
+    "lat": -23.5097,
+    "lng": -46.4376,
+    "descricaoLonga": "Subcentro leste com CPTM e comércio forte. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "sao-rafael",
+    "nome": "São Rafael",
+    "zona": "leste",
+    "aluguelMedioM2": 25,
+    "condominioMedio": 230,
+    "renda": 2870,
+    "populacao": 249070,
+    "seguranca": 41,
+    "metro": false,
+    "vidaNoturna": 2,
+    "comercio": 4,
+    "parques": 4,
+    "descricao": "Leste extremo, residencial popular, CPTM.",
+    "lat": -23.6173,
+    "lng": -46.4642,
+    "descricaoLonga": "Leste extremo, residencial popular, CPTM. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel acessível, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 18,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "saude",
+    "nome": "Saúde",
+    "zona": "sul",
+    "aluguelMedioM2": 86,
+    "condominioMedio": 1020,
+    "renda": 14421,
+    "populacao": 85421,
+    "seguranca": 69,
+    "metro": true,
+    "vidaNoturna": 7,
+    "comercio": 8,
+    "parques": 5,
+    "descricao": "Sul, tranquilo, metrô azul, boa relação custo-benefício.",
+    "lat": -23.6078,
+    "lng": -46.6395,
+    "descricaoLonga": "Sul, tranquilo, metrô azul, boa relação custo-benefício. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Saúde",
+        "São Judas",
+        "Praça da Árvore"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 150,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping Plaza Sul"
+      ]
+    }
+  },
+  {
+    "id": "se",
+    "nome": "Sé",
+    "zona": "centro",
+    "aluguelMedioM2": 30,
+    "condominioMedio": 780,
+    "renda": 8806,
+    "populacao": 52806,
+    "seguranca": 51,
+    "metro": true,
+    "vidaNoturna": 4,
+    "comercio": 7,
+    "parques": 4,
+    "descricao": "Centro histórico. Densidade alta, comércio popular e problemas urbanos.",
+    "lat": -23.5482,
+    "lng": -46.6256,
+    "descricaoLonga": "Centro histórico. Densidade alta, comércio popular e problemas urbanos. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Sé",
+        "Anhangabaú"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 59,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "socorro",
+    "nome": "Socorro",
+    "zona": "sul",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 570,
+    "renda": 7465,
+    "populacao": 221465,
+    "seguranca": 60,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 6,
+    "parques": 3,
+    "descricao": "Sul, residencial, próximo a Santo Amaro.",
+    "lat": -23.6625,
+    "lng": -46.7012,
+    "descricaoLonga": "Sul, residencial, próximo a Santo Amaro. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Socorro"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "tatuape",
+    "nome": "Tatuapé",
+    "zona": "leste",
+    "aluguelMedioM2": 47,
+    "condominioMedio": 780,
+    "renda": 7428,
+    "populacao": 186428,
+    "seguranca": 54,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 5,
+    "parques": 6,
+    "descricao": "Polo comercial da zona leste. Shoppings e prédios novos no metrô vermelho.",
+    "lat": -23.5407,
+    "lng": -46.5697,
+    "descricaoLonga": "Polo comercial da zona leste. Shoppings e prédios novos no metrô vermelho. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Tatuapé",
+        "Carrão"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Parque Ceret",
+        "Parque do Piqueri"
+      ],
+      "hospitais": [
+        "Hosp. São Camilo"
+      ],
+      "shoppings": [
+        "Shopping Anália Franco",
+        "Shopping Metrô Tatuapé"
+      ]
+    }
+  },
+  {
+    "id": "tremembe",
+    "nome": "Tremembé",
+    "zona": "norte",
+    "aluguelMedioM2": 51,
+    "condominioMedio": 710,
+    "renda": 10557,
+    "populacao": 259557,
+    "seguranca": 59,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 6,
+    "parques": 5,
+    "descricao": "Norte com Serra da Cantareira, residencial verde.",
+    "lat": -23.4317,
+    "lng": -46.5924,
+    "descricaoLonga": "Norte com Serra da Cantareira, residencial verde. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 65,
+      "parques": [
+        "Horto Florestal",
+        "Parque do Estado"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "tucuruvi",
+    "nome": "Tucuruvi",
+    "zona": "norte",
+    "aluguelMedioM2": 48,
+    "condominioMedio": 570,
+    "renda": 7367,
+    "populacao": 271367,
+    "seguranca": 61,
+    "metro": true,
+    "vidaNoturna": 5,
+    "comercio": 8,
+    "parques": 5,
+    "descricao": "Residencial classe média, fim da linha azul do metrô.",
+    "lat": -23.4868,
+    "lng": -46.6064,
+    "descricaoLonga": "Residencial classe média, fim da linha azul do metrô. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Tucuruvi",
+        "Parada Inglesa"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Horto Florestal"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "vila-andrade",
+    "nome": "Vila Andrade",
+    "zona": "oeste",
+    "aluguelMedioM2": 40,
+    "condominioMedio": 850,
+    "renda": 9735,
+    "populacao": 238735,
+    "seguranca": 56,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 8,
+    "parques": 3,
+    "descricao": "Sul-oeste com torres altas e favela do Paraisópolis vizinha.",
+    "lat": -23.6142,
+    "lng": -46.7289,
+    "descricaoLonga": "Sul-oeste com torres altas e favela do Paraisópolis vizinha. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "vila-curuca",
+    "nome": "Vila Curuçá",
+    "zona": "leste",
+    "aluguelMedioM2": 29,
+    "condominioMedio": 230,
+    "renda": 3595,
+    "populacao": 116295,
+    "seguranca": 45,
+    "metro": false,
+    "vidaNoturna": 1,
+    "comercio": 3,
+    "parques": 5,
+    "descricao": "Periferia leste extrema, sem metrô.",
+    "lat": -23.5187,
+    "lng": -46.4284,
+    "descricaoLonga": "Periferia leste extrema, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel acessível, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 5,
+      "barRestaurantes": 15,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-formosa",
+    "nome": "Vila Formosa",
+    "zona": "leste",
+    "aluguelMedioM2": 52,
+    "condominioMedio": 850,
+    "renda": 9249,
+    "populacao": 213249,
+    "seguranca": 58,
+    "metro": false,
+    "vidaNoturna": 7,
+    "comercio": 6,
+    "parques": 7,
+    "descricao": "Leste classe média baixa, sem metrô direto.",
+    "lat": -23.5675,
+    "lng": -46.5372,
+    "descricaoLonga": "Leste classe média baixa, sem metrô direto. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Matilde"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 77,
+      "parques": [
+        "Praça local",
+        "Áreas verdes próximas"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-guilherme",
+    "nome": "Vila Guilherme",
+    "zona": "norte",
+    "aluguelMedioM2": 36,
+    "condominioMedio": 780,
+    "renda": 6836,
+    "populacao": 165836,
+    "seguranca": 56,
+    "metro": false,
+    "vidaNoturna": 4,
+    "comercio": 5,
+    "parques": 4,
+    "descricao": "Comercial e logístico próximo à Marginal Tietê.",
+    "lat": -23.5172,
+    "lng": -46.5997,
+    "descricaoLonga": "Comercial e logístico próximo à Marginal Tietê. Bairro da zona norte com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Tietê"
+      ],
+      "supermercados": 5,
+      "barRestaurantes": 24,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-jacui",
+    "nome": "Vila Jacuí",
+    "zona": "leste",
+    "aluguelMedioM2": 42,
+    "condominioMedio": 640,
+    "renda": 7428,
+    "populacao": 71428,
+    "seguranca": 54,
+    "metro": false,
+    "vidaNoturna": 6,
+    "comercio": 5,
+    "parques": 6,
+    "descricao": "Leste periferia densa, sem metrô.",
+    "lat": -23.5135,
+    "lng": -46.4692,
+    "descricaoLonga": "Leste periferia densa, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 11,
+      "barRestaurantes": 71,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-leopoldina",
+    "nome": "Vila Leopoldina",
+    "zona": "oeste",
+    "aluguelMedioM2": 64,
+    "condominioMedio": 1260,
+    "renda": 17505,
+    "populacao": 100505,
+    "seguranca": 67,
+    "metro": false,
+    "vidaNoturna": 7,
+    "comercio": 7,
+    "parques": 4,
+    "descricao": "Oeste em transformação, novos prédios e shoppings.",
+    "lat": -23.53,
+    "lng": -46.7216,
+    "descricaoLonga": "Oeste em transformação, novos prédios e shoppings. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Leopoldina"
+      ],
+      "supermercados": 21,
+      "barRestaurantes": 150,
+      "parques": [
+        "Parque Villa-Lobos"
+      ],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": [
+        "Shopping Villa-Lobos",
+        "Shopping Bourbon"
+      ]
+    }
+  },
+  {
+    "id": "vila-maria",
+    "nome": "Vila Maria",
+    "zona": "leste",
+    "aluguelMedioM2": 47,
+    "condominioMedio": 780,
+    "renda": 7962,
+    "populacao": 286962,
+    "seguranca": 60,
+    "metro": false,
+    "vidaNoturna": 5,
+    "comercio": 7,
+    "parques": 5,
+    "descricao": "Norte, próximo à rodoviária do Tietê.",
+    "lat": -23.5221,
+    "lng": -46.5778,
+    "descricaoLonga": "Norte, próximo à rodoviária do Tietê. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [],
+      "supermercados": 12,
+      "barRestaurantes": 65,
+      "parques": [
+        "Praça local"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-mariana",
+    "nome": "Vila Mariana",
+    "zona": "sul",
+    "aluguelMedioM2": 77,
+    "condominioMedio": 900,
+    "renda": 19833,
+    "populacao": 80833,
+    "seguranca": 70,
+    "metro": true,
+    "vidaNoturna": 7,
+    "comercio": 8,
+    "parques": 7,
+    "descricao": "Equilibrado, próximo ao Ibirapuera, metrô azul e ar familiar.",
+    "lat": -23.579,
+    "lng": -46.6368,
+    "descricaoLonga": "Equilibrado, próximo ao Ibirapuera, metrô azul e ar familiar. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Mariana",
+        "Ana Rosa"
+      ],
+      "supermercados": 22,
+      "barRestaurantes": 150,
+      "parques": [
+        "Parque do Ibirapuera"
+      ],
+      "hospitais": [
+        "Hosp. São Paulo (UNIFESP)"
+      ],
+      "shoppings": [
+        "Shopping Plaza Sul"
+      ]
+    }
+  },
+  {
+    "id": "vila-matilde",
+    "nome": "Vila Matilde",
+    "zona": "leste",
+    "aluguelMedioM2": 41,
+    "condominioMedio": 640,
+    "renda": 9140,
+    "populacao": 188140,
+    "seguranca": 56,
+    "metro": true,
+    "vidaNoturna": 3,
+    "comercio": 5,
+    "parques": 3,
+    "descricao": "Leste com metrô vermelho, classe média popular.",
+    "lat": -23.5413,
+    "lng": -46.5271,
+    "descricaoLonga": "Leste com metrô vermelho, classe média popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Matilde"
+      ],
+      "supermercados": 11,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-medeiros",
+    "nome": "Vila Medeiros",
+    "zona": "norte",
+    "aluguelMedioM2": 52,
+    "condominioMedio": 780,
+    "renda": 9370,
+    "populacao": 98370,
+    "seguranca": 61,
+    "metro": false,
+    "vidaNoturna": 3,
+    "comercio": 7,
+    "parques": 3,
+    "descricao": "Norte residencial popular.",
+    "lat": -23.4976,
+    "lng": -46.5852,
+    "descricaoLonga": "Norte residencial popular. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Medeiros"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 53,
+      "parques": [],
+      "hospitais": [
+        "Unidades de saúde particulares próximas"
+      ],
+      "shoppings": []
+    }
+  },
+  {
+    "id": "vila-prudente",
+    "nome": "Vila Prudente",
+    "zona": "leste",
+    "aluguelMedioM2": 58,
+    "condominioMedio": 570,
+    "renda": 6483,
+    "populacao": 260483,
+    "seguranca": 63,
+    "metro": true,
+    "vidaNoturna": 6,
+    "comercio": 8,
+    "parques": 6,
+    "descricao": "Subcentro leste com metrô prata recente. Verticalizando.",
+    "lat": -23.5866,
+    "lng": -46.5811,
+    "descricaoLonga": "Subcentro leste com metrô prata recente. Verticalizando. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Prudente",
+        "Tamanduateí"
+      ],
+      "supermercados": 12,
+      "barRestaurantes": 71,
+      "parques": [
+        "Parque Ceret"
+      ],
+      "hospitais": [
+        "UBS local",
+        "Hospital municipal próximo"
+      ],
+      "shoppings": [
+        "Shopping de bairro"
+      ]
+    }
+  },
+  {
+    "id": "vila-sonia",
+    "nome": "Vila Sônia",
+    "zona": "oeste",
+    "aluguelMedioM2": 61,
+    "condominioMedio": 1020,
+    "renda": 17403,
+    "populacao": 120403,
+    "seguranca": 66,
+    "metro": true,
+    "vidaNoturna": 9,
+    "comercio": 9,
+    "parques": 7,
+    "descricao": "Oeste residencial, fim da linha amarela do metrô.",
+    "lat": -23.5905,
+    "lng": -46.7349,
+    "descricaoLonga": "Oeste residencial, fim da linha amarela do metrô. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "pois": {
+      "metroEstacoes": [
+        "Vila Sônia",
+        "São Paulo-Morumbi"
+      ],
+      "supermercados": 23,
+      "barRestaurantes": 170,
+      "parques": [
+        "Parque do Povo"
+      ],
+      "hospitais": [
+        "Hosp. Albert Einstein"
+      ],
+      "shoppings": [
+        "Shopping Morumbi"
+      ]
+    }
+  }
+]

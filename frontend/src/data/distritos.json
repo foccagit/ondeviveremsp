@@ -1,0 +1,560 @@
+[
+  {
+    "id": "agua-rasa",
+    "nome": "Água Rasa",
+    "zona": "leste",
+    "svgName": "Água Rasa"
+  },
+  {
+    "id": "alto-de-pinheiros",
+    "nome": "Alto de Pinheiros",
+    "zona": "oeste",
+    "svgName": "Alto de Pinheiros"
+  },
+  {
+    "id": "anhanguera",
+    "nome": "Anhanguera",
+    "zona": "oeste",
+    "svgName": "Anhangüera"
+  },
+  {
+    "id": "aricanduva",
+    "nome": "Aricanduva",
+    "zona": "leste",
+    "svgName": "Aricanduva"
+  },
+  {
+    "id": "artur-alvim",
+    "nome": "Artur Alvim",
+    "zona": "leste",
+    "svgName": "Artur Alvim"
+  },
+  {
+    "id": "barra-funda",
+    "nome": "Barra Funda",
+    "zona": "oeste",
+    "svgName": "Barra Funda"
+  },
+  {
+    "id": "bela-vista",
+    "nome": "Bela Vista",
+    "zona": "centro",
+    "svgName": "Bela Vista"
+  },
+  {
+    "id": "belem",
+    "nome": "Belém",
+    "zona": "leste",
+    "svgName": "Belém"
+  },
+  {
+    "id": "bom-retiro",
+    "nome": "Bom Retiro",
+    "zona": "centro",
+    "svgName": "Bom Retiro"
+  },
+  {
+    "id": "bras",
+    "nome": "Brás",
+    "zona": "centro",
+    "svgName": "Brás"
+  },
+  {
+    "id": "brasilandia",
+    "nome": "Brasilândia",
+    "zona": "norte",
+    "svgName": "Brasilândia"
+  },
+  {
+    "id": "butanta",
+    "nome": "Butantã",
+    "zona": "oeste",
+    "svgName": "Butantã"
+  },
+  {
+    "id": "cachoeirinha",
+    "nome": "Cachoeirinha",
+    "zona": "norte",
+    "svgName": "Cachoeirinha"
+  },
+  {
+    "id": "cambuci",
+    "nome": "Cambuci",
+    "zona": "centro",
+    "svgName": "Cambuci"
+  },
+  {
+    "id": "campo-belo",
+    "nome": "Campo Belo",
+    "zona": "sul",
+    "svgName": "Campo Belo"
+  },
+  {
+    "id": "campo-grande",
+    "nome": "Campo Grande",
+    "zona": "sul",
+    "svgName": "Campo Grande"
+  },
+  {
+    "id": "campo-limpo",
+    "nome": "Campo Limpo",
+    "zona": "oeste",
+    "svgName": "Campo Limpo"
+  },
+  {
+    "id": "cangaiba",
+    "nome": "Cangaíba",
+    "zona": "leste",
+    "svgName": "Cangaíba"
+  },
+  {
+    "id": "capao-redondo",
+    "nome": "Capão Redondo",
+    "zona": "oeste",
+    "svgName": "Capão Redondo"
+  },
+  {
+    "id": "carrao",
+    "nome": "Carrão",
+    "zona": "leste",
+    "svgName": "Carrão"
+  },
+  {
+    "id": "casa-verde",
+    "nome": "Casa Verde",
+    "zona": "norte",
+    "svgName": "Casa Verde"
+  },
+  {
+    "id": "cidade-ademar",
+    "nome": "Cidade Ademar",
+    "zona": "sul",
+    "svgName": "Cidade Ademar"
+  },
+  {
+    "id": "cidade-dutra",
+    "nome": "Cidade Dutra",
+    "zona": "sul",
+    "svgName": "Cidade Dutra"
+  },
+  {
+    "id": "cidade-lider",
+    "nome": "Cidade Líder",
+    "zona": "leste",
+    "svgName": "Cidade Líder"
+  },
+  {
+    "id": "consolacao",
+    "nome": "Consolação",
+    "zona": "centro",
+    "svgName": "Consolação"
+  },
+  {
+    "id": "cursino",
+    "nome": "Cursino",
+    "zona": "sul",
+    "svgName": "Cursino"
+  },
+  {
+    "id": "ermelino-matarazzo",
+    "nome": "Ermelino Matarazzo",
+    "zona": "leste",
+    "svgName": "Ermelino Matarazzo"
+  },
+  {
+    "id": "freguesia-do-o",
+    "nome": "Freguesia do Ó",
+    "zona": "oeste",
+    "svgName": "Freguesia do Ó"
+  },
+  {
+    "id": "grajau",
+    "nome": "Grajaú",
+    "zona": "sul",
+    "svgName": "Grajaú"
+  },
+  {
+    "id": "guaianases",
+    "nome": "Guaianases",
+    "zona": "leste",
+    "svgName": "Guaianases"
+  },
+  {
+    "id": "iguatemi",
+    "nome": "Iguatemi",
+    "zona": "leste",
+    "svgName": "Iguatemi"
+  },
+  {
+    "id": "ipiranga",
+    "nome": "Ipiranga",
+    "zona": "sul",
+    "svgName": "Ipiranga"
+  },
+  {
+    "id": "itaim-bibi",
+    "nome": "Itaim Bibi",
+    "zona": "oeste",
+    "svgName": "Itaim Bibi"
+  },
+  {
+    "id": "itaim-paulista",
+    "nome": "Itaim Paulista",
+    "zona": "leste",
+    "svgName": "Itaim Paulista"
+  },
+  {
+    "id": "itaquera",
+    "nome": "Itaquera",
+    "zona": "leste",
+    "svgName": "Itaquera"
+  },
+  {
+    "id": "jacana",
+    "nome": "Jaçanã",
+    "zona": "norte",
+    "svgName": "Jaçanã"
+  },
+  {
+    "id": "jaguara",
+    "nome": "Jaguara",
+    "zona": "oeste",
+    "svgName": "Jaguara"
+  },
+  {
+    "id": "jaguare",
+    "nome": "Jaguaré",
+    "zona": "oeste",
+    "svgName": "Jaguaré"
+  },
+  {
+    "id": "jaragua",
+    "nome": "Jaraguá",
+    "zona": "oeste",
+    "svgName": "Jaraguá"
+  },
+  {
+    "id": "jardim-angela",
+    "nome": "Jardim Ângela",
+    "zona": "sul",
+    "svgName": "Jardim Ângela"
+  },
+  {
+    "id": "jardim-helena",
+    "nome": "Jardim Helena",
+    "zona": "leste",
+    "svgName": "Jardim Helena"
+  },
+  {
+    "id": "jardim-paulista",
+    "nome": "Jardim Paulista",
+    "zona": "centro",
+    "svgName": "Jardim Paulista"
+  },
+  {
+    "id": "jardim-sao-luis",
+    "nome": "Jardim São Luís",
+    "zona": "oeste",
+    "svgName": "Jardim São Luís"
+  },
+  {
+    "id": "jose-bonifacio",
+    "nome": "José Bonifácio",
+    "zona": "leste",
+    "svgName": "José Bonifácio"
+  },
+  {
+    "id": "lajeado",
+    "nome": "Lajeado",
+    "zona": "leste",
+    "svgName": "Lajeado"
+  },
+  {
+    "id": "lapa",
+    "nome": "Lapa",
+    "zona": "oeste",
+    "svgName": "Lapa"
+  },
+  {
+    "id": "liberdade",
+    "nome": "Liberdade",
+    "zona": "centro",
+    "svgName": "Liberdade"
+  },
+  {
+    "id": "limao",
+    "nome": "Limão",
+    "zona": "norte",
+    "svgName": "Limão"
+  },
+  {
+    "id": "mandaqui",
+    "nome": "Mandaqui",
+    "zona": "norte",
+    "svgName": "Mandaqui"
+  },
+  {
+    "id": "marsilac",
+    "nome": "Marsilac",
+    "zona": "sul",
+    "svgName": "Marsilac"
+  },
+  {
+    "id": "moema",
+    "nome": "Moema",
+    "zona": "sul",
+    "svgName": "Moema"
+  },
+  {
+    "id": "mooca",
+    "nome": "Mooca",
+    "zona": "leste",
+    "svgName": "Mooca"
+  },
+  {
+    "id": "morumbi",
+    "nome": "Morumbi",
+    "zona": "oeste",
+    "svgName": "Morumbi"
+  },
+  {
+    "id": "parelheiros",
+    "nome": "Parelheiros",
+    "zona": "sul",
+    "svgName": "Parelheiros"
+  },
+  {
+    "id": "pari",
+    "nome": "Pari",
+    "zona": "centro",
+    "svgName": "Pari"
+  },
+  {
+    "id": "parque-do-carmo",
+    "nome": "Parque do Carmo",
+    "zona": "leste",
+    "svgName": "Parque do Carmo"
+  },
+  {
+    "id": "pedreira",
+    "nome": "Pedreira",
+    "zona": "sul",
+    "svgName": "Pedreira"
+  },
+  {
+    "id": "penha",
+    "nome": "Penha",
+    "zona": "leste",
+    "svgName": "Penha"
+  },
+  {
+    "id": "perdizes",
+    "nome": "Perdizes",
+    "zona": "oeste",
+    "svgName": "Perdizes"
+  },
+  {
+    "id": "perus",
+    "nome": "Perus",
+    "zona": "norte",
+    "svgName": "Perus"
+  },
+  {
+    "id": "pinheiros",
+    "nome": "Pinheiros",
+    "zona": "oeste",
+    "svgName": "Pinheiros"
+  },
+  {
+    "id": "pirituba",
+    "nome": "Pirituba",
+    "zona": "oeste",
+    "svgName": "Pirituba"
+  },
+  {
+    "id": "ponte-rasa",
+    "nome": "Ponte Rasa",
+    "zona": "leste",
+    "svgName": "Ponte Rasa"
+  },
+  {
+    "id": "raposo-tavares",
+    "nome": "Raposo Tavares",
+    "zona": "oeste",
+    "svgName": "Raposo Tavares"
+  },
+  {
+    "id": "republica",
+    "nome": "República",
+    "zona": "centro",
+    "svgName": "República"
+  },
+  {
+    "id": "rio-pequeno",
+    "nome": "Rio Pequeno",
+    "zona": "oeste",
+    "svgName": "Rio Pequeno"
+  },
+  {
+    "id": "sacoma",
+    "nome": "Sacomã",
+    "zona": "sul",
+    "svgName": "Sacomã"
+  },
+  {
+    "id": "santa-cecilia",
+    "nome": "Santa Cecília",
+    "zona": "centro",
+    "svgName": "Santa Cecília"
+  },
+  {
+    "id": "santana",
+    "nome": "Santana",
+    "zona": "norte",
+    "svgName": "Santana"
+  },
+  {
+    "id": "santo-amaro",
+    "nome": "Santo Amaro",
+    "zona": "sul",
+    "svgName": "Santo Amaro"
+  },
+  {
+    "id": "sao-domingos",
+    "nome": "São Domingos",
+    "zona": "oeste",
+    "svgName": "São Domingos"
+  },
+  {
+    "id": "sao-lucas",
+    "nome": "São Lucas",
+    "zona": "leste",
+    "svgName": "São Lucas"
+  },
+  {
+    "id": "sao-mateus",
+    "nome": "São Mateus",
+    "zona": "leste",
+    "svgName": "São Mateus"
+  },
+  {
+    "id": "sao-miguel-paulista",
+    "nome": "São Miguel Paulista",
+    "zona": "leste",
+    "svgName": "S. Miguel Pta."
+  },
+  {
+    "id": "sao-rafael",
+    "nome": "São Rafael",
+    "zona": "leste",
+    "svgName": "São Rafael"
+  },
+  {
+    "id": "saude",
+    "nome": "Saúde",
+    "zona": "sul",
+    "svgName": "Saúde"
+  },
+  {
+    "id": "se",
+    "nome": "Sé",
+    "zona": "centro",
+    "svgName": "Sé"
+  },
+  {
+    "id": "socorro",
+    "nome": "Socorro",
+    "zona": "sul",
+    "svgName": "Capela do Socorro"
+  },
+  {
+    "id": "tatuape",
+    "nome": "Tatuapé",
+    "zona": "leste",
+    "svgName": "Tatuapé"
+  },
+  {
+    "id": "tremembe",
+    "nome": "Tremembé",
+    "zona": "norte",
+    "svgName": "Tremembé"
+  },
+  {
+    "id": "tucuruvi",
+    "nome": "Tucuruvi",
+    "zona": "norte",
+    "svgName": "Tucuruvi"
+  },
+  {
+    "id": "vila-andrade",
+    "nome": "Vila Andrade",
+    "zona": "oeste",
+    "svgName": "Vila Andrade"
+  },
+  {
+    "id": "vila-curuca",
+    "nome": "Vila Curuçá",
+    "zona": "leste",
+    "svgName": "Vila Curuçá"
+  },
+  {
+    "id": "vila-formosa",
+    "nome": "Vila Formosa",
+    "zona": "leste",
+    "svgName": "Vila Formosa"
+  },
+  {
+    "id": "vila-guilherme",
+    "nome": "Vila Guilherme",
+    "zona": "norte",
+    "svgName": "Vila Guilherme"
+  },
+  {
+    "id": "vila-jacui",
+    "nome": "Vila Jacuí",
+    "zona": "leste",
+    "svgName": "Vila Jacuí"
+  },
+  {
+    "id": "vila-leopoldina",
+    "nome": "Vila Leopoldina",
+    "zona": "oeste",
+    "svgName": "Vila Leopoldina"
+  },
+  {
+    "id": "vila-maria",
+    "nome": "Vila Maria",
+    "zona": "leste",
+    "svgName": "Vila Maria"
+  },
+  {
+    "id": "vila-mariana",
+    "nome": "Vila Mariana",
+    "zona": "sul",
+    "svgName": "Vila Mariana"
+  },
+  {
+    "id": "vila-matilde",
+    "nome": "Vila Matilde",
+    "zona": "leste",
+    "svgName": "Vila Matilde"
+  },
+  {
+    "id": "vila-medeiros",
+    "nome": "Vila Medeiros",
+    "zona": "norte",
+    "svgName": "Vila Medeiros"
+  },
+  {
+    "id": "vila-prudente",
+    "nome": "Vila Prudente",
+    "zona": "leste",
+    "svgName": "Vila Prudente"
+  },
+  {
+    "id": "vila-sonia",
+    "nome": "Vila Sônia",
+    "zona": "oeste",
+    "svgName": "Vila Sônia"
+  }
+]

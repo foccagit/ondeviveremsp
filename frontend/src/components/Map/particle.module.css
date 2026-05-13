@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.canvas {
+  display: block;
+}
+
