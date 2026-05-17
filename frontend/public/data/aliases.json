@@ -1,0 +1,736 @@
+{
+  "_metadata": {
+    "descricao": "Mapeamento de sub-bairros e regiões populares de São Paulo para os 96 distritos oficiais. Usado pra que usuários possam buscar pelo nome popular do bairro (ex: 'Vila Madalena') e o sistema use os dados do distrito-pai (ex: 'Pinheiros').",
+    "ultima_atualizacao": "2026-05",
+    "total_aliases": 84
+  },
+
+  "aliases": {
+    "vila-madalena": {
+      "nome_exibicao": "Vila Madalena",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "lat": -23.5544,
+      "lng": -46.6900,
+      "descricao_curta": "Boêmia, bares, lojinhas. Caro e ruidoso à noite, charmoso de dia."
+    },
+    "sumarezinho": {
+      "nome_exibicao": "Sumarezinho",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "lat": -23.5485,
+      "lng": -46.6792,
+      "descricao_curta": "Residencial, arborizado, próximo da Pompéia e Sumaré."
+    },
+    "pinheiros-centro": {
+      "nome_exibicao": "Pinheiros (Centro)",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "lat": -23.5645,
+      "lng": -46.6859,
+      "descricao_curta": "Coração comercial, com metrô, restaurantes e mercado municipal."
+    },
+
+    "jardins": {
+      "nome_exibicao": "Jardins",
+      "distrito": "jardim-paulista",
+      "zona": "oeste",
+      "lat": -23.5650,
+      "lng": -46.6661,
+      "descricao_curta": "Bairro nobre clássico. Comércio sofisticado, restaurantes premiados."
+    },
+    "jardim-america": {
+      "nome_exibicao": "Jardim América",
+      "distrito": "jardim-paulista",
+      "zona": "oeste",
+      "lat": -23.5685,
+      "lng": -46.6730,
+      "descricao_curta": "Casarões, ruas arborizadas, perfil familiar de alto padrão."
+    },
+    "jardim-europa": {
+      "nome_exibicao": "Jardim Europa",
+      "distrito": "jardim-paulista",
+      "zona": "oeste",
+      "lat": -23.5780,
+      "lng": -46.6770,
+      "descricao_curta": "Residencial elegante entre o Itaim e os Jardins."
+    },
+    "jardim-paulistano": {
+      "nome_exibicao": "Jardim Paulistano",
+      "distrito": "jardim-paulista",
+      "zona": "oeste",
+      "lat": -23.5810,
+      "lng": -46.6840,
+      "descricao_curta": "Residencial verticalizado, próximo da Faria Lima."
+    },
+    "cerqueira-cesar": {
+      "nome_exibicao": "Cerqueira César",
+      "distrito": "jardim-paulista",
+      "zona": "centro",
+      "lat": -23.5577,
+      "lng": -46.6648,
+      "descricao_curta": "Próximo da Paulista, hospitais e clínicas, vida urbana intensa."
+    },
+
+    "higienopolis": {
+      "nome_exibicao": "Higienópolis",
+      "distrito": "consolacao",
+      "zona": "centro",
+      "lat": -23.5460,
+      "lng": -46.6580,
+      "descricao_curta": "Tradicional, intelectual, com prédios clássicos e shopping próprio."
+    },
+    "santa-cecilia-paulista": {
+      "nome_exibicao": "Paulista (Av.)",
+      "distrito": "consolacao",
+      "zona": "centro",
+      "lat": -23.5614,
+      "lng": -46.6557,
+      "descricao_curta": "Coração corporativo, museus, intensa vida urbana 24h."
+    },
+
+    "pacaembu": {
+      "nome_exibicao": "Pacaembu",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "lat": -23.5430,
+      "lng": -46.6680,
+      "descricao_curta": "Residencial arborizado, com o estádio histórico no centro."
+    },
+    "alto-da-lapa": {
+      "nome_exibicao": "Alto da Lapa",
+      "distrito": "lapa",
+      "zona": "oeste",
+      "lat": -23.5310,
+      "lng": -46.7080,
+      "descricao_curta": "Residencial alto padrão, ruas tranquilas, vista da cidade."
+    },
+    "vila-leopoldina-centro": {
+      "nome_exibicao": "Vila Leopoldina (Comercial)",
+      "distrito": "vila-leopoldina",
+      "zona": "oeste",
+      "lat": -23.5240,
+      "lng": -46.7320,
+      "descricao_curta": "Em transformação, com novos prédios e antigos galpões reaproveitados."
+    },
+
+    "itaim-centro": {
+      "nome_exibicao": "Itaim Bibi (Comercial)",
+      "distrito": "itaim-bibi",
+      "zona": "oeste",
+      "lat": -23.5836,
+      "lng": -46.6736,
+      "descricao_curta": "Coração corporativo e gastronômico. Caro e movimentado."
+    },
+    "vila-olimpia": {
+      "nome_exibicao": "Vila Olímpia",
+      "distrito": "itaim-bibi",
+      "zona": "oeste",
+      "lat": -23.5950,
+      "lng": -46.6840,
+      "descricao_curta": "Polo corporativo moderno com torres e vida noturna."
+    },
+    "faria-lima": {
+      "nome_exibicao": "Faria Lima",
+      "distrito": "itaim-bibi",
+      "zona": "oeste",
+      "lat": -23.5790,
+      "lng": -46.6890,
+      "descricao_curta": "Eixo financeiro, torres corporativas, fundos e startups."
+    },
+
+    "berrini": {
+      "nome_exibicao": "Berrini",
+      "distrito": "itaim-bibi",
+      "zona": "sul",
+      "lat": -23.6030,
+      "lng": -46.6920,
+      "descricao_curta": "Polo de escritórios, próximo do rio Pinheiros."
+    },
+    "brooklin": {
+      "nome_exibicao": "Brooklin",
+      "distrito": "campo-belo",
+      "zona": "sul",
+      "lat": -23.6168,
+      "lng": -46.6850,
+      "descricao_curta": "Residencial e comercial misto, com avenida principal arborizada."
+    },
+    "brooklin-novo": {
+      "nome_exibicao": "Brooklin Novo",
+      "distrito": "itaim-bibi",
+      "zona": "sul",
+      "lat": -23.6080,
+      "lng": -46.6890,
+      "descricao_curta": "Em verticalização, próximo ao Itaim e Vila Olímpia."
+    },
+
+    "moema-centro": {
+      "nome_exibicao": "Moema",
+      "distrito": "moema",
+      "zona": "sul",
+      "lat": -23.5980,
+      "lng": -46.6660,
+      "descricao_curta": "Residencial verticalizado, próximo ao Ibirapuera. Família e jovem profissional."
+    },
+    "indianopolis": {
+      "nome_exibicao": "Indianópolis",
+      "distrito": "moema",
+      "zona": "sul",
+      "lat": -23.6060,
+      "lng": -46.6600,
+      "descricao_curta": "Residencial bem servido de comércio e transporte."
+    },
+    "planalto-paulista": {
+      "nome_exibicao": "Planalto Paulista",
+      "distrito": "saude",
+      "zona": "sul",
+      "lat": -23.6210,
+      "lng": -46.6630,
+      "descricao_curta": "Residencial calmo, prédios médios, perfil familiar."
+    },
+
+    "ibirapuera": {
+      "nome_exibicao": "Ibirapuera",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "lat": -23.5870,
+      "lng": -46.6570,
+      "descricao_curta": "Vizinhança do parque mais famoso da cidade."
+    },
+    "chacara-klabin": {
+      "nome_exibicao": "Chácara Klabin",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "lat": -23.6010,
+      "lng": -46.6360,
+      "descricao_curta": "Próximo do metrô, mistura prédios novos e antigos."
+    },
+    "vila-clementino": {
+      "nome_exibicao": "Vila Clementino",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "lat": -23.5960,
+      "lng": -46.6400,
+      "descricao_curta": "Polo médico (UNIFESP), comércio e bares na rua Vergueiro."
+    },
+    "mirandopolis": {
+      "nome_exibicao": "Mirandópolis",
+      "distrito": "saude",
+      "zona": "sul",
+      "lat": -23.6090,
+      "lng": -46.6480,
+      "descricao_curta": "Residencial estabelecido com bom acesso a metrô."
+    },
+
+    "campo-belo-centro": {
+      "nome_exibicao": "Campo Belo (Comercial)",
+      "distrito": "campo-belo",
+      "zona": "sul",
+      "lat": -23.6210,
+      "lng": -46.6740,
+      "descricao_curta": "Comércio variado, escolas tradicionais, próximo de Congonhas."
+    },
+    "jabaquara-centro": {
+      "nome_exibicao": "Jabaquara",
+      "distrito": "jabaquara",
+      "zona": "sul",
+      "lat": -23.6470,
+      "lng": -46.6420,
+      "descricao_curta": "Acesso ao metrô (estação terminal) e ao aeroporto."
+    },
+
+    "agua-branca": {
+      "nome_exibicao": "Água Branca",
+      "distrito": "barra-funda",
+      "zona": "oeste",
+      "lat": -23.5210,
+      "lng": -46.6720,
+      "descricao_curta": "Em expansão imobiliária, próximo ao Allianz Parque."
+    },
+    "pompeia": {
+      "nome_exibicao": "Pompéia",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "lat": -23.5300,
+      "lng": -46.6850,
+      "descricao_curta": "Cultural (SESC), boêmio sem ser caro, bom comércio."
+    },
+    "sumare": {
+      "nome_exibicao": "Sumaré",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "lat": -23.5450,
+      "lng": -46.6800,
+      "descricao_curta": "Residencial arborizado, com metrô, próximo da Vila Madalena."
+    },
+
+    "bela-vista-paulista": {
+      "nome_exibicao": "Bela Vista",
+      "distrito": "bela-vista",
+      "zona": "centro",
+      "lat": -23.5570,
+      "lng": -46.6480,
+      "descricao_curta": "Próximo da Paulista, com prédios antigos e nova vida cultural."
+    },
+    "bixiga": {
+      "nome_exibicao": "Bixiga",
+      "distrito": "bela-vista",
+      "zona": "centro",
+      "lat": -23.5605,
+      "lng": -46.6470,
+      "descricao_curta": "Tradicionalmente italiano, cantinas, teatro."
+    },
+    "liberdade-japonesa": {
+      "nome_exibicao": "Liberdade (Bairro Japonês)",
+      "distrito": "liberdade",
+      "zona": "centro",
+      "lat": -23.5587,
+      "lng": -46.6360,
+      "descricao_curta": "Bairro oriental tradicional, com feirinha aos domingos."
+    },
+    "republica-centro": {
+      "nome_exibicao": "República",
+      "distrito": "republica",
+      "zona": "centro",
+      "lat": -23.5440,
+      "lng": -46.6420,
+      "descricao_curta": "Centro histórico, em revitalização, prédios antigos baratos."
+    },
+    "centro-historico": {
+      "nome_exibicao": "Centro Histórico",
+      "distrito": "se",
+      "zona": "centro",
+      "lat": -23.5505,
+      "lng": -46.6333,
+      "descricao_curta": "Núcleo original da cidade, prédios históricos, comércio popular."
+    },
+
+    "luz": {
+      "nome_exibicao": "Luz",
+      "distrito": "bom-retiro",
+      "zona": "centro",
+      "lat": -23.5340,
+      "lng": -46.6360,
+      "descricao_curta": "Patrimônio cultural (Pinacoteca, Sala SP), em revitalização."
+    },
+    "campos-eliseos": {
+      "nome_exibicao": "Campos Elíseos",
+      "distrito": "santa-cecilia",
+      "zona": "centro",
+      "lat": -23.5380,
+      "lng": -46.6450,
+      "descricao_curta": "Antiga elite, hoje misto e popular, com Cracolândia próxima."
+    },
+
+    "vila-pompeia": {
+      "nome_exibicao": "Vila Pompéia",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "lat": -23.5250,
+      "lng": -46.6890,
+      "descricao_curta": "Mistura residencial e comercial, com vida ativa."
+    },
+    "vila-romana": {
+      "nome_exibicao": "Vila Romana",
+      "distrito": "lapa",
+      "zona": "oeste",
+      "lat": -23.5290,
+      "lng": -46.6960,
+      "descricao_curta": "Tradicionalmente italiana, comércio gastronômico forte."
+    },
+    "lapa-centro": {
+      "nome_exibicao": "Lapa (Comercial)",
+      "distrito": "lapa",
+      "zona": "oeste",
+      "lat": -23.5210,
+      "lng": -46.7060,
+      "descricao_curta": "Polo comercial popular, estação CPTM importante."
+    },
+
+    "vila-prudente-centro": {
+      "nome_exibicao": "Vila Prudente",
+      "distrito": "vila-prudente",
+      "zona": "leste",
+      "lat": -23.5840,
+      "lng": -46.5810,
+      "descricao_curta": "Subcentro leste com metrô prata recente. Verticalizando."
+    },
+    "mooca-centro": {
+      "nome_exibicao": "Mooca",
+      "distrito": "mooca",
+      "zona": "centro",
+      "lat": -23.5570,
+      "lng": -46.6010,
+      "descricao_curta": "Tradicionalmente italiana, em forte verticalização recente."
+    },
+    "bras-comercial": {
+      "nome_exibicao": "Brás (Comercial)",
+      "distrito": "bras",
+      "zona": "centro",
+      "lat": -23.5390,
+      "lng": -46.6120,
+      "descricao_curta": "Polo de comércio popular, atacado, feiras."
+    },
+    "tatuape-centro": {
+      "nome_exibicao": "Tatuapé",
+      "distrito": "tatuape",
+      "zona": "leste",
+      "lat": -23.5395,
+      "lng": -46.5760,
+      "descricao_curta": "Subcentro leste verticalizado, comércio forte e metrô."
+    },
+
+    "anália-franco": {
+      "nome_exibicao": "Anália Franco",
+      "distrito": "vila-formosa",
+      "zona": "leste",
+      "lat": -23.5530,
+      "lng": -46.5530,
+      "descricao_curta": "Residencial de alto padrão na zona leste, shopping próprio."
+    },
+    "vila-carrao": {
+      "nome_exibicao": "Vila Carrão",
+      "distrito": "carrao",
+      "zona": "leste",
+      "lat": -23.5470,
+      "lng": -46.5310,
+      "descricao_curta": "Residencial estabelecido, comércio local forte."
+    },
+    "penha-comercio": {
+      "nome_exibicao": "Penha",
+      "distrito": "penha",
+      "zona": "leste",
+      "lat": -23.5260,
+      "lng": -46.5430,
+      "descricao_curta": "Subcentro leste tradicional, igreja histórica, comércio variado."
+    },
+
+    "santana-centro": {
+      "nome_exibicao": "Santana",
+      "distrito": "santana",
+      "zona": "norte",
+      "lat": -23.5040,
+      "lng": -46.6260,
+      "descricao_curta": "Subcentro norte tradicional, com metrô e comércio antigo."
+    },
+    "tucuruvi-centro": {
+      "nome_exibicao": "Tucuruvi",
+      "distrito": "tucuruvi",
+      "zona": "norte",
+      "lat": -23.4805,
+      "lng": -46.6020,
+      "descricao_curta": "Final da linha azul do metrô, residencial verticalizando."
+    },
+    "carandiru": {
+      "nome_exibicao": "Carandiru",
+      "distrito": "santana",
+      "zona": "norte",
+      "lat": -23.5100,
+      "lng": -46.6260,
+      "descricao_curta": "Próximo ao parque da Juventude, prédios novos."
+    },
+    "vila-guilherme-centro": {
+      "nome_exibicao": "Vila Guilherme",
+      "distrito": "vila-guilherme",
+      "zona": "norte",
+      "lat": -23.5170,
+      "lng": -46.6050,
+      "descricao_curta": "Industrial em transformação para residencial."
+    },
+
+    "casa-verde-centro": {
+      "nome_exibicao": "Casa Verde",
+      "distrito": "casa-verde",
+      "zona": "norte",
+      "lat": -23.5070,
+      "lng": -46.6510,
+      "descricao_curta": "Residencial popular consolidado, comércio local."
+    },
+    "limao-centro": {
+      "nome_exibicao": "Limão",
+      "distrito": "limao",
+      "zona": "norte",
+      "lat": -23.5050,
+      "lng": -46.6680,
+      "descricao_curta": "Residencial misto, próximo da marginal Tietê."
+    },
+    "vila-maria-centro": {
+      "nome_exibicao": "Vila Maria",
+      "distrito": "vila-maria",
+      "zona": "norte",
+      "lat": -23.5210,
+      "lng": -46.5840,
+      "descricao_curta": "Bairro industrial-residencial misto."
+    },
+
+    "morumbi-alto": {
+      "nome_exibicao": "Morumbi (Alto)",
+      "distrito": "morumbi",
+      "zona": "sul",
+      "lat": -23.6010,
+      "lng": -46.7160,
+      "descricao_curta": "Mansões, shopping, estádio. Caro mas sem metrô."
+    },
+    "real-parque": {
+      "nome_exibicao": "Real Parque",
+      "distrito": "morumbi",
+      "zona": "sul",
+      "lat": -23.6160,
+      "lng": -46.7280,
+      "descricao_curta": "Condomínios de alto padrão à beira do rio Pinheiros."
+    },
+    "panamby": {
+      "nome_exibicao": "Panamby",
+      "distrito": "vila-andrade",
+      "zona": "sul",
+      "lat": -23.6320,
+      "lng": -46.7240,
+      "descricao_curta": "Condomínios novos, área verde, perfil família."
+    },
+    "vila-suzana": {
+      "nome_exibicao": "Vila Suzana",
+      "distrito": "vila-sonia",
+      "zona": "oeste",
+      "lat": -23.6080,
+      "lng": -46.7400,
+      "descricao_curta": "Residencial calmo, próximo da Vila Sônia."
+    },
+
+    "butanta-centro": {
+      "nome_exibicao": "Butantã",
+      "distrito": "butanta",
+      "zona": "oeste",
+      "lat": -23.5680,
+      "lng": -46.7180,
+      "descricao_curta": "Polo universitário (USP), metrô, mistura popular e médio."
+    },
+    "city-butanta": {
+      "nome_exibicao": "City Butantã",
+      "distrito": "butanta",
+      "zona": "oeste",
+      "lat": -23.5780,
+      "lng": -46.7270,
+      "descricao_curta": "Residencial arborizado, próximo da USP."
+    },
+
+    "ipiranga-museu": {
+      "nome_exibicao": "Ipiranga",
+      "distrito": "ipiranga",
+      "zona": "sul",
+      "lat": -23.5910,
+      "lng": -46.6090,
+      "descricao_curta": "Histórico, residencial tradicional, próximo do parque do Museu."
+    },
+    "vila-mariana-paulista": {
+      "nome_exibicao": "Vila Mariana",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "lat": -23.5910,
+      "lng": -46.6340,
+      "descricao_curta": "Residencial estabelecido, com metrô e comércio."
+    },
+    "saude-centro": {
+      "nome_exibicao": "Saúde",
+      "distrito": "saude",
+      "zona": "sul",
+      "lat": -23.6160,
+      "lng": -46.6390,
+      "descricao_curta": "Residencial verticalizado com metrô na linha azul."
+    },
+
+    "perdizes-centro": {
+      "nome_exibicao": "Perdizes",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "lat": -23.5380,
+      "lng": -46.6720,
+      "descricao_curta": "Residencial e tradicional. Boas escolas, padarias clássicas, sem metrô."
+    },
+
+    "santo-amaro-centro": {
+      "nome_exibicao": "Santo Amaro",
+      "distrito": "santo-amaro",
+      "zona": "sul",
+      "lat": -23.6480,
+      "lng": -46.7050,
+      "descricao_curta": "Subcentro sul antigo, comércio forte, metrô recente."
+    },
+    "interlagos": {
+      "nome_exibicao": "Interlagos",
+      "distrito": "cidade-dutra",
+      "zona": "sul",
+      "lat": -23.6940,
+      "lng": -46.6790,
+      "descricao_curta": "Extremo sul, com autódromo, áreas verdes."
+    },
+
+    "freguesia-do-o-centro": {
+      "nome_exibicao": "Freguesia do Ó",
+      "distrito": "freguesia-do-o",
+      "zona": "norte",
+      "lat": -23.4990,
+      "lng": -46.6920,
+      "descricao_curta": "Subcentro norte popular, comércio variado."
+    },
+    "pirituba-centro": {
+      "nome_exibicao": "Pirituba",
+      "distrito": "pirituba",
+      "zona": "norte",
+      "lat": -23.4830,
+      "lng": -46.7330,
+      "descricao_curta": "Bairro residencial extenso, CPTM próxima."
+    },
+
+    "santana-imigrantes": {
+      "nome_exibicao": "Imirim",
+      "distrito": "santana",
+      "zona": "norte",
+      "lat": -23.5040,
+      "lng": -46.6440,
+      "descricao_curta": "Residencial estabelecido próximo a Santana."
+    },
+    "lauzane-paulista": {
+      "nome_exibicao": "Lauzane Paulista",
+      "distrito": "mandaqui",
+      "zona": "norte",
+      "lat": -23.4790,
+      "lng": -46.6430,
+      "descricao_curta": "Residencial calmo na zona norte média."
+    },
+
+    "vila-formosa-centro": {
+      "nome_exibicao": "Vila Formosa",
+      "distrito": "vila-formosa",
+      "zona": "leste",
+      "lat": -23.5660,
+      "lng": -46.5480,
+      "descricao_curta": "Residencial popular consolidado, próximo da Anália Franco."
+    },
+    "vila-matilde-centro": {
+      "nome_exibicao": "Vila Matilde",
+      "distrito": "vila-matilde",
+      "zona": "leste",
+      "lat": -23.5320,
+      "lng": -46.5240,
+      "descricao_curta": "Residencial leste com metrô vermelha."
+    },
+    "itaquera-centro": {
+      "nome_exibicao": "Itaquera",
+      "distrito": "itaquera",
+      "zona": "leste",
+      "lat": -23.5410,
+      "lng": -46.4570,
+      "descricao_curta": "Subcentro leste, estádio do Corinthians, metrô e shopping."
+    },
+    "sao-miguel-centro": {
+      "nome_exibicao": "São Miguel Paulista",
+      "distrito": "sao-miguel",
+      "zona": "leste",
+      "lat": -23.4980,
+      "lng": -46.4440,
+      "descricao_curta": "Subcentro extremo leste, populacional grande."
+    },
+
+    "raposo-tavares-centro": {
+      "nome_exibicao": "Raposo Tavares",
+      "distrito": "raposo-tavares",
+      "zona": "oeste",
+      "lat": -23.5950,
+      "lng": -46.7600,
+      "descricao_curta": "Extremo oeste, populacional consolidado."
+    },
+    "vila-sonia-centro": {
+      "nome_exibicao": "Vila Sônia",
+      "distrito": "vila-sonia",
+      "zona": "oeste",
+      "lat": -23.6010,
+      "lng": -46.7280,
+      "descricao_curta": "Final da linha amarela do metrô, em expansão."
+    },
+
+    "cidade-jardim": {
+      "nome_exibicao": "Cidade Jardim",
+      "distrito": "alto-de-pinheiros",
+      "zona": "oeste",
+      "lat": -23.5900,
+      "lng": -46.6970,
+      "descricao_curta": "Alto padrão, shopping de luxo, mansões."
+    },
+    "vila-nova-conceicao": {
+      "nome_exibicao": "Vila Nova Conceição",
+      "distrito": "itaim-bibi",
+      "zona": "oeste",
+      "lat": -23.5870,
+      "lng": -46.6740,
+      "descricao_curta": "Residencial alto padrão entre Itaim e Ibirapuera."
+    },
+
+    "cambuci-centro": {
+      "nome_exibicao": "Cambuci",
+      "distrito": "cambuci",
+      "zona": "centro",
+      "lat": -23.5660,
+      "lng": -46.6230,
+      "descricao_curta": "Bairro central tradicional em redescoberta, próximo à Liberdade."
+    },
+    "aclimacao": {
+      "nome_exibicao": "Aclimação",
+      "distrito": "cambuci",
+      "zona": "centro",
+      "lat": -23.5660,
+      "lng": -46.6310,
+      "descricao_curta": "Residencial com parque, tradicionalmente classe média."
+    },
+
+    "vila-medeiros-centro": {
+      "nome_exibicao": "Vila Medeiros",
+      "distrito": "vila-medeiros",
+      "zona": "norte",
+      "lat": -23.4920,
+      "lng": -46.5810,
+      "descricao_curta": "Residencial misto na zona norte."
+    },
+    "tremembe-centro": {
+      "nome_exibicao": "Tremembé",
+      "distrito": "tremembe",
+      "zona": "norte",
+      "lat": -23.4570,
+      "lng": -46.6020,
+      "descricao_curta": "Próximo da Serra da Cantareira, perfil residencial e verde."
+    },
+
+    "jardim-anchieta": {
+      "nome_exibicao": "Jardim Anchieta",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "lat": -23.6060,
+      "lng": -46.6330,
+      "descricao_curta": "Residencial próximo da Vila Mariana e parque do Ibirapuera."
+    },
+    "vila-clementino-paulista": {
+      "nome_exibicao": "Paraíso",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "lat": -23.5760,
+      "lng": -46.6450,
+      "descricao_curta": "Bairro pequeno próximo da Paulista, com metrô."
+    },
+
+    "alto-da-mooca": {
+      "nome_exibicao": "Alto da Mooca",
+      "distrito": "mooca",
+      "zona": "centro",
+      "lat": -23.5650,
+      "lng": -46.5950,
+      "descricao_curta": "Residencial alto da Mooca, mais tranquilo que o centro."
+    },
+    "agua-rasa-centro": {
+      "nome_exibicao": "Água Rasa",
+      "distrito": "agua-rasa",
+      "zona": "leste",
+      "lat": -23.5550,
+      "lng": -46.5650,
+      "descricao_curta": "Residencial leste estabelecido, próximo da Mooca e Tatuapé."
+    }
+  }
+}
