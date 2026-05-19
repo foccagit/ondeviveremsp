@@ -4,6 +4,15 @@
   margin: 0 auto;
 }
 
+.loadingHint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: var(--space-3) 0;
+}
+
 .back {
   font-family: var(--font-mono);
   font-size: var(--text-xs);

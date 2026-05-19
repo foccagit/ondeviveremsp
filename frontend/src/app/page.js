@@ -14,6 +14,7 @@ import {
   classificarProximidade,
   compararContraReferencia,
 } from '@/lib/calcularCusto';
+import { carregarDistancias, carregarPois, carregarAliases } from '@/lib/dataLoader';
 import bairros from '@/data/bairros.json';
 import transporte from '@/data/transporte.json';
 import styles from './page.module.css';
@@ -30,6 +31,34 @@ export default function HomePage() {
   const [hoveredId, setHoveredId] = useState(null);
   const [activeTab, setActiveTab] = useState('pertinho');
 
+  // Dados reais (Google Distance Matrix / Places / aliases)
+  const [distancias, setDistancias] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [pois, setPois] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [aliases, setAliases] = useState(null);
+  const [carregandoDados, setCarregandoDados] = useState(true);
+
+  useEffect(() => {
+    let canceled = false;
+    Promise.all([carregarDistancias(), carregarPois(), carregarAliases()])
+      .then(([d, p, a]) => {
+        if (canceled) return;
+        setDistancias(d);
+        setPois(p);
+        setAliases(a);
+        setCarregandoDados(false);
+      })
+      .catch((err) => {
+        if (canceled) return;
+        console.error('Erro ao carregar dados:', err);
+        setCarregandoDados(false);
+      });
+    return () => {
+      canceled = true;
+    };
+  }, []);
+
   const trabalho = useMemo(
     () => bairros.find((b) => b.id === filters.bairroTrabalho) || null,
     [filters.bairroTrabalho]
@@ -39,16 +68,17 @@ export default function HomePage() {
     if (!trabalho) return [];
     return bairros
       .map((b) => {
-        const resumo = calcularResumoBairro(b, filters, trabalho, transporte);
+        const resumo = calcularResumoBairro(b, filters, trabalho, transporte, distancias);
         return { bairro: b, resumo, proximidade: classificarProximidade(resumo.distanciaKm) };
       })
       .filter(({ resumo }) => resumo.distanciaKm <= filters.distanciaMaximaKm);
-  }, [filters, trabalho]);
+  }, [filters, trabalho, distancias]);
 
   const referencia = useMemo(() => {
-    if (dados.length === 0) return null;
-    return dados.reduce((a, b) => (a.resumo.distanciaKm <= b.resumo.distanciaKm ? a : b));
-  }, [dados]);
+    if (dados.length === 0 || !trabalho) return null;
+    // Referência sempre é o próprio bairro de trabalho
+    return dados.find((d) => d.bairro.id === trabalho.id) || null;
+  }, [dados, trabalho]);
 
   const grupos = useMemo(() => {
     const buckets = { pertinho: [], medio: [], longe: [] };
@@ -71,7 +101,7 @@ export default function HomePage() {
 
   const clearTrabalho = () => {
     setTrabalhoConfirmado(false);
-    update({ bairroTrabalho: '' });
+    update({ bairroTrabalho: '', aliasAtivo: null });
   };
 
   const showResults = trabalhoConfirmado && trabalho;
@@ -91,10 +121,17 @@ export default function HomePage() {
       )}
 
       <div className={styles.page}>
+        {carregandoDados && (
+          <div className={styles.loadingHint}>Carregando dados precisos...</div>
+        )}
         {showResults ? (
           <div className={styles.layout}>
             <main className={styles.listColumn}>
-              <WorkBanner bairro={trabalho} onClear={clearTrabalho} />
+              <WorkBanner
+                bairro={trabalho}
+                aliasAtivo={filters.aliasAtivo}
+                onClear={clearTrabalho}
+              />
               <section className={styles.results}>
                 <div className={styles.tabs} role="tablist">
                   <div
@@ -132,7 +169,11 @@ export default function HomePage() {
                       const isRef = bairro.id === referencia?.bairro.id;
                       const tradeoff = isRef
                         ? null
-                        : compararContraReferencia(resumo, referencia.resumo);
+                        : compararContraReferencia(
+                            resumo,
+                            referencia.resumo,
+                            referencia.bairro.nome
+                          );
                       return (
                         <NeighborhoodCard
                           key={bairro.id}

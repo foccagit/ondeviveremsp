@@ -25,6 +25,25 @@ function Cell({ label, value, hint, nowrap }) {
   );
 }
 
+function MesmoBairroBlock() {
+  return (
+    <div className={styles.transportBlock}>
+      <div className={styles.mesmoBairroHeader}>
+        <span className={styles.mesmoBairroLabel}>TRANSPORTE</span>
+        <h4 className={styles.mesmoBairroModal}>A pé</h4>
+      </div>
+      <p className={styles.mesmoBairroNote}>
+        Você mora e trabalha no mesmo bairro. Provavelmente caminha.
+      </p>
+      <div className={styles.transportGrid}>
+        <Cell label="Tempo estimado" value="~12 min de caminhada" />
+        <Cell label="Distância" value="~1 km ida" />
+        <Cell label="Custo mensal" value="R$ 0" />
+      </div>
+    </div>
+  );
+}
+
 function TransportBlock({ modal }) {
   if (modal.modal === 'carro') {
     return (
@@ -57,8 +76,11 @@ function TransportBlock({ modal }) {
 
   return (
     <div className={styles.transportBlock}>
+      {modal.semMetro && modal.avisoTrajeto && (
+        <p className={styles.avisoTrajeto}>{modal.avisoTrajeto}</p>
+      )}
       <div className={styles.transportGrid}>
-        <Cell label="Transporte" value={MODAL_LABEL[modal.modal]} />
+        <Cell label="Transporte" value={modal.modalLabel || MODAL_LABEL[modal.modal]} />
         <Cell
           label="Tarifa"
           value={`${formatBRL(modal.breakdown.porViagem)}/viagem`}
@@ -136,7 +158,11 @@ export default function NeighborhoodCard({
 
           <div className={styles.divider} />
 
-          <TransportBlock modal={principal} />
+          {resumo.mesmoBairro ? (
+            <MesmoBairroBlock />
+          ) : (
+            <TransportBlock modal={principal} />
+          )}
 
           <div className={styles.divider} />
 
@@ -145,15 +171,26 @@ export default function NeighborhoodCard({
               <span className={styles.totalLabel}>Total</span>
               <span className={styles.totalValue}>{formatBRL(resumo.total)}/mês</span>
             </div>
-            <p className={styles.totalContext}>
-              Sendo {formatBRL(principal.custoMensal)} em transporte · {principal.tempoMensalHoras}h
-              no trânsito
-            </p>
+            {resumo.mesmoBairro ? (
+              <p className={styles.totalContext}>
+                Sem custo de transporte · 0h no trânsito
+              </p>
+            ) : (
+              <p className={styles.totalContext}>
+                Sendo {formatBRL(principal.custoMensal)} em transporte · {principal.tempoMensalHoras}h
+                no trânsito
+              </p>
+            )}
+            {(principal.modal === 'carro' || principal.modal === 'uber') && (
+              <p className={styles.notaPico}>
+                Tempos em horário normal. Em pico (7-10h e 17-20h), pode aumentar 40-70%.
+              </p>
+            )}
           </div>
 
           <blockquote className={styles.narrativa}>
             {isReference || !tradeoff
-              ? 'Bairro de referência. Mais perto, mas mais caro.'
+              ? 'Você mora e trabalha aqui. Custo mais alto, mas zero tempo no trânsito — máxima qualidade de vida.'
               : tradeoff.mensagem}
           </blockquote>
 

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Suspense, useMemo } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import {
   BarChart,
   Bar,
@@ -16,6 +16,7 @@ import bairros from '@/data/bairros.json';
 import transporte from '@/data/transporte.json';
 import { useFilters } from '@/hooks/useFilters';
 import { calcularResumoBairro, compararContraReferencia } from '@/lib/calcularCusto';
+import { carregarDistancias, carregarPois, getPois } from '@/lib/dataLoader';
 import { formatBRL, formatNumber, formatScore, formatBool, formatM2 } from '@/lib/format';
 import styles from './page.module.css';
 
@@ -25,6 +26,24 @@ const MODAL_LABEL = {
   metro: 'Metrô',
   onibus: 'Ônibus',
 };
+
+function formatPoiList(poiCategoria) {
+  if (!poiCategoria || poiCategoria.total === 0) return '—';
+  const { total, tem_mais, nomes } = poiCategoria;
+  const plus = tem_mais ? '+' : '';
+  if (nomes && nomes.length > 0) {
+    const shown = nomes.slice(0, 2).join(', ');
+    const extra = nomes.length > 2 ? '…' : '';
+    return `${shown}${extra} (${total}${plus})`;
+  }
+  return `${total}${plus}`;
+}
+
+function formatPoiCount(poiCategoria) {
+  if (!poiCategoria || poiCategoria.total === 0) return '0';
+  const { total, tem_mais } = poiCategoria;
+  return `${total}${tem_mais ? '+' : ''}`;
+}
 
 export default function CompararPage() {
   return (
@@ -50,13 +69,49 @@ function CompararInner() {
     bairros.find((b) => b.id === filters.bairroTrabalho) ||
     selecionados[0];
 
+  const [distancias, setDistancias] = useState(null);
+  const [pois, setPois] = useState(null);
+  const [carregandoDados, setCarregandoDados] = useState(true);
+
+  useEffect(() => {
+    let canceled = false;
+    carregarDistancias()
+      .then((d) => {
+        if (canceled) return;
+        setDistancias(d);
+        setCarregandoDados(false);
+      })
+      .catch((err) => {
+        if (canceled) return;
+        console.error('Erro ao carregar distancias:', err);
+        setCarregandoDados(false);
+      });
+    return () => {
+      canceled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    let canceled = false;
+    carregarPois()
+      .then((data) => {
+        if (!canceled) setPois(data);
+      })
+      .catch((err) => {
+        if (!canceled) console.error('Erro ao carregar pois:', err);
+      });
+    return () => {
+      canceled = true;
+    };
+  }, []);
+
   const dados = useMemo(() => {
     if (!trabalho) return [];
     return selecionados.map((b) => ({
       bairro: b,
-      resumo: calcularResumoBairro(b, filters, trabalho, transporte),
+      resumo: calcularResumoBairro(b, filters, trabalho, transporte, distancias),
     }));
-  }, [selecionados, filters, trabalho]);
+  }, [selecionados, filters, trabalho, distancias]);
 
   const chartData = dados.map((d) => ({
     nome: d.bairro.nome,
@@ -69,7 +124,7 @@ function CompararInner() {
       for (let j = i + 1; j < dados.length; j++) {
         const a = dados[i];
         const b = dados[j];
-        const cmpAB = compararContraReferencia(a.resumo, b.resumo);
+        const cmpAB = compararContraReferencia(a.resumo, b.resumo, b.bairro.nome);
         pairs.push({ from: a.bairro, to: b.bairro, cmp: cmpAB });
       }
     }
@@ -98,42 +153,68 @@ function CompararInner() {
         ← Voltar ao mapa
       </Link>
 
-      <div className={styles.columns} data-count={dados.length}>
-        {dados.map(({ bairro, resumo }) => (
-          <div key={bairro.id} className={styles.column}>
-            <h2 className={styles.colName}>{bairro.nome}</h2>
-            <span className={styles.colZone}>zona {bairro.zona}</span>
+      {carregandoDados && (
+        <div className={styles.loadingHint}>Carregando dados precisos...</div>
+      )}
 
-            <dl className={styles.metrics}>
-              <Row label="Aluguel/m²" value={formatM2(bairro.aluguelMedioM2)} />
-              <Row
-                label={`Aluguel (${filters.tamanhoImovel}m²)`}
-                value={formatBRL(resumo.aluguel)}
-              />
-              <Row label="Condomínio" value={formatBRL(resumo.condominio)} />
-              <Row
-                label={`Transporte (${MODAL_LABEL[resumo.modalPrincipal.modal]})`}
-                value={formatBRL(resumo.modalPrincipal.custoMensal)}
-              />
-              <Row label="Custo total" value={formatBRL(resumo.total)} emphasized />
-              <Row
-                label="Distância do trabalho"
-                value={`${resumo.distanciaKm.toFixed(1)} km`}
-              />
-              <Row
-                label="Tempo/mês no trânsito"
-                value={`${resumo.modalPrincipal.tempoMensalHoras} h`}
-              />
-              <Row label="Renda média" value={formatBRL(bairro.renda)} />
-              <Row label="População" value={formatNumber(bairro.populacao)} />
-              <Row label="Segurança" value={formatScore(bairro.seguranca)} />
-              <Row label="Tem metrô" value={formatBool(bairro.metro)} />
-              <Row label="Vida noturna" value={`${bairro.vidaNoturna}/10`} />
-              <Row label="Comércio" value={`${bairro.comercio}/10`} />
-              <Row label="Parques" value={`${bairro.parques}/10`} />
-            </dl>
-          </div>
-        ))}
+      <div className={styles.columns} data-count={dados.length}>
+        {dados.map(({ bairro, resumo }) => {
+          const poisBairro = pois ? getPois(pois, bairro.id) : null;
+          return (
+            <div key={bairro.id} className={styles.column}>
+              <h2 className={styles.colName}>{bairro.nome}</h2>
+              <span className={styles.colZone}>zona {bairro.zona}</span>
+
+              <dl className={styles.metrics}>
+                <Row label="Aluguel/m²" value={formatM2(bairro.aluguelMedioM2)} />
+                <Row
+                  label={`Aluguel (${filters.tamanhoImovel}m²)`}
+                  value={formatBRL(resumo.aluguel)}
+                />
+                <Row label="Condomínio" value={formatBRL(resumo.condominio)} />
+                <Row
+                  label={`Transporte (${MODAL_LABEL[resumo.modalPrincipal.modal]})`}
+                  value={formatBRL(resumo.modalPrincipal.custoMensal)}
+                />
+                <Row label="Custo total" value={formatBRL(resumo.total)} emphasized />
+                <Row
+                  label="Distância do trabalho"
+                  value={`${resumo.distanciaKm.toFixed(1)} km`}
+                />
+                <Row
+                  label="Tempo/mês no trânsito"
+                  value={`${resumo.modalPrincipal.tempoMensalHoras} h`}
+                />
+                <Row label="Renda média" value={formatBRL(bairro.renda)} />
+                <Row label="População" value={formatNumber(bairro.populacao)} />
+                <Row label="Segurança" value={formatScore(bairro.seguranca)} />
+                <Row label="Tem metrô" value={formatBool(bairro.metro)} />
+                <Row label="Vida noturna" value={`${bairro.vidaNoturna}/10`} />
+                <Row label="Comércio" value={`${bairro.comercio}/10`} />
+                <Row label="Parques" value={`${bairro.parques}/10`} />
+
+                {pois && (
+                  <>
+                    <Row label="Estações de metrô" value={formatPoiList(poisBairro?.metroEstacoes)} />
+                    <Row label="Supermercados" value={formatPoiCount(poisBairro?.supermercados)} />
+                    <Row label="Bares e restaurantes" value={formatPoiCount(poisBairro?.barRestaurantes)} />
+                    <Row label="Padarias" value={formatPoiCount(poisBairro?.padarias)} />
+                    <Row label="Farmácias" value={formatPoiCount(poisBairro?.farmacias)} />
+                    <Row label="Bancos" value={formatPoiCount(poisBairro?.bancos)} />
+                    <Row label="Postos de gasolina" value={formatPoiCount(poisBairro?.postosGasolina)} />
+                    <Row label="Escolas" value={formatPoiCount(poisBairro?.escolas)} />
+                    <Row label="Academias" value={formatPoiCount(poisBairro?.academias)} />
+                    <Row label="Cinemas" value={formatPoiCount(poisBairro?.cinemas)} />
+                    <Row label="Áreas verdes" value={formatPoiList(poisBairro?.parques)} />
+                    <Row label="Hospitais" value={formatPoiList(poisBairro?.hospitais)} />
+                    <Row label="Shoppings" value={formatPoiList(poisBairro?.shoppings)} />
+                    <Row label="Museus" value={formatPoiList(poisBairro?.museus)} />
+                  </>
+                )}
+              </dl>
+            </div>
+          );
+        })}
       </div>
 
       {mounted && chartData.length >= 2 && (

@@ -10,6 +10,7 @@ const DEFAULT_FILTERS = {
   prioridades: ['metro', 'seguranca'],
   tamanhoImovel: 50,
   distanciaMaximaKm: 10,
+  aliasAtivo: null,
 };
 
 function sanitize(saved) {
@@ -28,6 +29,7 @@ function sanitize(saved) {
   }
   // Always start a session with no bairro de trabalho picked
   merged.bairroTrabalho = '';
+  merged.aliasAtivo = null;
   return merged;
 }
 
