@@ -7510,24 +7510,59 @@
     },
     "sao-miguel": {
       "hospitais": {
-        "total": 0,
-        "tem_mais": false,
-        "nomes": []
+        "total": 20,
+        "tem_mais": true,
+        "nomes": [
+          "Hospital Municipal Tide Setubal",
+          "Hospital Municipal Professor Doutor Alípio Corrêa Netto – Ermelino Matarazzo",
+          "HOSPITAL DIA SÃO MIGUEL - DR TITO LOPES DA SILVA - CIES I",
+          "Hospital Ermelino Matarazzo",
+          "Hospital São Miguel",
+          "Hospital Dia São Miguel",
+          "Hospital Independência",
+          "UBS Vila Curuçá",
+          "CTA IST/Aids São Miguel- Centro De Testagem E Aconselhamento",
+          "Doutor SP - Centro Médico"
+        ]
       },
       "shoppings": {
-        "total": 0,
+        "total": 13,
         "tem_mais": false,
-        "nomes": []
+        "nomes": [
+          "Shopping Estaçāo Sāo Miguel",
+          "Shopping Marechal",
+          "Outlet São Miguel",
+          "jacui imports",
+          "Galeria Arlindo Colaço",
+          "Mini Shopping Vila Mara",
+          "Shopping SubZero",
+          "Shop Erica",
+          "Hype Outlet",
+          "Casa de assados BMS"
+        ]
       },
       "parques": {
-        "total": 0,
+        "total": 12,
         "tem_mais": false,
-        "nomes": []
+        "nomes": [
+          "EE Parque Jacuí",
+          "Pracinha do Morumbizinho Vila Jacui - Fortunato da Silveira",
+          "Praça Fortunato da Silbeira",
+          "Antônio Assis Pereira Square",
+          "Kemuel Efraim Silva",
+          "Skate Park D'avó Hell",
+          "Praça Guamirim",
+          "Praça (Jaime)",
+          "Parque lazer",
+          "Campinho do Tide"
+        ]
       },
       "metroEstacoes": {
-        "total": 0,
+        "total": 1,
         "tem_mais": false,
-        "nomes": []
+        "nomes": [
+          "São Miguel Paulista"
+        ]
       },
       "museus": {
         "total": 0,
@@ -7535,40 +7570,40 @@
         "nomes": []
       },
       "cinemas": {
-        "total": 0,
-        "tem_mais": false
-      },
-      "supermercados": {
-        "total": 0,
-        "tem_mais": false
-      },
-      "barRestaurantes": {
         "total": 1,
         "tem_mais": false
       },
-      "padarias": {
-        "total": 0,
+      "supermercados": {
+        "total": 15,
         "tem_mais": false
+      },
+      "barRestaurantes": {
+        "total": 20,
+        "tem_mais": true
+      },
+      "padarias": {
+        "total": 20,
+        "tem_mais": true
       },
       "farmacias": {
-        "total": 0,
-        "tem_mais": false
+        "total": 20,
+        "tem_mais": true
       },
       "bancos": {
-        "total": 0,
+        "total": 13,
         "tem_mais": false
       },
       "postosGasolina": {
-        "total": 0,
+        "total": 16,
         "tem_mais": false
       },
       "escolas": {
-        "total": 0,
-        "tem_mais": false
+        "total": 20,
+        "tem_mais": true
       },
       "academias": {
-        "total": 0,
-        "tem_mais": false
+        "total": 20,
+        "tem_mais": true
       }
     },
     "sao-rafael": {

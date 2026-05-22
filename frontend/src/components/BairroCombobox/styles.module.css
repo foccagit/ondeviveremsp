@@ -1,0 +1,82 @@
+.combobox {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 8px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-fg);
+  outline: none;
+}
+
+.input:focus {
+  border-bottom-color: var(--color-fg);
+}
+
+.input::placeholder {
+  color: var(--color-muted);
+}
+
+.opcoes {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  z-index: 100;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.opcao {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.opcao:last-child {
+  border-bottom: none;
+}
+
+.opcao:hover,
+.opcaoAtiva {
+  background: var(--color-surface);
+}
+
+.opcaoLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-fg);
+}
+
+.opcaoSubtitulo {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.semResultados {
+  padding: 16px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}

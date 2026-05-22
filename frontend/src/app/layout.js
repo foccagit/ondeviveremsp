@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from 'next/font/google';
 import { GeistSans } from 'geist/font/sans';
 import Header from '@/components/Layout/Header';
+import Footer from '@/components/Layout/Footer';
 import { CompareProvider } from '@/lib/CompareContext';
 import './globals.css';
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
         <CompareProvider>
           <Header />
           <main>{children}</main>
+          <Footer />
         </CompareProvider>
       </body>
     </html>

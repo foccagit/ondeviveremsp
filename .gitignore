@@ -42,3 +42,4 @@ backend/data/
 # Playwright (futuro)
 playwright-report/
 test-results/
+*.bak*

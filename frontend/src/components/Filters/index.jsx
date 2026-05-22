@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import bairros from '@/data/bairros.json';
+import BairroCombobox from '@/components/BairroCombobox';
 import styles from './styles.module.css';
 
 const PRESETS_TAMANHO = [
@@ -72,7 +72,6 @@ export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggl
     onUpdate({ tamanhoImovel: clamped });
   };
 
-  const bairroAtual = bairros.find((b) => b.id === filters.bairroTrabalho);
   const transporteSummary =
     filters.transporte.length === 0
       ? 'Nenhum'
@@ -87,28 +86,14 @@ export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggl
 
   return (
     <div className={styles.filters}>
-      <Dropdown label="Bairro de trabalho" summary={bairroAtual?.nome || 'Escolha um bairro'}>
-        {({ close }) => (
-          <ul className={styles.list}>
-            {[...bairros]
-              .sort((a, b) => a.nome.localeCompare(b.nome))
-              .map((b) => (
-                <li key={b.id}>
-                  <button
-                    type="button"
-                    className={`${styles.option} ${b.id === filters.bairroTrabalho ? styles.optionActive : ''}`}
-                    onClick={() => {
-                      onUpdate({ bairroTrabalho: b.id });
-                      close();
-                    }}
-                  >
-                    {b.nome}
-                  </button>
-                </li>
-              ))}
-          </ul>
-        )}
-      </Dropdown>
+      <div className={styles.dropdown}>
+        <span className={styles.label}>Bairro de trabalho</span>
+        <BairroCombobox
+          value={filters.bairroTrabalho}
+          onChange={(id) => onUpdate({ bairroTrabalho: id })}
+          onAliasChange={(alias) => onUpdate({ aliasAtivo: alias })}
+        />
+      </div>
 
       <Dropdown label="Tamanho do imóvel" summary={`${filters.tamanhoImovel} m²`}>
         <div className={styles.panelStack}>
