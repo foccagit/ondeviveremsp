@@ -170,6 +170,7 @@ function CompararInner() {
                 <Row
                   label={`Aluguel (${filters.tamanhoImovel}m²)`}
                   value={formatBRL(resumo.aluguel)}
+                  badge={bairro.aluguelFonte === 'estimado' ? 'estimado' : null}
                 />
                 <Row label="Condomínio" value={formatBRL(resumo.condominio)} />
                 <Row
@@ -295,10 +296,13 @@ function narrativaPar(from, to, cmp) {
   return `${from.nome} é mais caro E mais distante que ${to.nome}. Provavelmente não compensa.`;
 }
 
-function Row({ label, value, emphasized }) {
+function Row({ label, value, emphasized, badge }) {
   return (
     <div className={styles.row}>
-      <dt className={styles.rowLabel}>{label}</dt>
+      <dt className={styles.rowLabel}>
+        {label}
+        {badge && <span className={styles.badge}>{badge}</span>}
+      </dt>
       <dd className={`${styles.rowValue} ${emphasized ? styles.rowValueEmphasized : ''}`}>
         {value}
       </dd>

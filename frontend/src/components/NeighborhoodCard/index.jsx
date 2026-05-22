@@ -147,7 +147,12 @@ export default function NeighborhoodCard({
 
           <div className={styles.rentRow}>
             <div className={styles.metric}>
-              <span className={styles.metricLabel}>Aluguel ({tamanhoImovel}m²)</span>
+              <span className={styles.metricLabel}>
+                Aluguel ({tamanhoImovel}m²)
+                {bairro.aluguelFonte === 'estimado' && (
+                  <span className={styles.badge}>estimado</span>
+                )}
+              </span>
               <span className={styles.metricValue}>{formatBRL(resumo.aluguel)}</span>
             </div>
             <div className={styles.metric}>

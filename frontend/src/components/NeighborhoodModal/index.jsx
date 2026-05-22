@@ -13,10 +13,13 @@ const MODAL_LABEL = {
   onibus: 'ônibus',
 };
 
-function Row({ label, value }) {
+function Row({ label, value, badge }) {
   return (
     <div className={styles.row}>
-      <dt className={styles.rowLabel}>{label}</dt>
+      <dt className={styles.rowLabel}>
+        {label}
+        {badge && <span className={styles.badge}>{badge}</span>}
+      </dt>
       <dd className={styles.rowValue}>{value}</dd>
     </div>
   );
@@ -181,7 +184,11 @@ export default function NeighborhoodModal({
         <section className={styles.section}>
           <h3 className={styles.sectionTitle}>Custo estimado ({tamanhoImovel}m²)</h3>
           <dl className={styles.rows}>
-            <Row label="Aluguel" value={formatBRL(resumo.aluguel)} />
+            <Row
+              label="Aluguel"
+              value={formatBRL(resumo.aluguel)}
+              badge={bairro.aluguelFonte === 'estimado' ? 'estimado' : null}
+            />
             <Row label="Condomínio" value={formatBRL(resumo.condominio)} />
             <Row
               label={`Transporte (${modalLabel})`}

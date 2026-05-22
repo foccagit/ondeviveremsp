@@ -1,0 +1,386 @@
+{
+  "pinheiros": {
+    "aluguelMedioM2": 95.3,
+    "aluguelFonte": "real"
+  },
+  "itaim-bibi": {
+    "aluguelMedioM2": 87.5,
+    "aluguelFonte": "real"
+  },
+  "jardim-paulista": {
+    "aluguelMedioM2": 143.5,
+    "aluguelFonte": "real"
+  },
+  "alto-de-pinheiros": {
+    "aluguelMedioM2": 64.8,
+    "aluguelFonte": "real"
+  },
+  "vila-leopoldina": {
+    "aluguelMedioM2": 60.0,
+    "aluguelFonte": "estimado"
+  },
+  "perdizes": {
+    "aluguelMedioM2": 75.0,
+    "aluguelFonte": "estimado"
+  },
+  "lapa": {
+    "aluguelMedioM2": 50.0,
+    "aluguelFonte": "estimado"
+  },
+  "barra-funda": {
+    "aluguelMedioM2": 52.5,
+    "aluguelFonte": "estimado"
+  },
+  "butanta": {
+    "aluguelMedioM2": 45.0,
+    "aluguelFonte": "estimado"
+  },
+  "morumbi": {
+    "aluguelMedioM2": 50.5,
+    "aluguelFonte": "real"
+  },
+  "rio-pequeno": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "raposo-tavares": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-sonia": {
+    "aluguelMedioM2": 38.0,
+    "aluguelFonte": "estimado"
+  },
+  "jaguara": {
+    "aluguelMedioM2": 27.0,
+    "aluguelFonte": "real"
+  },
+  "jaguare": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "jaragua": {
+    "aluguelMedioM2": 26.0,
+    "aluguelFonte": "estimado"
+  },
+  "moema": {
+    "aluguelMedioM2": 84.8,
+    "aluguelFonte": "real"
+  },
+  "campo-belo": {
+    "aluguelMedioM2": 83.6,
+    "aluguelFonte": "real"
+  },
+  "vila-mariana": {
+    "aluguelMedioM2": 72.5,
+    "aluguelFonte": "real"
+  },
+  "saude": {
+    "aluguelMedioM2": 37.9,
+    "aluguelFonte": "real"
+  },
+  "santo-amaro": {
+    "aluguelMedioM2": 55.0,
+    "aluguelFonte": "estimado"
+  },
+  "cursino": {
+    "aluguelMedioM2": 38.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-andrade": {
+    "aluguelMedioM2": 45.0,
+    "aluguelFonte": "estimado"
+  },
+  "ipiranga": {
+    "aluguelMedioM2": 42.0,
+    "aluguelFonte": "estimado"
+  },
+  "sacoma": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "cidade-ademar": {
+    "aluguelMedioM2": 43.7,
+    "aluguelFonte": "real"
+  },
+  "jabaquara": {
+    "aluguelMedioM2": 40.0,
+    "aluguelFonte": "estimado"
+  },
+  "pedreira": {
+    "aluguelMedioM2": 25.0,
+    "aluguelFonte": "estimado"
+  },
+  "jardim-sao-luis": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "jardim-angela": {
+    "aluguelMedioM2": 22.0,
+    "aluguelFonte": "estimado"
+  },
+  "capao-redondo": {
+    "aluguelMedioM2": 25.0,
+    "aluguelFonte": "estimado"
+  },
+  "cidade-dutra": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "socorro": {
+    "aluguelMedioM2": 30.0,
+    "aluguelFonte": "estimado"
+  },
+  "campo-grande": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "grajau": {
+    "aluguelMedioM2": 26.1,
+    "aluguelFonte": "real"
+  },
+  "marsilac": {
+    "aluguelMedioM2": 18.0,
+    "aluguelFonte": "estimado"
+  },
+  "parelheiros": {
+    "aluguelMedioM2": 20.0,
+    "aluguelFonte": "estimado"
+  },
+  "cidade-lider": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "campo-limpo": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "consolacao": {
+    "aluguelMedioM2": 75.0,
+    "aluguelFonte": "estimado"
+  },
+  "republica": {
+    "aluguelMedioM2": 45.0,
+    "aluguelFonte": "estimado"
+  },
+  "se": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "bela-vista": {
+    "aluguelMedioM2": 55.0,
+    "aluguelFonte": "estimado"
+  },
+  "liberdade": {
+    "aluguelMedioM2": 50.0,
+    "aluguelFonte": "estimado"
+  },
+  "santa-cecilia": {
+    "aluguelMedioM2": 48.0,
+    "aluguelFonte": "estimado"
+  },
+  "cambuci": {
+    "aluguelMedioM2": 40.0,
+    "aluguelFonte": "estimado"
+  },
+  "mooca": {
+    "aluguelMedioM2": 40.0,
+    "aluguelFonte": "real"
+  },
+  "vila-formosa": {
+    "aluguelMedioM2": 43.7,
+    "aluguelFonte": "real"
+  },
+  "artur-alvim": {
+    "aluguelMedioM2": 25.3,
+    "aluguelFonte": "real"
+  },
+  "sao-mateus": {
+    "aluguelMedioM2": 29.3,
+    "aluguelFonte": "real"
+  },
+  "tatuape": {
+    "aluguelMedioM2": 45.0,
+    "aluguelFonte": "estimado"
+  },
+  "agua-rasa": {
+    "aluguelMedioM2": 38.0,
+    "aluguelFonte": "estimado"
+  },
+  "bras": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "belem": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "pari": {
+    "aluguelMedioM2": 30.0,
+    "aluguelFonte": "estimado"
+  },
+  "carrao": {
+    "aluguelMedioM2": 40.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-matilde": {
+    "aluguelMedioM2": 30.0,
+    "aluguelFonte": "estimado"
+  },
+  "penha": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-prudente": {
+    "aluguelMedioM2": 38.0,
+    "aluguelFonte": "estimado"
+  },
+  "sao-lucas": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "sapopemba": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "aricanduva": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-jacui": {
+    "aluguelMedioM2": 26.0,
+    "aluguelFonte": "estimado"
+  },
+  "jardim-helena": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "ermelino-matarazzo": {
+    "aluguelMedioM2": 26.0,
+    "aluguelFonte": "estimado"
+  },
+  "ponte-rasa": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "sao-miguel": {
+    "aluguelMedioM2": 26.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-curuca": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "itaim-paulista": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "jose-bonifacio": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "cidade-tiradentes": {
+    "aluguelMedioM2": 22.0,
+    "aluguelFonte": "estimado"
+  },
+  "iguatemi": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "itaquera": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "guaianases": {
+    "aluguelMedioM2": 22.0,
+    "aluguelFonte": "estimado"
+  },
+  "lajeado": {
+    "aluguelMedioM2": 22.0,
+    "aluguelFonte": "estimado"
+  },
+  "parque-do-carmo": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "cangaiba": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "sao-rafael": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "mandaqui": {
+    "aluguelMedioM2": 34.2,
+    "aluguelFonte": "real"
+  },
+  "santana": {
+    "aluguelMedioM2": 45.0,
+    "aluguelFonte": "estimado"
+  },
+  "tucuruvi": {
+    "aluguelMedioM2": 38.0,
+    "aluguelFonte": "estimado"
+  },
+  "tremembe": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "casa-verde": {
+    "aluguelMedioM2": 40.0,
+    "aluguelFonte": "estimado"
+  },
+  "limao": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "freguesia-do-o": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "brasilandia": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-maria": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-guilherme": {
+    "aluguelMedioM2": 38.0,
+    "aluguelFonte": "estimado"
+  },
+  "vila-medeiros": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "anhanguera": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "pirituba": {
+    "aluguelMedioM2": 32.0,
+    "aluguelFonte": "estimado"
+  },
+  "perus": {
+    "aluguelMedioM2": 24.0,
+    "aluguelFonte": "estimado"
+  },
+  "jacana": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "cachoeirinha": {
+    "aluguelMedioM2": 28.0,
+    "aluguelFonte": "estimado"
+  },
+  "sao-domingos": {
+    "aluguelMedioM2": 35.0,
+    "aluguelFonte": "estimado"
+  },
+  "bom-retiro": {
+    "aluguelMedioM2": 50.0,
+    "aluguelFonte": "estimado"
+  }
+}

@@ -3,7 +3,7 @@
     "id": "agua-rasa",
     "nome": "Água Rasa",
     "zona": "leste",
-    "aluguelMedioM2": 41,
+    "aluguelMedioM2": 38,
     "condominioMedio": 850,
     "renda": 9323,
     "populacao": 113323,
@@ -15,13 +15,14 @@
     "descricao": "Leste residencial, próximo à Mooca.",
     "lat": -23.553209,
     "lng": -46.58189,
-    "descricaoLonga": "Leste residencial, próximo à Mooca. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste residencial, próximo à Mooca. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "alto-de-pinheiros",
     "nome": "Alto de Pinheiros",
     "zona": "oeste",
-    "aluguelMedioM2": 75,
+    "aluguelMedioM2": 64.8,
     "condominioMedio": 1260,
     "renda": 15950,
     "populacao": 102950,
@@ -33,13 +34,14 @@
     "descricao": "Residencial nobre próximo ao Villa-Lobos.",
     "lat": -23.553274,
     "lng": -46.70963,
-    "descricaoLonga": "Residencial nobre próximo ao Villa-Lobos. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Residencial nobre próximo ao Villa-Lobos. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "anhanguera",
     "nome": "Anhanguera",
     "zona": "oeste",
-    "aluguelMedioM2": 23,
+    "aluguelMedioM2": 24,
     "condominioMedio": 230,
     "renda": 3790,
     "populacao": 163490,
@@ -51,7 +53,8 @@
     "descricao": "Extremo noroeste, atravessada pela rodovia. Mais rural que urbano.",
     "lat": -23.437879,
     "lng": -46.79328,
-    "descricaoLonga": "Extremo noroeste, atravessada pela rodovia. Mais rural que urbano. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Extremo noroeste, atravessada pela rodovia. Mais rural que urbano. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "aricanduva",
@@ -69,13 +72,14 @@
     "descricao": "Shopping Aricanduva, leste comercial.",
     "lat": -23.579519,
     "lng": -46.511026,
-    "descricaoLonga": "Shopping Aricanduva, leste comercial. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Shopping Aricanduva, leste comercial. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "artur-alvim",
     "nome": "Artur Alvim",
     "zona": "leste",
-    "aluguelMedioM2": 49,
+    "aluguelMedioM2": 25.3,
     "condominioMedio": 850,
     "renda": 8063,
     "populacao": 102063,
@@ -87,13 +91,14 @@
     "descricao": "Leste com metrô vermelho, residencial popular.",
     "lat": -23.545965,
     "lng": -46.468954,
-    "descricaoLonga": "Leste com metrô vermelho, residencial popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Leste com metrô vermelho, residencial popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "barra-funda",
     "nome": "Barra Funda",
     "zona": "oeste",
-    "aluguelMedioM2": 35,
+    "aluguelMedioM2": 52.5,
     "condominioMedio": 640,
     "renda": 10610,
     "populacao": 274610,
@@ -105,13 +110,14 @@
     "descricao": "Centro-oeste com estação multimodal, polo cultural.",
     "lat": -23.529192,
     "lng": -46.660999,
-    "descricaoLonga": "Centro-oeste com estação multimodal, polo cultural. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro-oeste com estação multimodal, polo cultural. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "bela-vista",
     "nome": "Bela Vista",
     "zona": "centro",
-    "aluguelMedioM2": 89,
+    "aluguelMedioM2": 55,
     "condominioMedio": 1080,
     "renda": 20579,
     "populacao": 299579,
@@ -123,13 +129,14 @@
     "descricao": "Bixiga, cantinas italianas, teatros. Centro vibrante mas urbano.",
     "lat": -23.555405,
     "lng": -46.645643,
-    "descricaoLonga": "Bixiga, cantinas italianas, teatros. Centro vibrante mas urbano. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Percepção de segurança alta. Atendido por estações de metrô."
+    "descricaoLonga": "Bixiga, cantinas italianas, teatros. Centro vibrante mas urbano. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Percepção de segurança alta. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "belem",
     "nome": "Belém",
     "zona": "leste",
-    "aluguelMedioM2": 49,
+    "aluguelMedioM2": 35,
     "condominioMedio": 850,
     "renda": 8397,
     "populacao": 122397,
@@ -141,13 +148,14 @@
     "descricao": "Centro leste, tradicional, sede do parque Dom Pedro.",
     "lat": -23.543319,
     "lng": -46.587074,
-    "descricaoLonga": "Centro leste, tradicional, sede do parque Dom Pedro. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro leste, tradicional, sede do parque Dom Pedro. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "bom-retiro",
     "nome": "Bom Retiro",
     "zona": "centro",
-    "aluguelMedioM2": 57,
+    "aluguelMedioM2": 50,
     "condominioMedio": 710,
     "renda": 6699,
     "populacao": 200699,
@@ -159,13 +167,14 @@
     "descricao": "Centro, polo coreano e judaico, comércio têxtil.",
     "lat": -23.52567,
     "lng": -46.640706,
-    "descricaoLonga": "Centro, polo coreano e judaico, comércio têxtil. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro, polo coreano e judaico, comércio têxtil. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "bras",
     "nome": "Brás",
     "zona": "centro",
-    "aluguelMedioM2": 48,
+    "aluguelMedioM2": 32,
     "condominioMedio": 780,
     "renda": 8850,
     "populacao": 132850,
@@ -177,13 +186,14 @@
     "descricao": "Centro do comércio popular paulistano, atacadistas roupas.",
     "lat": -23.537739,
     "lng": -46.613951,
-    "descricaoLonga": "Centro do comércio popular paulistano, atacadistas roupas. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro do comércio popular paulistano, atacadistas roupas. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "brasilandia",
     "nome": "Brasilândia",
     "zona": "norte",
-    "aluguelMedioM2": 20,
+    "aluguelMedioM2": 28,
     "condominioMedio": 260,
     "renda": 3651,
     "populacao": 89851,
@@ -195,13 +205,14 @@
     "descricao": "Periferia norte com nova linha laranja. Densidade alta e relevo acidentado.",
     "lat": -23.470333,
     "lng": -46.689978,
-    "descricaoLonga": "Periferia norte com nova linha laranja. Densidade alta e relevo acidentado. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Atendido por estações de metrô."
+    "descricaoLonga": "Periferia norte com nova linha laranja. Densidade alta e relevo acidentado. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "butanta",
     "nome": "Butantã",
     "zona": "oeste",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 45,
     "condominioMedio": 570,
     "renda": 10165,
     "populacao": 239165,
@@ -213,13 +224,14 @@
     "descricao": "Universitário, próximo à USP. Mistura intelectualidade e ruas residenciais.",
     "lat": -23.563487,
     "lng": -46.72101,
-    "descricaoLonga": "Universitário, próximo à USP. Mistura intelectualidade e ruas residenciais. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Universitário, próximo à USP. Mistura intelectualidade e ruas residenciais. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cachoeirinha",
     "nome": "Cachoeirinha",
     "zona": "norte",
-    "aluguelMedioM2": 20,
+    "aluguelMedioM2": 28,
     "condominioMedio": 260,
     "renda": 2876,
     "populacao": 146576,
@@ -231,13 +243,14 @@
     "descricao": "Periferia norte densa, vida cultural forte, sem metrô direto.",
     "lat": -23.464448,
     "lng": -46.655349,
-    "descricaoLonga": "Periferia norte densa, vida cultural forte, sem metrô direto. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia norte densa, vida cultural forte, sem metrô direto. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cambuci",
     "nome": "Cambuci",
     "zona": "centro",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 40,
     "condominioMedio": 780,
     "renda": 7248,
     "populacao": 86248,
@@ -249,13 +262,14 @@
     "descricao": "Centro-sul tradicional, ladeiras e arquitetura antiga.",
     "lat": -23.564473,
     "lng": -46.621113,
-    "descricaoLonga": "Centro-sul tradicional, ladeiras e arquitetura antiga. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Centro-sul tradicional, ladeiras e arquitetura antiga. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "campo-belo",
     "nome": "Campo Belo",
     "zona": "sul",
-    "aluguelMedioM2": 113,
+    "aluguelMedioM2": 83.6,
     "condominioMedio": 1080,
     "renda": 16096,
     "populacao": 291096,
@@ -267,13 +281,14 @@
     "descricao": "Residencial alto padrão, próximo ao aeroporto de Congonhas.",
     "lat": -23.62203,
     "lng": -46.67202,
-    "descricaoLonga": "Residencial alto padrão, próximo ao aeroporto de Congonhas. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Percepção de segurança alta. Atendido por estações de metrô."
+    "descricaoLonga": "Residencial alto padrão, próximo ao aeroporto de Congonhas. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Percepção de segurança alta. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "campo-grande",
     "nome": "Campo Grande",
     "zona": "sul",
-    "aluguelMedioM2": 46,
+    "aluguelMedioM2": 32,
     "condominioMedio": 570,
     "renda": 8723,
     "populacao": 177723,
@@ -285,13 +300,14 @@
     "descricao": "Sul classe média baixa.",
     "lat": -23.67809,
     "lng": -46.687237,
-    "descricaoLonga": "Sul classe média baixa. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul classe média baixa. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "campo-limpo",
     "nome": "Campo Limpo",
     "zona": "oeste",
-    "aluguelMedioM2": 45,
+    "aluguelMedioM2": 32,
     "condominioMedio": 570,
     "renda": 9381,
     "populacao": 108381,
@@ -303,13 +319,14 @@
     "descricao": "Sul periférico denso, metrô lilás.",
     "lat": -23.634796,
     "lng": -46.75499,
-    "descricaoLonga": "Sul periférico denso, metrô lilás. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul periférico denso, metrô lilás. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cangaiba",
     "nome": "Cangaíba",
     "zona": "leste",
-    "aluguelMedioM2": 40,
+    "aluguelMedioM2": 28,
     "condominioMedio": 500,
     "renda": 6814,
     "populacao": 130814,
@@ -321,13 +338,14 @@
     "descricao": "Leste perto da Penha, residencial popular.",
     "lat": -23.50505,
     "lng": -46.527094,
-    "descricaoLonga": "Leste perto da Penha, residencial popular. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste perto da Penha, residencial popular. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "capao-redondo",
     "nome": "Capão Redondo",
     "zona": "oeste",
-    "aluguelMedioM2": 20,
+    "aluguelMedioM2": 25,
     "condominioMedio": 320,
     "renda": 3673,
     "populacao": 100873,
@@ -339,13 +357,14 @@
     "descricao": "Periferia sul, forte cena cultural e hip-hop, metrô na borda.",
     "lat": -23.668461,
     "lng": -46.768972,
-    "descricaoLonga": "Periferia sul, forte cena cultural e hip-hop, metrô na borda. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Periferia sul, forte cena cultural e hip-hop, metrô na borda. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "carrao",
     "nome": "Carrão",
     "zona": "leste",
-    "aluguelMedioM2": 44,
+    "aluguelMedioM2": 40,
     "condominioMedio": 780,
     "renda": 8530,
     "populacao": 297530,
@@ -357,13 +376,14 @@
     "descricao": "Leste, metrô vermelho, residencial classe média.",
     "lat": -23.55063,
     "lng": -46.538291,
-    "descricaoLonga": "Leste, metrô vermelho, residencial classe média. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Leste, metrô vermelho, residencial classe média. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "casa-verde",
     "nome": "Casa Verde",
     "zona": "norte",
-    "aluguelMedioM2": 37,
+    "aluguelMedioM2": 40,
     "condominioMedio": 780,
     "renda": 8312,
     "populacao": 287312,
@@ -375,13 +395,14 @@
     "descricao": "Zona norte residencial, ponte para o centro, comércio local forte.",
     "lat": -23.510988,
     "lng": -46.657442,
-    "descricaoLonga": "Zona norte residencial, ponte para o centro, comércio local forte. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Zona norte residencial, ponte para o centro, comércio local forte. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cidade-ademar",
     "nome": "Cidade Ademar",
     "zona": "sul",
-    "aluguelMedioM2": 20,
+    "aluguelMedioM2": 43.7,
     "condominioMedio": 260,
     "renda": 2876,
     "populacao": 293576,
@@ -393,13 +414,14 @@
     "descricao": "Sul, residencial popular, próximo a Diadema.",
     "lat": -23.670859,
     "lng": -46.656654,
-    "descricaoLonga": "Sul, residencial popular, próximo a Diadema. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul, residencial popular, próximo a Diadema. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "real"
   },
   {
     "id": "cidade-dutra",
     "nome": "Cidade Dutra",
     "zona": "sul",
-    "aluguelMedioM2": 24,
+    "aluguelMedioM2": 28,
     "condominioMedio": 320,
     "renda": 3758,
     "populacao": 103958,
@@ -411,13 +433,14 @@
     "descricao": "Zona sul extrema, próximo à Billings. Sem metrô.",
     "lat": -23.713877,
     "lng": -46.698575,
-    "descricaoLonga": "Zona sul extrema, próximo à Billings. Sem metrô. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Zona sul extrema, próximo à Billings. Sem metrô. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cidade-lider",
     "nome": "Cidade Líder",
     "zona": "leste",
-    "aluguelMedioM2": 54,
+    "aluguelMedioM2": 24,
     "condominioMedio": 500,
     "renda": 7284,
     "populacao": 51284,
@@ -429,7 +452,8 @@
     "descricao": "Leste residencial periférico.",
     "lat": -23.557835,
     "lng": -46.476182,
-    "descricaoLonga": "Leste residencial periférico. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste residencial periférico. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cidade-tiradentes",
@@ -447,13 +471,14 @@
     "descricao": "Conjunto habitacional gigante na zona leste extrema. Periférico, populacional alto.",
     "lat": -23.601011,
     "lng": -46.39855,
-    "descricaoLonga": "Maior conjunto habitacional da América Latina, na divisa com Ferraz de Vasconcelos. Bairro popular de classe trabalhadora, com forte cultura local mas pouco comércio e infraestrutura. Acesso por trem (CPTM) ou Itaquera. Longe de tudo, mas com vida comunitária ativa."
+    "descricaoLonga": "Maior conjunto habitacional da América Latina, na divisa com Ferraz de Vasconcelos. Bairro popular de classe trabalhadora, com forte cultura local mas pouco comércio e infraestrutura. Acesso por trem (CPTM) ou Itaquera. Longe de tudo, mas com vida comunitária ativa.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "consolacao",
     "nome": "Consolação",
     "zona": "centro",
-    "aluguelMedioM2": 68,
+    "aluguelMedioM2": 75,
     "condominioMedio": 1260,
     "renda": 19208,
     "populacao": 76208,
@@ -465,13 +490,14 @@
     "descricao": "Augusta, baladas, cultura LGBTQ+. Vida noturna intensa.",
     "lat": -23.552058,
     "lng": -46.652577,
-    "descricaoLonga": "Augusta, baladas, cultura LGBTQ+. Vida noturna intensa. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Augusta, baladas, cultura LGBTQ+. Vida noturna intensa. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "cursino",
     "nome": "Cursino",
     "zona": "sul",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 38,
     "condominioMedio": 850,
     "renda": 6361,
     "populacao": 140361,
@@ -483,13 +509,14 @@
     "descricao": "Sul próximo ao Ipiranga, residencial.",
     "lat": -23.602992,
     "lng": -46.625539,
-    "descricaoLonga": "Sul próximo ao Ipiranga, residencial. Bairro da zona sul com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul próximo ao Ipiranga, residencial. Bairro da zona sul com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "ermelino-matarazzo",
     "nome": "Ermelino Matarazzo",
     "zona": "leste",
-    "aluguelMedioM2": 43,
+    "aluguelMedioM2": 26,
     "condominioMedio": 780,
     "renda": 8854,
     "populacao": 127854,
@@ -501,13 +528,14 @@
     "descricao": "Periferia leste com CPTM. Comércio local.",
     "lat": -23.469705,
     "lng": -46.472079,
-    "descricaoLonga": "Periferia leste com CPTM. Comércio local. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia leste com CPTM. Comércio local. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "freguesia-do-o",
     "nome": "Freguesia do Ó",
     "zona": "oeste",
-    "aluguelMedioM2": 38,
+    "aluguelMedioM2": 35,
     "condominioMedio": 570,
     "renda": 10929,
     "populacao": 234929,
@@ -519,13 +547,14 @@
     "descricao": "Tradicional zona norte com linha laranja chegando. Comércio popular.",
     "lat": -23.501497,
     "lng": -46.697702,
-    "descricaoLonga": "Tradicional zona norte com linha laranja chegando. Comércio popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Tradicional zona norte com linha laranja chegando. Comércio popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "grajau",
     "nome": "Grajaú",
     "zona": "sul",
-    "aluguelMedioM2": 24,
+    "aluguelMedioM2": 26.1,
     "condominioMedio": 230,
     "renda": 3265,
     "populacao": 245965,
@@ -537,13 +566,14 @@
     "descricao": "Maior distrito de SP em população. Próximo à represa Billings.",
     "lat": -23.772194,
     "lng": -46.668295,
-    "descricaoLonga": "Maior distrito de SP em população. Próximo à represa Billings. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Maior distrito de SP em população. Próximo à represa Billings. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "real"
   },
   {
     "id": "guaianases",
     "nome": "Guaianases",
     "zona": "leste",
-    "aluguelMedioM2": 21,
+    "aluguelMedioM2": 22,
     "condominioMedio": 230,
     "renda": 3555,
     "populacao": 70755,
@@ -555,13 +585,14 @@
     "descricao": "Subcentro leste, CPTM, forte identidade nordestina.",
     "lat": -23.576607,
     "lng": -46.409769,
-    "descricaoLonga": "Subcentro leste, CPTM, forte identidade nordestina. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Atendido por estações de metrô."
+    "descricaoLonga": "Subcentro leste, CPTM, forte identidade nordestina. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "iguatemi",
     "nome": "Iguatemi",
     "zona": "leste",
-    "aluguelMedioM2": 22,
+    "aluguelMedioM2": 24,
     "condominioMedio": 350,
     "renda": 4089,
     "populacao": 67289,
@@ -573,13 +604,14 @@
     "descricao": "Leste extremo próximo à Mogi, sem metrô.",
     "lat": -23.618101,
     "lng": -46.41713,
-    "descricaoLonga": "Leste extremo próximo à Mogi, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste extremo próximo à Mogi, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "ipiranga",
     "nome": "Ipiranga",
     "zona": "sul",
-    "aluguelMedioM2": 36,
+    "aluguelMedioM2": 42,
     "condominioMedio": 850,
     "renda": 7015,
     "populacao": 191015,
@@ -591,13 +623,14 @@
     "descricao": "Histórico (independência), residencial tradicional, metrô verde.",
     "lat": -23.595927,
     "lng": -46.609797,
-    "descricaoLonga": "Histórico (independência), residencial tradicional, metrô verde. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Histórico (independência), residencial tradicional, metrô verde. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "itaim-bibi",
     "nome": "Itaim Bibi",
     "zona": "oeste",
-    "aluguelMedioM2": 97,
+    "aluguelMedioM2": 87.5,
     "condominioMedio": 1020,
     "renda": 16148,
     "populacao": 237148,
@@ -609,13 +642,14 @@
     "descricao": "Coração corporativo e gastronômico. Caro, movimentado, vida noturna intensa.",
     "lat": -23.583748,
     "lng": -46.678074,
-    "descricaoLonga": "Coração corporativo e gastronômico. Caro, movimentado, vida noturna intensa. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, alguns bares e restaurantes, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Coração corporativo e gastronômico. Caro, movimentado, vida noturna intensa. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, alguns bares e restaurantes, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "itaim-paulista",
     "nome": "Itaim Paulista",
     "zona": "leste",
-    "aluguelMedioM2": 18,
+    "aluguelMedioM2": 24,
     "condominioMedio": 320,
     "renda": 3913,
     "populacao": 162613,
@@ -627,13 +661,14 @@
     "descricao": "Periferia leste, terminal de ônibus, CPTM.",
     "lat": -23.469045,
     "lng": -46.403396,
-    "descricaoLonga": "Periferia leste, terminal de ônibus, CPTM. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia leste, terminal de ônibus, CPTM. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "itaquera",
     "nome": "Itaquera",
     "zona": "leste",
-    "aluguelMedioM2": 39,
+    "aluguelMedioM2": 28,
     "condominioMedio": 500,
     "renda": 10226,
     "populacao": 119226,
@@ -645,13 +680,14 @@
     "descricao": "Polo da zona leste com Arena, parque do Carmo e metrô vermelho.",
     "lat": -23.53742,
     "lng": -46.453698,
-    "descricaoLonga": "Polo da zona leste com Arena, parque do Carmo e metrô vermelho. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Polo da zona leste com Arena, parque do Carmo e metrô vermelho. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jabaquara",
     "nome": "Jabaquara",
     "zona": "sul",
-    "aluguelMedioM2": 45,
+    "aluguelMedioM2": 40,
     "condominioMedio": 480,
     "renda": 4800,
     "populacao": 223780,
@@ -663,13 +699,14 @@
     "descricao": "Subcentro sul tradicional, com metrô azul terminal. Misto residencial e comercial.",
     "lat": -23.639648,
     "lng": -46.650517,
-    "descricaoLonga": "Bairro tradicional da zona sul que cresceu com a estação terminal do metrô. Misto de residencial classe média e comércio popular. Próximo do aeroporto de Congonhas. Boa opção pra quem trabalha no centro e quer custo médio."
+    "descricaoLonga": "Bairro tradicional da zona sul que cresceu com a estação terminal do metrô. Misto de residencial classe média e comércio popular. Próximo do aeroporto de Congonhas. Boa opção pra quem trabalha no centro e quer custo médio.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jacana",
     "nome": "Jaçanã",
     "zona": "norte",
-    "aluguelMedioM2": 35,
+    "aluguelMedioM2": 28,
     "condominioMedio": 640,
     "renda": 6010,
     "populacao": 150010,
@@ -681,13 +718,14 @@
     "descricao": "Norte, residencial popular, ponte importante do trem-bala.",
     "lat": -23.468539,
     "lng": -46.579739,
-    "descricaoLonga": "Norte, residencial popular, ponte importante do trem-bala. Bairro da zona norte com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Norte, residencial popular, ponte importante do trem-bala. Bairro da zona norte com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jaguara",
     "nome": "Jaguara",
     "zona": "oeste",
-    "aluguelMedioM2": 42,
+    "aluguelMedioM2": 27,
     "condominioMedio": 570,
     "renda": 7637,
     "populacao": 271637,
@@ -699,13 +737,14 @@
     "descricao": "Oeste, residencial perto da Marginal Tietê.",
     "lat": -23.514041,
     "lng": -46.745443,
-    "descricaoLonga": "Oeste, residencial perto da Marginal Tietê. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Oeste, residencial perto da Marginal Tietê. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "real"
   },
   {
     "id": "jaguare",
     "nome": "Jaguaré",
     "zona": "oeste",
-    "aluguelMedioM2": 34,
+    "aluguelMedioM2": 32,
     "condominioMedio": 710,
     "renda": 7501,
     "populacao": 271501,
@@ -717,13 +756,14 @@
     "descricao": "Oeste industrial e residencial, perto da USP.",
     "lat": -23.544951,
     "lng": -46.74699,
-    "descricaoLonga": "Oeste industrial e residencial, perto da USP. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Oeste industrial e residencial, perto da USP. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jaragua",
     "nome": "Jaraguá",
     "zona": "oeste",
-    "aluguelMedioM2": 19,
+    "aluguelMedioM2": 26,
     "condominioMedio": 350,
     "renda": 3039,
     "populacao": 202739,
@@ -735,13 +775,14 @@
     "descricao": "Pico do Jaraguá, mistura periferia com mata atlântica.",
     "lat": -23.457497,
     "lng": -46.743813,
-    "descricaoLonga": "Pico do Jaraguá, mistura periferia com mata atlântica. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Pico do Jaraguá, mistura periferia com mata atlântica. Bairro da zona oeste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jardim-angela",
     "nome": "Jardim Ângela",
     "zona": "sul",
-    "aluguelMedioM2": 19,
+    "aluguelMedioM2": 22,
     "condominioMedio": 230,
     "renda": 3110,
     "populacao": 121310,
@@ -753,13 +794,14 @@
     "descricao": "Periferia sul extrema. Aluguel entre os mais baixos.",
     "lat": -23.702797,
     "lng": -46.769188,
-    "descricaoLonga": "Periferia sul extrema. Aluguel entre os mais baixos. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia sul extrema. Aluguel entre os mais baixos. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jardim-helena",
     "nome": "Jardim Helena",
     "zona": "leste",
-    "aluguelMedioM2": 17,
+    "aluguelMedioM2": 24,
     "condominioMedio": 320,
     "renda": 3908,
     "populacao": 73108,
@@ -771,13 +813,14 @@
     "descricao": "Periferia leste, longe do centro, sem metrô.",
     "lat": -23.479468,
     "lng": -46.421293,
-    "descricaoLonga": "Periferia leste, longe do centro, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia leste, longe do centro, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jardim-paulista",
     "nome": "Jardim Paulista",
     "zona": "centro",
-    "aluguelMedioM2": 80,
+    "aluguelMedioM2": 143.5,
     "condominioMedio": 1140,
     "renda": 14454,
     "populacao": 171454,
@@ -789,13 +832,14 @@
     "descricao": "Endereço clássico da elite. Arborizado, restaurantes estrelados e grifes.",
     "lat": -23.573979,
     "lng": -46.660691,
-    "descricaoLonga": "Endereço clássico da elite. Arborizado, restaurantes estrelados e grifes. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Endereço clássico da elite. Arborizado, restaurantes estrelados e grifes. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "jardim-sao-luis",
     "nome": "Jardim São Luís",
     "zona": "oeste",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 28,
     "condominioMedio": 710,
     "renda": 7957,
     "populacao": 166957,
@@ -807,13 +851,14 @@
     "descricao": "Adjacente ao Jardim Ângela, periferia sul, sem metrô.",
     "lat": -23.651376,
     "lng": -46.733056,
-    "descricaoLonga": "Adjacente ao Jardim Ângela, periferia sul, sem metrô. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Adjacente ao Jardim Ângela, periferia sul, sem metrô. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "jose-bonifacio",
     "nome": "José Bonifácio",
     "zona": "leste",
-    "aluguelMedioM2": 21,
+    "aluguelMedioM2": 24,
     "condominioMedio": 350,
     "renda": 3919,
     "populacao": 111119,
@@ -825,13 +870,14 @@
     "descricao": "Leste residencial periférico, perto de Itaquera.",
     "lat": -21.054852,
     "lng": -49.678496,
-    "descricaoLonga": "Leste residencial periférico, perto de Itaquera. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste residencial periférico, perto de Itaquera. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "lajeado",
     "nome": "Lajeado",
     "zona": "leste",
-    "aluguelMedioM2": 17,
+    "aluguelMedioM2": 22,
     "condominioMedio": 290,
     "renda": 4012,
     "populacao": 129212,
@@ -843,13 +889,14 @@
     "descricao": "Periferia leste, vizinha de Guaianases.",
     "lat": -22.331126,
     "lng": -47.361969,
-    "descricaoLonga": "Periferia leste, vizinha de Guaianases. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia leste, vizinha de Guaianases. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "lapa",
     "nome": "Lapa",
     "zona": "oeste",
-    "aluguelMedioM2": 60,
+    "aluguelMedioM2": 50,
     "condominioMedio": 1200,
     "renda": 13902,
     "populacao": 160902,
@@ -861,13 +908,14 @@
     "descricao": "Comercial e operário-classe média. Mercado da Lapa e CPTM.",
     "lat": -23.522734,
     "lng": -46.711419,
-    "descricaoLonga": "Comercial e operário-classe média. Mercado da Lapa e CPTM. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Comercial e operário-classe média. Mercado da Lapa e CPTM. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "liberdade",
     "nome": "Liberdade",
     "zona": "centro",
-    "aluguelMedioM2": 59,
+    "aluguelMedioM2": 50,
     "condominioMedio": 640,
     "renda": 6584,
     "populacao": 195584,
@@ -879,13 +927,14 @@
     "descricao": "Bairro oriental tradicional. Feira de domingo e cultura asiática.",
     "lat": -23.559917,
     "lng": -46.631259,
-    "descricaoLonga": "Bairro oriental tradicional. Feira de domingo e cultura asiática. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Bairro oriental tradicional. Feira de domingo e cultura asiática. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "limao",
     "nome": "Limão",
     "zona": "norte",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 35,
     "condominioMedio": 780,
     "renda": 8548,
     "populacao": 227548,
@@ -897,13 +946,14 @@
     "descricao": "Norte comercial, perto da Marginal Tietê.",
     "lat": -23.492173,
     "lng": -46.677292,
-    "descricaoLonga": "Norte comercial, perto da Marginal Tietê. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Norte comercial, perto da Marginal Tietê. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "mandaqui",
     "nome": "Mandaqui",
     "zona": "norte",
-    "aluguelMedioM2": 34,
+    "aluguelMedioM2": 34.2,
     "condominioMedio": 640,
     "renda": 10222,
     "populacao": 64222,
@@ -915,7 +965,8 @@
     "descricao": "Norte classe média, perto do Horto Florestal.",
     "lat": -23.482087,
     "lng": -46.625891,
-    "descricaoLonga": "Norte classe média, perto do Horto Florestal. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Norte classe média, perto do Horto Florestal. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "marsilac",
@@ -933,13 +984,14 @@
     "descricao": "Distrito mais rural de SP, mata atlântica e pequenas chácaras.",
     "lat": -23.906403,
     "lng": -46.707666,
-    "descricaoLonga": "Distrito mais rural de SP, mata atlântica e pequenas chácaras. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Distrito mais rural de SP, mata atlântica e pequenas chácaras. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "moema",
     "nome": "Moema",
     "zona": "sul",
-    "aluguelMedioM2": 82,
+    "aluguelMedioM2": 84.8,
     "condominioMedio": 1140,
     "renda": 19455,
     "populacao": 68455,
@@ -951,13 +1003,14 @@
     "descricao": "Residencial e arborizado, próximo ao Ibirapuera. Famílias de alta renda.",
     "lat": -23.602021,
     "lng": -46.672103,
-    "descricaoLonga": "Residencial e arborizado, próximo ao Ibirapuera. Famílias de alta renda. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Residencial e arborizado, próximo ao Ibirapuera. Famílias de alta renda. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "mooca",
     "nome": "Mooca",
     "zona": "leste",
-    "aluguelMedioM2": 39,
+    "aluguelMedioM2": 40,
     "condominioMedio": 710,
     "renda": 8755,
     "populacao": 77755,
@@ -969,13 +1022,14 @@
     "descricao": "Tradição italiana, cantinas e clima de bairro com verticalização rápida.",
     "lat": -23.560326,
     "lng": -46.59959,
-    "descricaoLonga": "Tradição italiana, cantinas e clima de bairro com verticalização rápida. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Tradição italiana, cantinas e clima de bairro com verticalização rápida. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "morumbi",
     "nome": "Morumbi",
     "zona": "oeste",
-    "aluguelMedioM2": 58,
+    "aluguelMedioM2": 50.5,
     "condominioMedio": 1260,
     "renda": 19001,
     "populacao": 250001,
@@ -987,13 +1041,14 @@
     "descricao": "Verticalizado e elitizado, com favelas vizinhas. Estádio do São Paulo.",
     "lat": -23.597886,
     "lng": -46.720181,
-    "descricaoLonga": "Verticalizado e elitizado, com favelas vizinhas. Estádio do São Paulo. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Verticalizado e elitizado, com favelas vizinhas. Estádio do São Paulo. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "real"
   },
   {
     "id": "parelheiros",
     "nome": "Parelheiros",
     "zona": "sul",
-    "aluguelMedioM2": 24,
+    "aluguelMedioM2": 20,
     "condominioMedio": 320,
     "renda": 3698,
     "populacao": 292898,
@@ -1005,13 +1060,14 @@
     "descricao": "Verde, rural, áreas de proteção ambiental e turismo de natureza.",
     "lat": -23.828105,
     "lng": -46.731169,
-    "descricaoLonga": "Verde, rural, áreas de proteção ambiental e turismo de natureza. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Verde, rural, áreas de proteção ambiental e turismo de natureza. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "pari",
     "nome": "Pari",
     "zona": "centro",
-    "aluguelMedioM2": 41,
+    "aluguelMedioM2": 30,
     "condominioMedio": 500,
     "renda": 6136,
     "populacao": 280136,
@@ -1023,13 +1079,14 @@
     "descricao": "Centro, indústria têxtil tradicional, atacadistas.",
     "lat": -23.527114,
     "lng": -46.61142,
-    "descricaoLonga": "Centro, indústria têxtil tradicional, atacadistas. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Centro, indústria têxtil tradicional, atacadistas. Bairro da zona centro com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "parque-do-carmo",
     "nome": "Parque do Carmo",
     "zona": "leste",
-    "aluguelMedioM2": 45,
+    "aluguelMedioM2": 28,
     "condominioMedio": 850,
     "renda": 6343,
     "populacao": 155343,
@@ -1041,13 +1098,14 @@
     "descricao": "Leste com o segundo maior parque da cidade.",
     "lat": -23.570006,
     "lng": -46.459261,
-    "descricaoLonga": "Leste com o segundo maior parque da cidade. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste com o segundo maior parque da cidade. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "pedreira",
     "nome": "Pedreira",
     "zona": "sul",
-    "aluguelMedioM2": 20,
+    "aluguelMedioM2": 25,
     "condominioMedio": 320,
     "renda": 3318,
     "populacao": 74518,
@@ -1059,13 +1117,14 @@
     "descricao": "Sul, residencial periférico, longe do metrô.",
     "lat": -23.69594,
     "lng": -46.637952,
-    "descricaoLonga": "Sul, residencial periférico, longe do metrô. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul, residencial periférico, longe do metrô. Bairro da zona sul com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "penha",
     "nome": "Penha",
     "zona": "leste",
-    "aluguelMedioM2": 40,
+    "aluguelMedioM2": 35,
     "condominioMedio": 500,
     "renda": 10602,
     "populacao": 299602,
@@ -1077,13 +1136,14 @@
     "descricao": "Comercial e religioso. Largo da Penha, metrô vermelho e clima popular.",
     "lat": -23.522212,
     "lng": -46.526179,
-    "descricaoLonga": "Comercial e religioso. Largo da Penha, metrô vermelho e clima popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Comercial e religioso. Largo da Penha, metrô vermelho e clima popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "perdizes",
     "nome": "Perdizes",
     "zona": "oeste",
-    "aluguelMedioM2": 80,
+    "aluguelMedioM2": 75,
     "condominioMedio": 1200,
     "renda": 17454,
     "populacao": 88454,
@@ -1095,13 +1155,14 @@
     "descricao": "Residencial e tradicional. Boas escolas, padarias clássicas, sem metrô.",
     "lat": -23.536902,
     "lng": -46.674317,
-    "descricaoLonga": "Residencial e tradicional. Boas escolas, padarias clássicas, sem metrô. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Residencial e tradicional. Boas escolas, padarias clássicas, sem metrô. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "perus",
     "nome": "Perus",
     "zona": "norte",
-    "aluguelMedioM2": 22,
+    "aluguelMedioM2": 24,
     "condominioMedio": 290,
     "renda": 4167,
     "populacao": 53867,
@@ -1113,13 +1174,14 @@
     "descricao": "Extremo norte, núcleo histórico isolado, CPTM funciona.",
     "lat": -23.407091,
     "lng": -46.758477,
-    "descricaoLonga": "Extremo norte, núcleo histórico isolado, CPTM funciona. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Extremo norte, núcleo histórico isolado, CPTM funciona. Bairro da zona norte com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio médio, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "pinheiros",
     "nome": "Pinheiros",
     "zona": "oeste",
-    "aluguelMedioM2": 93,
+    "aluguelMedioM2": 95.3,
     "condominioMedio": 1200,
     "renda": 13063,
     "populacao": 178063,
@@ -1131,13 +1193,14 @@
     "descricao": "Boêmio e criativo. Bares, lojas independentes e cafés especiais.",
     "lat": -23.563579,
     "lng": -46.691607,
-    "descricaoLonga": "Boêmio e criativo. Bares, lojas independentes e cafés especiais. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Boêmio e criativo. Bares, lojas independentes e cafés especiais. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "pirituba",
     "nome": "Pirituba",
     "zona": "oeste",
-    "aluguelMedioM2": 37,
+    "aluguelMedioM2": 32,
     "condominioMedio": 500,
     "renda": 9728,
     "populacao": 273728,
@@ -1149,13 +1212,14 @@
     "descricao": "Residencial e popular. CPTM serve mas trânsito é gargalo.",
     "lat": -23.479116,
     "lng": -46.741805,
-    "descricaoLonga": "Residencial e popular. CPTM serve mas trânsito é gargalo. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Residencial e popular. CPTM serve mas trânsito é gargalo. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "ponte-rasa",
     "nome": "Ponte Rasa",
     "zona": "leste",
-    "aluguelMedioM2": 31,
+    "aluguelMedioM2": 28,
     "condominioMedio": 850,
     "renda": 9907,
     "populacao": 253907,
@@ -1167,13 +1231,14 @@
     "descricao": "Leste residencial, próximo à Penha.",
     "lat": -23.509274,
     "lng": -46.495231,
-    "descricaoLonga": "Leste residencial, próximo à Penha. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste residencial, próximo à Penha. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio forte, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "raposo-tavares",
     "nome": "Raposo Tavares",
     "zona": "oeste",
-    "aluguelMedioM2": 47,
+    "aluguelMedioM2": 28,
     "condominioMedio": 780,
     "renda": 10462,
     "populacao": 154462,
@@ -1185,13 +1250,14 @@
     "descricao": "Oeste próximo à rodovia homônima.",
     "lat": -24.298253,
     "lng": -47.138168,
-    "descricaoLonga": "Oeste próximo à rodovia homônima. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Oeste próximo à rodovia homônima. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "republica",
     "nome": "República",
     "zona": "centro",
-    "aluguelMedioM2": 54,
+    "aluguelMedioM2": 45,
     "condominioMedio": 500,
     "renda": 9272,
     "populacao": 168272,
@@ -1203,13 +1269,14 @@
     "descricao": "Centro alternativo, ocupações culturais, transporte privilegiado.",
     "lat": -23.545108,
     "lng": -46.642778,
-    "descricaoLonga": "Centro alternativo, ocupações culturais, transporte privilegiado. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro alternativo, ocupações culturais, transporte privilegiado. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "rio-pequeno",
     "nome": "Rio Pequeno",
     "zona": "oeste",
-    "aluguelMedioM2": 56,
+    "aluguelMedioM2": 32,
     "condominioMedio": 570,
     "renda": 8173,
     "populacao": 57173,
@@ -1221,13 +1288,14 @@
     "descricao": "Oeste próximo à Raposo Tavares, residencial popular.",
     "lat": -23.564488,
     "lng": -46.753935,
-    "descricaoLonga": "Oeste próximo à Raposo Tavares, residencial popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Oeste próximo à Raposo Tavares, residencial popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "sacoma",
     "nome": "Sacomã",
     "zona": "sul",
-    "aluguelMedioM2": 46,
+    "aluguelMedioM2": 35,
     "condominioMedio": 780,
     "renda": 7640,
     "populacao": 156640,
@@ -1239,13 +1307,14 @@
     "descricao": "Acesso por metrô verde, terminal de ônibus, classe média.",
     "lat": -23.614995,
     "lng": -46.596954,
-    "descricaoLonga": "Acesso por metrô verde, terminal de ônibus, classe média. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Acesso por metrô verde, terminal de ônibus, classe média. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "santa-cecilia",
     "nome": "Santa Cecília",
     "zona": "centro",
-    "aluguelMedioM2": 61,
+    "aluguelMedioM2": 48,
     "condominioMedio": 1200,
     "renda": 15203,
     "populacao": 148203,
@@ -1257,13 +1326,14 @@
     "descricao": "Centro residencial verticalizado, próximo ao Higienópolis.",
     "lat": -23.534385,
     "lng": -46.649024,
-    "descricaoLonga": "Centro residencial verticalizado, próximo ao Higienópolis. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro residencial verticalizado, próximo ao Higienópolis. Bairro da zona centro com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "santana",
     "nome": "Santana",
     "zona": "norte",
-    "aluguelMedioM2": 55,
+    "aluguelMedioM2": 45,
     "condominioMedio": 780,
     "renda": 9368,
     "populacao": 238368,
@@ -1275,13 +1345,14 @@
     "descricao": "Coração da zona norte. Linha azul, comércio forte e Parque da Juventude.",
     "lat": -22.625737,
     "lng": -47.728148,
-    "descricaoLonga": "Coração da zona norte. Linha azul, comércio forte e Parque da Juventude. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Coração da zona norte. Linha azul, comércio forte e Parque da Juventude. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "santo-amaro",
     "nome": "Santo Amaro",
     "zona": "sul",
-    "aluguelMedioM2": 90,
+    "aluguelMedioM2": 55,
     "condominioMedio": 900,
     "renda": 14043,
     "populacao": 141043,
@@ -1293,13 +1364,14 @@
     "descricao": "Subcentro do sul, igreja matriz, comércio antigo e Marginal Pinheiros.",
     "lat": -23.643869,
     "lng": -46.70114,
-    "descricaoLonga": "Subcentro do sul, igreja matriz, comércio antigo e Marginal Pinheiros. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Subcentro do sul, igreja matriz, comércio antigo e Marginal Pinheiros. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "sao-domingos",
     "nome": "São Domingos",
     "zona": "oeste",
-    "aluguelMedioM2": 41,
+    "aluguelMedioM2": 35,
     "condominioMedio": 850,
     "renda": 7157,
     "populacao": 141157,
@@ -1311,13 +1383,14 @@
     "descricao": "Noroeste residencial popular.",
     "lat": -23.504339,
     "lng": -46.743361,
-    "descricaoLonga": "Noroeste residencial popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Noroeste residencial popular. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "sao-lucas",
     "nome": "São Lucas",
     "zona": "leste",
-    "aluguelMedioM2": 49,
+    "aluguelMedioM2": 32,
     "condominioMedio": 850,
     "renda": 10763,
     "populacao": 204763,
@@ -1329,13 +1402,14 @@
     "descricao": "Bairro de perfil misto da zona leste sem metrô direto. Dados estimados.",
     "lat": -23.586518,
     "lng": -46.535209,
-    "descricaoLonga": "Bairro de perfil misto da zona leste sem metrô direto. Dados estimados. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Bairro de perfil misto da zona leste sem metrô direto. Dados estimados. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "sao-mateus",
     "nome": "São Mateus",
     "zona": "leste",
-    "aluguelMedioM2": 16,
+    "aluguelMedioM2": 29.3,
     "condominioMedio": 350,
     "renda": 3704,
     "populacao": 223404,
@@ -1347,13 +1421,14 @@
     "descricao": "Subcentro da zona leste, monotrilho prata em construção.",
     "lat": -23.601802,
     "lng": -46.470827,
-    "descricaoLonga": "Subcentro da zona leste, monotrilho prata em construção. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Subcentro da zona leste, monotrilho prata em construção. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel baixo, comércio limitado, sem grande vida noturna. Segurança preocupante em algumas áreas. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "real"
   },
   {
     "id": "sao-miguel",
     "nome": "São Miguel Paulista",
     "zona": "leste",
-    "aluguelMedioM2": 44,
+    "aluguelMedioM2": 26,
     "condominioMedio": 570,
     "renda": 9147,
     "populacao": 278147,
@@ -1365,13 +1440,14 @@
     "descricao": "Subcentro leste com CPTM e comércio forte.",
     "lat": -23.4981,
     "lng": -46.4444,
-    "descricaoLonga": "Subcentro leste com CPTM e comércio forte. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Subcentro leste com CPTM e comércio forte. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "sao-rafael",
     "nome": "São Rafael",
     "zona": "leste",
-    "aluguelMedioM2": 25,
+    "aluguelMedioM2": 24,
     "condominioMedio": 230,
     "renda": 2870,
     "populacao": 249070,
@@ -1383,7 +1459,8 @@
     "descricao": "Leste extremo, residencial popular, CPTM.",
     "lat": -23.629289,
     "lng": -46.459657,
-    "descricaoLonga": "Leste extremo, residencial popular, CPTM. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel acessível, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste extremo, residencial popular, CPTM. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel acessível, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "sapopemba",
@@ -1401,13 +1478,14 @@
     "descricao": "Bairro popular extenso na zona leste, divisa com São Caetano. Sem metrô.",
     "lat": -23.574888,
     "lng": -46.524049,
-    "descricaoLonga": "Um dos maiores distritos de São Paulo em população. Predominantemente residencial popular, com forte comércio local na Av. Sapopemba. Sem metrô, depende de ônibus e da proximidade com São Caetano do Sul. Comunidade forte e diversa."
+    "descricaoLonga": "Um dos maiores distritos de São Paulo em população. Predominantemente residencial popular, com forte comércio local na Av. Sapopemba. Sem metrô, depende de ônibus e da proximidade com São Caetano do Sul. Comunidade forte e diversa.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "saude",
     "nome": "Saúde",
     "zona": "sul",
-    "aluguelMedioM2": 86,
+    "aluguelMedioM2": 37.9,
     "condominioMedio": 1020,
     "renda": 14421,
     "populacao": 85421,
@@ -1419,13 +1497,14 @@
     "descricao": "Sul, tranquilo, metrô azul, boa relação custo-benefício.",
     "lat": -23.613586,
     "lng": -46.638047,
-    "descricaoLonga": "Sul, tranquilo, metrô azul, boa relação custo-benefício. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Sul, tranquilo, metrô azul, boa relação custo-benefício. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "se",
     "nome": "Sé",
     "zona": "centro",
-    "aluguelMedioM2": 30,
+    "aluguelMedioM2": 35,
     "condominioMedio": 780,
     "renda": 8806,
     "populacao": 52806,
@@ -1437,13 +1516,14 @@
     "descricao": "Centro histórico. Densidade alta, comércio popular e problemas urbanos.",
     "lat": -23.552849,
     "lng": -46.630715,
-    "descricaoLonga": "Centro histórico. Densidade alta, comércio popular e problemas urbanos. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Centro histórico. Densidade alta, comércio popular e problemas urbanos. Bairro da zona centro com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acessível, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "socorro",
     "nome": "Socorro",
     "zona": "sul",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 30,
     "condominioMedio": 570,
     "renda": 7465,
     "populacao": 221465,
@@ -1455,13 +1535,14 @@
     "descricao": "Sul, residencial, próximo a Santo Amaro.",
     "lat": -22.593502,
     "lng": -46.527446,
-    "descricaoLonga": "Sul, residencial, próximo a Santo Amaro. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul, residencial, próximo a Santo Amaro. Bairro da zona sul com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "tatuape",
     "nome": "Tatuapé",
     "zona": "leste",
-    "aluguelMedioM2": 47,
+    "aluguelMedioM2": 45,
     "condominioMedio": 780,
     "renda": 7428,
     "populacao": 186428,
@@ -1473,13 +1554,14 @@
     "descricao": "Polo comercial da zona leste. Shoppings e prédios novos no metrô vermelho.",
     "lat": -23.535245,
     "lng": -46.575463,
-    "descricaoLonga": "Polo comercial da zona leste. Shoppings e prédios novos no metrô vermelho. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô."
+    "descricaoLonga": "Polo comercial da zona leste. Shoppings e prédios novos no metrô vermelho. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "tremembe",
     "nome": "Tremembé",
     "zona": "norte",
-    "aluguelMedioM2": 51,
+    "aluguelMedioM2": 32,
     "condominioMedio": 710,
     "renda": 10557,
     "populacao": 259557,
@@ -1491,13 +1573,14 @@
     "descricao": "Norte com Serra da Cantareira, residencial verde.",
     "lat": -22.961588,
     "lng": -45.545345,
-    "descricaoLonga": "Norte com Serra da Cantareira, residencial verde. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Norte com Serra da Cantareira, residencial verde. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "tucuruvi",
     "nome": "Tucuruvi",
     "zona": "norte",
-    "aluguelMedioM2": 48,
+    "aluguelMedioM2": 38,
     "condominioMedio": 570,
     "renda": 7367,
     "populacao": 271367,
@@ -1509,13 +1592,14 @@
     "descricao": "Residencial classe média, fim da linha azul do metrô.",
     "lat": -23.473904,
     "lng": -46.610817,
-    "descricaoLonga": "Residencial classe média, fim da linha azul do metrô. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Residencial classe média, fim da linha azul do metrô. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-andrade",
     "nome": "Vila Andrade",
     "zona": "oeste",
-    "aluguelMedioM2": 40,
+    "aluguelMedioM2": 45,
     "condominioMedio": 850,
     "renda": 9735,
     "populacao": 238735,
@@ -1527,13 +1611,14 @@
     "descricao": "Sul-oeste com torres altas e favela do Paraisópolis vizinha.",
     "lat": -23.631508,
     "lng": -46.736743,
-    "descricaoLonga": "Sul-oeste com torres altas e favela do Paraisópolis vizinha. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Sul-oeste com torres altas e favela do Paraisópolis vizinha. Bairro da zona oeste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio forte, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-curuca",
     "nome": "Vila Curuçá",
     "zona": "leste",
-    "aluguelMedioM2": 29,
+    "aluguelMedioM2": 24,
     "condominioMedio": 230,
     "renda": 3595,
     "populacao": 116295,
@@ -1545,13 +1630,14 @@
     "descricao": "Periferia leste extrema, sem metrô.",
     "lat": -23.512614,
     "lng": -46.411724,
-    "descricaoLonga": "Periferia leste extrema, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel acessível, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Periferia leste extrema, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias trabalhadoras. Aluguel acessível, comércio limitado, sem grande vida noturna, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-formosa",
     "nome": "Vila Formosa",
     "zona": "leste",
-    "aluguelMedioM2": 52,
+    "aluguelMedioM2": 43.7,
     "condominioMedio": 850,
     "renda": 9249,
     "populacao": 213249,
@@ -1563,13 +1649,14 @@
     "descricao": "Leste classe média baixa, sem metrô direto.",
     "lat": -23.567186,
     "lng": -46.543792,
-    "descricaoLonga": "Leste classe média baixa, sem metrô direto. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste classe média baixa, sem metrô direto. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "real"
   },
   {
     "id": "vila-guilherme",
     "nome": "Vila Guilherme",
     "zona": "norte",
-    "aluguelMedioM2": 36,
+    "aluguelMedioM2": 38,
     "condominioMedio": 780,
     "renda": 6836,
     "populacao": 165836,
@@ -1581,13 +1668,14 @@
     "descricao": "Comercial e logístico próximo à Marginal Tietê.",
     "lat": -23.514403,
     "lng": -46.607448,
-    "descricaoLonga": "Comercial e logístico próximo à Marginal Tietê. Bairro da zona norte com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Comercial e logístico próximo à Marginal Tietê. Bairro da zona norte com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-jacui",
     "nome": "Vila Jacuí",
     "zona": "leste",
-    "aluguelMedioM2": 42,
+    "aluguelMedioM2": 26,
     "condominioMedio": 640,
     "renda": 7428,
     "populacao": 71428,
@@ -1599,13 +1687,14 @@
     "descricao": "Leste periferia densa, sem metrô.",
     "lat": -23.500878,
     "lng": -46.454504,
-    "descricaoLonga": "Leste periferia densa, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Leste periferia densa, sem metrô. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança variável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-leopoldina",
     "nome": "Vila Leopoldina",
     "zona": "oeste",
-    "aluguelMedioM2": 64,
+    "aluguelMedioM2": 60,
     "condominioMedio": 1260,
     "renda": 17505,
     "populacao": 100505,
@@ -1617,13 +1706,14 @@
     "descricao": "Oeste em transformação, novos prédios e shoppings.",
     "lat": -23.53243,
     "lng": -46.733589,
-    "descricaoLonga": "Oeste em transformação, novos prédios e shoppings. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Oeste em transformação, novos prédios e shoppings. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio médio, vida noturna animada, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-maria",
     "nome": "Vila Maria",
     "zona": "leste",
-    "aluguelMedioM2": 47,
+    "aluguelMedioM2": 35,
     "condominioMedio": 780,
     "renda": 7962,
     "populacao": 286962,
@@ -1635,13 +1725,14 @@
     "descricao": "Norte, próximo à rodoviária do Tietê.",
     "lat": -23.517559,
     "lng": -46.589087,
-    "descricaoLonga": "Norte, próximo à rodoviária do Tietê. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Norte, próximo à rodoviária do Tietê. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, alguns bares e restaurantes, alguns parques. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-mariana",
     "nome": "Vila Mariana",
     "zona": "sul",
-    "aluguelMedioM2": 77,
+    "aluguelMedioM2": 72.5,
     "condominioMedio": 900,
     "renda": 19833,
     "populacao": 80833,
@@ -1653,13 +1744,14 @@
     "descricao": "Equilibrado, próximo ao Ibirapuera, metrô azul e ar familiar.",
     "lat": -23.589702,
     "lng": -46.634638,
-    "descricaoLonga": "Equilibrado, próximo ao Ibirapuera, metrô azul e ar familiar. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Equilibrado, próximo ao Ibirapuera, metrô azul e ar familiar. Bairro da zona sul com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel alto, entre os mais caros da cidade, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "real"
   },
   {
     "id": "vila-matilde",
     "nome": "Vila Matilde",
     "zona": "leste",
-    "aluguelMedioM2": 41,
+    "aluguelMedioM2": 30,
     "condominioMedio": 640,
     "renda": 9140,
     "populacao": 188140,
@@ -1671,13 +1763,14 @@
     "descricao": "Leste com metrô vermelho, classe média popular.",
     "lat": -23.537721,
     "lng": -46.525646,
-    "descricaoLonga": "Leste com metrô vermelho, classe média popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Leste com metrô vermelho, classe média popular. Bairro da zona leste com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel na média da cidade, comércio médio, sem grande vida noturna. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-medeiros",
     "nome": "Vila Medeiros",
     "zona": "norte",
-    "aluguelMedioM2": 52,
+    "aluguelMedioM2": 32,
     "condominioMedio": 780,
     "renda": 9370,
     "populacao": 98370,
@@ -1689,13 +1782,14 @@
     "descricao": "Norte residencial popular.",
     "lat": -23.489255,
     "lng": -46.584522,
-    "descricaoLonga": "Norte residencial popular. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus."
+    "descricaoLonga": "Norte residencial popular. Bairro da zona norte com perfil de moradores formado principalmente por famílias de classe média e profissionais jovens. Aluguel acima da média paulistana, comércio médio, sem grande vida noturna. Segurança razoável. Sem estação de metrô — depende de ônibus.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-prudente",
     "nome": "Vila Prudente",
     "zona": "leste",
-    "aluguelMedioM2": 58,
+    "aluguelMedioM2": 38,
     "condominioMedio": 570,
     "renda": 6483,
     "populacao": 260483,
@@ -1707,13 +1801,14 @@
     "descricao": "Subcentro leste com metrô prata recente. Verticalizando.",
     "lat": -23.588146,
     "lng": -46.584395,
-    "descricaoLonga": "Subcentro leste com metrô prata recente. Verticalizando. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Subcentro leste com metrô prata recente. Verticalizando. Bairro da zona leste com perfil de moradores formado principalmente por classe média trabalhadora e famílias estabelecidas. Aluguel acima da média paulistana, comércio forte, alguns bares e restaurantes, alguns parques. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   },
   {
     "id": "vila-sonia",
     "nome": "Vila Sônia",
     "zona": "oeste",
-    "aluguelMedioM2": 61,
+    "aluguelMedioM2": 38,
     "condominioMedio": 1020,
     "renda": 17403,
     "populacao": 120403,
@@ -1725,6 +1820,7 @@
     "descricao": "Oeste residencial, fim da linha amarela do metrô.",
     "lat": -23.595056,
     "lng": -46.732135,
-    "descricaoLonga": "Oeste residencial, fim da linha amarela do metrô. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô."
+    "descricaoLonga": "Oeste residencial, fim da linha amarela do metrô. Bairro da zona oeste com perfil de moradores formado principalmente por executivos e famílias de alta renda. Aluguel acima da média paulistana, comércio forte, vida noturna animada, boa oferta de áreas verdes. Segurança razoável. Atendido por estações de metrô.",
+    "aluguelFonte": "estimado"
   }
 ]
