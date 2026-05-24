@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ThemeToggle from '@/components/ThemeToggle';
+import AboutButton from '@/components/AboutButton';
 import styles from './header.module.css';
 
 export default function Header() {
@@ -7,12 +8,20 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand}>
-          <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/avoa.svg`} alt="" className={styles.logo} aria-hidden="true" />
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/avoa.svg`}
+            alt=""
+            className={styles.logo}
+            aria-hidden="true"
+          />
           <span className={styles.brandText}>
             onde<span className={styles.brandMuted}>viver</span>em<span className={styles.brandMuted}>sp</span>
           </span>
         </Link>
-        <ThemeToggle />
+        <div className={styles.actions}>
+          <AboutButton />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
