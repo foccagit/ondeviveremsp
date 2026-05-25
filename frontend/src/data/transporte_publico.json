@@ -1,0 +1,1172 @@
+{
+  "artur-alvim": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Artur Alvim",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "barra-funda": {
+    "cptm": [
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Água Branca",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      },
+      {
+        "cor_hex": "#7C7B79",
+        "estacao": "Palmeiras-Barra Funda",
+        "linha_nome": "Diamante",
+        "linha_numero": 8
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Palmeiras-Barra Funda",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "bela-vista": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Brigadeiro",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Trianon-Masp",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Paulista-Pernambucanas",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "belem": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Belém",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "bom-retiro": {
+    "cptm": [
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Luz",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      },
+      {
+        "cor_hex": "#7C7B79",
+        "estacao": "Júlio Prestes",
+        "linha_nome": "Diamante",
+        "linha_numero": 8
+      },
+      {
+        "cor_hex": "#F47C20",
+        "estacao": "Luz",
+        "linha_nome": "Coral",
+        "linha_numero": 11
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Luz",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Tiradentes",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Luz",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "bras": {
+    "cptm": [
+      {
+        "cor_hex": "#0193A0",
+        "estacao": "Brás",
+        "linha_nome": "Turquesa",
+        "linha_numero": 10
+      },
+      {
+        "cor_hex": "#F47C20",
+        "estacao": "Brás",
+        "linha_nome": "Coral",
+        "linha_numero": 11
+      },
+      {
+        "cor_hex": "#1B468F",
+        "estacao": "Brás",
+        "linha_nome": "Safira",
+        "linha_numero": 12
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Bresser-Mooca",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Brás",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Pedro II",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "butanta": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Cidade Universitária",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Butantã",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "campo-belo": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Berrini",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      },
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Morumbi",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Brooklin",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Campo Belo",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "campo-limpo": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Campo Limpo",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Vila das Belezas",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "capao-redondo": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Capão Redondo",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "carrao": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Carrão-Assaí Atacadista",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "cidade-dutra": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Autódromo",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": []
+  },
+  "consolacao": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Trianon-Masp",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Consolação",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Clínicas",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Higienópolis-Mackenzie",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Paulista-Pernambucanas",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "cursino": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Santos-Imigrantes",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      }
+    ]
+  },
+  "ermelino-matarazzo": {
+    "cptm": [
+      {
+        "cor_hex": "#1B468F",
+        "estacao": "USP Leste",
+        "linha_nome": "Safira",
+        "linha_numero": 12
+      }
+    ],
+    "metro": []
+  },
+  "grajau": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Grajaú",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": []
+  },
+  "guaianases": {
+    "cptm": [
+      {
+        "cor_hex": "#F47C20",
+        "estacao": "Guaianases",
+        "linha_nome": "Coral",
+        "linha_numero": 11
+      }
+    ],
+    "metro": []
+  },
+  "ipiranga": {
+    "cptm": [
+      {
+        "cor_hex": "#0193A0",
+        "estacao": "Ipiranga",
+        "linha_nome": "Turquesa",
+        "linha_numero": 10
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Sacomã",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Alto do Ipiranga",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      }
+    ]
+  },
+  "itaim-bibi": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Cidade Jardim",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      },
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Vila Olímpia",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": []
+  },
+  "itaquera": {
+    "cptm": [
+      {
+        "cor_hex": "#F47C20",
+        "estacao": "Corinthians-Itaquera",
+        "linha_nome": "Coral",
+        "linha_numero": 11
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Corinthians-Itaquera",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "jabaquara": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Jabaquara-Comitê Paralímpico Brasileiro",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Conceição",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      }
+    ]
+  },
+  "jaguare": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Ceasa",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      },
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Villa-Lobos Jaguaré",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": []
+  },
+  "jaragua": {
+    "cptm": [
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Jaraguá",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      },
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Vila Aurora",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      }
+    ],
+    "metro": []
+  },
+  "jardim-paulista": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Oscar Freire",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "lapa": {
+    "cptm": [
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Lapa",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      },
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Piqueri",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      },
+      {
+        "cor_hex": "#7C7B79",
+        "estacao": "Lapa",
+        "linha_nome": "Diamante",
+        "linha_numero": 8
+      }
+    ],
+    "metro": []
+  },
+  "liberdade": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Vergueiro-Sebrae",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "São Joaquim",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Japão-Liberdade",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      }
+    ]
+  },
+  "moema": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Eucaliptos",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Moema",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "mooca": {
+    "cptm": [
+      {
+        "cor_hex": "#0193A0",
+        "estacao": "Juventus-Mooca",
+        "linha_nome": "Turquesa",
+        "linha_numero": 10
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Bresser-Mooca",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "morumbi": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Giovanni Gronchi",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "pari": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Armênia",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      }
+    ]
+  },
+  "penha": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Guilhermina-Esperança",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Penha-Lojas Besni",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "perdizes": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "S. N. Sra. de Fátima-Sumaré",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      }
+    ]
+  },
+  "perus": {
+    "cptm": [
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Perus",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      }
+    ],
+    "metro": []
+  },
+  "pinheiros": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Pinheiros",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      },
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Hebraica-Rebouças",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Oscar Freire",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Fradique Coutinho",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Faria Lima",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Pinheiros",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "pirituba": {
+    "cptm": [
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Pirituba",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      },
+      {
+        "cor_hex": "#A41E22",
+        "estacao": "Vila Clarice",
+        "linha_nome": "Rubi",
+        "linha_numero": 7
+      }
+    ],
+    "metro": []
+  },
+  "republica": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Anhangabaú",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "República",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "República",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  },
+  "santa-cecilia": {
+    "cptm": [
+      {
+        "cor_hex": "#7C7B79",
+        "estacao": "Júlio Prestes",
+        "linha_nome": "Diamante",
+        "linha_numero": 8
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Santa Cecília",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Marechal Deodoro",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "santana": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Portuguesa-Tietê",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Carandiru",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Santana",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Jardim São Paulo-Ayrton Senna",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Parada Inglesa",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      }
+    ]
+  },
+  "santo-amaro": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Granja Julieta",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      },
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Santo Amaro",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Santo Amaro",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Largo Treze",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Adolfo Pinheiro",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Alto da Boa Vista",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Borba Gato",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "sao-lucas": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Oratório",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "São Lucas",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Camilo Haddad",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Vila Tolstói",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      }
+    ]
+  },
+  "sao-mateus": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "São Mateus",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Jardim Colonial",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      }
+    ]
+  },
+  "sao-miguel-paulista": {
+    "cptm": [
+      {
+        "cor_hex": "#1B468F",
+        "estacao": "São Miguel Paulista",
+        "linha_nome": "Safira",
+        "linha_numero": 12
+      }
+    ],
+    "metro": []
+  },
+  "sapopemba": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Vila União",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Jardim Planalto",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Sapopemba",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Fazenda da Juta",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      }
+    ]
+  },
+  "saude": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "São Judas",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Saúde-Ultrafarma",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Praça da Árvore",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      }
+    ]
+  },
+  "se": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Sé",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "São Bento",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Pedro II",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Sé",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Anhangabaú",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "socorro": {
+    "cptm": [
+      {
+        "cor_hex": "#00A698",
+        "estacao": "Jurubatuba",
+        "linha_nome": "Esmeralda",
+        "linha_numero": 9
+      }
+    ],
+    "metro": []
+  },
+  "tatuape": {
+    "cptm": [
+      {
+        "cor_hex": "#F47C20",
+        "estacao": "Tatuapé",
+        "linha_nome": "Coral",
+        "linha_numero": 11
+      },
+      {
+        "cor_hex": "#1B468F",
+        "estacao": "Tatuapé",
+        "linha_nome": "Safira",
+        "linha_numero": 12
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Carrão-Assaí Atacadista",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Tatuapé",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "tucuruvi": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Parada Inglesa",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Tucuruvi",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      }
+    ]
+  },
+  "vila-andrade": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Giovanni Gronchi",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "vila-jacui": {
+    "cptm": [
+      {
+        "cor_hex": "#1B468F",
+        "estacao": "Engenheiro Goulart",
+        "linha_nome": "Safira",
+        "linha_numero": 12
+      },
+      {
+        "cor_hex": "#65B348",
+        "estacao": "Engenheiro Goulart",
+        "linha_nome": "Jade",
+        "linha_numero": 13
+      }
+    ],
+    "metro": []
+  },
+  "vila-madalena": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Vila Madalena",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      }
+    ]
+  },
+  "vila-mariana": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Santa Cruz",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Vila Mariana",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Ana Rosa",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#003B91",
+        "estacao": "Paraíso",
+        "linha_nome": "Azul",
+        "linha_numero": 1
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Santos-Imigrantes",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Chácara Klabin",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Ana Rosa",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Paraíso",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "AACD-Servidor",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Hospital São Paulo",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Santa Cruz",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      },
+      {
+        "cor_hex": "#8E388E",
+        "estacao": "Chácara Klabin",
+        "linha_nome": "Lilás",
+        "linha_numero": 5
+      }
+    ]
+  },
+  "vila-matilde": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Patriarca-Vila Ré",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      },
+      {
+        "cor_hex": "#EE372F",
+        "estacao": "Vila Matilde",
+        "linha_nome": "Vermelha",
+        "linha_numero": 3
+      }
+    ]
+  },
+  "vila-prudente": {
+    "cptm": [
+      {
+        "cor_hex": "#0193A0",
+        "estacao": "Tamanduateí",
+        "linha_nome": "Turquesa",
+        "linha_numero": 10
+      }
+    ],
+    "metro": [
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Vila Prudente",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#007E40",
+        "estacao": "Tamanduateí",
+        "linha_nome": "Verde",
+        "linha_numero": 2
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Vila Prudente",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      },
+      {
+        "cor_hex": "#9C9C9C",
+        "estacao": "Oratório",
+        "linha_nome": "Prata",
+        "linha_numero": 15
+      }
+    ]
+  },
+  "vila-sonia": {
+    "cptm": [],
+    "metro": [
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "São Paulo-Morumbi",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      },
+      {
+        "cor_hex": "#FFCB00",
+        "estacao": "Vila Sônia Profª Elisabeth Tenreiro",
+        "linha_nome": "Amarela",
+        "linha_numero": 4
+      }
+    ]
+  }
+}

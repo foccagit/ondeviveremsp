@@ -14,7 +14,7 @@ import {
   classificarProximidade,
   compararContraReferencia,
 } from '@/lib/calcularCusto';
-import { carregarDistancias, carregarPois, carregarAliases } from '@/lib/dataLoader';
+import { carregarDistancias, carregarPois, carregarAliases, getPois } from '@/lib/dataLoader';
 import bairros from '@/data/bairros.json';
 import transporte from '@/data/transporte.json';
 import styles from './page.module.css';
@@ -24,6 +24,40 @@ const GRUPOS = [
   { id: 'medio', titulo: 'Meio', hint: '5–15 km' },
   { id: 'longe', titulo: 'Distante', hint: '15 km+' },
 ];
+
+/**
+ * Verifica se o bairro atende TODAS as prioridades selecionadas (AND).
+ * Cortes calibrados sobre dados reais do Google Places.
+ * 'seguranca' é tratada como no-op até termos dados oficiais do SSP-SP.
+ */
+function atendePrioridades(bairro, prioridades, pois) {
+  if (!prioridades || prioridades.length === 0) return true;
+  const ativas = prioridades.filter((p) => p !== 'seguranca');
+  if (ativas.length === 0) return true;
+
+  const poisBairro = getPois(pois, bairro.id);
+
+  return ativas.every((prioridade) => {
+    switch (prioridade) {
+      case 'metro':
+        return bairro.metro === true;
+      case 'vidaNoturna':
+        return (poisBairro?.barRestaurantes?.total || 0) >= 15;
+      case 'comercio': {
+        if (!poisBairro) return false;
+        const supermercados = poisBairro.supermercados?.total || 0;
+        const shoppings = poisBairro.shoppings?.total || 0;
+        const farmacias = poisBairro.farmacias?.total || 0;
+        const bancos = poisBairro.bancos?.total || 0;
+        return supermercados >= 8 || shoppings >= 1 || farmacias + bancos >= 15;
+      }
+      case 'parques':
+        return (poisBairro?.parques?.total || 0) >= 3;
+      default:
+        return true;
+    }
+  });
+}
 
 export default function HomePage() {
   const { filters, update, togglePrioridade, toggleTransporte, mounted } = useFilters();
@@ -71,8 +105,13 @@ export default function HomePage() {
         const resumo = calcularResumoBairro(b, filters, trabalho, transporte, distancias);
         return { bairro: b, resumo, proximidade: classificarProximidade(resumo.distanciaKm) };
       })
-      .filter(({ resumo }) => resumo.distanciaKm <= filters.distanciaMaximaKm);
-  }, [filters, trabalho, distancias]);
+      .filter(({ resumo }) => resumo.distanciaKm <= filters.distanciaMaximaKm)
+      .filter(({ bairro }) => {
+        // O bairro de trabalho SEMPRE aparece (é a âncora da comparação)
+        if (bairro.id === trabalho.id) return true;
+        return atendePrioridades(bairro, filters.prioridades, pois);
+      });
+  }, [filters, trabalho, distancias, pois]);
 
   const referencia = useMemo(() => {
     if (dados.length === 0 || !trabalho) return null;
@@ -163,7 +202,13 @@ export default function HomePage() {
                 </div>
                 <div className={styles.groupList}>
                   {activeEntries.length === 0 ? (
-                    <p className={styles.emptyTab}>Nenhum bairro nesta faixa.</p>
+                    filters.prioridades.some((p) => p !== 'seguranca') ? (
+                      <p className={styles.emptyTab}>
+                        Nenhum bairro nesta faixa atende suas prioridades. Tente afrouxar os filtros.
+                      </p>
+                    ) : (
+                      <p className={styles.emptyTab}>Nenhum bairro nesta faixa.</p>
+                    )
                   ) : (
                     activeEntries.map(({ bairro, resumo }) => {
                       const isRef = bairro.id === referencia?.bairro.id;

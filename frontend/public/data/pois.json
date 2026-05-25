@@ -65,10 +65,11 @@
         ]
       },
       "metroEstacoes": {
-        "total": 1,
+        "total": 2,
         "tem_mais": false,
         "nomes": [
-          "Belém"
+          "Belém",
+          "Tatuapé"
         ]
       },
       "museus": {
@@ -792,10 +793,11 @@
         ]
       },
       "metroEstacoes": {
-        "total": 1,
+        "total": 2,
         "tem_mais": false,
         "nomes": [
-          "Belém"
+          "Belém",
+          "Tatuapé"
         ]
       },
       "museus": {
@@ -2046,10 +2048,12 @@
         ]
       },
       "metroEstacoes": {
-        "total": 1,
+        "total": 3,
         "tem_mais": false,
         "nomes": [
-          "Penha-Lojas Besni"
+          "Carrão-Assaí Atacadista",
+          "Penha-Lojas Besni",
+          "Tatuapé"
         ]
       },
       "museus": {
@@ -5378,11 +5382,12 @@
         ]
       },
       "metroEstacoes": {
-        "total": 2,
+        "total": 3,
         "tem_mais": false,
         "nomes": [
           "Bresser - Mooca",
-          "Juventus-Mooca"
+          "Juventus-Mooca",
+          "Tatuapé"
         ]
       },
       "museus": {
@@ -8157,9 +8162,10 @@
         ]
       },
       "metroEstacoes": {
-        "total": 2,
+        "total": 3,
         "tem_mais": false,
         "nomes": [
+          "Tatuapé",
           "Carrão-Assaí Atacadista",
           "Belém"
         ]
@@ -8641,9 +8647,11 @@
         ]
       },
       "metroEstacoes": {
-        "total": 0,
+        "total": 1,
         "tem_mais": false,
-        "nomes": []
+        "nomes": [
+          "Tatuapé"
+        ]
       },
       "museus": {
         "total": 7,

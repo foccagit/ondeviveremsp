@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { formatBRL, formatNumber } from '@/lib/format';
 import { carregarPois, getPois } from '@/lib/dataLoader';
+import transportePublico from '@/data/transporte_publico.json';
 import styles from './styles.module.css';
 
 const MODAL_LABEL = {
@@ -24,16 +25,26 @@ function Row({ label, value, badge }) {
     </div>
   );
 }
-
 function formatPoiList(poiCategoria) {
   // { total, tem_mais, nomes? }
   if (!poiCategoria || poiCategoria.total === 0) return '—';
   const { total, tem_mais, nomes } = poiCategoria;
   const plus = tem_mais ? '+' : '';
   if (nomes && nomes.length > 0) {
-    const shown = nomes.slice(0, 3).join(', ');
-    const extra = nomes.length > 3 ? '…' : '';
-    return `${shown}${extra} (${total}${plus})`;
+    const visible = nomes.slice(0, 3);
+    const restantes = total - visible.length;
+    return (
+      <ul className={styles.poiList}>
+        {visible.map((nome, i) => (
+          <li key={i} className={styles.poiItem}>{nome}</li>
+        ))}
+        {restantes > 0 && (
+          <li className={styles.poiItemMore}>
+            e mais {restantes}{tem_mais ? '+' : ''}
+          </li>
+        )}
+      </ul>
+    );
   }
   return `${total}${plus}`;
 }
@@ -42,6 +53,12 @@ function formatPoiCount(poiCategoria, sufixo = '') {
   if (!poiCategoria || poiCategoria.total === 0) return '0';
   const { total, tem_mais } = poiCategoria;
   return `${total}${tem_mais ? '+' : ''}${sufixo}`;
+}
+
+// Linhas com fundo claro precisam de texto preto pra contraste legível
+const LINHAS_FUNDO_CLARO = new Set(['#FFCB00', '#9C9C9C', '#65B348']);
+function corTextoLinha(hex) {
+  return LINHAS_FUNDO_CLARO.has(String(hex).toUpperCase()) ? '#000000' : '#FFFFFF';
 }
 
 export default function NeighborhoodModal({
@@ -140,8 +157,69 @@ export default function NeighborhoodModal({
           {!pois ? (
             <p className={styles.loadingHint}>Carregando dados...</p>
           ) : (
-            <dl className={styles.rows}>
-              <Row label="Estações de metrô" value={formatPoiList(pois.metroEstacoes)} />
+            <>
+              <dl className={styles.rows}>
+                {(() => {
+                  const transporte = transportePublico[bairro.id];
+                  const metro = transporte?.metro || [];
+                  const cptm = transporte?.cptm || [];
+                  if (metro.length === 0 && cptm.length === 0) {
+                    return <Row label="Transporte público" value="—" />;
+                  }
+                  return (
+                    <div className={styles.row}>
+                      <dt className={styles.rowLabel}>Transporte público</dt>
+                      <dd className={styles.rowValue}>
+                        <div className={styles.transporteGrupos}>
+                          {metro.length > 0 && (
+                            <div className={styles.transporteSubGrupo}>
+                              <span className={styles.transporteSubLabel}>Metrô</span>
+                              <ul className={styles.transporteList}>
+                                {metro.map((e, i) => (
+                                  <li key={`m-${i}`} className={styles.transporteItem}>
+                                    <span
+                                      className={styles.linhaCirculo}
+                                      style={{
+                                        backgroundColor: e.cor_hex,
+                                        color: corTextoLinha(e.cor_hex),
+                                      }}
+                                      title={`Linha ${e.linha_numero} ${e.linha_nome}`}
+                                    >
+                                      {e.linha_numero}
+                                    </span>
+                                    <span className={styles.estacaoNome}>{e.estacao}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {cptm.length > 0 && (
+                            <div className={styles.transporteSubGrupo}>
+                              <span className={styles.transporteSubLabel}>CPTM</span>
+                              <ul className={styles.transporteList}>
+                                {cptm.map((e, i) => (
+                                  <li key={`c-${i}`} className={styles.transporteItem}>
+                                    <span
+                                      className={styles.linhaCirculo}
+                                      style={{
+                                        backgroundColor: e.cor_hex,
+                                        color: corTextoLinha(e.cor_hex),
+                                      }}
+                                      title={`Linha ${e.linha_numero} ${e.linha_nome}`}
+                                    >
+                                      {e.linha_numero}
+                                    </span>
+                                    <span className={styles.estacaoNome}>{e.estacao}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </dd>
+                    </div>
+                  );
+                })()}
               <Row
                 label="Supermercados"
                 value={`${formatPoiCount(pois.supermercados)} no entorno`}
@@ -160,8 +238,9 @@ export default function NeighborhoodModal({
               <Row label="Áreas verdes" value={formatPoiList(pois.parques)} />
               <Row label="Hospitais" value={formatPoiList(pois.hospitais)} />
               <Row label="Shoppings" value={formatPoiList(pois.shoppings)} />
-              <Row label="Museus" value={formatPoiList(pois.museus)} />
-            </dl>
+                <Row label="Museus" value={formatPoiList(pois.museus)} />
+              </dl>
+            </>
           )}
         </section>
 
