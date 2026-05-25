@@ -9,7 +9,7 @@ function normalizar(str) {
   return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
-export default function BairroCombobox({ value, onChange, onAliasChange }) {
+export default function BairroCombobox({ value, onChange, onAliasChange, onOpenChange }) {
   const [busca, setBusca] = useState('');
   const [aberto, setAberto] = useState(false);
   const [aliases, setAliases] = useState(null);
@@ -43,6 +43,11 @@ export default function BairroCombobox({ value, onChange, onAliasChange }) {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [aberto]);
+
+  // Propaga mudanças de estado de abertura pro componente pai (opcional)
+  useEffect(() => {
+    if (onOpenChange) onOpenChange(aberto);
+  }, [aberto, onOpenChange]);
 
   // Lista combinada: 96 distritos + N aliases
   const opcoes = useMemo(() => {

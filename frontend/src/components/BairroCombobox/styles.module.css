@@ -1,5 +1,5 @@
 .combobox {
-  position: relative;
+  position: static;
   width: 100%;
 }
 
@@ -8,11 +8,12 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid var(--color-border);
-  padding: 8px 0;
+  padding: 0;
   font-family: var(--font-body);
   font-size: 16px;
   color: var(--color-fg);
   outline: none;
+  line-height: 1.5;
 }
 
 .input:focus {
@@ -25,25 +26,25 @@
 
 .opcoes {
   position: absolute;
-  top: calc(100% + 4px);
+  top: 100%;
   left: 0;
   right: 0;
   max-height: 320px;
   overflow-y: auto;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border: none;
+  border-bottom: 1px solid var(--color-border);
   z-index: 100;
   list-style: none;
-  padding: 0;
+  padding: 15px 0 0 0;
   margin: 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .opcao {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 10px 14px;
+  padding: 10px 14px 10px var(--cell-pad-l, 14px);
   cursor: pointer;
   border-bottom: 1px solid var(--color-border);
 }
@@ -54,7 +55,19 @@
 
 .opcao:hover,
 .opcaoAtiva {
-  background: var(--color-surface);
+  background: #000000;
+  color: #ffffff;
+}
+
+.opcao:hover .opcaoLabel,
+.opcaoAtiva .opcaoLabel {
+  color: #ffffff;
+}
+
+.opcao:hover .opcaoSubtitulo,
+.opcaoAtiva .opcaoSubtitulo {
+  color: #ffffff;
+  opacity: 0.7;
 }
 
 .opcaoLabel {
@@ -72,11 +85,11 @@
 }
 
 .semResultados {
-  padding: 16px 14px;
+  padding: 16px 14px 16px var(--cell-pad-l, 14px);
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  text-align: center;
+  text-align: left;
 }

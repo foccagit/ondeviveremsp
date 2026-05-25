@@ -19,11 +19,26 @@ const TRANSPORTES = [
 
 const PRIORIDADES = [
   { id: 'metro', label: 'Metrô' },
-  { id: 'seguranca', label: 'Segurança' },
+  { id: 'seguranca', label: 'Segurança', disabled: true, hint: 'em breve' },
   { id: 'vidaNoturna', label: 'Vida noturna' },
   { id: 'comercio', label: 'Comércio' },
   { id: 'parques', label: 'Parques' },
 ];
+
+function BairroTrabalhoCell({ filters, onUpdate }) {
+  const [comboAberto, setComboAberto] = useState(false);
+  return (
+    <div className={`${styles.dropdown} ${comboAberto ? styles.dropdownOpen : ''}`}>
+      <span className={styles.label}>Bairro de trabalho</span>
+      <BairroCombobox
+        value={filters.bairroTrabalho}
+        onChange={(id) => onUpdate({ bairroTrabalho: id })}
+        onAliasChange={(alias) => onUpdate({ aliasAtivo: alias })}
+        onOpenChange={setComboAberto}
+      />
+    </div>
+  );
+}
 
 function Dropdown({ label, summary, children, align = 'left' }) {
   const [open, setOpen] = useState(false);
@@ -46,7 +61,7 @@ function Dropdown({ label, summary, children, align = 'left' }) {
   }, [open]);
 
   return (
-    <div className={styles.dropdown} ref={ref}>
+    <div className={`${styles.dropdown} ${open ? styles.dropdownOpen : ''}`} ref={ref}>
       <span className={styles.label}>{label}</span>
       <button
         type="button"
@@ -72,6 +87,42 @@ export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggl
     onUpdate({ tamanhoImovel: clamped });
   };
 
+  // Estado local do input "Personalizar" — permite digitação livre sem
+  // clampar a cada caractere. Commita no blur/Enter.
+  const [tamanhoInput, setTamanhoInput] = useState(filters.tamanhoImovel.toString());
+  const [tamanhoErro, setTamanhoErro] = useState(null);
+
+  useEffect(() => {
+    setTamanhoInput(filters.tamanhoImovel.toString());
+  }, [filters.tamanhoImovel]);
+
+  const commitTamanhoInput = () => {
+    const num = Number(tamanhoInput);
+
+    if (Number.isNaN(num) || tamanhoInput.trim() === '') {
+      setTamanhoInput(filters.tamanhoImovel.toString());
+      setTamanhoErro(null);
+      return;
+    }
+
+    if (num < 20) {
+      setTamanhoErro('Mínimo de 20m²');
+      setTamanhoInput(filters.tamanhoImovel.toString());
+      return;
+    }
+
+    if (num > 200) {
+      setTamanhoErro('Máximo de 200m²');
+      setTamanhoInput(filters.tamanhoImovel.toString());
+      return;
+    }
+
+    const rounded = Math.round(num);
+    onUpdate({ tamanhoImovel: rounded });
+    setTamanhoInput(rounded.toString());
+    setTamanhoErro(null);
+  };
+
   const transporteSummary =
     filters.transporte.length === 0
       ? 'Nenhum'
@@ -86,45 +137,60 @@ export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggl
 
   return (
     <div className={styles.filters}>
-      <div className={styles.dropdown}>
-        <span className={styles.label}>Bairro de trabalho</span>
-        <BairroCombobox
-          value={filters.bairroTrabalho}
-          onChange={(id) => onUpdate({ bairroTrabalho: id })}
-          onAliasChange={(alias) => onUpdate({ aliasAtivo: alias })}
-        />
-      </div>
+      <BairroTrabalhoCell filters={filters} onUpdate={onUpdate} />
 
       <Dropdown label="Tamanho do imóvel" summary={`${filters.tamanhoImovel} m²`}>
-        <div className={styles.panelStack}>
-          <div className={styles.inputRow}>
-            <input
-              type="number"
-              min={20}
-              max={200}
-              step={5}
-              value={filters.tamanhoImovel}
-              onChange={(e) => setTamanho(e.target.value)}
-              className={styles.input}
-            />
-            <span className={styles.suffix}>m²</span>
+        {({ close }) => (
+          <div className={styles.panelStack}>
+            <div className={styles.presets}>
+              {PRESETS_TAMANHO.map((p) => {
+                const active = filters.tamanhoImovel === p.m2;
+                return (
+                  <button
+                    key={p.m2}
+                    type="button"
+                    onClick={() => {
+                      setTamanho(p.m2);
+                      close();
+                    }}
+                    className={`${styles.preset} ${active ? styles.presetActive : ''}`}
+                  >
+                    {p.label} ({p.m2}m²)
+                  </button>
+                );
+              })}
+            </div>
+            <div className={styles.inputBlock}>
+              <div className={styles.inputHeader}>
+                <span className={styles.inputLabel}>Personalizar:</span>
+                <span className={styles.inputHint}>{tamanhoErro || 'Máximo 200m²'}</span>
+              </div>
+              <div className={styles.inputRow}>
+                <input
+                  type="number"
+                  min={20}
+                  max={200}
+                  step={1}
+                  value={tamanhoInput}
+                  onChange={(e) => {
+                    setTamanhoInput(e.target.value);
+                    if (tamanhoErro) setTamanhoErro(null);
+                  }}
+                  onBlur={commitTamanhoInput}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      commitTamanhoInput();
+                      e.target.blur();
+                    }
+                  }}
+                  className={styles.input}
+                />
+                <span className={styles.suffix}>m²</span>
+              </div>
+            </div>
           </div>
-          <div className={styles.presets}>
-            {PRESETS_TAMANHO.map((p) => {
-              const active = filters.tamanhoImovel === p.m2;
-              return (
-                <button
-                  key={p.m2}
-                  type="button"
-                  onClick={() => setTamanho(p.m2)}
-                  className={`${styles.preset} ${active ? styles.presetActive : ''}`}
-                >
-                  {p.label} ({p.m2}m²)
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        )}
       </Dropdown>
 
       <div className={styles.dropdown}>
@@ -177,11 +243,18 @@ export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggl
               <li key={p.id}>
                 <button
                   type="button"
+                  disabled={p.disabled}
                   className={styles.checkOption}
-                  onClick={() => onTogglePrioridade(p.id)}
+                  onClick={() => !p.disabled && onTogglePrioridade(p.id)}
+                  title={
+                    p.disabled
+                      ? 'Em desenvolvimento — precisa de dados reais do SSP-SP'
+                      : undefined
+                  }
                 >
                   <span className={`${styles.checkbox} ${active ? styles.checkboxOn : ''}`} />
                   <span>{p.label}</span>
+                  {p.hint && <span className={styles.hintBadge}>{p.hint}</span>}
                 </button>
               </li>
             );

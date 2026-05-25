@@ -186,11 +186,6 @@ export default function NeighborhoodCard({
                 no trânsito
               </p>
             )}
-            {(principal.modal === 'carro' || principal.modal === 'uber') && (
-              <p className={styles.notaPico}>
-                Tempos em horário normal. Em pico (7-10h e 17-20h), pode aumentar 40-70%.
-              </p>
-            )}
           </div>
 
           <blockquote className={styles.narrativa}>
@@ -206,7 +201,7 @@ export default function NeighborhoodCard({
                 e.stopPropagation();
                 setModalOpen(true);
               }}
-              className={styles.footerBtn}
+              className={`${styles.footerBtn} ${styles.footerBtnPrimary}`}
             >
               Saiba mais sobre {bairro.nome}
             </button>
@@ -222,6 +217,11 @@ export default function NeighborhoodCard({
               {isSelected ? 'Remover do comparar' : isFull ? 'Limite atingido' : 'Comparar'}
             </button>
           </div>
+          {(principal.modal === 'carro' || principal.modal === 'uber') && (
+            <p className={styles.notaPico}>
+              *Tempos em horário normal. Em pico (7-10h e 17-20h), pode aumentar 40-70%.
+            </p>
+          )}
         </div>
       )}
 
