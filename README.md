@@ -43,9 +43,7 @@ moradai/
 └── scrapers/          Coleta de dados (futuro — Fase 3+)
 ```
 
-## Princípios de design
 
-- **Editorial, não dashboard.** Inspirado em [justadesignlist.com](https://www.justadesignlist.com). Tipografia faz o trabalho pesado. Pouca cor, muito espaço.
 - **Sem login.** Ninguém quer colocar salário num site que pede cadastro. Tudo roda no cliente, dados sensíveis nunca saem do navegador.
 - **Honesto sobre incerteza.** Quando um dado é estimativa, deixa claro.
 
