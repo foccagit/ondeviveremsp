@@ -10,6 +10,13 @@ body {
   transition: background-color var(--transition), color var(--transition);
 }
 
+/* Padronização global de botões: sempre quadrados, sempre em fonte mono.
+   !important sobrescreve overrides locais nos CSS Modules. */
+button {
+  font-family: var(--font-mono) !important;
+  border-radius: 0 !important;
+}
+
 ::selection {
   background: var(--color-fg);
   color: var(--color-bg);

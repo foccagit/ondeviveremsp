@@ -1,8 +1,7 @@
 import { JetBrains_Mono } from 'next/font/google';
 import { GeistSans } from 'geist/font/sans';
 import Header from '@/components/Layout/Header';
-import Footer from '@/components/Layout/Footer';
-import { CompareProvider } from '@/lib/CompareContext';
+import { FiltersProvider } from '@/hooks/useFilters';
 import './globals.css';
 
 const jetbrainsMono = JetBrains_Mono({
@@ -12,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'ondeviveremsp — onde morar em São Paulo',
+  title: 'OndeViverEmSP',
   description:
     'Compare bairros de SP pelo custo total real — aluguel, transporte e estilo de vida.',
 };
@@ -37,11 +36,10 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: initThemeScript }} />
       </head>
       <body>
-        <CompareProvider>
+        <FiltersProvider>
           <Header />
           <main>{children}</main>
-          <Footer />
-        </CompareProvider>
+        </FiltersProvider>
       </body>
     </html>
   );

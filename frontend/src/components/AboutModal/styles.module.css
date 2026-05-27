@@ -25,90 +25,116 @@
   position: fixed;
   top: var(--space-4);
   right: var(--space-6);
-  font-family: var(--font-mono);
-  font-size: 28px;
-  line-height: 1;
-  color: var(--color-muted);
+  width: 40px;
+  height: 40px;
+  color: var(--color-fg);
   background: none;
   border: none;
-  padding: var(--space-2);
+  padding: 0;
   cursor: pointer;
-  transition: color var(--transition);
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 101;
 }
 
+.close svg {
+  display: block;
+}
+
 .close:hover {
-  color: var(--color-fg);
+  opacity: 0.6;
+}
+
+.close:focus-visible {
+  outline: none;
 }
 
 .content {
-  max-width: 720px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: var(--space-12) var(--space-6) var(--space-12);
+  padding: 64px 32px;
 }
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-muted);
-  display: block;
-  margin-bottom: var(--space-4);
+.row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 48px;
+  margin-bottom: 45px;
+  align-items: start;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.rowContent {
+  min-width: 0;
+}
+
+.row + .row .rowContent {
+  border-top: 1px solid var(--color-border);
+  padding-top: 44px;
+}
+
+.row + .row .rowLabel {
+  padding-top: 44px;
+}
+
+.rowLabel {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  color: var(--color-fg);
+  text-align: right;
+  margin: 0;
 }
 
 .title {
-  font-family: var(--font-display);
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-family: var(--font-body);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: normal;
   color: var(--color-fg);
-  margin: 0 0 var(--space-12) 0;
+  margin: 0;
 }
 
-.section {
-  margin-bottom: var(--space-12);
-}
-
-.h2 {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  color: var(--color-fg);
-  margin: 0 0 var(--space-4) 0;
-}
-
-.h3 {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  margin: var(--space-6) 0 var(--space-2) 0;
-  font-weight: 400;
+.bodyGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .p {
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: 1.6;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
   color: var(--color-fg);
-  margin: 0 0 var(--space-3) 0;
+  margin: 0;
 }
 
-.list {
+.subSection {
+  margin-bottom: 28px;
+}
+
+.subSection:last-child {
+  margin-bottom: 0;
+}
+
+.subLabel {
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: 1.6;
-  color: var(--color-fg);
-  margin: 0 0 var(--space-3) 0;
-  padding-left: var(--space-6);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  color: #b3b3b3;
+  margin: 0 0 8px 0;
 }
 
-.list li {
-  margin-bottom: var(--space-2);
+[data-theme='dark'] .subLabel {
+  color: #666666;
 }
 
 .link {
@@ -124,16 +150,54 @@
 }
 
 @media (max-width: 767px) {
-  .title {
-    font-size: 36px;
-  }
-
-  .h2 {
-    font-size: 22px;
-  }
-
   .content {
-    padding: var(--space-12) var(--space-4) var(--space-8);
+    padding: 48px 16px 40px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  /* No mobile, a linha divisória vai pro topo da .row inteira — assim o
+     título (rowLabel) aparece ABAIXO do divisor, e não do lado direito
+     dele. Reseta os paddings/borders desktop-only. */
+  .row + .row {
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+  }
+
+  .row + .row .rowContent {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .row + .row .rowLabel {
+    padding-top: 0;
+  }
+
+  .rowLabel {
+    font-size: 16px;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .subLabel {
+    font-size: 13px;
+  }
+
+  .subSection {
+    margin-bottom: 20px;
   }
 
   .close {

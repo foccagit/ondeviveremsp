@@ -2,16 +2,10 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import distritos from '@/data/distritos.json';
-import bairrosData from '@/data/bairros.json';
-import { formatM2 } from '@/lib/format';
 import styles from './styles.module.css';
-
-const ALUGUEL_BY_ID = new globalThis.Map(bairrosData.map((b) => [b.id, b.aluguelMedioM2]));
-const getAluguelM2 = (id) => ALUGUEL_BY_ID.get(id);
 
 const SVG_URL = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/mapa-sp.svg`;
 const MATCH_THRESHOLD = 70;
-const FALLBACK_VIEWBOX = '0 0 1200 1800';
 
 function isSubprefeitura(text) {
   return text === text.toUpperCase() && /[A-ZÁÉÍÓÚÂÊÔÃÕÇ]/.test(text);
@@ -40,11 +34,11 @@ function buildSvgNameIndex() {
   return byName;
 }
 
-export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
+// Mapa é representativo da lista — não recebe interação direta.
+// Hover só vem de fora (cards da lista) via prop `hoveredId`.
+export default function Map({ filters, hoveredId }) {
   const containerRef = useRef(null);
-  const tooltipRef = useRef(null);
   const [svgReady, setSvgReady] = useState(false);
-  const [hovered, setHovered] = useState(null);
   const [themeTick, setThemeTick] = useState(0);
 
   useEffect(() => {
@@ -57,7 +51,6 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
   }, []);
 
   const nameIndex = useMemo(() => buildSvgNameIndex(), []);
-  const resumoById = resumos || {};
 
   // Load SVG once
   useEffect(() => {
@@ -80,12 +73,18 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
         svg.removeAttribute('height');
         svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
 
-        // Strip embedded inline fills/strokes from <g> wrappers
+        // Strip embedded inline fills/strokes/opacity from <g> wrappers — sem
+        // isso a opacidade herdada deixa o preto parecendo cinza nos paths.
         svg.querySelectorAll('g').forEach((g) => {
           g.removeAttribute('fill');
           g.removeAttribute('stroke');
           g.removeAttribute('style');
+          g.removeAttribute('opacity');
+          g.removeAttribute('fill-opacity');
+          g.removeAttribute('stroke-opacity');
         });
+        svg.removeAttribute('opacity');
+        svg.removeAttribute('fill-opacity');
 
         setSvgReady(true);
       })
@@ -126,6 +125,7 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
       path.removeAttribute('stroke');
       path.removeAttribute('fill-opacity');
       path.removeAttribute('stroke-opacity');
+      path.removeAttribute('opacity');
 
       let bbox;
       try {
@@ -162,8 +162,9 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
       const distrito = nameIndex.get(best.name);
       if (!distrito) return;
       path.setAttribute('data-distrito-id', distrito.id);
-      path.style.cursor = 'pointer';
-      path.style.transition = 'filter 180ms ease, stroke-width 180ms ease';
+      path.style.cursor = 'default';
+      path.style.pointerEvents = 'none';
+      path.style.transition = 'stroke-width 180ms ease';
       identified++;
     });
 
@@ -195,7 +196,7 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
     }
   }, [svgReady, nameIndex]);
 
-  // Apply fills (re-runs on filter/resumo change)
+  // Apply fills (re-runs on filter change / theme change)
   useEffect(() => {
     if (!svgReady || !containerRef.current) return;
     const svg = containerRef.current.querySelector('svg');
@@ -204,8 +205,6 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
     const computed = getComputedStyle(document.documentElement);
     const fg = computed.getPropertyValue('--color-fg').trim();
     const bg = computed.getPropertyValue('--color-bg').trim();
-    const medium = computed.getPropertyValue('--map-medium').trim();
-    const far = computed.getPropertyValue('--map-far').trim();
     const muted = computed.getPropertyValue('--color-muted').trim();
 
     const hasWork = !!filters.bairroTrabalho;
@@ -216,9 +215,11 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
 
       const fill = isWork ? fg : bg;
       path.setAttribute('fill', fill);
+      path.setAttribute('fill-opacity', '1');
+      path.setAttribute('opacity', '1');
       path.setAttribute('stroke', fg);
       path.setAttribute('stroke-width', '0.8');
-      path.style.pointerEvents = 'auto';
+      path.style.pointerEvents = 'none';
       path.dataset.fillBase = fill;
     });
 
@@ -238,93 +239,30 @@ export default function Map({ filters, onBairroClick, resumos, hoveredId }) {
     });
   }, [svgReady, filters.bairroTrabalho, themeTick]);
 
-  // External hover (from list cards) → highlight matching path
+  // External hover (from list cards) → highlight matching path in solid black
   useEffect(() => {
     if (!svgReady || !containerRef.current) return;
     const svg = containerRef.current.querySelector('svg');
     if (!svg) return;
-    const fg = getComputedStyle(document.documentElement).getPropertyValue('--color-fg').trim();
     svg.querySelectorAll('path[data-distrito-id]').forEach((path) => {
       const id = path.getAttribute('data-distrito-id');
       if (hoveredId && id === hoveredId && id !== filters.bairroTrabalho) {
-        path.setAttribute('fill', fg);
+        path.setAttribute('fill', '#000000');
+        path.setAttribute('fill-opacity', '1');
+        path.setAttribute('opacity', '1');
         path.setAttribute('stroke-width', '1.4');
       } else {
         const base = path.dataset.fillBase;
         if (base) path.setAttribute('fill', base);
+        path.removeAttribute('fill-opacity');
         path.setAttribute('stroke-width', filters.bairroTrabalho ? '0.8' : '1');
       }
     });
   }, [svgReady, hoveredId, filters.bairroTrabalho]);
 
-  // Hover/click delegation
-  useEffect(() => {
-    if (!svgReady || !containerRef.current) return;
-    const svg = containerRef.current.querySelector('svg');
-    if (!svg) return;
-
-    const fgColor =
-      getComputedStyle(document.documentElement).getPropertyValue('--color-fg').trim() || '#000';
-
-    const handleOver = (e) => {
-      const el = e.target.closest('path[data-distrito-id]');
-      if (!el) return;
-      el.setAttribute('fill', fgColor);
-      el.style.opacity = '0.85';
-      el.setAttribute('stroke-width', '1.2');
-      const id = el.getAttribute('data-distrito-id');
-      const distrito = distritos.find((d) => d.id === id);
-      const resumo = resumoById[id];
-      setHovered({ id, nome: distrito?.nome, resumo });
-    };
-    const handleOut = (e) => {
-      const el = e.target.closest('path[data-distrito-id]');
-      if (!el) return;
-      const base = el.dataset.fillBase;
-      if (base) el.setAttribute('fill', base);
-      el.style.opacity = '';
-      el.setAttribute('stroke-width', '0.8');
-      setHovered(null);
-    };
-    const handleMove = (e) => {
-      if (!tooltipRef.current || !containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      tooltipRef.current.style.left = `${e.clientX - rect.left}px`;
-      tooltipRef.current.style.top = `${e.clientY - rect.top}px`;
-    };
-    const handleClick = (e) => {
-      const el = e.target.closest('path[data-distrito-id]');
-      if (!el) return;
-      if (onBairroClick) onBairroClick(el.getAttribute('data-distrito-id'));
-    };
-
-    svg.addEventListener('mouseover', handleOver);
-    svg.addEventListener('mouseout', handleOut);
-    svg.addEventListener('mousemove', handleMove);
-    svg.addEventListener('click', handleClick);
-    return () => {
-      svg.removeEventListener('mouseover', handleOver);
-      svg.removeEventListener('mouseout', handleOut);
-      svg.removeEventListener('mousemove', handleMove);
-      svg.removeEventListener('click', handleClick);
-    };
-  }, [svgReady, resumoById, onBairroClick]);
-
   return (
     <div className={styles.wrapper}>
       <div ref={containerRef} className={styles.svgHost} aria-label="Mapa de São Paulo" />
-      {hovered && (
-        <div ref={tooltipRef} className={styles.tooltip}>
-          <span className={styles.tooltipName}>{hovered.nome}</span>
-          {hovered.resumo ? (
-            <span className={styles.tooltipMeta}>
-              {hovered.resumo.distanciaKm.toFixed(1)} km · {formatM2(getAluguelM2(hovered.id))}
-            </span>
-          ) : (
-            <span className={styles.tooltipMeta}>{formatM2(getAluguelM2(hovered.id))}</span>
-          )}
-        </div>
-      )}
     </div>
   );
 }

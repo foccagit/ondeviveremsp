@@ -65,6 +65,14 @@
   text-overflow: ellipsis;
 }
 
+/* Label do distrito-pai (aparece quando bairro é alias). Herda o estilo
+   mono/uppercase do .colLocation onde aparece. */
+.distritoPai {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .colValue {
   font-family: var(--font-body);
   font-size: 18px;
@@ -106,7 +114,7 @@
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.6;
-  color: var(--color-muted);
+  color: var(--color-fg);
   max-width: 60ch;
   margin: 0;
   display: -webkit-box;
@@ -156,15 +164,22 @@
 }
 
 .avisoTrajeto {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--color-muted);
-  font-style: italic;
-  padding: 12px 14px;
-  border-left: 2px solid var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-fg);
+  padding: 0;
   margin: 0 0 16px 0;
   line-height: 1.5;
-  background: var(--color-surface);
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.avisoIcon {
+  flex-shrink: 0;
+  color: var(--color-fg);
+  margin-top: 1px;
 }
 
 .notaPico {
@@ -192,11 +207,27 @@
   vertical-align: middle;
 }
 
+/* Badge "estimado" dentro do .metric (que é flex column): aparece como
+   pílula alinhada à esquerda, abaixo do valor. */
+.metricBadge {
+  align-self: flex-start;
+  margin-left: 0;
+  margin-top: 4px;
+}
+
 .mesmoBairroHeader {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-bottom: 12px;
+}
+
+/* Stack apertado: TRANSPORTE / A pé / Você mora... — espaçamento igual ao
+   .totalBlock (label/valor/contexto). */
+.mesmoBairroTopo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .mesmoBairroLabel {
@@ -208,20 +239,19 @@
 }
 
 .mesmoBairroModal {
-  font-family: var(--font-display);
-  font-size: 28px;
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   margin: 0;
   color: var(--color-fg);
 }
 
 .mesmoBairroNote {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-style: italic;
-  color: var(--color-muted);
-  margin: 4px 0 20px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-fg);
+  margin: 0;
   line-height: 1.5;
 }
 
@@ -311,7 +341,7 @@
 .totalContext {
   font-family: var(--font-body);
   font-size: 13px;
-  color: var(--color-muted);
+  color: var(--color-fg);
   margin: 0;
   line-height: 1.5;
 }
@@ -319,11 +349,57 @@
 .narrativa {
   font-family: var(--font-body);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
   color: var(--color-fg);
   max-width: 60ch;
   margin: 0;
+  /* Honra o '\n' do texto (vindo de gerarNarrativa) pra quebrar entre
+     o trecho de economia e o trecho de tempo. */
+  white-space: pre-line;
+}
+
+/* Versão estruturada da narrativa: cada parte é uma linha com ícone
+   semântico à esquerda (verde pra cima = bom, vermelho pra baixo = ruim). */
+.narrativaList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 60ch;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-fg);
+}
+
+.narrativaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.narrativaIcon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.narrativaIconUp {
+  color: #16a34a; /* verde */
+}
+
+.narrativaIconDown {
+  color: #dc2626; /* vermelho */
+}
+
+.narrativaIconSpacer {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
 }
 
 .detailFooter {
@@ -346,7 +422,8 @@
 }
 
 .footerBtn:hover:not(:disabled) {
-  background: var(--color-surface);
+  background: var(--color-fg);
+  color: var(--color-bg);
   border-color: var(--color-fg);
 }
 
@@ -402,23 +479,70 @@
 }
 
 @media (max-width: 767px) {
+  /* Honra os '\n' dos textos (nota de "mesmo bairro" e da narrativa
+     comparativa) — no desktop o '\n' colapsa em espaço; no mobile vira
+     quebra de linha. */
+  .mesmoBairroNote,
+  .narrativaItem > span {
+    white-space: pre-line;
+  }
+
+  /* Linhas divisórias dos cards respeitam o padding lateral de 20px da
+     página — não estendem até as bordas do viewport. */
+
+  /* Linha de topo do card vira coluna no mobile. */
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  .colName,
+  .colLocation,
+  .colValue {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: left;
+  }
+
   .colName {
     font-size: 19px;
   }
   .metricValue {
     font-size: 20px;
   }
+  /* Igualar visualmente os valores das células de transporte ao valor do
+     aluguel (.metricValue), mas 3px menor pra equilibrar a densidade. */
   .cellValue {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-fg);
   }
+
+  /* Aluguel + condomínio em coluna */
+  .rentRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Transport blocks em 2 colunas no mobile */
   .transportGrid,
   .transportGridCarro {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-5) var(--space-4);
+    gap: var(--space-4);
   }
   .transportGrid > .cell:nth-child(2) {
     grid-column: auto;
   }
+
+  /* Hints (· 44 viagens/mês, (22 dias úteis), etc.) quebram pra próxima
+     linha abaixo do valor — não ficam inline. */
+  .cellHint {
+    display: block;
+    margin-top: 2px;
+    white-space: normal;
+  }
+
   .totalValue {
     font-size: 20px;
   }

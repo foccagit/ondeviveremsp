@@ -1,473 +1,926 @@
 {
   "_metadata": {
-    "descricao": "Mapeamento de sub-bairros e regiões populares de São Paulo para os 96 distritos oficiais. Usado pra que usuários possam buscar pelo nome popular do bairro (ex: 'Vila Madalena') e o sistema use os dados do distrito-pai (ex: 'Pinheiros').",
+    "descricao": "Bairros buscáveis de São Paulo: sub-bairros, regiões populares e distritos oficiais. Cada entrada aponta para o distrito-pai (que carrega os dados quantitativos) e contém bios curta e longa próprias para card e modal de detalhes.",
     "ultima_atualizacao": "2026-05",
-    "total_aliases": 58
+    "total_bairros_buscaveis": 131
   },
   "aliases": {
-    "vila-madalena": {
-      "nome_exibicao": "Vila Madalena",
-      "distrito": "pinheiros",
-      "zona": "oeste",
-      "lat": -23.5544,
-      "lng": -46.69,
-      "descricao_curta": "Boêmia, bares, lojinhas. Caro e ruidoso à noite, charmoso de dia."
-    },
-    "sumarezinho": {
-      "nome_exibicao": "Sumarezinho",
-      "distrito": "pinheiros",
-      "zona": "oeste",
-      "lat": -23.5485,
-      "lng": -46.6792,
-      "descricao_curta": "Residencial, arborizado, próximo da Pompéia e Sumaré."
-    },
-    "jardins": {
-      "nome_exibicao": "Jardins",
-      "distrito": "jardim-paulista",
-      "zona": "oeste",
-      "lat": -23.565,
-      "lng": -46.6661,
-      "descricao_curta": "Bairro nobre clássico. Comércio sofisticado, restaurantes premiados."
-    },
-    "jardim-america": {
-      "nome_exibicao": "Jardim América",
-      "distrito": "jardim-paulista",
-      "zona": "oeste",
-      "lat": -23.5685,
-      "lng": -46.673,
-      "descricao_curta": "Casarões, ruas arborizadas, perfil familiar de alto padrão."
-    },
-    "jardim-europa": {
-      "nome_exibicao": "Jardim Europa",
-      "distrito": "jardim-paulista",
-      "zona": "oeste",
-      "lat": -23.578,
-      "lng": -46.677,
-      "descricao_curta": "Residencial elegante entre o Itaim e os Jardins."
-    },
-    "cerqueira-cesar": {
-      "nome_exibicao": "Cerqueira César",
-      "distrito": "jardim-paulista",
+    "aclimacao": {
+      "nome_exibicao": "Aclimação",
+      "distrito": "cambuci",
       "zona": "centro",
-      "lat": -23.5577,
-      "lng": -46.6648,
-      "descricao_curta": "Próximo da Paulista, hospitais e clínicas, vida urbana intensa."
+      "bio_curta": "A Aclimação parece desacelerar São Paulo. Entre o parque, as árvores e os prédios antigos, o bairro tem um silêncio raro perto do centro.",
+      "bio_longa": "A Aclimação tem um jeito discreto de existir, como se fosse uma pausa no meio da cidade. Suas ruas inclinadas, padarias antigas e moradores de longa data dão ao bairro uma sensação de vizinhança real.\n\nO Parque da Aclimação é o coração da região: aos fins de semana, reúne famílias, corredores, crianças e cachorros. Mesmo perto de avenidas importantes, o bairro consegue preservar uma calma que parece quase improvável em São Paulo."
     },
-    "higienopolis": {
-      "nome_exibicao": "Higienópolis",
-      "distrito": "consolacao",
+    "bela-vista": {
+      "nome_exibicao": "Bela Vista",
+      "distrito": "bela-vista",
       "zona": "centro",
-      "lat": -23.546,
-      "lng": -46.658,
-      "descricao_curta": "Tradicional, intelectual, com prédios clássicos e shopping próprio."
-    },
-    "santa-cecilia-paulista": {
-      "nome_exibicao": "Paulista (Av.)",
-      "distrito": "consolacao",
-      "zona": "centro",
-      "lat": -23.5614,
-      "lng": -46.6557,
-      "descricao_curta": "Coração corporativo, museus, intensa vida urbana 24h."
-    },
-    "pacaembu": {
-      "nome_exibicao": "Pacaembu",
-      "distrito": "perdizes",
-      "zona": "oeste",
-      "lat": -23.543,
-      "lng": -46.668,
-      "descricao_curta": "Residencial arborizado, com o estádio histórico no centro."
-    },
-    "alto-da-lapa": {
-      "nome_exibicao": "Alto da Lapa",
-      "distrito": "lapa",
-      "zona": "oeste",
-      "lat": -23.531,
-      "lng": -46.708,
-      "descricao_curta": "Residencial alto padrão, ruas tranquilas, vista da cidade."
-    },
-    "vila-olimpia": {
-      "nome_exibicao": "Vila Olímpia",
-      "distrito": "itaim-bibi",
-      "zona": "oeste",
-      "lat": -23.595,
-      "lng": -46.684,
-      "descricao_curta": "Polo corporativo moderno com torres e vida noturna."
-    },
-    "faria-lima": {
-      "nome_exibicao": "Faria Lima",
-      "distrito": "itaim-bibi",
-      "zona": "oeste",
-      "lat": -23.579,
-      "lng": -46.689,
-      "descricao_curta": "Eixo financeiro, torres corporativas, fundos e startups."
-    },
-    "berrini": {
-      "nome_exibicao": "Berrini",
-      "distrito": "itaim-bibi",
-      "zona": "sul",
-      "lat": -23.603,
-      "lng": -46.692,
-      "descricao_curta": "Polo de escritórios, próximo do rio Pinheiros."
-    },
-    "brooklin": {
-      "nome_exibicao": "Brooklin",
-      "distrito": "campo-belo",
-      "zona": "sul",
-      "lat": -23.6168,
-      "lng": -46.685,
-      "descricao_curta": "Residencial e comercial misto, com avenida principal arborizada."
-    },
-    "brooklin-novo": {
-      "nome_exibicao": "Brooklin Novo",
-      "distrito": "itaim-bibi",
-      "zona": "sul",
-      "lat": -23.608,
-      "lng": -46.689,
-      "descricao_curta": "Em verticalização, próximo ao Itaim e Vila Olímpia."
-    },
-    "indianopolis": {
-      "nome_exibicao": "Indianópolis",
-      "distrito": "moema",
-      "zona": "sul",
-      "lat": -23.606,
-      "lng": -46.66,
-      "descricao_curta": "Residencial bem servido de comércio e transporte."
-    },
-    "planalto-paulista": {
-      "nome_exibicao": "Planalto Paulista",
-      "distrito": "saude",
-      "zona": "sul",
-      "lat": -23.621,
-      "lng": -46.663,
-      "descricao_curta": "Residencial calmo, prédios médios, perfil familiar."
-    },
-    "ibirapuera": {
-      "nome_exibicao": "Ibirapuera",
-      "distrito": "vila-mariana",
-      "zona": "sul",
-      "lat": -23.587,
-      "lng": -46.657,
-      "descricao_curta": "Vizinhança do parque mais famoso da cidade."
-    },
-    "chacara-klabin": {
-      "nome_exibicao": "Chácara Klabin",
-      "distrito": "vila-mariana",
-      "zona": "sul",
-      "lat": -23.601,
-      "lng": -46.636,
-      "descricao_curta": "Próximo do metrô, mistura prédios novos e antigos."
-    },
-    "vila-clementino": {
-      "nome_exibicao": "Vila Clementino",
-      "distrito": "vila-mariana",
-      "zona": "sul",
-      "lat": -23.596,
-      "lng": -46.64,
-      "descricao_curta": "Polo médico (UNIFESP), comércio e bares na rua Vergueiro."
-    },
-    "mirandopolis": {
-      "nome_exibicao": "Mirandópolis",
-      "distrito": "saude",
-      "zona": "sul",
-      "lat": -23.609,
-      "lng": -46.648,
-      "descricao_curta": "Residencial estabelecido com bom acesso a metrô."
-    },
-    "agua-branca": {
-      "nome_exibicao": "Água Branca",
-      "distrito": "barra-funda",
-      "zona": "oeste",
-      "lat": -23.521,
-      "lng": -46.672,
-      "descricao_curta": "Em expansão imobiliária, próximo ao Allianz Parque."
-    },
-    "pompeia": {
-      "nome_exibicao": "Pompéia",
-      "distrito": "perdizes",
-      "zona": "oeste",
-      "lat": -23.53,
-      "lng": -46.685,
-      "descricao_curta": "Cultural (SESC), boêmio sem ser caro, bom comércio."
-    },
-    "sumare": {
-      "nome_exibicao": "Sumaré",
-      "distrito": "perdizes",
-      "zona": "oeste",
-      "lat": -23.545,
-      "lng": -46.68,
-      "descricao_curta": "Residencial arborizado, com metrô, próximo da Vila Madalena."
+      "bio_curta": "A Bela Vista é uma mistura de cantinas, teatros, prédios antigos e vida urbana intensa. Um bairro onde a história de São Paulo ainda aparece nas calçadas.",
+      "bio_longa": "A Bela Vista nasceu marcada pela presença italiana e pela vida cultural. Entre ruas estreitas e edifícios antigos, o bairro conecta o centro à Paulista e guarda uma São Paulo cheia de camadas.\n\nDurante o dia, tem movimento de estudantes, trabalhadores e moradores antigos. À noite, bares, cantinas e teatros acendem uma atmosfera mais boêmia, popular e afetiva."
     },
     "bixiga": {
       "nome_exibicao": "Bixiga",
       "distrito": "bela-vista",
       "zona": "centro",
-      "lat": -23.5605,
-      "lng": -46.647,
-      "descricao_curta": "Tradicionalmente italiano, cantinas, teatro."
+      "bio_curta": "O Bixiga tem cheiro de cantina, som de samba e memória italiana espalhada pelas ladeiras. É um dos bairros mais culturais e teatrais da cidade.",
+      "bio_longa": "O Bixiga parece funcionar em outro ritmo, mais dramático e mais popular. Suas ruas guardam festas tradicionais, escadarias, sobrados antigos e uma relação forte com o teatro e a música.\n\nÉ um pedaço de São Paulo que mistura imigração italiana, cultura negra, samba e vida de rua. Poucos lugares conseguem parecer tão antigos e tão vivos ao mesmo tempo."
     },
-    "liberdade-japonesa": {
-      "nome_exibicao": "Liberdade (Bairro Japonês)",
-      "distrito": "liberdade",
-      "zona": "centro",
-      "lat": -23.5587,
-      "lng": -46.636,
-      "descricao_curta": "Bairro oriental tradicional, com feirinha aos domingos."
-    },
-    "republica-centro": {
-      "nome_exibicao": "República",
-      "distrito": "republica",
-      "zona": "centro",
-      "lat": -23.544,
-      "lng": -46.642,
-      "descricao_curta": "Centro histórico, em revitalização, prédios antigos baratos."
-    },
-    "centro-historico": {
-      "nome_exibicao": "Centro Histórico",
-      "distrito": "se",
-      "zona": "centro",
-      "lat": -23.5505,
-      "lng": -46.6333,
-      "descricao_curta": "Núcleo original da cidade, prédios históricos, comércio popular."
-    },
-    "luz": {
-      "nome_exibicao": "Luz",
+    "bom-retiro": {
+      "nome_exibicao": "Bom Retiro",
       "distrito": "bom-retiro",
       "zona": "centro",
-      "lat": -23.534,
-      "lng": -46.636,
-      "descricao_curta": "Patrimônio cultural (Pinacoteca, Sala SP), em revitalização."
+      "bio_curta": "O Bom Retiro é um bairro de chegadas: coreanos, bolivianos, judeus e tantos outros grupos deixaram marcas por ali. Moda, comida e idiomas diferentes dividem as mesmas ruas.",
+      "bio_longa": "O Bom Retiro sempre foi uma porta de entrada para quem chega em São Paulo tentando construir uma vida. A região mistura comércio de roupas, oficinas, restaurantes escondidos e uma diversidade cultural que muda de quarteirão para quarteirão.\n\nÉ um bairro intenso, prático e multicultural. Entre lojas lotadas e ruas mais silenciosas, dá para sentir como São Paulo se formou pela sobreposição de comunidades diferentes."
+    },
+    "bras": {
+      "nome_exibicao": "Brás",
+      "distrito": "bras",
+      "zona": "centro",
+      "bio_curta": "O Brás vive em ritmo de comércio. Sacolas, ônibus, vendedores, galpões e multidões fazem o bairro parecer sempre em horário de pico.",
+      "bio_longa": "O Brás cresceu ligado às fábricas, ao comércio popular e à chegada de imigrantes. Hoje é um dos lugares mais movimentados do país para comprar roupa e mercadorias.\n\nA região pode parecer caótica à primeira vista, mas tem uma lógica própria: tudo ali gira em torno da circulação. Pessoas chegam, compram, vendem, carregam, atravessam e continuam."
+    },
+    "cambuci": {
+      "nome_exibicao": "Cambuci",
+      "distrito": "cambuci",
+      "zona": "centro",
+      "bio_curta": "O Cambuci tem um jeito de bairro antigo, com ruas tranquilas e uma vida mais discreta. Parece uma São Paulo que ficou menos apressada.",
+      "bio_longa": "O Cambuci não tenta chamar atenção, e talvez essa seja sua graça. Próximo ao centro, mas longe do brilho das regiões mais famosas, o bairro mantém padarias, casas antigas e um cotidiano mais silencioso.\n\nQuem mora ali costuma ter uma relação de rotina com o lugar. É um bairro de passagem para alguns, mas de pertencimento para quem conhece suas ruas menores."
     },
     "campos-eliseos": {
       "nome_exibicao": "Campos Elíseos",
       "distrito": "santa-cecilia",
       "zona": "centro",
-      "lat": -23.538,
-      "lng": -46.645,
-      "descricao_curta": "Antiga elite, hoje misto e popular, com Cracolândia próxima."
+      "bio_curta": "Campos Elíseos carrega a lembrança de uma São Paulo rica e elegante que mudou de destino. Casarões antigos e ruas desgastadas contam essa história sem precisar explicar.",
+      "bio_longa": "A região já foi endereço da elite paulistana, com palacetes e construções imponentes. Com o tempo, mudou de função e passou a carregar marcas fortes de abandono, conflito social e resistência urbana.\n\nHoje Campos Elíseos é um bairro de contrastes: bonito e duro, histórico e ferido. É uma das áreas que melhor mostra como São Paulo transforma, esquece e reaproveita seus próprios espaços."
     },
-    "vila-pompeia": {
-      "nome_exibicao": "Vila Pompéia",
-      "distrito": "perdizes",
-      "zona": "oeste",
-      "lat": -23.525,
-      "lng": -46.689,
-      "descricao_curta": "Mistura residencial e comercial, com vida ativa."
+    "consolacao": {
+      "nome_exibicao": "Consolação",
+      "distrito": "consolacao",
+      "zona": "centro",
+      "bio_curta": "A Consolação mistura universidade, bares, cinemas, prédios antigos e um movimento que nunca some completamente. É um bairro de atravessamento e encontro.",
+      "bio_longa": "Entre a Paulista e o centro, a Consolação acabou virando território de estudantes, artistas, trabalhadores e gente de passagem. Ela tem uma energia urbana forte, feita de calçadas cheias e portas abertas até tarde.\n\nO bairro muda muito de uma rua para outra. Pode ser barulhento, cultural, residencial ou meio decadente, sempre com a sensação de que alguma coisa está acontecendo ali perto."
     },
-    "vila-romana": {
-      "nome_exibicao": "Vila Romana",
-      "distrito": "lapa",
-      "zona": "oeste",
-      "lat": -23.529,
-      "lng": -46.696,
-      "descricao_curta": "Tradicionalmente italiana, comércio gastronômico forte."
+    "glicerio": {
+      "nome_exibicao": "Glicério",
+      "distrito": "liberdade",
+      "zona": "centro",
+      "bio_curta": "O Glicério é uma região popular, intensa e humana, onde imigrantes, comércio e moradia se misturam perto do centro. Não é polido, mas é profundamente paulistano.",
+      "bio_longa": "O Glicério tem uma presença forte de comunidades imigrantes e uma vida urbana que acontece muito na rua. É uma região de circulação, moradia popular e pequenas redes de sobrevivência.\n\nSua beleza não está no cartão-postal, mas na realidade das pessoas que ocupam o bairro todos os dias. É uma São Paulo crua, diversa e cheia de contrastes."
     },
-    "tatuape-centro": {
-      "nome_exibicao": "Tatuapé",
-      "distrito": "tatuape",
-      "zona": "leste",
-      "lat": -23.5395,
-      "lng": -46.576,
-      "descricao_curta": "Subcentro leste verticalizado, comércio forte e metrô."
+    "higienopolis": {
+      "nome_exibicao": "Higienópolis",
+      "distrito": "consolacao",
+      "zona": "centro",
+      "bio_curta": "Higienópolis tem prédios elegantes, ruas arborizadas e uma calma de bairro tradicional. É uma São Paulo clássica, sofisticada e cheia de códigos próprios.",
+      "bio_longa": "Higienópolis cresceu como bairro de elite e ainda guarda uma arquitetura residencial marcante. Seus edifícios antigos, praças e cafés criam uma atmosfera mais europeia e silenciosa.\n\nAo mesmo tempo, a região não é só formalidade. Universidades, livrarias, restaurantes e a forte presença da comunidade judaica dão ao bairro uma vida cultural discreta, mas constante."
     },
-    "anália-franco": {
-      "nome_exibicao": "Anália Franco",
-      "distrito": "vila-formosa",
-      "zona": "leste",
-      "lat": -23.553,
-      "lng": -46.553,
-      "descricao_curta": "Residencial de alto padrão na zona leste, shopping próprio."
+    "liberdade": {
+      "nome_exibicao": "Liberdade",
+      "distrito": "liberdade",
+      "zona": "centro",
+      "bio_curta": "Na Liberdade, São Paulo muda de idioma, cheiro e cor em poucas quadras. Lanternas, mercados asiáticos e restaurantes escondidos fazem o bairro parecer uma cidade dentro da cidade.",
+      "bio_longa": "A Liberdade ganhou identidade japonesa no início do século XX e depois incorporou também influências chinesas e coreanas. Hoje é um dos lugares mais reconhecíveis e visitados de São Paulo.\n\nAos fins de semana, a região fica tomada por feiras, turistas, filas e lojas cheias. Mas em ruas menores ainda aparecem templos, mercados e pequenos restaurantes que guardam uma atmosfera mais íntima."
     },
-    "vila-carrao": {
-      "nome_exibicao": "Vila Carrão",
-      "distrito": "carrao",
-      "zona": "leste",
-      "lat": -23.547,
-      "lng": -46.531,
-      "descricao_curta": "Residencial estabelecido, comércio local forte."
+    "luz": {
+      "nome_exibicao": "Luz",
+      "distrito": "bom-retiro",
+      "zona": "centro",
+      "bio_curta": "A Luz mistura beleza histórica e dureza urbana. Estação, museus, jardins e problemas sociais convivem em um dos pedaços mais simbólicos da cidade.",
+      "bio_longa": "A Luz é uma das regiões mais importantes da história de São Paulo. A estação, a Pinacoteca e o Jardim da Luz lembram um tempo em que o centro era o grande palco da cidade.\n\nHoje o bairro também carrega contrastes pesados. Patrimônio cultural e vulnerabilidade social dividem espaço, criando uma paisagem complexa, bonita e difícil."
     },
-    "carandiru": {
-      "nome_exibicao": "Carandiru",
+    "pari": {
+      "nome_exibicao": "Pari",
+      "distrito": "pari",
+      "zona": "centro",
+      "bio_curta": "O Pari é discreto, comercial e antigo, espremido entre o Brás, o Tietê e a memória industrial da cidade. Tem cara de São Paulo de trabalho.",
+      "bio_longa": "O Pari cresceu com galpões, comércio e circulação de mercadorias. Não é um bairro turístico, mas revela muito da lógica prática que move São Paulo todos os dias.\n\nEntre ruas simples, pequenas indústrias e comunidades imigrantes, o bairro guarda uma atmosfera de bastidor da cidade. É onde muita coisa acontece longe dos holofotes."
+    },
+    "republica": {
+      "nome_exibicao": "República",
+      "distrito": "republica",
+      "zona": "centro",
+      "bio_curta": "A República é urbana, diversa e imprevisível. Prédios antigos, bares, galerias e gente de todo tipo fazem o bairro parecer São Paulo concentrada.",
+      "bio_longa": "A República tem uma energia que muda de hora em hora. Durante o dia, recebe trabalhadores, estudantes e turistas; à noite, bares, festas e moradores dão outro tom às ruas.\n\nÉ um bairro cheio de contradições: bonito, caótico, cultural e desgastado. Para muita gente, é justamente essa mistura que faz a região parecer tão viva."
+    },
+    "santa-cecilia": {
+      "nome_exibicao": "Santa Cecília",
+      "distrito": "santa-cecilia",
+      "zona": "centro",
+      "bio_curta": "Santa Cecília virou abrigo de uma São Paulo criativa, boêmia e meio nostálgica. Cafés, bares e prédios antigos dão ao bairro uma personalidade forte.",
+      "bio_longa": "Santa Cecília mistura moradores antigos com uma nova geração de artistas, jornalistas, designers e gente que gosta de viver perto do centro. O bairro ganhou bares e restaurantes, mas ainda preserva uma alma residencial.\n\nExiste ali uma São Paulo menos óbvia: elegante em alguns trechos, decadente em outros, sempre humana. É um bairro que parece feito para caminhar e observar."
+    },
+    "se": {
+      "nome_exibicao": "Sé",
+      "distrito": "se",
+      "zona": "centro",
+      "bio_curta": "A Sé é o coração histórico de São Paulo, mas também um dos lugares onde a cidade mostra suas contradições com mais força. Tudo parece começar e se chocar ali.",
+      "bio_longa": "A Sé concentra parte da memória fundadora de São Paulo. Igrejas, prédios públicos, estações e multidões fazem da região um centro simbólico e prático da cidade.\n\nAo mesmo tempo, é um lugar de contrastes sociais muito visíveis. A Sé pode ser monumental e dura na mesma caminhada, revelando a cidade sem filtro."
+    },
+    "vila-buarque": {
+      "nome_exibicao": "Vila Buarque",
+      "distrito": "republica",
+      "zona": "centro",
+      "bio_curta": "A Vila Buarque tem livrarias, cafés, bares e uma atmosfera jovem perto do centro. É um bairro pequeno, cultural e cheio de gente interessante circulando.",
+      "bio_longa": "Entre Santa Cecília, Higienópolis e República, a Vila Buarque ganhou fama como território de encontros. Universidades, bares, cinemas e restaurantes ajudam a criar um clima intelectual e boêmio.\n\nO bairro tem escala humana, com ruas que convidam a caminhar. Parece uma São Paulo de conversas longas, mesas na calçada e vida cultural acontecendo em espaços pequenos."
+    },
+    "agua-fria": {
+      "nome_exibicao": "Água Fria",
       "distrito": "santana",
       "zona": "norte",
-      "lat": -23.51,
-      "lng": -46.626,
-      "descricao_curta": "Próximo ao parque da Juventude, prédios novos."
+      "bio_curta": "A Água Fria tem um clima residencial e familiar, com ruas tranquilas e uma vida de bairro bem marcada. Fica perto do movimento de Santana, mas preserva um ritmo próprio.",
+      "bio_longa": "A Água Fria é um daqueles bairros da Zona Norte onde a rotina parece mais estável. Casas, prédios baixos e comércio local ajudam a criar uma sensação de vizinhança tranquila.\n\nSua proximidade com Santana e Tucuruvi garante acesso e movimento, mas o bairro ainda mantém uma atmosfera mais reservada. É um lugar de famílias, padarias conhecidas e ruas que não precisam chamar atenção."
     },
-    "limao-centro": {
-      "nome_exibicao": "Limão",
-      "distrito": "limao",
+    "brasilandia": {
+      "nome_exibicao": "Brasilândia",
+      "distrito": "brasilandia",
       "zona": "norte",
-      "lat": -23.505,
-      "lng": -46.668,
-      "descricao_curta": "Residencial misto, próximo da marginal Tietê."
+      "bio_curta": "A Brasilândia é grande, popular e cheia de vida comunitária. O bairro carrega uma força periférica feita de cultura, resistência e muita gente construindo a cidade todos os dias.",
+      "bio_longa": "A Brasilândia é um dos territórios mais expressivos da Zona Norte. Suas ruas, vielas, comércios e casas mostram uma São Paulo que cresceu longe dos centros de poder, mas perto da força das comunidades.\n\nAli existe uma identidade muito ligada à música, à cultura periférica e às redes de vizinhança. É um bairro intenso, com desafios reais, mas também com muita produção cultural e sentimento de pertencimento."
     },
-    "morumbi-alto": {
-      "nome_exibicao": "Morumbi (Alto)",
-      "distrito": "morumbi",
-      "zona": "sul",
-      "lat": -23.601,
-      "lng": -46.716,
-      "descricao_curta": "Mansões, shopping, estádio. Caro mas sem metrô."
+    "cachoeirinha": {
+      "nome_exibicao": "Cachoeirinha",
+      "distrito": "cachoeirinha",
+      "zona": "norte",
+      "bio_curta": "A Cachoeirinha tem cara de bairro popular da Zona Norte: comércio de rua, vida familiar e movimento constante. É um lugar de rotina, trabalho e vizinhança.",
+      "bio_longa": "A Cachoeirinha cresceu como uma região residencial e popular, muito ligada ao cotidiano de famílias que vivem e trabalham na Zona Norte. O comércio local é parte importante da vida do bairro.\n\nNão é um lugar de grandes cartões-postais, mas tem a força dos bairros que funcionam como cidade dentro da cidade. Ali, a vida acontece nas avenidas, nas padarias, nos pontos de ônibus e nas conversas de rua."
     },
-    "real-parque": {
-      "nome_exibicao": "Real Parque",
-      "distrito": "morumbi",
-      "zona": "sul",
-      "lat": -23.616,
-      "lng": -46.728,
-      "descricao_curta": "Condomínios de alto padrão à beira do rio Pinheiros."
+    "casa-verde": {
+      "nome_exibicao": "Casa Verde",
+      "distrito": "casa-verde",
+      "zona": "norte",
+      "bio_curta": "A Casa Verde tem samba, tradição e clima de bairro antigo da Zona Norte. É residencial, popular e orgulhosa da própria história.",
+      "bio_longa": "A Casa Verde é muito associada ao carnaval e às escolas de samba, mas sua identidade vai além disso. O bairro preserva uma atmosfera de vizinhança, com ruas residenciais e comércio local forte.\n\nExiste ali uma mistura de tradição popular e vida familiar. É um bairro que parece conhecer seus próprios personagens, com moradores antigos, bares simples e uma relação afetiva forte com a Zona Norte."
     },
-    "panamby": {
-      "nome_exibicao": "Panamby",
-      "distrito": "vila-andrade",
-      "zona": "sul",
-      "lat": -23.632,
-      "lng": -46.724,
-      "descricao_curta": "Condomínios novos, área verde, perfil família."
-    },
-    "vila-suzana": {
-      "nome_exibicao": "Vila Suzana",
-      "distrito": "vila-sonia",
-      "zona": "oeste",
-      "lat": -23.608,
-      "lng": -46.74,
-      "descricao_curta": "Residencial calmo, próximo da Vila Sônia."
-    },
-    "butanta-centro": {
-      "nome_exibicao": "Butantã",
-      "distrito": "butanta",
-      "zona": "oeste",
-      "lat": -23.568,
-      "lng": -46.718,
-      "descricao_curta": "Polo universitário (USP), metrô, mistura popular e médio."
-    },
-    "city-butanta": {
-      "nome_exibicao": "City Butantã",
-      "distrito": "butanta",
-      "zona": "oeste",
-      "lat": -23.578,
-      "lng": -46.727,
-      "descricao_curta": "Residencial arborizado, próximo da USP."
-    },
-    "saude-centro": {
-      "nome_exibicao": "Saúde",
-      "distrito": "saude",
-      "zona": "sul",
-      "lat": -23.616,
-      "lng": -46.639,
-      "descricao_curta": "Residencial verticalizado com metrô na linha azul."
-    },
-    "interlagos": {
-      "nome_exibicao": "Interlagos",
-      "distrito": "cidade-dutra",
-      "zona": "sul",
-      "lat": -23.694,
-      "lng": -46.679,
-      "descricao_curta": "Extremo sul, com autódromo, áreas verdes."
-    },
-    "freguesia-do-o-centro": {
+    "freguesia-do-o": {
       "nome_exibicao": "Freguesia do Ó",
       "distrito": "freguesia-do-o",
       "zona": "norte",
-      "lat": -23.499,
-      "lng": -46.692,
-      "descricao_curta": "Subcentro norte popular, comércio variado."
+      "bio_curta": "A Freguesia do Ó é um dos bairros mais antigos de São Paulo e ainda parece guardar uma cidade menor dentro dela. Tem igreja, bares, ladeiras e muita memória.",
+      "bio_longa": "A Freguesia do Ó tem uma identidade histórica muito forte. O largo, a igreja e as ruas antigas dão ao bairro uma sensação de vila que resistiu ao crescimento da metrópole.\n\nAo mesmo tempo, é uma região viva, com bares, restaurantes e uma cena boêmia própria. A Freguesia consegue ser tradicional sem parecer parada no tempo."
     },
-    "santana-imigrantes": {
+    "horto-florestal": {
+      "nome_exibicao": "Horto Florestal",
+      "distrito": "tremembe",
+      "zona": "norte",
+      "bio_curta": "O Horto Florestal é uma pausa verde na Zona Norte. A proximidade com a Serra da Cantareira dá ao bairro um clima mais fresco, calmo e arborizado.",
+      "bio_longa": "Morar perto do Horto é conviver com uma São Paulo menos mineral e mais verde. As árvores, o parque e a presença da Cantareira criam uma atmosfera diferente do restante da cidade.\n\nA região tem um perfil residencial e tranquilo, muito procurado por quem quer silêncio sem sair completamente da capital. É um bairro onde a natureza participa da rotina."
+    },
+    "imirim": {
       "nome_exibicao": "Imirim",
       "distrito": "santana",
       "zona": "norte",
-      "lat": -23.504,
-      "lng": -46.644,
-      "descricao_curta": "Residencial estabelecido próximo a Santana."
+      "bio_curta": "O Imirim é um bairro de passagem e permanência ao mesmo tempo. Avenidas movimentadas convivem com ruas residenciais e uma rotina bem familiar.",
+      "bio_longa": "O Imirim fica em uma posição importante da Zona Norte, conectando Santana, Casa Verde e regiões vizinhas. Por isso, tem movimento constante, comércio forte e uma vida urbana prática.\n\nApesar do fluxo das avenidas, o bairro mantém áreas residenciais tranquilas. É uma região sem grandes poses, muito ligada ao cotidiano real de quem vive a cidade."
+    },
+    "jacana": {
+      "nome_exibicao": "Jaçanã",
+      "distrito": "jacana",
+      "zona": "norte",
+      "bio_curta": "O Jaçanã ficou eternizado pelo Trem das Onze e ainda carrega esse imaginário popular. É um bairro simples, residencial e cheio de memória afetiva paulistana.",
+      "bio_longa": "O Jaçanã entrou no imaginário de São Paulo pela música de Adoniran Barbosa, mas sua identidade vai além da nostalgia. O bairro tem vida popular, comércio local e uma atmosfera de Zona Norte mais afastada.\n\nSuas ruas misturam casas, pequenos negócios e moradores que carregam uma relação afetiva com a região. É um lugar onde a cidade parece mais cotidiana e menos performática."
+    },
+    "jardim-franca": {
+      "nome_exibicao": "Jardim França",
+      "distrito": "tucuruvi",
+      "zona": "norte",
+      "bio_curta": "O Jardim França tem ruas arborizadas, casas grandes e uma calma pouco comum na Zona Norte. É uma região mais reservada, familiar e silenciosa.",
+      "bio_longa": "O Jardim França é conhecido pelo perfil residencial de alto padrão e por uma sensação de refúgio urbano. Suas ruas são mais tranquilas, com casas amplas e muito verde.\n\nA proximidade com o Tucuruvi e a Serra da Cantareira dá ao bairro uma combinação interessante: acesso à cidade e clima de recolhimento. É uma São Paulo mais discreta, quase escondida."
+    },
+    "jardim-sao-paulo": {
+      "nome_exibicao": "Jardim São Paulo",
+      "distrito": "santana",
+      "zona": "norte",
+      "bio_curta": "O Jardim São Paulo é residencial, bem localizado e tranquilo. Tem metrô por perto, ruas agradáveis e uma rotina de bairro que funciona sem muito barulho.",
+      "bio_longa": "O Jardim São Paulo combina mobilidade com vida residencial. A presença do metrô aproxima o bairro do restante da cidade, mas suas ruas mantêm uma atmosfera mais familiar e silenciosa.\n\nÉ um daqueles lugares valorizados pela praticidade. Moradores antigos, prédios novos e comércio local dividem espaço sem apagar completamente o clima de vizinhança."
     },
     "lauzane-paulista": {
       "nome_exibicao": "Lauzane Paulista",
       "distrito": "mandaqui",
       "zona": "norte",
-      "lat": -23.479,
-      "lng": -46.643,
-      "descricao_curta": "Residencial calmo na zona norte média."
+      "bio_curta": "Lauzane Paulista tem um ritmo calmo e familiar, muito ligado à vida residencial da Zona Norte. É um bairro de ruas conhecidas, comércio local e rotina simples.",
+      "bio_longa": "Lauzane Paulista é uma região que se apoia na tranquilidade. Próxima a Santana e Mandaqui, oferece acesso a serviços sem perder completamente o clima residencial.\n\nO bairro tem cara de cotidiano: mercado, escola, padaria, vizinhos e famílias que circulam pelas mesmas ruas há anos. É São Paulo em uma escala mais doméstica."
     },
-    "sao-miguel-centro": {
-      "nome_exibicao": "São Miguel Paulista",
-      "distrito": "sao-miguel",
-      "zona": "leste",
-      "lat": -23.498,
-      "lng": -46.444,
-      "descricao_curta": "Subcentro extremo leste, populacional grande."
+    "limao": {
+      "nome_exibicao": "Limão",
+      "distrito": "limao",
+      "zona": "norte",
+      "bio_curta": "O Limão mistura avenidas movimentadas, casas antigas e comércio de bairro. Tem uma identidade prática, popular e muito ligada à Zona Norte.",
+      "bio_longa": "O Limão cresceu como um bairro residencial e comercial ao mesmo tempo. Suas avenidas levam movimento, mas as ruas internas ainda preservam uma vida mais tranquila.\n\nÉ uma região de contrastes simples: oficinas, padarias, prédios novos e casas antigas convivem lado a lado. Um bairro de rotina, trabalho e história local."
     },
-    "vila-sonia-centro": {
-      "nome_exibicao": "Vila Sônia",
-      "distrito": "vila-sonia",
-      "zona": "oeste",
-      "lat": -23.601,
-      "lng": -46.728,
-      "descricao_curta": "Final da linha amarela do metrô, em expansão."
+    "mandaqui": {
+      "nome_exibicao": "Mandaqui",
+      "distrito": "mandaqui",
+      "zona": "norte",
+      "bio_curta": "O Mandaqui tem um clima mais fresco e residencial, com ruas que sobem em direção à Cantareira. É um bairro de famílias, árvores e vida menos apressada.",
+      "bio_longa": "O Mandaqui guarda uma relação forte com a paisagem da Zona Norte mais arborizada. A proximidade com a Serra da Cantareira influencia o clima, as ruas e a sensação de bairro mais tranquilo.\n\nEntre casas, condomínios e pequenos comércios, a região mantém um ritmo residencial. É um lugar para quem gosta de estar perto da cidade, mas não no meio do barulho dela."
     },
-    "cidade-jardim": {
-      "nome_exibicao": "Cidade Jardim",
-      "distrito": "alto-de-pinheiros",
-      "zona": "oeste",
-      "lat": -23.59,
-      "lng": -46.697,
-      "descricao_curta": "Alto padrão, shopping de luxo, mansões."
+    "parque-novo-mundo": {
+      "nome_exibicao": "Parque Novo Mundo",
+      "distrito": "vila-maria",
+      "zona": "norte",
+      "bio_curta": "O Parque Novo Mundo tem uma energia de bastidor da cidade. Galpões, transportes e áreas residenciais se misturam perto das marginais.",
+      "bio_longa": "O Parque Novo Mundo é muito marcado pela logística e pelo movimento de cargas. A proximidade com as marginais e rodovias fez do bairro uma região prática, de passagem e trabalho.\n\nMas ele não é só galpão. Também existem áreas residenciais, comércios locais e famílias que vivem ali há anos, criando uma rotina própria em meio ao fluxo pesado da cidade."
     },
-    "vila-nova-conceicao": {
-      "nome_exibicao": "Vila Nova Conceição",
-      "distrito": "itaim-bibi",
-      "zona": "oeste",
-      "lat": -23.587,
-      "lng": -46.674,
-      "descricao_curta": "Residencial alto padrão entre Itaim e Ibirapuera."
+    "perus": {
+      "nome_exibicao": "Perus",
+      "distrito": "perus",
+      "zona": "norte",
+      "bio_curta": "Perus fica na borda da cidade e tem uma identidade muito ligada à história operária, à natureza e à sensação de periferia afastada.",
+      "bio_longa": "Perus cresceu ligado à indústria do cimento e à expansão da cidade para a região noroeste. Essa memória operária ainda aparece na identidade local e no orgulho dos moradores.\n\nAo mesmo tempo, o bairro tem proximidade com áreas verdes e um ritmo diferente do centro expandido. Parece uma São Paulo mais distante, mais ampla e mais conectada ao limite da metrópole."
     },
-    "aclimacao": {
-      "nome_exibicao": "Aclimação",
-      "distrito": "cambuci",
-      "zona": "centro",
-      "lat": -23.566,
-      "lng": -46.631,
-      "descricao_curta": "Residencial com parque, tradicionalmente classe média."
+    "pirituba": {
+      "nome_exibicao": "Pirituba",
+      "distrito": "pirituba",
+      "zona": "norte",
+      "bio_curta": "Pirituba é grande, diversa e cheia de vida própria. Tem cara de bairro-cidade, com comércio, casas, prédios e uma rotina independente.",
+      "bio_longa": "Pirituba é uma das regiões mais importantes da Zona Norte/Noroeste e funciona quase como um centro local. Muita gente resolve a vida por ali sem precisar atravessar a cidade.\n\nO bairro mistura áreas antigas, condomínios novos, comércio forte e ruas residenciais. É uma São Paulo de família, trabalho e expansão urbana."
     },
-    "tremembe-centro": {
+    "santana": {
+      "nome_exibicao": "Santana",
+      "distrito": "santana",
+      "zona": "norte",
+      "bio_curta": "Santana é um dos corações da Zona Norte. Tem bares, comércio, metrô, escolas e uma vida urbana que mistura tradição e movimento.",
+      "bio_longa": "Santana funciona como referência para boa parte da Zona Norte. A região concentra serviços, restaurantes, vida noturna, hospitais e acesso fácil ao metrô.\n\nMesmo com o movimento intenso, ainda guarda ruas residenciais e uma memória de bairro tradicional. É um lugar onde moradores antigos e novos convivem em uma rotina bem paulistana."
+    },
+    "serra-da-cantareira": {
+      "nome_exibicao": "Serra da Cantareira",
+      "distrito": "tremembe",
+      "zona": "norte",
+      "bio_curta": "A Serra da Cantareira parece outra cidade dentro de São Paulo. Mata, silêncio e clima mais frio fazem a região fugir completamente do imaginário urbano da capital.",
+      "bio_longa": "Viver perto da Serra da Cantareira é ter uma relação diferente com São Paulo. A presença da mata atlântica, das subidas e do ar mais fresco cria uma sensação quase rural em alguns trechos.\n\nA região atrai quem procura natureza, casas maiores e uma rotina mais afastada. É um dos poucos lugares onde a cidade parece diminuir o volume."
+    },
+    "sao-domingos": {
+      "nome_exibicao": "São Domingos",
+      "distrito": "sao-domingos",
+      "zona": "norte",
+      "bio_curta": "São Domingos é residencial, tranquilo e familiar. Um bairro mais discreto, onde a rotina acontece sem grande espetáculo.",
+      "bio_longa": "São Domingos tem uma atmosfera de bairro tradicional, com ruas residenciais, pequenos comércios e uma vida cotidiana menos acelerada. Fica perto de regiões importantes, mas não perde o perfil local.\n\nÉ um bairro de moradores que valorizam praticidade e silêncio. A paisagem mistura casas, prédios baixos e uma sensação de pertencimento simples."
+    },
+    "tremembe": {
       "nome_exibicao": "Tremembé",
       "distrito": "tremembe",
       "zona": "norte",
-      "lat": -23.457,
-      "lng": -46.602,
-      "descricao_curta": "Próximo da Serra da Cantareira, perfil residencial e verde."
+      "bio_curta": "O Tremembé combina ruas residenciais, verde e proximidade com a Cantareira. Tem um clima mais calmo, quase de refúgio dentro da Zona Norte.",
+      "bio_longa": "O Tremembé é uma das áreas mais arborizadas da Zona Norte, muito influenciada pela proximidade com a Serra da Cantareira. Suas ruas têm uma atmosfera mais fresca e residencial.\n\nO bairro atrai famílias e pessoas que buscam uma rotina menos comprimida. Mesmo sendo parte da cidade, em alguns trechos parece estar um pouco fora dela."
     },
-    "jardim-anchieta": {
-      "nome_exibicao": "Jardim Anchieta",
+    "tucuruvi": {
+      "nome_exibicao": "Tucuruvi",
+      "distrito": "tucuruvi",
+      "zona": "norte",
+      "bio_curta": "O Tucuruvi mistura metrô, shopping, comércio forte e vida residencial. É um bairro prático, movimentado e muito presente na rotina da Zona Norte.",
+      "bio_longa": "O Tucuruvi ganhou ainda mais importância com o metrô e o crescimento do comércio. A região virou ponto de circulação para moradores de várias partes da Zona Norte.\n\nAo mesmo tempo, mantém ruas residenciais e uma vida de bairro tradicional. É uma mistura de praticidade urbana com cotidiano familiar."
+    },
+    "vila-guilherme": {
+      "nome_exibicao": "Vila Guilherme",
+      "distrito": "vila-guilherme",
+      "zona": "norte",
+      "bio_curta": "A Vila Guilherme tem galpões, eventos, casas e uma rotina prática perto das grandes avenidas. É um bairro de circulação e moradia ao mesmo tempo.",
+      "bio_longa": "A Vila Guilherme é muito marcada pela proximidade com o Anhembi, o Expo Center Norte e as marginais. Isso traz movimento, eventos e uma paisagem urbana voltada ao deslocamento.\n\nMas o bairro também tem áreas residenciais antigas, com famílias e comércio local. É uma região que vive entre o fluxo da cidade e a rotina de vizinhança."
+    },
+    "vila-maria": {
+      "nome_exibicao": "Vila Maria",
+      "distrito": "vila-maria",
+      "zona": "norte",
+      "bio_curta": "A Vila Maria mistura tradição residencial, galpões e uma forte ligação com transportes e logística. Tem cara de bairro antigo e trabalhador.",
+      "bio_longa": "A Vila Maria cresceu em uma posição estratégica, próxima às marginais e às entradas da cidade. Isso fez com que galpões, transportadoras e comércio se misturassem às áreas residenciais.\n\nMesmo com essa paisagem de trabalho, o bairro mantém uma vida familiar forte. Padarias, escolas e casas antigas ajudam a equilibrar o ritmo industrial da região."
+    },
+    "vila-medeiros": {
+      "nome_exibicao": "Vila Medeiros",
+      "distrito": "vila-medeiros",
+      "zona": "norte",
+      "bio_curta": "A Vila Medeiros tem uma vida de bairro forte, com comércio local, famílias e ruas movimentadas no ritmo da Zona Norte popular.",
+      "bio_longa": "A Vila Medeiros é um bairro residencial e popular, muito ligado à rotina de quem mora e trabalha na própria região. O comércio de rua tem papel importante na vida local.\n\nÉ um lugar sem grandes símbolos turísticos, mas cheio de cotidiano. A força do bairro está nas relações de vizinhança, nas famílias antigas e na vida prática das ruas."
+    },
+    "alto-da-lapa": {
+      "nome_exibicao": "Alto da Lapa",
+      "distrito": "lapa",
+      "zona": "oeste",
+      "bio_curta": "O Alto da Lapa tem ruas arborizadas, casas grandes e uma calma de bairro nobre antigo. Parece uma São Paulo mais espaçosa e silenciosa.",
+      "bio_longa": "O Alto da Lapa preserva uma atmosfera residencial rara na Zona Oeste. Suas casas amplas, árvores antigas e ruas tranquilas criam uma sensação de refúgio urbano.\n\nÉ um bairro de luxo discreto, menos exibido que outras regiões nobres. A vida ali parece acontecer em outro volume, mais baixo e mais familiar."
+    },
+    "alto-de-pinheiros": {
+      "nome_exibicao": "Alto de Pinheiros",
+      "distrito": "alto-de-pinheiros",
+      "zona": "oeste",
+      "bio_curta": "Alto de Pinheiros é verde, amplo e silencioso. Um bairro de casas grandes, ruas largas e uma sensação de cidade planejada dentro de São Paulo.",
+      "bio_longa": "O Alto de Pinheiros se tornou uma das regiões mais desejadas da cidade por juntar espaço, arborização e tranquilidade. É um bairro que parece resistir à pressa e à verticalização excessiva.\n\nA proximidade com o Parque Villa-Lobos e com Pinheiros aumenta o contraste: perto de tudo, mas com clima de retiro residencial. É uma São Paulo nobre, discreta e horizontal."
+    },
+    "barra-funda": {
+      "nome_exibicao": "Barra Funda",
+      "distrito": "barra-funda",
+      "zona": "oeste",
+      "bio_curta": "A Barra Funda vive em transformação. Galpões antigos, prédios novos, casas de show e escritórios fazem o bairro parecer um laboratório urbano.",
+      "bio_longa": "A Barra Funda carrega uma memória industrial e ferroviária muito forte. Por muito tempo foi vista como região de galpões, oficinas e espaços grandes, mas isso vem mudando rapidamente.\n\nHoje o bairro mistura cultura, eventos, empresas e novos empreendimentos residenciais. É uma área que parece estar sempre entre o passado fabril e o futuro imobiliário."
+    },
+    "boacava": {
+      "nome_exibicao": "Boaçava",
+      "distrito": "alto-de-pinheiros",
+      "zona": "oeste",
+      "bio_curta": "Boaçava é uma região calma, arborizada e de alto padrão perto do Villa-Lobos. Tem ruas silenciosas e uma sensação de bairro escondido.",
+      "bio_longa": "Boaçava tem um perfil residencial muito discreto, com casas grandes, condomínios e muita arborização. A região é procurada por quem quer tranquilidade sem sair da Zona Oeste.\n\nA proximidade com o Parque Villa-Lobos reforça esse clima de qualidade de vida. É um bairro que não faz muito barulho, mas comunica conforto em cada rua."
+    },
+    "butanta": {
+      "nome_exibicao": "Butantã",
+      "distrito": "butanta",
+      "zona": "oeste",
+      "bio_curta": "O Butantã mistura universidade, casas, estudantes e uma vida cotidiana bastante diversa. A USP dá ao bairro um espírito jovem e intelectual.",
+      "bio_longa": "O Butantã tem uma relação forte com a Universidade de São Paulo, que molda parte da rotina da região. Estudantes, professores, famílias e trabalhadores convivem em um bairro grande e cheio de contrastes.\n\nA região combina ruas residenciais, comércio local e avenidas importantes. É um bairro prático, jovem em alguns trechos e familiar em outros."
+    },
+    "jaguare": {
+      "nome_exibicao": "Jaguaré",
+      "distrito": "jaguare",
+      "zona": "oeste",
+      "bio_curta": "O Jaguaré mistura memória industrial, condomínios recentes e uma vida urbana de transição. É um bairro que mudou muito sem perder o jeito prático.",
+      "bio_longa": "O Jaguaré cresceu ligado à indústria e aos grandes terrenos próximos às marginais. Com o tempo, parte dessa paisagem foi sendo substituída por prédios residenciais e novos serviços.\n\nHoje o bairro tem um ar de transformação constante. Galpões, condomínios e comércio convivem em uma região que ainda procura uma identidade mais clara."
+    },
+    "jaguara": {
+      "nome_exibicao": "Jaguara",
+      "distrito": "jaguara",
+      "zona": "oeste",
+      "bio_curta": "A Jaguara tem uma rotina residencial e simples, próxima às marginais e aos limites da Zona Oeste. É um bairro mais discreto e funcional.",
+      "bio_longa": "A Jaguara é uma região menos comentada, mas importante para a vida prática da cidade. Suas ruas misturam moradia, comércio local e proximidade com grandes vias de circulação.\n\nÉ um bairro de cotidiano, sem grande espetáculo urbano. A sensação é de uma São Paulo mais tranquila, quase de bastidor."
+    },
+    "jardim-europa": {
+      "nome_exibicao": "Jardim Europa",
+      "distrito": "jardim-paulista",
+      "zona": "oeste",
+      "bio_curta": "O Jardim Europa é uma das áreas mais elegantes de São Paulo. Mansões, museus e ruas arborizadas criam uma atmosfera silenciosa e sofisticada.",
+      "bio_longa": "O Jardim Europa concentra algumas das ruas mais valorizadas da cidade e carrega uma imagem de luxo antigo. É um bairro de casas grandes, muros discretos e pouco movimento de rua.\n\nA presença de museus e instituições culturais dá outra camada à região. Mesmo sendo muito residencial, o bairro tem uma relação forte com arte, arquitetura e prestígio."
+    },
+    "jardim-guedala": {
+      "nome_exibicao": "Jardim Guedala",
+      "distrito": "morumbi",
+      "zona": "oeste",
+      "bio_curta": "O Jardim Guedala tem casas grandes, ladeiras e um silêncio de bairro nobre mais escondido. É um pedaço reservado do Morumbi.",
+      "bio_longa": "O Jardim Guedala é uma região residencial de alto padrão, conhecida pelas casas amplas e ruas sinuosas. Tem um clima mais reservado, longe do movimento comercial mais intenso.\n\nA paisagem do bairro é marcada por muros, árvores e ladeiras. É uma São Paulo de privacidade, carro e vida mais recolhida."
+    },
+    "jardim-paulistano": {
+      "nome_exibicao": "Jardim Paulistano",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "bio_curta": "O Jardim Paulistano mistura luxo, clubes, restaurantes e a proximidade com a Faria Lima. É uma São Paulo sofisticada e muito ligada ao dinheiro.",
+      "bio_longa": "O Jardim Paulistano tem uma localização estratégica entre áreas residenciais nobres e o eixo financeiro da Faria Lima. Isso cria uma mistura de casas elegantes, restaurantes caros e vida corporativa.\n\nÉ um bairro de códigos discretos: clubes tradicionais, ruas arborizadas e movimento controlado. Uma São Paulo rica que raramente precisa se explicar."
+    },
+    "jardim-paulista": {
+      "nome_exibicao": "Jardim Paulista",
+      "distrito": "jardim-paulista",
+      "zona": "oeste",
+      "bio_curta": "O Jardim Paulista tem ruas arborizadas, restaurantes, clínicas e prédios de alto padrão. É uma das faces mais conhecidas e valorizadas dos Jardins.",
+      "bio_longa": "O Jardim Paulista combina vida residencial, serviços sofisticados e proximidade com a Avenida Paulista. É um bairro de calçadas movimentadas, cafés, consultórios e moradores que gostam de estar perto de tudo.\n\nA região equilibra luxo e rotina urbana. Mesmo com trânsito e movimento, preserva uma sensação de bairro elegante e caminhável."
+    },
+    "lapa": {
+      "nome_exibicao": "Lapa",
+      "distrito": "lapa",
+      "zona": "oeste",
+      "bio_curta": "A Lapa tem comércio forte, memória ferroviária e clima de bairro antigo. É uma região que ainda parece conhecer seus próprios moradores.",
+      "bio_longa": "A Lapa cresceu ligada aos trilhos, aos mercados e à vida operária da Zona Oeste. Essa história ainda aparece no comércio de rua, nas construções antigas e na relação afetiva dos moradores com o bairro.\n\nÉ uma região prática e tradicional, onde dá para resolver muita coisa sem sair dali. A Lapa tem personalidade de bairro completo, quase independente."
+    },
+    "morumbi": {
+      "nome_exibicao": "Morumbi",
+      "distrito": "morumbi",
+      "zona": "oeste",
+      "bio_curta": "O Morumbi é feito de contrastes: mansões, condomínios, trânsito, ladeiras e desigualdades convivem na mesma paisagem.",
+      "bio_longa": "O Morumbi cresceu como símbolo de alto padrão, com casas grandes, prédios fechados e avenidas largas. Mas a região nunca foi homogênea, e seus contrastes sociais são parte central da sua identidade.\n\nÉ um bairro espalhado, de deslocamentos longos e paisagens muito diferentes. Em poucos minutos, a cidade muda de escala, renda e sensação urbana."
+    },
+    "pacaembu": {
+      "nome_exibicao": "Pacaembu",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "bio_curta": "O Pacaembu tem casas antigas, ruas curvas e um silêncio elegante. O estádio ajuda a dar ao bairro uma memória afetiva muito paulistana.",
+      "bio_longa": "O Pacaembu é um bairro residencial de alto padrão que preserva uma atmosfera clássica. Suas ruas arborizadas, casas antigas e topografia marcada criam uma paisagem muito reconhecível.\n\nO estádio do Pacaembu dá ao bairro uma dimensão coletiva, mesmo em meio ao silêncio residencial. É um lugar onde memória esportiva e vida nobre se encontram."
+    },
+    "perdizes": {
+      "nome_exibicao": "Perdizes",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "bio_curta": "Perdizes mistura ladeiras, prédios, estudantes e famílias. É um bairro de classe média alta com vida urbana intensa e clima residencial ao mesmo tempo.",
+      "bio_longa": "Perdizes tem uma rotina muito marcada pela presença de universidades, escolas, hospitais e prédios residenciais. Isso faz o bairro circular entre juventude, família e vida prática.\n\nAs ladeiras são parte da personalidade local. Em algumas ruas, a sensação é de calma; em outras, bares, trânsito e comércio mostram uma São Paulo sempre ativa."
+    },
+    "pinheiros": {
+      "nome_exibicao": "Pinheiros",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "bio_curta": "Pinheiros mistura restaurantes, bares, feiras, escritórios e gente criativa. É um dos bairros mais urbanos e desejados de São Paulo.",
+      "bio_longa": "Pinheiros mudou muito, mas ainda preserva uma mistura difícil de copiar. Entre prédios novos, casas antigas, feiras e bares, o bairro virou um ponto de encontro entre trabalho, cultura e lazer.\n\nÉ uma região que funciona de dia e de noite. Tem comida boa, transporte, vida criativa e aquela sensação de que sempre existe uma esquina interessante por perto."
+    },
+    "pompeia": {
+      "nome_exibicao": "Pompéia",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "bio_curta": "A Pompéia tem cara de bairro antigo, mas respira cultura. O SESC, as padarias e as ruas residenciais dão à região um charme muito próprio.",
+      "bio_longa": "A Pompéia preserva uma sensação de vizinhança forte, com moradores antigos, comércio local e ruas que ainda parecem de bairro pequeno. Ao mesmo tempo, tem vida cultural intensa.\n\nO SESC Pompéia virou um símbolo da região e trouxe outra camada para o bairro. A Pompéia mistura cotidiano, arte e uma certa nostalgia paulistana."
+    },
+    "raposo-tavares": {
+      "nome_exibicao": "Raposo Tavares",
+      "distrito": "raposo-tavares",
+      "zona": "oeste",
+      "bio_curta": "Raposo Tavares tem uma vida mais afastada do centro expandido, marcada por condomínios, avenidas e uma rotina de deslocamento.",
+      "bio_longa": "A região da Raposo Tavares cresceu muito ligada à rodovia e à expansão urbana para o oeste da cidade. É um território de condomínios, comércio de apoio e trajetos longos.\n\nO bairro tem uma sensação menos central, mais dependente do carro e da circulação pelas grandes vias. Ainda assim, guarda bolsões residenciais tranquilos e familiares."
+    },
+    "rio-pequeno": {
+      "nome_exibicao": "Rio Pequeno",
+      "distrito": "rio-pequeno",
+      "zona": "oeste",
+      "bio_curta": "O Rio Pequeno mistura estudantes, famílias e comércio local perto da USP. É um bairro residencial, prático e diverso.",
+      "bio_longa": "O Rio Pequeno tem uma relação indireta, mas forte, com a vida universitária do Butantã. Muitos estudantes e trabalhadores circulam pela região, misturados a famílias que vivem ali há anos.\n\nÉ um bairro de rotina simples, com comércio local, ônibus e ruas residenciais. Não tenta ser sofisticado, mas funciona como um pedaço prático da Zona Oeste."
+    },
+    "sumare": {
+      "nome_exibicao": "Sumaré",
+      "distrito": "perdizes",
+      "zona": "oeste",
+      "bio_curta": "O Sumaré é arborizado, residencial e silencioso, mesmo estando perto de bairros agitados. Parece uma pausa entre Perdizes, Pinheiros e Vila Madalena.",
+      "bio_longa": "O Sumaré tem uma localização privilegiada e um clima mais reservado. Suas ruas arborizadas e casas antigas criam uma sensação de tranquilidade no meio de uma área muito valorizada.\n\nÉ um bairro para quem quer estar perto da vida cultural e gastronômica da Zona Oeste sem morar exatamente no barulho dela. Um equilíbrio raro em São Paulo."
+    },
+    "sumarezinho": {
+      "nome_exibicao": "Sumarezinho",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "bio_curta": "O Sumarezinho é pequeno, criativo e bem localizado, entre Pinheiros e Vila Madalena. Tem bares, cafés e uma vida urbana mais íntima.",
+      "bio_longa": "O Sumarezinho muitas vezes aparece misturado à Vila Madalena ou a Pinheiros, mas tem sua própria escala. É uma região de ruas menores, restaurantes, cafés e moradores que gostam da vida a pé.\n\nO bairro combina a energia criativa da região com uma atmosfera mais residencial. Parece uma versão menos óbvia e mais tranquila da boemia ao redor."
+    },
+    "vila-anglo-brasileira": {
+      "nome_exibicao": "Vila Anglo Brasileira",
+      "distrito": "butanta",
+      "zona": "oeste",
+      "bio_curta": "A Vila Anglo Brasileira é residencial, tranquila e meio escondida entre bairros mais conhecidos. Tem um clima de vila dentro da Zona Oeste.",
+      "bio_longa": "A Vila Anglo Brasileira preserva uma escala menor, com ruas residenciais e uma sensação de bairro mais fechado em si. Fica perto de regiões movimentadas, mas não absorve completamente esse ritmo.\n\nÉ um lugar de cotidiano doméstico, onde a cidade parece mais próxima e menos anônima. Sua graça está justamente em não parecer óbvia."
+    },
+    "vila-ida": {
+      "nome_exibicao": "Vila Ida",
+      "distrito": "butanta",
+      "zona": "oeste",
+      "bio_curta": "A Vila Ida é tranquila, arborizada e próxima da Vila Madalena, mas com uma personalidade mais residencial e silenciosa.",
+      "bio_longa": "A Vila Ida vive na sombra boa de bairros mais famosos. Perto de Pinheiros e Vila Madalena, consegue manter ruas mais calmas e uma atmosfera de refúgio.\n\nÉ uma região procurada por quem quer acesso à vida cultural da Zona Oeste, mas prefere voltar para casa em um lugar mais quieto. Pequena, discreta e agradável."
+    },
+    "vila-leopoldina": {
+      "nome_exibicao": "Vila Leopoldina",
+      "distrito": "vila-leopoldina",
+      "zona": "oeste",
+      "bio_curta": "A Vila Leopoldina passou de bairro de galpões a região de condomínios modernos. Ainda carrega um pouco da memória industrial no meio da transformação.",
+      "bio_longa": "A Vila Leopoldina mudou radicalmente nas últimas décadas. Antigos galpões e áreas industriais abriram espaço para prédios residenciais, escritórios e novos serviços.\n\nMesmo modernizada, a região ainda tem uma paisagem de transição. É um bairro que mostra como São Paulo reaproveita seus antigos espaços de trabalho para criar novos estilos de vida."
+    },
+    "vila-madalena": {
+      "nome_exibicao": "Vila Madalena",
+      "distrito": "pinheiros",
+      "zona": "oeste",
+      "bio_curta": "A Vila Madalena mistura bares lotados, grafites, cafés e gente criativa andando pelas ruas em qualquer horário. É a São Paulo boêmia em versão bairro.",
+      "bio_longa": "A Vila Madalena nasceu como reduto estudantil e artístico, mas acabou se transformando em um dos bairros mais conhecidos da cidade. Entre ladeiras e muros pintados, convivem artistas, turistas e moradores antigos.\n\nO bairro parece estar sempre acordado. Música, conversas nas calçadas e bares cheios ajudam a criar uma sensação constante de movimento."
+    },
+    "vila-romana": {
+      "nome_exibicao": "Vila Romana",
+      "distrito": "lapa",
+      "zona": "oeste",
+      "bio_curta": "A Vila Romana tem padarias, ruas tranquilas e um clima familiar perto da Lapa. É tradicional, residencial e cada vez mais valorizada.",
+      "bio_longa": "A Vila Romana guarda um jeito de bairro antigo da Zona Oeste, com comércio local forte e moradores de longa data. Ao mesmo tempo, novos prédios vêm mudando sua paisagem.\n\nO bairro equilibra tradição e transformação. Ainda dá para sentir uma vida de vizinhança, mesmo com a chegada de empreendimentos e novos moradores."
+    },
+    "vila-sonia": {
+      "nome_exibicao": "Vila Sônia",
+      "distrito": "vila-sonia",
+      "zona": "oeste",
+      "bio_curta": "A Vila Sônia cresceu com condomínios, metrô e uma rotina residencial cada vez mais conectada. É um bairro familiar em transformação.",
+      "bio_longa": "A Vila Sônia mudou bastante com a chegada do metrô e a valorização imobiliária. A região passou a atrair mais moradores, serviços e novos prédios.\n\nAinda assim, mantém um perfil residencial e familiar. É um bairro que parece estar saindo de uma fase mais periférica para uma presença maior no mapa da cidade."
+    },
+    "alto-da-boa-vista": {
+      "nome_exibicao": "Alto da Boa Vista",
+      "distrito": "santo-amaro",
+      "zona": "sul",
+      "bio_curta": "O Alto da Boa Vista tem ruas verdes, escolas tradicionais e um silêncio residencial raro na Zona Sul. Parece um bairro feito para respirar melhor.",
+      "bio_longa": "O Alto da Boa Vista tem uma atmosfera arborizada e familiar, com casas, condomínios e uma presença forte de escolas internacionais e tradicionais. É uma região que transmite conforto e recolhimento.\n\nMesmo perto de Santo Amaro e grandes avenidas, o bairro preserva ruas mais tranquilas. É uma São Paulo de jardins, muros, árvores e vida menos acelerada."
+    },
+    "brooklin": {
+      "nome_exibicao": "Brooklin",
+      "distrito": "itaim-bibi",
+      "zona": "sul",
+      "bio_curta": "O Brooklin mistura prédios corporativos, apartamentos modernos e uma rotina acelerada. É uma das faces mais empresariais da Zona Sul.",
+      "bio_longa": "O Brooklin mudou muito com a expansão dos escritórios, hotéis e prédios residenciais. A região combina vida de negócios com ruas onde ainda existem casas e comércios de bairro.\n\nDurante o dia, o movimento é corporativo e intenso. À noite, restaurantes, bares e moradores dão ao bairro uma vida mais doméstica e menos formal."
+    },
+    "campo-belo": {
+      "nome_exibicao": "Campo Belo",
+      "distrito": "campo-belo",
+      "zona": "sul",
+      "bio_curta": "O Campo Belo é residencial, arborizado e prático, com cafés, ruas tranquilas e a presença constante dos aviões de Congonhas.",
+      "bio_longa": "O Campo Belo tem um perfil de classe média alta e uma rotina muito ligada à vida residencial. Suas ruas arborizadas, padarias e restaurantes dão ao bairro uma sensação confortável.\n\nA proximidade com Congonhas é parte da identidade local: os aviões passam no céu como trilha sonora. Mesmo assim, o bairro preserva um clima familiar e caminhável."
+    },
+    "campo-grande": {
+      "nome_exibicao": "Campo Grande",
+      "distrito": "campo-grande",
+      "zona": "sul",
+      "bio_curta": "Campo Grande tem uma vida residencial forte, com famílias, avenidas importantes e uma rotina prática da Zona Sul. É um bairro de cotidiano amplo.",
+      "bio_longa": "Campo Grande é uma região grande e diversa, marcada por casas, condomínios, comércio local e proximidade com centros de consumo. O bairro atende muito à vida diária dos moradores.\n\nNão tem uma imagem única, e talvez por isso seja tão paulistano. Em algumas partes é tranquilo; em outras, movimentado e comercial."
+    },
+    "campo-limpo": {
+      "nome_exibicao": "Campo Limpo",
+      "distrito": "campo-limpo",
+      "zona": "sul",
+      "bio_curta": "O Campo Limpo é popular, intenso e cheio de vida de rua. Comércio, transporte e comunidades dão ao bairro uma energia própria.",
+      "bio_longa": "O Campo Limpo é uma região importante da Zona Sul, com grande circulação de pessoas e uma vida urbana muito marcada pelo cotidiano de trabalho. O comércio local tem papel central na dinâmica do bairro.\n\nÉ um território com desafios, mas também com forte identidade periférica. Ali, São Paulo aparece em sua forma mais real, coletiva e resistente."
+    },
+    "capao-redondo": {
+      "nome_exibicao": "Capão Redondo",
+      "distrito": "capao-redondo",
+      "zona": "sul",
+      "bio_curta": "O Capão Redondo é símbolo de cultura periférica, música e resistência. Um bairro que transformou dificuldade em identidade forte.",
+      "bio_longa": "O Capão Redondo tem uma presença enorme no imaginário de São Paulo, muito por sua ligação com o rap, a literatura periférica e os movimentos culturais da Zona Sul. É um bairro de voz forte.\n\nA região carrega problemas históricos, mas também uma produção cultural potente. É um lugar onde pertencimento, luta e criatividade caminham juntos."
+    },
+    "capela-do-socorro": {
+      "nome_exibicao": "Capela do Socorro",
+      "distrito": "socorro",
+      "zona": "sul",
+      "bio_curta": "A Capela do Socorro mistura cidade, represa e áreas mais abertas. É uma região extensa, com paisagens que fogem do padrão urbano de São Paulo.",
+      "bio_longa": "A Capela do Socorro tem uma relação forte com a água e com os extremos da Zona Sul. A presença das represas muda a paisagem e cria um clima diferente de bairros mais centrais.\n\nA região combina áreas populares, comércio, casas e trechos quase naturais. É uma São Paulo mais ampla, menos vertical e mais ligada ao território."
+    },
+    "chacara-flora": {
+      "nome_exibicao": "Chácara Flora",
+      "distrito": "santo-amaro",
+      "zona": "sul",
+      "bio_curta": "A Chácara Flora é verde, fechada e silenciosa, com casas grandes e uma sensação de isolamento confortável no meio da Zona Sul.",
+      "bio_longa": "A Chácara Flora tem um perfil residencial de alto padrão, marcado por ruas arborizadas, condomínios e casas amplas. É uma região associada a privacidade e tranquilidade.\n\nO bairro parece funcionar em outra velocidade, mais reservada e menos exposta. É uma São Paulo que se esconde atrás de árvores, portões e jardins."
+    },
+    "chacara-klabin": {
+      "nome_exibicao": "Chácara Klabin",
       "distrito": "vila-mariana",
       "zona": "sul",
-      "lat": -23.606,
-      "lng": -46.633,
-      "descricao_curta": "Residencial próximo da Vila Mariana e parque do Ibirapuera."
+      "bio_curta": "A Chácara Klabin é moderna, vertical e tranquila, com prédios novos e acesso fácil ao metrô. Um bairro residencial valorizado e bem resolvido.",
+      "bio_longa": "A Chácara Klabin se consolidou como uma região residencial de alto padrão, com muitos prédios modernos e ruas mais organizadas. A presença do metrô aumentou ainda mais sua valorização.\n\nO bairro tem uma atmosfera familiar e prática. Fica perto da Vila Mariana e da Saúde, mas mantém uma identidade mais silenciosa e planejada."
     },
-    "vila-clementino-paulista": {
-      "nome_exibicao": "Paraíso",
+    "cidade-ademar": {
+      "nome_exibicao": "Cidade Ademar",
+      "distrito": "cidade-ademar",
+      "zona": "sul",
+      "bio_curta": "Cidade Ademar é popular, movimentada e muito ligada à vida comunitária. Um bairro de comércio local, famílias e rotina intensa.",
+      "bio_longa": "Cidade Ademar é uma região grande e diversa da Zona Sul, com ruas cheias, comércio forte e uma vida cotidiana bastante ativa. Muita coisa acontece no entorno das avenidas e dos pequenos centros locais.\n\nÉ um bairro de trabalho, vizinhança e deslocamentos. Sua identidade vem menos dos cartões-postais e mais das pessoas que constroem a rotina da região todos os dias."
+    },
+    "cidade-dutra": {
+      "nome_exibicao": "Cidade Dutra",
+      "distrito": "cidade-dutra",
+      "zona": "sul",
+      "bio_curta": "Cidade Dutra tem uma relação forte com Interlagos, a represa e uma vida residencial mais aberta. É uma São Paulo com mais céu e mais distância.",
+      "bio_longa": "Cidade Dutra fica em uma parte da Zona Sul onde a cidade parece ganhar outra escala. A proximidade com a represa, o autódromo e áreas mais largas cria uma sensação menos comprimida.\n\nO bairro mistura casas, comércio local e grandes deslocamentos. É uma região familiar, popular e muito ligada à paisagem sul da cidade."
+    },
+    "grajau": {
+      "nome_exibicao": "Grajaú",
+      "distrito": "grajau",
+      "zona": "sul",
+      "bio_curta": "O Grajaú é enorme, periférico e cheio de vida cultural. A represa, o trem e as comunidades dão ao bairro uma identidade muito forte.",
+      "bio_longa": "O Grajaú é uma das regiões mais populosas de São Paulo e carrega uma força periférica muito expressiva. Sua relação com a represa cria uma paisagem diferente, ao mesmo tempo bonita e marcada por desafios urbanos.\n\nA região tem música, coletivos culturais, comércio intenso e uma vida comunitária muito presente. É um bairro onde a distância do centro não diminui a potência local."
+    },
+    "interlagos": {
+      "nome_exibicao": "Interlagos",
+      "distrito": "cidade-dutra",
+      "zona": "sul",
+      "bio_curta": "Interlagos tem autódromo, casas grandes e a presença da represa por perto. É um bairro que mistura velocidade, verde e vida residencial.",
+      "bio_longa": "Interlagos ficou famoso pelo autódromo, mas sua identidade vai além da Fórmula 1. A região tem ruas arborizadas, casas amplas e uma relação forte com a paisagem da represa.\n\nEm alguns trechos, o bairro parece mais aberto e menos denso que o restante da cidade. É uma São Paulo de curvas, vento e horizontes mais largos."
+    },
+    "ipiranga": {
+      "nome_exibicao": "Ipiranga",
+      "distrito": "ipiranga",
+      "zona": "sul",
+      "bio_curta": "O Ipiranga mistura história nacional, comércio de bairro e vida residencial. É tradicional sem parecer parado no tempo.",
+      "bio_longa": "O Ipiranga carrega o peso simbólico da independência do Brasil, principalmente pela presença do museu e do parque. Mas o bairro também é muito cotidiano, feito de moradores, escolas, padarias e ruas conhecidas.\n\nA região mistura tradição e crescimento imobiliário. É um lugar onde a história oficial convive com a vida comum de quem atravessa o bairro todos os dias."
+    },
+    "jabaquara": {
+      "nome_exibicao": "Jabaquara",
+      "distrito": "jabaquara",
+      "zona": "sul",
+      "bio_curta": "O Jabaquara é passagem, chegada e moradia ao mesmo tempo. Terminal, metrô e comércio dão ao bairro uma rotina intensa.",
+      "bio_longa": "O Jabaquara tem uma identidade muito ligada ao transporte e à conexão com outras partes da cidade e do litoral. O terminal e o metrô fazem da região um ponto de circulação constante.\n\nMas o bairro também é residencial e diverso, com ruas tranquilas em alguns trechos e movimento pesado em outros. É uma São Paulo prática, popular e conectada."
+    },
+    "jardim-angela": {
+      "nome_exibicao": "Jardim Ângela",
+      "distrito": "jardim-angela",
+      "zona": "sul",
+      "bio_curta": "O Jardim Ângela carrega uma história dura, mas também muita força comunitária. É um bairro de resistência, transformação e cultura periférica.",
+      "bio_longa": "O Jardim Ângela foi por muito tempo associado à violência, mas sua história recente também é feita de organização comunitária, projetos sociais e cultura local. O bairro aprendeu a disputar a própria narrativa.\n\nHoje, continua enfrentando desafios, mas tem uma identidade forte e uma rede de moradores que transforma o território todos os dias. É periferia viva, complexa e humana."
+    },
+    "jardim-marajoara": {
+      "nome_exibicao": "Jardim Marajoara",
+      "distrito": "campo-grande",
+      "zona": "sul",
+      "bio_curta": "O Jardim Marajoara é residencial, arborizado e familiar, com condomínios e ruas mais calmas na Zona Sul. Tem uma atmosfera confortável e discreta.",
+      "bio_longa": "O Jardim Marajoara tem uma vida muito ligada a condomínios, escolas, clubes e comércio de apoio. É uma região procurada por famílias que querem tranquilidade sem se afastar demais dos serviços.\n\nO bairro tem ruas largas e uma sensação de espaço maior. É uma São Paulo menos barulhenta, mais doméstica e bastante residencial."
+    },
+    "jardim-sao-luis": {
+      "nome_exibicao": "Jardim São Luís",
+      "distrito": "jardim-sao-luis",
+      "zona": "sul",
+      "bio_curta": "O Jardim São Luís é popular, grande e cheio de movimento. Comércio, moradia e cultura periférica dão ao bairro uma identidade muito presente.",
+      "bio_longa": "O Jardim São Luís é uma região importante da Zona Sul, marcada por grande densidade, comércio local e deslocamentos diários. É um bairro de trabalhadores, famílias e vida comunitária.\n\nTambém tem uma cena cultural periférica forte, ligada à música, arte e coletivos locais. O bairro mostra uma São Paulo distante dos centros ricos, mas cheia de produção e pertencimento."
+    },
+    "marsilac": {
+      "nome_exibicao": "Marsilac",
+      "distrito": "marsilac",
+      "zona": "sul",
+      "bio_curta": "Marsilac parece outra cidade: mata, estradas, silêncio e um clima rural dentro do município de São Paulo. É o extremo mais verde da capital.",
+      "bio_longa": "Marsilac é uma das regiões mais surpreendentes de São Paulo. Diferente da imagem de prédios e avenidas, ali aparecem áreas de mata, sítios, rios e uma vida muito mais próxima do campo.\n\nÉ um bairro que lembra que o município também tem floresta e zona rural. A distância do centro cria uma sensação de São Paulo quase desconhecida, mais lenta e natural."
+    },
+    "mirandopolis": {
+      "nome_exibicao": "Mirandópolis",
+      "distrito": "saude",
+      "zona": "sul",
+      "bio_curta": "Mirandópolis é tranquilo, residencial e bem localizado, com ruas arborizadas e uma vida de bairro perto da Saúde e da Vila Mariana.",
+      "bio_longa": "Mirandópolis tem uma atmosfera familiar, com casas, prédios baixos e comércio local. É uma região valorizada justamente por ser calma sem estar isolada.\n\nA proximidade com metrô, escolas e serviços torna o bairro muito prático. É uma São Paulo cotidiana, organizada e menos ansiosa."
+    },
+    "moema": {
+      "nome_exibicao": "Moema",
+      "distrito": "moema",
+      "zona": "sul",
+      "bio_curta": "Moema tem ruas arborizadas, cafés cheios e uma rotina que parece mais organizada que o restante da cidade. É um dos bairros mais caminháveis de São Paulo.",
+      "bio_longa": "Moema cresceu como um bairro residencial de classe alta e acabou se tornando símbolo de qualidade de vida dentro do centro expandido. A proximidade com o Ibirapuera e as ruas planas favorecem uma rotina a pé.\n\nUma curiosidade famosa é a divisão pela Avenida Ibirapuera: de um lado, ruas com nomes de pássaros; do outro, nomes indígenas. Mesmo perto de avenidas movimentadas, o bairro preserva uma sensação de calma."
+    },
+    "morumbi-sul": {
+      "nome_exibicao": "Morumbi Sul",
+      "distrito": "vila-andrade",
+      "zona": "sul",
+      "bio_curta": "Morumbi Sul tem condomínios, prédios e uma rotina residencial mais fechada. É uma região marcada por conforto, carro e grandes deslocamentos.",
+      "bio_longa": "Morumbi Sul acompanha a lógica de parte do Morumbi: áreas residenciais verticais, condomínios e uma vida muito dependente de deslocamento. A sensação é de bairro planejado mais para morar do que para caminhar.\n\nA região tem conforto e estrutura, mas também reflete a São Paulo dos muros, garagens e avenidas. É um bairro de rotina familiar e pouco improviso."
+    },
+    "parelheiros": {
+      "nome_exibicao": "Parelheiros",
+      "distrito": "parelheiros",
+      "zona": "sul",
+      "bio_curta": "Parelheiros é São Paulo com cara de interior: verde, distância, estradas e comunidades próximas da natureza. Um extremo da cidade que muita gente nem imagina.",
+      "bio_longa": "Parelheiros é uma das regiões mais verdes e extensas do município. Ali, São Paulo deixa de parecer metrópole e ganha paisagens de mata, sítios, aldeias, estradas e áreas rurais.\n\nA distância do centro cria desafios, mas também uma identidade muito própria. É um território onde natureza, periferia e vida rural se misturam de um jeito único."
+    },
+    "pedreira": {
+      "nome_exibicao": "Pedreira",
+      "distrito": "pedreira",
+      "zona": "sul",
+      "bio_curta": "Pedreira é popular, residencial e próxima da represa. Um bairro de rotina intensa, comércio local e vida comunitária.",
+      "bio_longa": "Pedreira tem uma dinâmica muito ligada à Zona Sul mais afastada, com moradia popular, comércio de apoio e deslocamentos longos. A proximidade com a represa marca parte da paisagem.\n\nÉ um bairro de cotidiano forte, onde a vida acontece nas ruas, nos ônibus, nas escolas e nos pequenos negócios. Simples, movimentado e real."
+    },
+    "planalto-paulista": {
+      "nome_exibicao": "Planalto Paulista",
+      "distrito": "saude",
+      "zona": "sul",
+      "bio_curta": "O Planalto Paulista é residencial, arborizado e tranquilo, com ruas largas e casas antigas. Tem um clima familiar bem marcado.",
+      "bio_longa": "O Planalto Paulista tem uma atmosfera calma, muito ligada à vida residencial de classe média. Casas, árvores e ruas largas criam uma sensação de bairro organizado e menos denso.\n\nA localização é estratégica, perto de Moema, Saúde e grandes avenidas, mas o bairro ainda preserva uma rotina mais silenciosa. É uma São Paulo prática e confortável."
+    },
+    "real-parque": {
+      "nome_exibicao": "Real Parque",
+      "distrito": "morumbi",
+      "zona": "sul",
+      "bio_curta": "O Real Parque mostra São Paulo em contraste: condomínios de luxo, pontes, avenidas e comunidades convivem muito perto.",
+      "bio_longa": "O Real Parque é uma região onde a desigualdade urbana aparece de forma clara. Prédios de alto padrão e comunidades populares ocupam o mesmo território, criando uma paisagem muito paulistana.\n\nAo mesmo tempo, o bairro tem localização estratégica e uma vida local própria. É um lugar complexo, onde conforto, exclusão e pertencimento se cruzam o tempo todo."
+    },
+    "sacoma": {
+      "nome_exibicao": "Sacomã",
+      "distrito": "sacoma",
+      "zona": "sul",
+      "bio_curta": "O Sacomã é movimentado, popular e conectado ao ABC. Terminal, metrô e comércio fazem o bairro ter uma rotina intensa.",
+      "bio_longa": "O Sacomã tem uma identidade muito ligada ao deslocamento. A proximidade com o ABC, o metrô e as avenidas importantes faz da região um ponto de passagem constante.\n\nMas também é um bairro de moradia, com famílias, comércio local e ruas residenciais. Uma São Paulo prática, trabalhadora e sempre em movimento."
+    },
+    "santo-amaro": {
+      "nome_exibicao": "Santo Amaro",
+      "distrito": "santo-amaro",
+      "zona": "sul",
+      "bio_curta": "Santo Amaro parece uma cidade dentro da cidade. Comércio, empresas, história antiga e movimento intenso convivem no mesmo território.",
+      "bio_longa": "Santo Amaro já foi município independente, e essa sensação de centro próprio ainda existe. A região tem comércio forte, serviços, empresas e uma circulação grande de pessoas todos os dias.\n\nO bairro mistura construções antigas, prédios modernos e áreas residenciais. É uma São Paulo completa, onde tradição e velocidade convivem sem pedir licença."
+    },
+    "saude": {
+      "nome_exibicao": "Saúde",
+      "distrito": "saude",
+      "zona": "sul",
+      "bio_curta": "A Saúde é residencial, prática e familiar, com metrô, ruas tranquilas e comércio de bairro. Um lugar confortável para viver a rotina.",
+      "bio_longa": "A Saúde tem uma atmosfera de classe média tranquila, muito valorizada pela mobilidade e pela vida cotidiana simples. O metrô aproxima o bairro de outras regiões sem apagar seu perfil residencial.\n\nÉ uma região de padarias, escolas, prédios e famílias. Não tem a fama de bairros vizinhos, mas justamente por isso mantém uma sensação mais estável e acolhedora."
+    },
+    "socorro": {
+      "nome_exibicao": "Socorro",
+      "distrito": "socorro",
+      "zona": "sul",
+      "bio_curta": "Socorro tem represa, avenidas e uma vida urbana mais aberta. É uma região de passagem, comércio e paisagem diferente na Zona Sul.",
+      "bio_longa": "Socorro fica em uma área onde a cidade começa a se abrir em direção às represas. Isso dá ao bairro uma paisagem menos densa e uma relação maior com água, pontes e grandes vias.\n\nA região mistura comércio, moradia e deslocamento. É um bairro funcional, com uma energia menos central e mais ligada ao extremo sul da cidade."
+    },
+    "vila-andrade": {
+      "nome_exibicao": "Vila Andrade",
+      "distrito": "vila-andrade",
+      "zona": "sul",
+      "bio_curta": "A Vila Andrade é vertical, residencial e marcada por condomínios. Cresceu rápido e virou uma das regiões mais densas do sudoeste paulistano.",
+      "bio_longa": "A Vila Andrade mudou muito com a chegada de grandes condomínios e prédios residenciais. A região atrai famílias e moradores em busca de estrutura, segurança e apartamentos maiores.\n\nAo mesmo tempo, sua paisagem mostra os contrastes do crescimento urbano. É um bairro de torres, shoppings próximos, trânsito e vida muito organizada em torno dos condomínios."
+    },
+    "vila-clementino": {
+      "nome_exibicao": "Vila Clementino",
       "distrito": "vila-mariana",
       "zona": "sul",
-      "lat": -23.576,
-      "lng": -46.645,
-      "descricao_curta": "Bairro pequeno próximo da Paulista, com metrô."
+      "bio_curta": "A Vila Clementino mistura hospitais, universidades, estudantes e vida residencial. É um bairro prático, bem localizado e cheio de circulação durante o dia.",
+      "bio_longa": "A Vila Clementino tem uma identidade muito ligada à saúde e à educação, com hospitais, faculdades e centros de pesquisa espalhados pela região. Isso cria uma rotina de estudantes, médicos, pacientes e moradores.\n\nApesar do movimento, o bairro preserva ruas residenciais e uma localização privilegiada perto do Ibirapuera e da Vila Mariana. É prático, urbano e bastante desejado."
     },
-    "alto-da-mooca": {
-      "nome_exibicao": "Alto da Mooca",
-      "distrito": "mooca",
-      "zona": "centro",
-      "lat": -23.565,
-      "lng": -46.595,
-      "descricao_curta": "Residencial alto da Mooca, mais tranquilo que o centro."
+    "vila-mariana": {
+      "nome_exibicao": "Vila Mariana",
+      "distrito": "vila-mariana",
+      "zona": "sul",
+      "bio_curta": "A Vila Mariana mistura estudantes, famílias, cultura e metrô. É um dos bairros mais equilibrados e desejados para viver em São Paulo.",
+      "bio_longa": "A Vila Mariana tem uma combinação rara de mobilidade, vida cultural e clima residencial. Universidades, centros culturais, estações de metrô e ruas tranquilas convivem no mesmo bairro.\n\nÉ uma região que atrai perfis muito diferentes: estudantes, famílias, profissionais e moradores antigos. Talvez por isso pareça tão completa e tão fácil de gostar."
     },
-    "agua-rasa-centro": {
+    "agua-rasa": {
       "nome_exibicao": "Água Rasa",
       "distrito": "agua-rasa",
       "zona": "leste",
-      "lat": -23.555,
-      "lng": -46.565,
-      "descricao_curta": "Residencial leste estabelecido, próximo da Mooca e Tatuapé."
+      "bio_curta": "A Água Rasa tem uma vida residencial tranquila e um jeito tradicional de Zona Leste. Casas, comércio local e influência italiana aparecem no cotidiano.",
+      "bio_longa": "A Água Rasa é um bairro de escala mais familiar, onde ruas residenciais e pequenos comércios ainda têm presença forte. A região carrega traços da imigração italiana e da expansão antiga da Zona Leste.\n\nNão é um bairro de grandes excessos, mas de rotina. Padarias, escolas e vizinhos conhecidos ajudam a manter uma sensação de São Paulo mais próxima e doméstica."
+    },
+    "analia-franco": {
+      "nome_exibicao": "Anália Franco",
+      "distrito": "vila-formosa",
+      "zona": "leste",
+      "bio_curta": "Anália Franco é a face mais sofisticada da Zona Leste. Prédios modernos, restaurantes e ruas arborizadas criam uma atmosfera mais organizada e nobre.",
+      "bio_longa": "Anália Franco ganhou força com o crescimento imobiliário e se tornou referência de alto padrão na Zona Leste. A região atrai moradores que buscam estrutura, conforto e uma vida mais próxima de restaurantes e serviços.\n\nO bairro tem um ar de centralidade local, quase como se fosse um Jardins do lado leste. Ao mesmo tempo, mantém conexão com bairros tradicionais ao redor, como Tatuapé e Vila Formosa."
+    },
+    "aricanduva": {
+      "nome_exibicao": "Aricanduva",
+      "distrito": "aricanduva",
+      "zona": "leste",
+      "bio_curta": "Aricanduva é movimento, shopping, avenidas largas e rotina prática. Um bairro muito ligado ao consumo e ao deslocamento da Zona Leste.",
+      "bio_longa": "Aricanduva tem uma paisagem marcada por grandes vias e pelo complexo comercial que virou referência para a região. Muita gente passa pelo bairro para comprar, trabalhar ou atravessar a Zona Leste.\n\nApesar do movimento, também existem áreas residenciais e uma vida de bairro menos visível. É uma região funcional, direta e muito ligada à lógica prática da cidade."
+    },
+    "artur-alvim": {
+      "nome_exibicao": "Artur Alvim",
+      "distrito": "artur-alvim",
+      "zona": "leste",
+      "bio_curta": "Artur Alvim tem metrô, comércio popular e uma rotina intensa de Zona Leste. É um bairro de trabalhadores, famílias e muita circulação.",
+      "bio_longa": "Artur Alvim cresceu como uma região residencial e popular, muito conectada pelo transporte público. A estação de metrô ajuda a organizar parte da vida e do movimento local.\n\nO bairro tem comércio forte, ruas cheias e uma identidade de cotidiano. É um lugar onde a cidade funciona na prática, no vai e vem de quem trabalha longe e volta para casa todos os dias."
+    },
+    "belem": {
+      "nome_exibicao": "Belém",
+      "distrito": "belem",
+      "zona": "leste",
+      "bio_curta": "O Belém mistura galpões antigos, prédios, comércio e herança industrial. É um bairro de transição entre a Mooca, o Brás e a Zona Leste residencial.",
+      "bio_longa": "O Belém tem uma história ligada à indústria, aos imigrantes e à expansão da cidade para o leste. Muitas construções antigas ainda lembram esse passado operário.\n\nHoje o bairro vive uma transformação gradual, com novos prédios e serviços ocupando antigas áreas industriais. É uma região entre memória e mudança."
+    },
+    "cangaiba": {
+      "nome_exibicao": "Cangaíba",
+      "distrito": "cangaiba",
+      "zona": "leste",
+      "bio_curta": "Cangaíba é residencial, popular e familiar, com uma vida muito ligada ao comércio local e às conexões da Zona Leste.",
+      "bio_longa": "Cangaíba tem uma rotina de bairro grande, com casas, avenidas, escolas e pequenos centros comerciais. É uma região onde a vida acontece muito perto de casa.\n\nA proximidade com o Tietê e com outras áreas da Zona Leste dá ao bairro uma sensação de passagem e permanência ao mesmo tempo. Simples, cotidiano e cheio de moradores antigos."
+    },
+    "carrao": {
+      "nome_exibicao": "Carrão",
+      "distrito": "carrao",
+      "zona": "leste",
+      "bio_curta": "O Carrão tem clima residencial, restaurantes e tradição de Zona Leste. É um bairro que equilibra movimento e vida familiar.",
+      "bio_longa": "O Carrão fica entre regiões muito movimentadas, mas preserva uma identidade residencial forte. Casas, prédios, bares e comércio local criam uma rotina confortável para quem mora ali.\n\nA influência italiana aparece em cantinas, padarias e no orgulho de bairro. É uma região tradicional que vem se modernizando sem perder completamente seu jeito antigo."
+    },
+    "cidade-lider": {
+      "nome_exibicao": "Cidade Líder",
+      "distrito": "cidade-lider",
+      "zona": "leste",
+      "bio_curta": "Cidade Líder é popular, residencial e muito ligada à vida comunitária. Um bairro de comércio local, famílias e rotina intensa perto de Itaquera.",
+      "bio_longa": "Cidade Líder cresceu junto com a expansão da Zona Leste e tem uma vida muito marcada por moradores que circulam pela própria região. O comércio de rua e os serviços locais sustentam boa parte do cotidiano.\n\nÉ um bairro sem muita maquiagem, mas com identidade forte. A proximidade com Itaquera aumenta o movimento e reforça sua conexão com uma Zona Leste trabalhadora e popular."
+    },
+    "cidade-tiradentes": {
+      "nome_exibicao": "Cidade Tiradentes",
+      "distrito": "cidade-tiradentes",
+      "zona": "leste",
+      "bio_curta": "Cidade Tiradentes é enorme, periférica e cheia de identidade. Conjuntos habitacionais, cultura local e distância do centro moldam a vida do bairro.",
+      "bio_longa": "Cidade Tiradentes é uma das regiões mais populosas e afastadas de São Paulo. Seu crescimento foi muito marcado por conjuntos habitacionais e por uma urbanização distante dos centros de emprego.\n\nMesmo enfrentando desafios, o bairro tem uma força cultural e comunitária muito grande. É um território onde juventude, arte, luta por direitos e pertencimento aparecem com muita potência."
+    },
+    "ermelino-matarazzo": {
+      "nome_exibicao": "Ermelino Matarazzo",
+      "distrito": "ermelino-matarazzo",
+      "zona": "leste",
+      "bio_curta": "Ermelino Matarazzo tem clima residencial, comércio forte e uma vida popular muito ligada à Zona Leste. É um bairro de rotina e pertencimento.",
+      "bio_longa": "Ermelino Matarazzo cresceu como região de moradia e trabalho, com ruas comerciais, escolas e famílias que vivem ali há gerações. A presença universitária em alguns pontos também adiciona movimento jovem.\n\nO bairro carrega uma identidade simples e forte, sem precisar de grandes símbolos. É uma São Paulo feita de deslocamentos, vizinhança e vida prática."
+    },
+    "guaianases": {
+      "nome_exibicao": "Guaianases",
+      "distrito": "guaianases",
+      "zona": "leste",
+      "bio_curta": "Guaianases é intenso, popular e distante do centro, mas cheio de vida própria. Comércio, trem e comunidade organizam o ritmo do bairro.",
+      "bio_longa": "Guaianases funciona como centralidade importante para o extremo leste. Muita gente circula pelo bairro diariamente para trabalhar, estudar, comprar e se conectar ao restante da cidade.\n\nA distância do centro marca a rotina, mas também fortalece a identidade local. É um bairro de resistência, movimento e vida periférica muito presente."
+    },
+    "itaim-paulista": {
+      "nome_exibicao": "Itaim Paulista",
+      "distrito": "itaim-paulista",
+      "zona": "leste",
+      "bio_curta": "Itaim Paulista é grande, popular e movimentado. Um bairro de comércio forte, trem, famílias e rotina acelerada no extremo leste.",
+      "bio_longa": "Itaim Paulista tem uma vida urbana intensa, muito ligada ao deslocamento diário de quem cruza a cidade para trabalhar. O comércio local é forte e faz o bairro funcionar como centro para muitos moradores.\n\nÉ uma região de periferia viva, com desafios de infraestrutura, mas também com muita circulação e pertencimento. A cidade ali parece mais longa, mais trabalhadora e mais coletiva."
+    },
+    "itaquera": {
+      "nome_exibicao": "Itaquera",
+      "distrito": "itaquera",
+      "zona": "leste",
+      "bio_curta": "Itaquera mistura vida popular, expansão urbana e paixão por futebol. A arena colocou o bairro no mapa simbólico da cidade.",
+      "bio_longa": "Itaquera já era uma centralidade importante da Zona Leste antes da arena, mas ganhou outro destaque com o estádio. Metrô, trem, comércio e grandes equipamentos fazem a região circular muito.\n\nO bairro tem uma identidade popular forte, ligada a famílias, trabalhadores e torcedores. É um lugar em transformação, mas ainda muito marcado pela vida cotidiana da periferia leste."
+    },
+    "jardim-helena": {
+      "nome_exibicao": "Jardim Helena",
+      "distrito": "jardim-helena",
+      "zona": "leste",
+      "bio_curta": "Jardim Helena é popular, residencial e ligado à vida do extremo leste. Tem uma rotina de comunidade, trem e comércio local.",
+      "bio_longa": "Jardim Helena fica em uma região onde São Paulo se estende em direção aos limites do município. A vida ali é marcada por deslocamentos longos e por redes de vizinhança fortes.\n\nO bairro tem comércio de apoio, casas, escolas e uma dinâmica muito ligada ao cotidiano. É um território periférico com identidade própria e muita vida local."
+    },
+    "jose-bonifacio": {
+      "nome_exibicao": "José Bonifácio",
+      "distrito": "jose-bonifacio",
+      "zona": "leste",
+      "bio_curta": "José Bonifácio tem conjuntos habitacionais, famílias e uma rotina residencial muito ligada a Itaquera. É um bairro popular e organizado pela vida cotidiana.",
+      "bio_longa": "José Bonifácio cresceu com forte presença de conjuntos habitacionais, o que marcou sua paisagem e sua forma de ocupação. A região tem perfil familiar e popular.\n\nA proximidade com Itaquera cria conexões importantes de transporte, comércio e serviços. É um bairro de moradores que constroem sua rotina entre deslocamento, vizinhança e vida local."
+    },
+    "mooca": {
+      "nome_exibicao": "Mooca",
+      "distrito": "mooca",
+      "zona": "leste",
+      "bio_curta": "A Mooca carrega orgulho de bairro como poucos lugares em São Paulo. Herança italiana, cantinas, futebol e família fazem parte da identidade local.",
+      "bio_longa": "A Mooca cresceu ligada à imigração italiana, às fábricas e à vida operária. Mesmo com mudanças urbanas, ainda preserva uma relação afetiva muito forte entre moradores e território.\n\nÉ um bairro de memória, comida e pertencimento. Quem é da Mooca costuma falar como se o bairro fosse quase uma nacionalidade própria dentro de São Paulo."
+    },
+    "parque-do-carmo": {
+      "nome_exibicao": "Parque do Carmo",
+      "distrito": "parque-do-carmo",
+      "zona": "leste",
+      "bio_curta": "O Parque do Carmo é lembrado pelo verde, pelas cerejeiras e pela sensação de respiro na Zona Leste. Um bairro onde o parque muda a paisagem.",
+      "bio_longa": "A região do Parque do Carmo tem uma relação direta com uma das áreas verdes mais importantes da Zona Leste. O parque cria uma identidade ligada a lazer, natureza e encontros familiares.\n\nNa época das cerejeiras, o bairro ganha ainda mais movimento e beleza. É uma parte da cidade onde o cotidiano popular encontra uma paisagem mais aberta e afetiva."
+    },
+    "parque-sao-lucas": {
+      "nome_exibicao": "Parque São Lucas",
+      "distrito": "sao-lucas",
+      "zona": "leste",
+      "bio_curta": "Parque São Lucas é residencial, popular e familiar, com ruas de comércio local e uma rotina tradicional da Zona Leste.",
+      "bio_longa": "Parque São Lucas tem uma atmosfera de bairro de moradia, com casas, pequenos prédios e serviços próximos. A vida acontece muito nas ruas principais e nos comércios de vizinhança.\n\nÉ um bairro simples, sem grandes poses, mas com uma identidade local consistente. A sensação é de uma São Paulo cotidiana, prática e familiar."
+    },
+    "penha": {
+      "nome_exibicao": "Penha",
+      "distrito": "penha",
+      "zona": "leste",
+      "bio_curta": "A Penha tem igreja, comércio forte e tradição antiga da Zona Leste. É um bairro que funciona como centro para muita gente ao redor.",
+      "bio_longa": "A Penha é uma das regiões mais tradicionais da Zona Leste, com história ligada à igreja, ao comércio e à circulação de moradores de bairros vizinhos. Seu centro comercial ainda é uma referência local.\n\nO bairro mistura ruas movimentadas, áreas residenciais e uma memória urbana forte. É tradicional, popular e cheio de vida prática."
+    },
+    "ponte-rasa": {
+      "nome_exibicao": "Ponte Rasa",
+      "distrito": "ponte-rasa",
+      "zona": "leste",
+      "bio_curta": "Ponte Rasa é residencial, simples e familiar, com comércio local e uma rotina mais tranquila dentro da Zona Leste.",
+      "bio_longa": "Ponte Rasa tem uma vida de bairro mais discreta, marcada por casas, pequenas lojas e moradores que usam a própria região no dia a dia. É menos comentada que bairros vizinhos, mas muito presente para quem vive ali.\n\nA atmosfera é de cotidiano: mercado, escola, ônibus, padaria e vizinhança. Um bairro funcional e humano."
+    },
+    "sao-mateus": {
+      "nome_exibicao": "São Mateus",
+      "distrito": "sao-mateus",
+      "zona": "leste",
+      "bio_curta": "São Mateus é grande, popular e movimentado, com comércio forte e uma identidade periférica muito marcada na Zona Leste.",
+      "bio_longa": "São Mateus funciona como uma centralidade importante para o extremo leste. A região reúne comércio, serviços, transporte e uma circulação intensa de moradores.\n\nÉ um bairro de periferia potente, com desafios e vida comunitária forte. Ali, São Paulo aparece no ritmo de quem trabalha, se desloca e constrói pertencimento longe do centro."
+    },
+    "sao-miguel-paulista": {
+      "nome_exibicao": "São Miguel Paulista",
+      "distrito": "sao-miguel",
+      "zona": "leste",
+      "bio_curta": "São Miguel Paulista tem história, indústria e vida popular. É um dos bairros mais simbólicos do extremo leste de São Paulo.",
+      "bio_longa": "São Miguel Paulista cresceu ligado à industrialização e à ocupação da Zona Leste. A antiga capela e a memória operária fazem parte de uma identidade histórica mais profunda.\n\nHoje o bairro mistura comércio popular, moradia, transporte e cultura local. É uma região que carrega passado e presente de forma muito viva."
+    },
+    "sapopemba": {
+      "nome_exibicao": "Sapopemba",
+      "distrito": "sapopemba",
+      "zona": "leste",
+      "bio_curta": "Sapopemba é popular, extensa e cheia de movimento. O monotrilho, o comércio e as comunidades moldam a rotina do bairro.",
+      "bio_longa": "Sapopemba é uma região grande e densa, marcada por crescimento urbano rápido e forte vida comunitária. A chegada do monotrilho mudou parte da mobilidade e da paisagem local.\n\nO bairro tem comércio forte, moradia popular e uma rotina intensa. É uma São Paulo periférica, viva e em constante adaptação."
+    },
+    "tatuape": {
+      "nome_exibicao": "Tatuapé",
+      "distrito": "tatuape",
+      "zona": "leste",
+      "bio_curta": "O Tatuapé virou símbolo de uma Zona Leste mais valorizada. Restaurantes, bares, prédios modernos e famílias antigas dividem o bairro.",
+      "bio_longa": "O Tatuapé mudou muito nas últimas décadas e se tornou um dos maiores polos imobiliários e gastronômicos da Zona Leste. A região atrai moradores que querem estrutura sem sair do lado leste da cidade.\n\nMesmo com prédios novos e vida noturna, ainda preserva ruas residenciais e uma relação forte com famílias antigas. É tradição e ascensão urbana no mesmo bairro."
+    },
+    "vila-carrao": {
+      "nome_exibicao": "Vila Carrão",
+      "distrito": "carrao",
+      "zona": "leste",
+      "bio_curta": "Vila Carrão tem ruas residenciais, influência italiana e um clima de bairro tradicional. É tranquila, familiar e próxima do movimento do Tatuapé.",
+      "bio_longa": "A Vila Carrão preserva uma identidade residencial forte, com casas, padarias, restaurantes e famílias antigas. A influência italiana ainda aparece em festas, cantinas e na memória dos moradores.\n\nO bairro se beneficia da proximidade com o Tatuapé, mas mantém um ritmo mais calmo. É uma Zona Leste tradicional, afetiva e menos acelerada."
+    },
+    "vila-curuca": {
+      "nome_exibicao": "Vila Curuçá",
+      "distrito": "vila-curuca",
+      "zona": "leste",
+      "bio_curta": "Vila Curuçá é popular, residencial e distante do centro. Um bairro de comunidade forte, comércio local e rotina do extremo leste.",
+      "bio_longa": "A Vila Curuçá tem uma vida muito ligada ao cotidiano periférico: deslocamentos longos, comércio de bairro e relações de vizinhança. É uma região que funciona pela força da comunidade.\n\nMesmo longe do centro expandido, o bairro tem uma identidade própria. A vida ali é prática, coletiva e marcada pela experiência de quem conhece bem o território."
+    },
+    "vila-esperanca": {
+      "nome_exibicao": "Vila Esperança",
+      "distrito": "penha",
+      "zona": "leste",
+      "bio_curta": "Vila Esperança é residencial e familiar, com metrô por perto e uma atmosfera tranquila entre Penha e Vila Matilde.",
+      "bio_longa": "A Vila Esperança tem uma escala mais calma dentro da Zona Leste. Suas ruas misturam casas, comércio local e moradores que valorizam a praticidade da região.\n\nA estação de metrô ajuda a conectar o bairro ao restante da cidade, mas a sensação interna ainda é de bairro tradicional. Um lugar simples, funcional e acolhedor."
+    },
+    "vila-formosa": {
+      "nome_exibicao": "Vila Formosa",
+      "distrito": "vila-formosa",
+      "zona": "leste",
+      "bio_curta": "Vila Formosa é tradicional, residencial e muito ligada à vida familiar da Zona Leste. Tem ruas tranquilas, comércio local e memória antiga.",
+      "bio_longa": "A Vila Formosa é conhecida pelo perfil residencial e pela presença de moradores antigos. Suas ruas preservam uma atmosfera de bairro consolidado, com comércio de proximidade e vida familiar.\n\nA região também é lembrada pelo grande cemitério, parte marcante da paisagem local. É um bairro discreto, tradicional e muito enraizado na Zona Leste."
+    },
+    "vila-matilde": {
+      "nome_exibicao": "Vila Matilde",
+      "distrito": "vila-matilde",
+      "zona": "leste",
+      "bio_curta": "Vila Matilde tem samba, tradição e uma vida de bairro muito forte. É uma Zona Leste afetiva, popular e cheia de memória.",
+      "bio_longa": "A Vila Matilde carrega uma relação importante com o samba e com a cultura popular paulistana. Suas escolas e tradições ajudaram a dar identidade à região.\n\nO bairro mantém uma atmosfera residencial e familiar, com comércio local e moradores antigos. É um lugar onde a vida de vizinhança ainda aparece com força."
+    },
+    "vila-prudente": {
+      "nome_exibicao": "Vila Prudente",
+      "distrito": "vila-prudente",
+      "zona": "leste",
+      "bio_curta": "Vila Prudente mistura passado industrial, metrô e novos prédios. É uma região em transformação entre a Zona Leste e o centro expandido.",
+      "bio_longa": "A Vila Prudente cresceu ligada à indústria e aos bairros operários do entorno. Nos últimos anos, a chegada do metrô e de novos empreendimentos mudou bastante sua paisagem.\n\nHoje o bairro vive entre tradição e renovação. Galpões, casas antigas, prédios modernos e novos moradores convivem em uma São Paulo que se reinventa rapidamente."
     }
   }
 }

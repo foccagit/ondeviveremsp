@@ -5,7 +5,6 @@ import { createPortal } from 'react-dom';
 import styles from './styles.module.css';
 
 export default function AboutModal({ onClose }) {
-  // ESC fecha
   useEffect(() => {
     function handleKey(e) {
       if (e.key === 'Escape') onClose();
@@ -14,7 +13,6 @@ export default function AboutModal({ onClose }) {
     return () => document.removeEventListener('keydown', handleKey);
   }, [onClose]);
 
-  // Scroll lock
   useEffect(() => {
     const original = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -29,114 +27,154 @@ export default function AboutModal({ onClose }) {
     <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="about-title">
       <div className={styles.panel}>
         <button type="button" onClick={onClose} className={styles.close} aria-label="Fechar">
-          ×
+          <svg
+            viewBox="0 0 24 24"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="square"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="4" x2="20" y2="20" />
+            <line x1="20" y1="4" x2="4" y2="20" />
+          </svg>
         </button>
 
         <div className={styles.content}>
-          <span className={styles.eyebrow}>Sobre</span>
 
-          <h1 id="about-title" className={styles.title}>
-            96 distritos. Custo real de morar em cada um.
-          </h1>
+          <div className={styles.row}>
+            <p className={styles.rowLabel}>Sobre</p>
+            <div className={styles.rowContent}>
+              <h1 id="about-title" className={styles.title}>
+                96 distritos. Milhões de rotinas diferentes. E uma pergunta simples que quase
+                ninguém consegue responder direito: quanto custa, de verdade, morar em cada
+                lugar de São Paulo?
+              </h1>
+            </div>
+          </div>
 
-          <section className={styles.section}>
-            <h2 className={styles.h2}>Por que esse site existe</h2>
-            <p className={styles.p}>
-              Morar em São Paulo envolve uma decisão complexa que ninguém faz sozinho: aluguel,
-              transporte, tempo gasto no trânsito, qualidade de vida. A maioria das pessoas
-              escolhe o bairro baseada em &quot;feeling&quot; ou no que outros recomendam — sem
-              dado nenhum.
-            </p>
-            <p className={styles.p}>
-              Este site cruza dados reais de 96 distritos oficiais de São Paulo pra mostrar o
-              custo total de morar em cada um, considerando não só o aluguel mas o tempo perdido
-              no deslocamento.
-            </p>
-          </section>
+          <div className={styles.row}>
+            <p className={styles.rowLabel}>Por que esse projeto existe?</p>
+            <div className={styles.rowContent}>
+              <div className={styles.bodyGroup}>
+                <p className={styles.p}>
+                  Toda conversa sobre morar em São Paulo acaba igual. &ldquo;Esse bairro é
+                  bom.&rdquo; &ldquo;Ali é mais barato.&rdquo; &ldquo;Perto do metrô vale a
+                  pena.&rdquo; &ldquo;Mas o trânsito mata.&rdquo;
+                </p>
+                <p className={styles.p}>
+                  Só que quase sempre essas decisões são feitas no feeling. Ou baseadas apenas
+                  no valor do aluguel. Mas morar longe pode significar 3 horas perdidas por
+                  dia. Morar perto pode custar o dobro. E às vezes o barato sai caro em tempo,
+                  transporte, cansaço e rotina. Esse projeto nasceu para transformar essa
+                  escolha em algo mais visível, comparável e racional.
+                </p>
+                <p className={styles.p}>
+                  A ideia é cruzar dados reais dos 96 distritos oficiais de São Paulo para
+                  mostrar o custo total de morar em cada região considerando aluguel,
+                  deslocamento, acesso a transporte, serviços e qualidade prática de vida.
+                </p>
+              </div>
+            </div>
+          </div>
 
-          <section className={styles.section}>
-            <h2 className={styles.h2}>Os 96 distritos</h2>
-            <p className={styles.p}>
-              São Paulo é dividida oficialmente em 96 distritos administrativos. Cada um tem suas
-              características, perfil socioeconômico e relação com transporte público. Esse site
-              cobre os 96.
-            </p>
-          </section>
+          <div className={styles.row}>
+            <p className={styles.rowLabel}>O projeto ainda está em beta</p>
+            <div className={styles.rowContent}>
+              <div className={styles.bodyGroup}>
+                <p className={styles.p}>
+                  O site ainda está em desenvolvimento e vários recursos estão sendo testados.
+                </p>
+                <p className={styles.p}>
+                  Algumas informações são estimadas, outras ainda estão sendo calibradas, e
+                  novos dados estão sendo adicionados aos poucos. A proposta nunca foi criar um
+                  &ldquo;ranking dos melhores bairros&rdquo;, porque isso muda dependendo da
+                  rotina, renda, prioridades e tempo de cada pessoa.
+                </p>
+                <p className={styles.p}>
+                  A ideia é construir uma forma mais honesta de comparar escolhas urbanas. Não
+                  é um guia definitivo. É uma ferramenta para ajudar pessoas a pensarem melhor
+                  sobre a cidade onde vivem.
+                </p>
+              </div>
+            </div>
+          </div>
 
-          <section className={styles.section}>
-            <h2 className={styles.h2}>De onde vêm os dados</h2>
+          <div className={styles.row}>
+            <p className={styles.rowLabel}>O que os dados consideram</p>
+            <div className={styles.rowContent}>
+              <div className={styles.subSection}>
+                <p className={styles.subLabel}>Tempo de deslocamento</p>
+                <p className={styles.p}>
+                  Os tempos são calculados usando a Google Maps Distance Matrix API. Os
+                  valores atuais usam horários normais de sábado pela manhã como referência
+                  base. Em horários de pico (7h–10h e 17h–20h), o tempo pode aumentar entre
+                  40% e 70%.
+                </p>
+              </div>
+              <div className={styles.subSection}>
+                <p className={styles.subLabel}>Pontos de interesse</p>
+                <p className={styles.p}>
+                  O sistema considera categorias como hospitais, mercados, farmácias,
+                  escolas, padarias, áreas verdes, shoppings, museus, estações de metrô,
+                  academias, restaurantes, entre outros.
+                </p>
+              </div>
+              <div className={styles.subSection}>
+                <p className={styles.subLabel}>Aluguéis</p>
+                <p className={styles.p}>
+                  Atualmente existem distritos com dados reais de mercado e outros com
+                  estimativas calibradas por zona da cidade. Sempre que um valor for
+                  estimado, isso aparece sinalizado no produto. As fontes utilizadas são
+                  QuintoAndar, Imovelweb e Loft.
+                </p>
+              </div>
+              <div className={styles.subSection}>
+                <p className={styles.subLabel}>Segurança</p>
+                <p className={styles.p}>
+                  A parte de segurança ainda está em desenvolvimento. A próxima versão
+                  utilizará dados oficiais da Secretaria da Segurança Pública do Estado de
+                  São Paulo.
+                </p>
+              </div>
+            </div>
+          </div>
 
-            <h3 className={styles.h3}>Distâncias e tempos</h3>
-            <p className={styles.p}>
-              Google Maps Distance Matrix API. Tempos calculados em horário normal de sábado de
-              manhã. Em horário de pico (7-10h e 17-20h), podem aumentar 40-70%.
-            </p>
+          <div className={styles.row}>
+            <p className={styles.rowLabel}>Limitações conhecidas</p>
+            <div className={styles.rowContent}>
+              <div className={styles.bodyGroup}>
+                <p className={styles.p}>
+                  Sub-bairros como Vila Madalena e Higienópolis são tratados dentro dos
+                  distritos oficiais correspondentes.
+                </p>
+                <p className={styles.p}>
+                  Valores de condomínio ainda são estimativas proporcionais ao aluguel.
+                </p>
+                <p className={styles.p}>
+                  Tempos de carro e Uber podem variar bastante dependendo do horário e clima.
+                </p>
+                <p className={styles.p}>
+                  Alguns distritos ainda possuem menos dados do que outros.
+                </p>
+              </div>
+            </div>
+          </div>
 
-            <h3 className={styles.h3}>Pontos de interesse</h3>
-            <p className={styles.p}>
-              Google Places API. 14 categorias por bairro: hospitais, escolas, mercados,
-              padarias, farmácias, áreas verdes, shoppings, museus, estações de metrô, e mais.
-            </p>
+          <div className={styles.row}>
+            <p className={styles.rowLabel}>Contato</p>
+            <div className={styles.rowContent}>
+              <p className={styles.p}>
+                Para qualquer dúvida ou sugestão, entre em contato:{' '}
+                <a href="mailto:focca@foccaland.com.br" className={styles.link}>
+                  focca@foccaland.com.br
+                </a>
+              </p>
+            </div>
+          </div>
 
-            <h3 className={styles.h3}>Aluguéis</h3>
-            <p className={styles.p}>17 distritos com dados reais de mercado:</p>
-            <ul className={styles.list}>
-              <li>QuintoAndar/Imovelweb (Set/2025) — 10 bairros mais caros</li>
-              <li>Loft Q2/2025 — 7 bairros com base em 152 mil anúncios reais</li>
-            </ul>
-            <p className={styles.p}>
-              Os outros 79 distritos têm estimativas calibradas por zona, sempre marcadas com
-              badge [estimado] no produto.
-            </p>
-
-            <h3 className={styles.h3}>Segurança</h3>
-            <p className={styles.p}>
-              Estimativa simplificada por enquanto. Versão com dados oficiais do SSP-SP
-              (Secretaria da Segurança Pública) em desenvolvimento.
-            </p>
-
-            <h3 className={styles.h3}>População e renda</h3>
-            <p className={styles.p}>
-              IBGE Censo 2022 (estimativas baseadas em divisão administrativa).
-            </p>
-          </section>
-
-          <section className={styles.section}>
-            <h2 className={styles.h2}>Limitações conhecidas</h2>
-            <ul className={styles.list}>
-              <li>
-                Sub-bairros (Vila Madalena, Higienópolis) são tratados como parte do
-                distrito-pai oficial (Pinheiros, Consolação). Você pode buscar pelo nome do
-                sub-bairro, mas os cálculos usam o distrito-pai.
-              </li>
-              <li>
-                Condomínios são estimativas proporcionais ao aluguel — não há fonte pública
-                confiável por bairro.
-              </li>
-              <li>
-                Tempos de carro/Uber são de horário normal. Pico pode aumentar significativamente.
-              </li>
-            </ul>
-          </section>
-
-          <section className={styles.section}>
-            <h2 className={styles.h2}>Quem fez</h2>
-            <p className={styles.p}>
-              Projeto independente, sem fins lucrativos, sem ads. Código aberto em{' '}
-              <a
-                href="https://github.com/foccagit/ondeviveremsp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                github.com/foccagit/ondeviveremsp
-              </a>
-              .
-            </p>
-            <p className={styles.p}>
-              Sugestões, correções ou descobriu um erro? Abre uma issue no GitHub.
-            </p>
-          </section>
         </div>
       </div>
     </div>,

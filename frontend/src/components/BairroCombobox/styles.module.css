@@ -55,19 +55,7 @@
 
 .opcao:hover,
 .opcaoAtiva {
-  background: #000000;
-  color: #ffffff;
-}
-
-.opcao:hover .opcaoLabel,
-.opcaoAtiva .opcaoLabel {
-  color: #ffffff;
-}
-
-.opcao:hover .opcaoSubtitulo,
-.opcaoAtiva .opcaoSubtitulo {
-  color: #ffffff;
-  opacity: 0.7;
+  background: var(--color-surface);
 }
 
 .opcaoLabel {
@@ -92,4 +80,27 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: left;
+}
+
+/* Mobile dentro do bottom sheet: a lista de opções extende edge-to-edge
+   no sheet (bg encosta nas bordas), mas itens mantêm 20px de respiro. */
+@media (max-width: 767px) {
+  .opcoes {
+    position: static;
+    margin: 12px -20px 0 -20px;
+    padding: 12px 20px;
+    width: auto;
+    max-height: 280px;
+    overflow-y: auto;
+    border-bottom: none;
+  }
+  .opcao {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+  .semResultados {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

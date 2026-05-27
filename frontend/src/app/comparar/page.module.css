@@ -1,5 +1,6 @@
 .page {
-  padding: var(--space-12) var(--space-8) var(--space-16);
+  /* Gap visível do header até o link "Voltar ao mapa". */
+  padding: var(--space-6) var(--space-8) var(--space-16);
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -21,7 +22,7 @@
   color: var(--color-muted);
   transition: color var(--transition);
   display: inline-block;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-6);
 }
 
 .back:hover {
@@ -47,32 +48,110 @@
   color: var(--color-muted);
 }
 
-.columns {
+.stickyHead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+  /* padding-top/bottom pequenos pra que, quando o sticky ativa, os nomes
+     dos bairros fiquem o mais próximo possível do topo da viewport. */
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-3);
+}
+
+.compareTitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-fg);
+  /* +30px de respiro entre a frase e a linha dos nomes dos bairros. */
+  margin: 0 0 calc(var(--space-4) + 30px) 0;
+  max-width: 75ch;
+}
+
+.compareTitle strong {
+  font-weight: 500;
+}
+
+/* .headerRow põe o grid de nomes + botão "Adicionar bairro" lado a lado.
+   O botão fica alinhado verticalmente com a linha dos nomes dos bairros. */
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.headerRow > .colHeaders {
+  flex: 1;
+}
+
+/* Grid de colunas: header das colunas (uma linha) e linhas de dados (uma linha por categoria) */
+.colHeaders {
   display: grid;
+  grid-template-columns: repeat(var(--col-count, 3), 1fr);
   gap: var(--space-8);
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-8);
 }
 
-.columns[data-count='2'] {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.columns[data-count='3'] {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.column {
+.colHeader {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-2);
+  /* Containing block pro botão X (position: absolute). */
+  position: relative;
+}
+
+.colHeaderTop {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  /* Reserva espaço à direita pro X (40px largura + 8px folga) sem usar
+     justify-content: space-between, pra evitar que o X afete o layout. */
+  padding-right: 48px;
+}
+
+/* Botão X absoluto: não ocupa espaço no fluxo, então a linha zona/distrito
+   abaixo do nome fica na mesma altura em todas as colunas — independente
+   de a coluna ter botão (adicionais) ou não (trabalho). */
+.colRemove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--color-fg);
+  cursor: pointer;
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.colRemove svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.colRemove:hover {
+  opacity: 0.6;
+}
+
+.colRemove:focus-visible {
+  outline: none;
 }
 
 .colName {
   font-family: var(--font-body);
-  font-size: var(--text-2xl);
+  font-size: 32px;
   font-weight: 400;
-  line-height: var(--leading-snug);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
 }
 
 .colZone {
@@ -83,19 +162,36 @@
   color: var(--color-muted);
 }
 
-.metrics {
+.rows {
   display: flex;
   flex-direction: column;
-  margin-top: var(--space-4);
+  margin: 0;
+  padding: 0;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--space-4);
-  padding: var(--space-3) 0;
+.rowLine {
+  display: grid;
+  grid-template-columns: repeat(var(--col-count, 3), 1fr);
+  gap: var(--space-8);
   border-bottom: 1px solid var(--color-border);
+  /* Reserva espaço à direita igual ao que o slot "+ Adicionar bairro" ocupa
+     no header — sem isso, a coluna 2 (ex: Cambuci) ficaria desalinhada dos
+     seus dados abaixo. */
+  padding-right: var(--right-reserve, 0px);
+  /* align-items: stretch (default) — todas as células ocupam a altura da maior,
+     garantindo alinhamento horizontal entre colunas */
+}
+
+.rowLine:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  min-width: 0;
 }
 
 .rowLabel {
@@ -104,16 +200,20 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-muted);
+  margin: 0;
 }
 
 .rowValue {
   font-family: var(--font-body);
   font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.3;
   color: var(--color-fg);
+  margin: 0;
 }
 
-.rowValueEmphasized {
-  font-size: var(--text-base);
+.cellEmphasized .rowValue {
+  font-weight: 500;
 }
 
 .chartSection {
@@ -196,13 +296,53 @@
   max-width: 75ch;
 }
 
+/* Narrativa estruturada (mesma diagramação do NeighborhoodCard): cada parte
+   vira uma linha com ícone semântico à esquerda (seta verde pra cima =
+   positivo, seta vermelha pra baixo = negativo, neutro = sem ícone). */
+.narrativaList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 75ch;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-fg);
+}
+
+.narrativaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.narrativaIcon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.narrativaIconUp {
+  color: #16a34a; /* verde */
+}
+
+.narrativaIconDown {
+  color: #dc2626; /* vermelho */
+}
+
+.narrativaIconSpacer {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+}
+
 @media (max-width: 1023px) {
-  .columns {
-    overflow-x: auto;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(280px, 1fr);
-    grid-template-columns: none !important;
-    padding-bottom: var(--space-4);
+  .colName {
+    font-size: 24px;
   }
 }
 
@@ -222,8 +362,217 @@
   vertical-align: middle;
 }
 
+/* Badge dentro de uma .cell (sibling de dt/dd) — sempre fica abaixo do
+   valor (order: 3), tanto desktop quanto mobile. */
+.cellBadge {
+  order: 3;
+  align-self: flex-start;
+  margin-left: 0;
+  margin-top: 4px;
+}
+
+.poiList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.poiItem {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-fg);
+}
+
+.poiItem::before {
+  content: '• ';
+  color: var(--color-muted);
+  margin-right: 4px;
+}
+
+.poiItemMore {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-top: 4px;
+}
+
+.transporteGrupos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.transporteSubGrupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.transporteSubLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.transporteList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.transporteItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-fg);
+}
+
+.linhaCirculo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.estacaoNome {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-fg);
+}
+
 @media (max-width: 767px) {
   .page {
-    padding: var(--space-8) var(--space-4) var(--space-12);
+    padding: var(--space-8) 20px var(--space-12);
+  }
+  /* O Header do site no mobile é sticky com z-index: 60 e altura ≈ 49px
+     (logo 17px + padding 32px). Posicionamos .stickyHead logo abaixo dele
+     pra que os nomes dos bairros não fiquem escondidos atrás. */
+  .stickyHead {
+    top: 49px;
+  }
+  /* Quando a barra .stickyHead fica "presa" no topo (scroll passou),
+     escondemos zona/distrito pra deixar só os nomes fixos. Sem stuck,
+     zona/distrito aparecem normal. A classe é aplicada por JS via
+     IntersectionObserver sobre um sentinel acima da barra. */
+  .stickyHeadStuck .colZone {
+    display: none;
+  }
+}
+
+/* Slot do "+ Adicionar bairro" — largura fixa pra não empurrar/deslocar a
+   coluna do bairro à esquerda quando o combobox abre. O .rowLine das linhas
+   de dados reserva o mesmo espaço à direita via --right-reserve. */
+.adicionarSlot {
+  flex-shrink: 0;
+  width: 280px;
+  padding-top: 2px; /* Alinha visualmente com a baseline do h2 do .colName */
+  /* Altura mínima = altura do botão (44px) pra que, quando o input do
+     combobox aparece, seu border-bottom fique na mesma linha base do
+     botão. */
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Mesmo estilo do botão "Comparar com X" do card: borda fina, hover preto.
+   Largura 100% pra preencher o .adicionarSlot fixo (280px). */
+.adicionarBtn {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-fg);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 12px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition);
+}
+
+.adicionarBtn:hover {
+  background: var(--color-fg);
+  color: var(--color-bg);
+  border-color: var(--color-fg);
+}
+
+/* Wrapper do BairroCombobox quando renderizado inline. Position: relative
+   pra que o popover .opcoes (que é position: absolute) fique ancorado AQUI,
+   ocupando só a largura do input em vez de tela inteira. */
+.adicionarCombo {
+  /* 10px de respiro pra que os nomes dos bairros na lista de resultados
+     não fiquem colados na borda esquerda do popover. */
+  --cell-pad-l: 10px;
+  position: relative;
+  width: 100%;
+}
+
+/* Botão X pra cancelar a adição. Absoluto no canto direito do input,
+   sem afetar layout do combobox. top: -7px sobe o X em relação ao input. */
+.adicionarCancel {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--color-fg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: opacity var(--transition);
+  z-index: 2; /* fica acima do input */
+}
+
+.adicionarCancel:hover {
+  opacity: 0.6;
+}
+
+.adicionarCancel svg {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+  }
+  /* No mobile, comparação é sempre trabalho + 1 (máximo 2 colunas) —
+     então não tem "+ Adicionar bairro". Esconde o slot e zera o reserve
+     pra que .rowLine ocupe a largura total. */
+  .adicionarSlot {
+    display: none;
+  }
+  .rowLine {
+    padding-right: 0 !important;
   }
 }

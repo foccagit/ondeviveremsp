@@ -23,27 +23,53 @@
 
 .clear {
   margin-left: auto;
-  font-family: var(--font-mono);
-  font-size: 22px;
-  line-height: 1;
-  color: var(--color-muted);
-  padding: 0 var(--space-2);
+  width: 40px;
+  height: 40px;
+  color: var(--color-fg);
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
-  transition: color var(--transition);
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.clear svg {
+  display: block;
 }
 
 .clear:hover {
-  color: var(--color-fg);
+  opacity: 0.6;
+}
+
+.clear:focus-visible {
+  outline: none;
 }
 
 .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-3);
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.metaItem {
+  font: inherit;
+  color: inherit;
+}
+
+.metaItem + .metaItem::before {
+  content: '·';
+  margin-right: var(--space-3);
+  color: var(--color-muted);
 }
 
 .description {
@@ -58,5 +84,14 @@
 @media (max-width: 767px) {
   .name {
     font-size: 32px;
+  }
+  /* No mobile, cada info do meta vira uma linha (Zona, habitantes etc.) */
+  .meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .metaItem + .metaItem::before {
+    content: none;
+    margin-right: 0;
   }
 }

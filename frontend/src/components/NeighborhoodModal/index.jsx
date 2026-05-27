@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
+import { useRouter } from 'next/navigation';
 import { formatBRL, formatNumber } from '@/lib/format';
 import { carregarPois, getPois } from '@/lib/dataLoader';
 import transportePublico from '@/data/transporte_publico.json';
@@ -17,11 +17,9 @@ const MODAL_LABEL = {
 function Row({ label, value, badge }) {
   return (
     <div className={styles.row}>
-      <dt className={styles.rowLabel}>
-        {label}
-        {badge && <span className={styles.badge}>{badge}</span>}
-      </dt>
+      <dt className={styles.rowLabel}>{label}</dt>
       <dd className={styles.rowValue}>{value}</dd>
+      {badge && <span className={`${styles.badge} ${styles.rowBadge}`}>{badge}</span>}
     </div>
   );
 }
@@ -67,13 +65,22 @@ export default function NeighborhoodModal({
   tamanhoImovel,
   principal,
   onClose,
-  onToggleCompare,
-  isSelected,
-  isFull,
+  trabalhoSlug,
+  trabalhoNome,
+  isTrabalho,
 }) {
+  const router = useRouter();
   const closeRef = useRef(null);
   const dialogRef = useRef(null);
   const [pois, setPois] = useState(null);
+  const [closing, setClosing] = useState(false);
+
+  // Wrapper que dispara a animação de saída e só depois desmonta
+  const requestClose = () => {
+    if (closing) return;
+    setClosing(true);
+    setTimeout(onClose, 320);
+  };
 
   useEffect(() => {
     let canceled = false;
@@ -86,11 +93,10 @@ export default function NeighborhoodModal({
   }, [bairro.id]);
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
     closeRef.current?.focus();
     const onKey = (e) => {
       if (e.key === 'Escape') {
-        onClose();
+        requestClose();
         return;
       }
       if (e.key === 'Tab' && dialogRef.current) {
@@ -111,44 +117,72 @@ export default function NeighborhoodModal({
     };
     document.addEventListener('keydown', onKey);
     return () => {
-      document.body.style.overflow = '';
       document.removeEventListener('keydown', onKey);
     };
   }, [onClose]);
 
   const modalLabel = MODAL_LABEL[principal.modal] || principal.modal;
 
-  return createPortal(
-    <div
-      className={styles.overlay}
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
+  return (
+    <aside
+      className={`${styles.panel} ${closing ? styles.panelClosing : ''}`}
+      ref={dialogRef}
       role="dialog"
-      aria-modal="true"
+      aria-modal="false"
       aria-labelledby="modal-bairro-title"
     >
-      <div className={styles.dialog} ref={dialogRef}>
+      <div className={styles.panelInner}>
         <button
           ref={closeRef}
           type="button"
-          onClick={onClose}
+          onClick={requestClose}
           className={styles.close}
           aria-label="Fechar"
         >
-          ✕
+          <svg
+            viewBox="0 0 24 24"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="square"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="4" x2="20" y2="20" />
+            <line x1="20" y1="4" x2="4" y2="20" />
+          </svg>
         </button>
 
         <header className={styles.header}>
           <h2 id="modal-bairro-title" className={styles.title}>
             {bairro.nome}
           </h2>
-          <span className={styles.zone}>Zona {bairro.zona}</span>
+          <div className={styles.headerMeta}>
+            <span className={styles.zone}>Zona {bairro.zona}</span>
+            {bairro.ehAlias && (
+              <>
+                <span className={styles.headerMetaSeparator}>·</span>
+                <span className={styles.distritoPai}>Distrito {bairro.distritoNome}</span>
+              </>
+            )}
+          </div>
         </header>
 
-        <div className={styles.sep} />
-
-        <p className={styles.long}>{bairro.descricaoLonga || bairro.descricao}</p>
+        {(bairro.bioLonga || bairro.descricaoLonga || bairro.descricao) && (
+          <>
+            <div className={styles.sep} />
+            <div className={styles.bio}>
+              {(bairro.bioLonga || bairro.descricaoLonga || bairro.descricao)
+                .split('\n\n')
+                .map((s) => s.trim())
+                .filter(Boolean)
+                .map((par, i) => (
+                  <p key={i} className={styles.long}>{par}</p>
+                ))}
+            </div>
+          </>
+        )}
 
         <div className={styles.sep} />
 
@@ -164,11 +198,11 @@ export default function NeighborhoodModal({
                   const metro = transporte?.metro || [];
                   const cptm = transporte?.cptm || [];
                   if (metro.length === 0 && cptm.length === 0) {
-                    return <Row label="Transporte público" value="—" />;
+                    return <Row label="Metrô/CPTM" value="—" />;
                   }
                   return (
                     <div className={styles.row}>
-                      <dt className={styles.rowLabel}>Transporte público</dt>
+                      <dt className={styles.rowLabel}>Metrô/CPTM</dt>
                       <dd className={styles.rowValue}>
                         <div className={styles.transporteGrupos}>
                           {metro.length > 0 && (
@@ -286,20 +320,21 @@ export default function NeighborhoodModal({
           )}
         </section>
 
-        <footer className={styles.footer}>
-          <button
-            type="button"
-            onClick={() => {
-              onToggleCompare();
-            }}
-            disabled={isFull}
-            className={`${styles.primary} ${isSelected ? styles.primaryActive : ''}`}
-          >
-            {isSelected ? 'Remover da comparação' : isFull ? 'Limite atingido' : 'Adicionar à comparação'}
-          </button>
-        </footer>
+        {!isTrabalho && trabalhoSlug && (
+          <footer className={styles.footer}>
+            <button
+              type="button"
+              onClick={() => {
+                const slug = bairro.slug || bairro.id;
+                router.push(`/comparar?ids=${slug}&trabalho=${trabalhoSlug}`);
+              }}
+              className={styles.primary}
+            >
+              Comparar com {trabalhoNome}
+            </button>
+          </footer>
+        )}
       </div>
-    </div>,
-    document.body
+    </aside>
   );
 }

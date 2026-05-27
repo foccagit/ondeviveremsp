@@ -19,10 +19,10 @@ const TRANSPORTES = [
 
 const PRIORIDADES = [
   { id: 'metro', label: 'Metrô' },
-  { id: 'seguranca', label: 'Segurança', disabled: true, hint: 'em breve' },
   { id: 'vidaNoturna', label: 'Vida noturna' },
   { id: 'comercio', label: 'Comércio' },
   { id: 'parques', label: 'Parques' },
+  { id: 'seguranca', label: 'Segurança', disabled: true, hint: 'em breve' },
 ];
 
 function BairroTrabalhoCell({ filters, onUpdate }) {
@@ -81,7 +81,7 @@ function Dropdown({ label, summary, children, align = 'left' }) {
   );
 }
 
-export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggleTransporte }) {
+export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggleTransporte, layout = 'desktop' }) {
   const setTamanho = (n) => {
     const clamped = Math.min(200, Math.max(20, Number(n) || 0));
     onUpdate({ tamanhoImovel: clamped });
@@ -136,7 +136,7 @@ export default function Filters({ filters, onUpdate, onTogglePrioridade, onToggl
       : `${filters.prioridades.length} selecionada${filters.prioridades.length > 1 ? 's' : ''}`;
 
   return (
-    <div className={styles.filters}>
+    <div className={`${styles.filters} ${layout === 'mobile' ? styles.filtersVertical : ''}`}>
       <BairroTrabalhoCell filters={filters} onUpdate={onUpdate} />
 
       <Dropdown label="Tamanho do imóvel" summary={`${filters.tamanhoImovel} m²`}>

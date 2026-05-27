@@ -2,7 +2,7 @@
   --color-bg: #ffffff;
   --color-fg: #000000;
   --color-muted: #6b6b6b;
-  --color-border: #e5e5e5;
+  --color-border: #000000;
   --color-surface: #fafafa;
 
   --font-body: var(--font-geist-sans), 'Geist', system-ui, -apple-system, sans-serif;
@@ -48,7 +48,7 @@
   --color-bg: #0a0a0a;
   --color-fg: #fafafa;
   --color-muted: #909090;
-  --color-border: #1f1f1f;
+  --color-border: #ffffff;
   --color-surface: #141414;
 
   --map-tiles: 'dark';

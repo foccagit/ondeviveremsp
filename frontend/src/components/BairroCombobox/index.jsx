@@ -9,7 +9,14 @@ function normalizar(str) {
   return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
-export default function BairroCombobox({ value, onChange, onAliasChange, onOpenChange }) {
+export default function BairroCombobox({
+  value,
+  onChange,
+  onAliasChange,
+  onOpenChange,
+  excluirSlugs = [],
+  placeholder,
+}) {
   const [busca, setBusca] = useState('');
   const [aberto, setAberto] = useState(false);
   const [aliases, setAliases] = useState(null);
@@ -64,6 +71,9 @@ export default function BairroCombobox({ value, onChange, onAliasChange, onOpenC
       Object.entries(aliases.aliases).forEach(([aliasId, data]) => {
         const distritoPai = bairros.find((b) => b.id === data.distrito);
         if (!distritoPai) return;
+        // Pula aliases que são o próprio distrito-pai (mesmo nome) — já estão
+        // na lista vindos do bairros.json. Evita duplicatas como "Pinheiros".
+        if (data.nome_exibicao === distritoPai.nome) return;
         lista.push({
           id: aliasId,
           label: data.nome_exibicao,
@@ -80,19 +90,27 @@ export default function BairroCombobox({ value, onChange, onAliasChange, onOpenC
 
   // Filtragem com normalização (acentos-tolerante)
   const filtradas = useMemo(() => {
-    if (!busca) return opcoes;
+    const excluir = new Set(excluirSlugs);
+    let base = opcoes;
+    if (excluir.size > 0) {
+      base = base.filter((o) => !excluir.has(o.id) && !excluir.has(o.distritoId));
+    }
+    if (!busca) return base;
     const buscaNorm = normalizar(busca);
-    return opcoes.filter((o) => normalizar(o.label).includes(buscaNorm));
-  }, [busca, opcoes]);
+    return base.filter((o) => normalizar(o.label).includes(buscaNorm));
+  }, [busca, opcoes, excluirSlugs]);
 
   // Distrito selecionado pra exibir no input fechado
   const selecionado = useMemo(
-    () => opcoes.find((o) => o.distritoId === value && o.tipo === 'distrito'),
+    () => opcoes.find((o) => o.id === value),
     [opcoes, value]
   );
 
   function handleSelecionar(opcao) {
-    onChange(opcao.distritoId);
+    // Emite o slug do item (opcao.id). Pra distritos opcao.id === distritoId;
+    // pra aliases é o slug do alias. Quem precisar do distritoId resolve via
+    // resolverDistritoId(slug, aliases) em lib/enriquecerAlias.
+    onChange(opcao.id);
     setLabelExibido(opcao.label);
     setAberto(false);
     setBusca('');
@@ -160,7 +178,7 @@ export default function BairroCombobox({ value, onChange, onAliasChange, onOpenC
         ref={inputRef}
         type="text"
         className={styles.input}
-        placeholder="Buscar bairro..."
+        placeholder={placeholder || 'Buscar bairro...'}
         value={aberto ? busca : labelExibido || selecionado?.label || ''}
         onFocus={() => {
           setAberto(true);

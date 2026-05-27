@@ -426,3 +426,80 @@
     border-bottom: none;
   }
 }
+
+/* ============================================================
+   MOBILE: esconder a barra desktop e oferecer variante vertical
+   pro uso dentro do bottom sheet (.filtersVertical é aplicado
+   pelo prop layout="mobile")
+   ============================================================ */
+@media (max-width: 767px) {
+  .filters {
+    display: none;
+  }
+  .filtersVertical {
+    display: flex !important;
+    flex-direction: column;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    transform: none;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+  .filtersVertical .dropdown {
+    /* Altura natural sempre — abrir um dropdown não muda a altura dos
+       outros. Cada filtro fica com a altura do seu conteúdo (label +
+       valor); o opened expande naturalmente com o panel embaixo. */
+    flex: 0 0 auto;
+    width: 100%;
+    /* Padding lateral interno = 20px de respiro pro conteúdo; a
+       border-bottom e o background quando aberto vão edge-to-edge. */
+    padding: var(--space-5, 20px) 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    --cell-pad-l: 0;
+    gap: var(--space-3);
+  }
+  .filtersVertical .dropdown:last-child {
+    border-bottom: none;
+  }
+  .filtersVertical .sliderRow {
+    flex-wrap: nowrap;
+  }
+
+  /* Painel expandido: bg edge-to-edge no sheet, conteúdo interno a 20px. */
+  .filtersVertical .panel {
+    position: static;
+    margin: var(--space-3) -20px 0 -20px;
+    padding: var(--space-3) 20px;
+    width: auto;
+    max-height: none;
+  }
+
+  /* Itens das listas (opções de transporte/prioridades/presets de tamanho)
+     ficam alinhados aos 20px do conteúdo, não ao --cell-pad-l zerado. */
+  .filtersVertical .option,
+  .filtersVertical .checkOption {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .filtersVertical .preset {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  /* Remover linhas internas (underline do input "personalizar" e a borda
+     inferior do .panel) — separadores devem vir só entre os 5 filtros. */
+  .filtersVertical .input {
+    border-bottom: none;
+  }
+  .filtersVertical .input:focus {
+    border-bottom: none;
+  }
+  .filtersVertical .panel {
+    border-bottom: none;
+  }
+}

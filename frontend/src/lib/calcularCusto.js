@@ -241,7 +241,7 @@ export function calcularResumoBairro(
         breakdown: { porViagem: passagem, viagensMes: viagens * 2 },
         semMetro: true,
         avisoTrajeto:
-          'Este bairro não tem metrô. Inclui ~15 min de ônibus até a estação mais próxima.',
+          'Este bairro não tem metrô. Inclui 15 min de ônibus até a estação mais próxima.',
       };
     }
 
@@ -281,30 +281,54 @@ function formatBRL(value) {
   return Math.abs(Math.round(value)).toLocaleString('pt-BR');
 }
 
+/**
+ * Constrói a narrativa em formato estruturado: array de partes com
+ * semântica (positivo / negativo / neutro). O consumidor renderiza cada
+ * parte com seu ícone (seta verde pra cima quando positivo, seta vermelha
+ * pra baixo quando negativo).
+ */
 function gerarNarrativa(economia, tempoExtra, reaisPorHora, nomeBairroReferencia = 'o bairro de trabalho') {
   const ref = nomeBairroReferencia;
 
-  // Caso 1: economiza dinheiro mas gasta mais tempo (trade-off clássico)
+  // Caso 1: economiza dinheiro mas gasta mais tempo (trade-off clássico).
+  // O '\n' após o nome do bairro de referência só vira quebra no mobile,
+  // via white-space: pre-line na .narrativaItem. No desktop fica como
+  // espaço (normal collapse).
   if (economia > 0 && tempoExtra > 0) {
-    return `Em relação a ${ref}, economiza R$ ${formatBRL(economia)}/mês mas custa ${tempoExtra}h a mais no trânsito. Você "paga" R$ ${formatBRL(reaisPorHora)}/hora pelo tempo de ${ref}.`;
+    return [
+      { semantica: 'positivo', texto: `Em relação a ${ref},\neconomiza R$ ${formatBRL(economia)}/mês.` },
+      { semantica: 'negativo', texto: `Mas custa ${tempoExtra}h a mais no trânsito.` },
+      { semantica: 'neutro', texto: `Você "paga" R$ ${formatBRL(reaisPorHora)}/hora pelo tempo de ${ref}.` },
+    ];
   }
 
   // Caso 2: economiza dinheiro E tempo (raro quando trabalho é a referência)
   if (economia > 0 && tempoExtra <= 0) {
-    return `Em relação a ${ref}, economiza R$ ${formatBRL(economia)}/mês com tempo de deslocamento similar.`;
+    return [
+      { semantica: 'positivo', texto: `Em relação a ${ref},\neconomiza R$ ${formatBRL(economia)}/mês com tempo de deslocamento similar.` },
+    ];
   }
 
   // Caso 3: mais caro mas mais perto (próximo ao trabalho)
   if (economia <= 0 && tempoExtra <= 0) {
     const horasEconomizadas = Math.abs(tempoExtra);
     if (horasEconomizadas === 0) {
-      return `Em relação a ${ref}, custa R$ ${formatBRL(Math.abs(economia))}/mês a mais com tempo de deslocamento similar.`;
+      return [
+        { semantica: 'negativo', texto: `Em relação a ${ref},\ncusta R$ ${formatBRL(Math.abs(economia))}/mês a mais com tempo de deslocamento similar.` },
+      ];
     }
-    return `Em relação a ${ref}, custa R$ ${formatBRL(Math.abs(economia))}/mês a mais mas economiza ${horasEconomizadas}h no trânsito.`;
+    return [
+      { semantica: 'negativo', texto: `Em relação a ${ref},\ncusta R$ ${formatBRL(Math.abs(economia))}/mês a mais.` },
+      { semantica: 'positivo', texto: `Mas economiza ${horasEconomizadas}h no trânsito.` },
+    ];
   }
 
   // Caso 4: mais caro E mais distante
-  return `Em relação a ${ref}, custa R$ ${formatBRL(Math.abs(economia))}/mês a mais E gasta ${tempoExtra}h extras no trânsito. Provavelmente não vale a pena.`;
+  return [
+    { semantica: 'negativo', texto: `Em relação a ${ref},\ncusta R$ ${formatBRL(Math.abs(economia))}/mês a mais.` },
+    { semantica: 'negativo', texto: `E gasta ${tempoExtra}h extras no trânsito.` },
+    { semantica: 'neutro', texto: 'Provavelmente não vale a pena.' },
+  ];
 }
 
 export function compararContraReferencia(resumoAtual, resumoReferencia, nomeBairroReferencia) {
@@ -323,15 +347,19 @@ export function compararContraReferencia(resumoAtual, resumoReferencia, nomeBair
   const reaisPorHora =
     tempoExtraMensalHoras > 0 ? Math.round(economiaMensal / tempoExtraMensalHoras) : null;
 
+  const partes = gerarNarrativa(
+    economiaMensal,
+    tempoExtraMensalHoras,
+    reaisPorHora,
+    nomeBairroReferencia
+  );
+
   return {
     economiaMensal,
     tempoExtraMensalHoras,
     reaisPorHora,
-    mensagem: gerarNarrativa(
-      economiaMensal,
-      tempoExtraMensalHoras,
-      reaisPorHora,
-      nomeBairroReferencia
-    ),
+    partes,
+    // mensagem mantida pra fallback caso algum consumidor ainda use texto plano.
+    mensagem: partes.map((p) => p.texto).join('\n'),
   };
 }

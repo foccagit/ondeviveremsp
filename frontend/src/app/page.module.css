@@ -99,8 +99,15 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  mix-blend-mode: difference;
-  color: #ffffff;
+  /* Cor explícita por estado em vez de mix-blend-mode: difference — esse
+     blend tem bugs no Safari mobile que deixavam as abas não-ativas
+     invisíveis (texto branco em fundo branco). */
+  color: var(--color-fg);
+  transition: color var(--transition);
+}
+
+.tabActive {
+  color: var(--color-bg);
 }
 
 .tabTitle {
@@ -167,6 +174,63 @@
 
 @media (max-width: 767px) {
   .page {
-    padding: 0 var(--space-4) var(--space-12);
+    padding: 0 20px var(--space-12);
+  }
+
+  /* Esconde a Stats (H1 introdutório) no mobile quando já há resultados. */
+  .statsHiddenMobile {
+    display: none;
+  }
+
+  /* No mobile, o mapa lateral some — só a lista de bairros aparece. */
+  .mapColumn {
+    display: none;
+  }
+
+  /* Tabs Próximo/Meio/Distante no mobile:
+     - O container .tabs estende até as bordas do viewport (negative margin
+       cancela o padding 20px do .page) pra que o bg preto do ativo encoste
+       nas bordas quando for Próximo ou Distante.
+     - O texto da primeira e última aba recebem padding 20px pra alinhar
+       com o resto do conteúdo da página. */
+  .tabs {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .tab {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 6px;
+    row-gap: 2px;
+    align-items: baseline;
+    justify-content: start;
+    padding: var(--space-3) var(--space-2);
+  }
+  .tab:first-of-type {
+    padding-left: 20px;
+  }
+  .tab:last-of-type {
+    padding-right: 20px;
+  }
+  .tabTitle {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .tabCount {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 0;
+  }
+  .tabCount::before {
+    content: '(';
+  }
+  .tabCount::after {
+    content: ')';
+  }
+  .tabHint {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-size: 10px;
   }
 }
