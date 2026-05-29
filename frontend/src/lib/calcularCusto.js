@@ -1,5 +1,12 @@
 import { haversine } from './geo';
 
+/**
+ * Tamanho fixo do imóvel usado em todos os cálculos de aluguel.
+ * Era configurável via filtro; passou a ser constante quando o filtro
+ * "Tamanho do imóvel" saiu da UI.
+ */
+export const TAMANHO_IMOVEL_FIXO = 50;
+
 const DIAS_UTEIS = 22;
 const FATOR_URBANO = 1.35;
 
@@ -180,7 +187,7 @@ export function calcularResumoBairro(
   dadosTransporte,
   distancias = null
 ) {
-  const aluguel = Math.round(bairro.aluguelMedioM2 * filtros.tamanhoImovel);
+  const aluguel = Math.round(bairro.aluguelMedioM2 * TAMANHO_IMOVEL_FIXO);
   const condominio = bairro.condominioMedio;
 
   // Caso especial: mora e trabalha no mesmo bairro → caminhada curta, R$ 0
@@ -283,55 +290,99 @@ function formatBRL(value) {
 
 /**
  * Constrói a narrativa em formato estruturado: array de partes com
- * semântica (positivo / negativo / neutro). O consumidor renderiza cada
- * parte com seu ícone (seta verde pra cima quando positivo, seta vermelha
- * pra baixo quando negativo).
+ * semântica (positivo / negativo / neutro). Mesmo tom da narrativa do
+ * tradeoff em /comparar — fala sempre na perspectiva do bairro atual.
  */
-function gerarNarrativa(economia, tempoExtra, reaisPorHora, nomeBairroReferencia = 'o bairro de trabalho') {
+function gerarNarrativa(
+  economia,
+  tempoExtra,
+  _reaisPorHora,
+  nomeBairroReferencia = 'o bairro de trabalho',
+  nomeBairroAtual = 'este bairro'
+) {
+  const economiaAbs = Math.abs(economia);
+  const horasAbs = Math.abs(tempoExtra);
+  const diasAno = Math.round((horasAbs * 12) / 24);
+  const from = nomeBairroAtual;
   const ref = nomeBairroReferencia;
 
-  // Caso 1: economiza dinheiro mas gasta mais tempo (trade-off clássico).
-  // O '\n' após o nome do bairro de referência só vira quebra no mobile,
-  // via white-space: pre-line na .narrativaItem. No desktop fica como
-  // espaço (normal collapse).
+  // Caso 1: economiza dinheiro mas gasta MAIS tempo no trânsito.
   if (economia > 0 && tempoExtra > 0) {
     return [
-      { semantica: 'positivo', texto: `Em relação a ${ref},\neconomiza R$ ${formatBRL(economia)}/mês.` },
-      { semantica: 'negativo', texto: `Mas custa ${tempoExtra}h a mais no trânsito.` },
-      { semantica: 'neutro', texto: `Você "paga" R$ ${formatBRL(reaisPorHora)}/hora pelo tempo de ${ref}.` },
+      {
+        semantica: 'positivo',
+        texto: `Você economizará cerca de R$ ${formatBRL(economiaAbs)} por mês morando na ${from}.`,
+      },
+      {
+        semantica: 'negativo',
+        texto: `Mas perderá aproximadamente ${horasAbs} horas a mais por mês em deslocamentos.`,
+      },
+      {
+        semantica: 'neutro',
+        texto: `Isso equivale a quase ${diasAno} dias inteiros por ano gastos no trânsito.`,
+      },
     ];
   }
 
-  // Caso 2: economiza dinheiro E tempo (raro quando trabalho é a referência)
+  // Caso 2: economiza dinheiro E tempo (vitória dupla).
   if (economia > 0 && tempoExtra <= 0) {
     return [
-      { semantica: 'positivo', texto: `Em relação a ${ref},\neconomiza R$ ${formatBRL(economia)}/mês com tempo de deslocamento similar.` },
+      {
+        semantica: 'positivo',
+        texto: `Você economizará cerca de R$ ${formatBRL(economiaAbs)} por mês morando na ${from}.`,
+      },
+      {
+        semantica: 'positivo',
+        texto: `E ainda gastará menos tempo em deslocamentos do que vivendo em ${ref}.`,
+      },
+      {
+        semantica: 'neutro',
+        texto: `Dificilmente ${ref} compensa nessa comparação.`,
+      },
     ];
   }
 
-  // Caso 3: mais caro mas mais perto (próximo ao trabalho)
+  // Caso 3: mais caro mas com MENOS tempo no trânsito.
   if (economia <= 0 && tempoExtra <= 0) {
-    const horasEconomizadas = Math.abs(tempoExtra);
-    if (horasEconomizadas === 0) {
-      return [
-        { semantica: 'negativo', texto: `Em relação a ${ref},\ncusta R$ ${formatBRL(Math.abs(economia))}/mês a mais com tempo de deslocamento similar.` },
-      ];
-    }
     return [
-      { semantica: 'negativo', texto: `Em relação a ${ref},\ncusta R$ ${formatBRL(Math.abs(economia))}/mês a mais.` },
-      { semantica: 'positivo', texto: `Mas economiza ${horasEconomizadas}h no trânsito.` },
+      {
+        semantica: 'negativo',
+        texto: `Você pagará cerca de R$ ${formatBRL(economiaAbs)} a mais por mês para morar na ${from}.`,
+      },
+      {
+        semantica: 'positivo',
+        texto: `Em troca, ganhará aproximadamente ${horasAbs} horas por mês que seriam gastas em deslocamentos.`,
+      },
+      {
+        semantica: 'neutro',
+        texto: `Isso equivale a quase ${diasAno} dias inteiros por ano recuperados do trânsito.`,
+      },
     ];
   }
 
-  // Caso 4: mais caro E mais distante
+  // Caso 4: mais caro E mais tempo no trânsito (perda dupla).
   return [
-    { semantica: 'negativo', texto: `Em relação a ${ref},\ncusta R$ ${formatBRL(Math.abs(economia))}/mês a mais.` },
-    { semantica: 'negativo', texto: `E gasta ${tempoExtra}h extras no trânsito.` },
-    { semantica: 'neutro', texto: 'Provavelmente não vale a pena.' },
+    {
+      semantica: 'negativo',
+      texto: `Você pagará cerca de R$ ${formatBRL(economiaAbs)} a mais por mês para morar na ${from}.`,
+    },
+    {
+      semantica: 'negativo',
+      texto: `E ainda perderá aproximadamente ${horasAbs} horas a mais por mês em deslocamentos.`,
+    },
+    {
+      semantica: 'neutro',
+      texto: `Isso equivale a quase ${diasAno} dias inteiros por ano gastos no trânsito.`,
+    },
   ];
 }
 
-export function compararContraReferencia(resumoAtual, resumoReferencia, nomeBairroReferencia) {
+export function compararContraReferencia(
+  resumoAtual,
+  resumoReferencia,
+  nomeBairroReferencia,
+  nomeBairroAtual
+) {
   const economiaMensal = resumoReferencia.total - resumoAtual.total;
 
   // Se a referência é "mesmo bairro" (trabalho = moradia), trata o tempo dela como 0
@@ -351,7 +402,8 @@ export function compararContraReferencia(resumoAtual, resumoReferencia, nomeBair
     economiaMensal,
     tempoExtraMensalHoras,
     reaisPorHora,
-    nomeBairroReferencia
+    nomeBairroReferencia,
+    nomeBairroAtual
   );
 
   return {

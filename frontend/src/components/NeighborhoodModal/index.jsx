@@ -284,7 +284,6 @@ export default function NeighborhoodModal({
           <h3 className={styles.sectionTitle}>Perfil</h3>
           <dl className={styles.rows}>
             <Row label="População" value={`${formatNumber(bairro.populacao)} habitantes`} />
-            <Row label="Renda média familiar" value={formatBRL(bairro.renda)} />
             <Row label="Índice de segurança" value={`${bairro.seguranca}/100`} />
             <Row label="Vida noturna" value={`${bairro.vidaNoturna}/10`} />
             <Row label="Comércio" value={`${bairro.comercio}/10`} />

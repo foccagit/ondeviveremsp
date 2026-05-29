@@ -55,6 +55,9 @@
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   margin-bottom: var(--space-4);
+  /* margin-top extra cria respiro entre a linha do tradeoff e os nomes
+     dos bairros que aparecem aqui. */
+  margin-top: var(--space-8);
   /* padding-top/bottom pequenos pra que, quando o sticky ativa, os nomes
      dos bairros fiquem o mais próximo possível do topo da viewport. */
   padding-top: var(--space-2);
@@ -265,19 +268,24 @@
 .tradeoffList {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  /* Sem gap: cada item já tem padding 15px que define o respiro pra
+     border-top — gap adicional quebraria a simetria. */
+  gap: 0;
 }
 
 .tradeoffItem {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  padding: var(--space-4) 0;
+  /* Padding uniforme: 15px acima e 15px abaixo do conteúdo, em relação
+     às linhas divisórias. Mesmo respiro em todos os itens. */
+  padding: 15px 0;
   border-top: 1px solid var(--color-border);
 }
 
 .tradeoffItem:last-child {
   border-bottom: 1px solid var(--color-border);
+  padding-bottom: 15px;
 }
 
 .tradeoffPair {

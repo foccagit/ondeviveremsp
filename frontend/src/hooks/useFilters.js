@@ -6,8 +6,12 @@ const DEFAULT_FILTERS = {
   bairroTrabalho: '',
   transporte: ['metro'],
   prioridades: [],
-  tamanhoImovel: 50,
-  distanciaMaximaKm: 10,
+  /**
+   * Ordenação da lista: 0 = priorizar mais barato (custo total),
+   * 100 = priorizar menos deslocamento (tempo no trânsito),
+   * 50 = balanceado entre os dois.
+   */
+  prioridadeOrdenacao: 50,
   aliasAtivo: null,
 };
 

@@ -16,7 +16,11 @@ import {
 import bairros from '@/data/bairros.json';
 import transporte from '@/data/transporte.json';
 import { useFilters } from '@/hooks/useFilters';
-import { calcularResumoBairro, compararContraReferencia } from '@/lib/calcularCusto';
+import {
+  calcularResumoBairro,
+  compararContraReferencia,
+  TAMANHO_IMOVEL_FIXO,
+} from '@/lib/calcularCusto';
 import { resolverItem, resolverDistritoId } from '@/lib/enriquecerAlias';
 import BairroCombobox from '@/components/BairroCombobox';
 import { carregarDistancias, carregarPois, carregarAliases, getPois } from '@/lib/dataLoader';
@@ -123,7 +127,7 @@ const CATEGORIAS = [
   },
   {
     id: 'aluguel',
-    label: ({ filters }) => `Aluguel (${filters.tamanhoImovel}m²)`,
+    label: () => `Aluguel (${TAMANHO_IMOVEL_FIXO}m²)`,
     render: ({ resumo }) => formatBRL(resumo.aluguel),
     badge: ({ bairro }) => (bairro.aluguelFonte === 'estimado' ? 'estimado' : null),
   },
@@ -535,9 +539,34 @@ function CompararInner() {
 
       {trabalho && (
         <p className={styles.compareTitle}>
-          Essa comparação está sendo feita em cima do seu bairro de trabalho:{' '}
-          <strong>{trabalhoNomeExibicao}</strong>.
+          <strong>{trabalhoNomeExibicao}</strong> é onde você trabalha.
+          <br />
+          Todos os tempos e custos desta comparação foram calculados considerando
+          deslocamentos até esse distrito.
         </p>
+      )}
+
+      {tradeoffs.length > 0 && (
+        <section className={styles.tradeoffs}>
+          <h3 className={styles.tradeoffsTitle}>O custo dessa escolha</h3>
+          <ul className={styles.tradeoffList}>
+            {tradeoffs.map(({ from, to, cmp }) => (
+              <li key={`${from.id}-${to.id}`} className={styles.tradeoffItem}>
+                <span className={styles.tradeoffPair}>
+                  {from.nome} vs. {to.nome}
+                </span>
+                <ul className={styles.narrativaList}>
+                  {narrativaPar(from, to, cmp).map((parte, i) => (
+                    <li key={i} className={styles.narrativaItem}>
+                      <NarrativaIcon semantica={parte.semantica} />
+                      <span>{parte.texto}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       <div
@@ -730,28 +759,6 @@ function CompararInner() {
         </section>
       )}
 
-      {tradeoffs.length > 0 && (
-        <section className={styles.tradeoffs}>
-          <h3 className={styles.tradeoffsTitle}>Tradeoff</h3>
-          <ul className={styles.tradeoffList}>
-            {tradeoffs.map(({ from, to, cmp }) => (
-              <li key={`${from.id}-${to.id}`} className={styles.tradeoffItem}>
-                <span className={styles.tradeoffPair}>
-                  {from.nome} vs. {to.nome}
-                </span>
-                <ul className={styles.narrativaList}>
-                  {narrativaPar(from, to, cmp).map((parte, i) => (
-                    <li key={i} className={styles.narrativaItem}>
-                      <NarrativaIcon semantica={parte.semantica} />
-                      <span>{parte.texto}</span>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
     </div>
   );
 }
@@ -808,31 +815,79 @@ function NarrativaIcon({ semantica }) {
  * semântica (positivo/negativo/neutro) — mesma diagramação do card.
  */
 function narrativaPar(from, to, cmp) {
-  const { economiaMensal, tempoExtraMensalHoras, reaisPorHora } = cmp;
+  const { economiaMensal, tempoExtraMensalHoras } = cmp;
   const fmt = (v) => Math.abs(Math.round(v)).toLocaleString('pt-BR');
+  const economiaAbs = Math.abs(economiaMensal);
+  const horasAbs = Math.abs(tempoExtraMensalHoras);
+  const diasAno = Math.round((horasAbs * 12) / 24);
 
+  // Caso 1: economiza dinheiro mas gasta MAIS tempo no trânsito.
   if (economiaMensal > 0 && tempoExtraMensalHoras > 0) {
     return [
-      { semantica: 'positivo', texto: `Você economiza R$ ${fmt(economiaMensal)}/mês indo pro ${from.nome}.` },
-      { semantica: 'negativo', texto: `Mas perde ${tempoExtraMensalHoras}h/mês.` },
-      { semantica: 'neutro', texto: `Seu tempo está sendo "vendido" por R$ ${fmt(reaisPorHora)}/hora.` },
+      {
+        semantica: 'positivo',
+        texto: `Você economizará cerca de R$ ${fmt(economiaAbs)} por mês morando na ${from.nome}.`,
+      },
+      {
+        semantica: 'negativo',
+        texto: `Mas perderá aproximadamente ${horasAbs} horas a mais por mês em deslocamentos.`,
+      },
+      {
+        semantica: 'neutro',
+        texto: `Isso equivale a quase ${diasAno} dias inteiros por ano gastos no trânsito.`,
+      },
     ];
   }
+
+  // Caso 2: economiza dinheiro E tempo (vitória dupla).
   if (economiaMensal > 0 && tempoExtraMensalHoras <= 0) {
     return [
-      { semantica: 'positivo', texto: `${from.nome} economiza R$ ${fmt(economiaMensal)}/mês.` },
-      { semantica: 'positivo', texto: `E gasta menos tempo no trânsito que ${to.nome}.` },
-      { semantica: 'neutro', texto: `Dificilmente o ${to.nome} compensa.` },
+      {
+        semantica: 'positivo',
+        texto: `Você economizará cerca de R$ ${fmt(economiaAbs)} por mês morando na ${from.nome}.`,
+      },
+      {
+        semantica: 'positivo',
+        texto: `E ainda gastará menos tempo em deslocamentos do que vivendo em ${to.nome}.`,
+      },
+      {
+        semantica: 'neutro',
+        texto: `Dificilmente ${to.nome} compensa nessa comparação.`,
+      },
     ];
   }
+
+  // Caso 3: mais caro mas com MENOS tempo no trânsito.
   if (economiaMensal <= 0 && tempoExtraMensalHoras <= 0) {
     return [
-      { semantica: 'negativo', texto: `${from.nome} é R$ ${fmt(economiaMensal)}/mês mais caro.` },
-      { semantica: 'positivo', texto: `Mas economiza ${Math.abs(tempoExtraMensalHoras)}h/mês comparado ao ${to.nome}.` },
+      {
+        semantica: 'negativo',
+        texto: `Você pagará cerca de R$ ${fmt(economiaAbs)} a mais por mês para morar na ${from.nome}.`,
+      },
+      {
+        semantica: 'positivo',
+        texto: `Em troca, ganhará aproximadamente ${horasAbs} horas por mês que seriam gastas em deslocamentos.`,
+      },
+      {
+        semantica: 'neutro',
+        texto: `Isso equivale a quase ${diasAno} dias inteiros por ano recuperados do trânsito.`,
+      },
     ];
   }
+
+  // Caso 4: mais caro E mais tempo no trânsito (perda dupla).
   return [
-    { semantica: 'negativo', texto: `${from.nome} é mais caro E mais distante que ${to.nome}.` },
-    { semantica: 'neutro', texto: 'Provavelmente não compensa.' },
+    {
+      semantica: 'negativo',
+      texto: `Você pagará cerca de R$ ${fmt(economiaAbs)} a mais por mês para morar na ${from.nome}.`,
+    },
+    {
+      semantica: 'negativo',
+      texto: `E ainda perderá aproximadamente ${horasAbs} horas a mais por mês em deslocamentos.`,
+    },
+    {
+      semantica: 'neutro',
+      texto: `Isso equivale a quase ${diasAno} dias inteiros por ano gastos no trânsito.`,
+    },
   ];
 }

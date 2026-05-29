@@ -13,8 +13,8 @@ import WorkBanner from '@/components/Layout/WorkBanner';
 import { useFilters } from '@/hooks/useFilters';
 import {
   calcularResumoBairro,
-  classificarProximidade,
   compararContraReferencia,
+  TAMANHO_IMOVEL_FIXO,
 } from '@/lib/calcularCusto';
 import { carregarDistancias, carregarPois, carregarAliases, getPois } from '@/lib/dataLoader';
 import { enriquecerAlias, resolverDistritoId } from '@/lib/enriquecerAlias';
@@ -22,11 +22,35 @@ import bairros from '@/data/bairros.json';
 import transporte from '@/data/transporte.json';
 import styles from './page.module.css';
 
-const GRUPOS = [
-  { id: 'pertinho', titulo: 'Próximo', hint: 'até 5 km' },
-  { id: 'medio', titulo: 'Meio', hint: '5–15 km' },
-  { id: 'longe', titulo: 'Distante', hint: '15 km+' },
-];
+const LIMITE_INICIAL = 30;
+
+/**
+ * Ordena uma lista de entries (com .resumo) combinando custo total e tempo
+ * mensal. `peso` é 0-100: 0 = 100% custo, 100 = 100% tempo, 50 = balanceado.
+ * Normaliza min/max de cada métrica antes de combinar pra que a diferença
+ * de escala (R$ vs h) não domine o score.
+ */
+function ordenarPorPrioridade(items, peso) {
+  if (items.length < 2) return items;
+  const pesoTempo = peso / 100;
+  const pesoCusto = 1 - pesoTempo;
+  const custos = items.map((d) => d.resumo.total);
+  const tempos = items.map((d) => d.resumo.modalPrincipal.tempoMensalHoras);
+  const cMin = Math.min(...custos);
+  const cMax = Math.max(...custos);
+  const tMin = Math.min(...tempos);
+  const tMax = Math.max(...tempos);
+  const norm = (v, mn, mx) => (mx === mn ? 0 : (v - mn) / (mx - mn));
+  return [...items].sort((a, b) => {
+    const sA =
+      pesoCusto * norm(a.resumo.total, cMin, cMax) +
+      pesoTempo * norm(a.resumo.modalPrincipal.tempoMensalHoras, tMin, tMax);
+    const sB =
+      pesoCusto * norm(b.resumo.total, cMin, cMax) +
+      pesoTempo * norm(b.resumo.modalPrincipal.tempoMensalHoras, tMin, tMax);
+    return sA - sB;
+  });
+}
 
 /**
  * Verifica se o bairro atende TODAS as prioridades selecionadas (AND).
@@ -65,9 +89,10 @@ function atendePrioridades(bairro, prioridades, pois) {
 export default function HomePage() {
   const { filters, update, togglePrioridade, toggleTransporte, mounted } = useFilters();
   const [hoveredId, setHoveredId] = useState(null);
-  const [activeTab, setActiveTab] = useState('pertinho');
   const [bairroModalId, setBairroModalId] = useState(null);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  // Paginação: começa em 30 e expande ao clicar "Ver todos".
+  const [limite, setLimite] = useState(LIMITE_INICIAL);
 
   // Dados reais (Google Distance Matrix / Places / aliases)
   const [distancias, setDistancias] = useState(null);
@@ -119,21 +144,22 @@ export default function HomePage() {
     if (!aliases?.aliases) return [];
     // Base agora é aliases.json (131 bairros buscáveis), não bairros.json (96).
     // Cada item carrega os dados quantitativos do distrito-pai via enriquecimento.
-    return Object.entries(aliases.aliases)
+    const lista = Object.entries(aliases.aliases)
       .map(([slug, alias]) => {
         const distritoPai = bairros.find((b) => b.id === alias.distrito);
         if (!distritoPai) return null;
         const item = enriquecerAlias(slug, alias, distritoPai);
         const resumo = calcularResumoBairro(item, filters, trabalho, transporte, distancias);
-        return { bairro: item, resumo, proximidade: classificarProximidade(resumo.distanciaKm) };
+        return { bairro: item, resumo };
       })
       .filter(Boolean)
-      .filter(({ resumo }) => resumo.distanciaKm <= filters.distanciaMaximaKm)
       .filter(({ bairro }) => {
         // O bairro do trabalho (qualquer alias cujo distrito = trabalho) SEMPRE aparece
         if (bairro.distritoId === trabalho.id) return true;
         return atendePrioridades(bairro, filters.prioridades, pois);
       });
+    // Ordenação combinada pelo slider de prioridade (custo vs tempo).
+    return ordenarPorPrioridade(lista, filters.prioridadeOrdenacao ?? 50);
   }, [filters, trabalho, distancias, pois, aliases]);
 
   // Auto-fecha o modal se o bairro aberto sumiu dos resultados (filtro mudou).
@@ -150,22 +176,43 @@ export default function HomePage() {
     // Prioridade: bate exatamente com o slug buscado pelo usuário (pode ser
     // alias como "analia-franco"). Sem isso, a narrativa ("Em relação a X...")
     // mostraria o nome do distrito-pai (Vila Formosa) em vez do alias buscado.
-    return (
+    const match =
       dados.find((d) => d.bairro.slug === filters.bairroTrabalho) ||
       dados.find((d) => d.bairro.slug === trabalho.id) ||
-      dados.find((d) => d.bairro.distritoId === trabalho.id) ||
-      null
+      dados.find((d) => d.bairro.distritoId === trabalho.id);
+    if (match) return match;
+    // Fallback: alguns distritos (ex: Cursino, Jaraguá) podem não ter alias
+    // próprio em aliases.json. Constrói uma entrada sintética do próprio
+    // distrito-pai pra que o tradeoff funcione.
+    const resumoTrabalho = calcularResumoBairro(
+      trabalho,
+      filters,
+      trabalho,
+      transporte,
+      distancias
     );
-  }, [dados, trabalho, filters.bairroTrabalho]);
+    return {
+      bairro: {
+        ...trabalho,
+        slug: trabalho.id,
+        distritoId: trabalho.id,
+        distritoNome: trabalho.nome,
+        ehAlias: false,
+      },
+      resumo: resumoTrabalho,
+    };
+  }, [dados, trabalho, filters, filters.bairroTrabalho, distancias]);
 
-  const grupos = useMemo(() => {
-    const buckets = { pertinho: [], medio: [], longe: [] };
-    for (const d of dados) buckets[d.proximidade].push(d);
-    for (const key of Object.keys(buckets)) {
-      buckets[key].sort((a, b) => a.resumo.distanciaKm - b.resumo.distanciaKm);
-    }
-    return buckets;
-  }, [dados]);
+  // Reseta paginação pra LIMITE_INICIAL toda vez que a lista re-ordena
+  // ou re-filtra (mudança nos filtros relevantes).
+  useEffect(() => {
+    setLimite(LIMITE_INICIAL);
+  }, [
+    filters.bairroTrabalho,
+    filters.prioridadeOrdenacao,
+    filters.transporte,
+    filters.prioridades,
+  ]);
 
   const handleSelectChange = (patch) => {
     update(patch);
@@ -179,7 +226,7 @@ export default function HomePage() {
   // a navegação entre rotas. Derivar daí basta — sem estado local que se
   // perde quando o componente desmonta ao ir pra /comparar.
   const showResults = !!trabalho;
-  const activeEntries = grupos[activeTab] || [];
+  const cardsVisiveis = dados.slice(0, limite);
 
   return (
     <>
@@ -209,53 +256,30 @@ export default function HomePage() {
                 onClear={clearTrabalho}
               />
               <section className={styles.results}>
-                <div className={styles.tabs} role="tablist">
-                  <div
-                    className={styles.tabsIndicator}
-                    style={{
-                      transform: `translateX(${
-                        GRUPOS.findIndex((g) => g.id === activeTab) * 100
-                      }%)`,
-                    }}
-                  />
-                  {GRUPOS.map((g) => {
-                    const count = (grupos[g.id] || []).length;
-                    const active = activeTab === g.id;
-                    return (
-                      <button
-                        key={g.id}
-                        type="button"
-                        role="tab"
-                        aria-selected={active}
-                        onClick={() => setActiveTab(g.id)}
-                        className={`${styles.tab} ${active ? styles.tabActive : ''}`}
-                      >
-                        <span className={styles.tabTitle}>{g.titulo}</span>
-                        <span className={styles.tabHint}>{g.hint}</span>
-                        <span className={styles.tabCount}>{count}</span>
-                      </button>
-                    );
-                  })}
-                </div>
                 <div className={styles.groupList}>
-                  {activeEntries.length === 0 ? (
+                  {dados.length === 0 ? (
                     filters.prioridades.some((p) => p !== 'seguranca') ? (
                       <p className={styles.emptyTab}>
-                        Nenhum bairro nesta faixa atende suas prioridades. Tente afrouxar os filtros.
+                        Nenhum bairro atende suas prioridades. Tente afrouxar os filtros.
                       </p>
                     ) : (
-                      <p className={styles.emptyTab}>Nenhum bairro nesta faixa.</p>
+                      <p className={styles.emptyTab}>Nenhum bairro encontrado.</p>
                     )
                   ) : (
-                    activeEntries.map(({ bairro, resumo }) => {
+                    cardsVisiveis.map(({ bairro, resumo }) => {
                       const isRef = bairro.slug === referencia?.bairro.slug;
-                      const tradeoff = isRef
-                        ? null
-                        : compararContraReferencia(
-                            resumo,
-                            referencia.resumo,
-                            referencia.bairro.nome
-                          );
+                      // Sem referência (caso o bairro de trabalho não esteja
+                      // entre os aliases — ex: Cursino/Jaraguá sem entrada
+                      // própria no aliases.json), pula o tradeoff.
+                      const tradeoff =
+                        !referencia || isRef
+                          ? null
+                          : compararContraReferencia(
+                              resumo,
+                              referencia.resumo,
+                              referencia.bairro.nome,
+                              bairro.nome
+                            );
                       return (
                         <NeighborhoodCard
                           key={bairro.slug}
@@ -264,7 +288,7 @@ export default function HomePage() {
                           tradeoff={tradeoff}
                           isReference={isRef}
                           isTrabalho={bairro.slug === filters.bairroTrabalho}
-                          tamanhoImovel={filters.tamanhoImovel}
+                          tamanhoImovel={TAMANHO_IMOVEL_FIXO}
                           trabalhoSlug={filters.bairroTrabalho}
                           trabalhoNome={trabalhoNome}
                           onHover={(id) => setHoveredId(id ? bairro.distritoId : null)}
@@ -274,6 +298,20 @@ export default function HomePage() {
                     })
                   )}
                 </div>
+                {dados.length > limite && (
+                  <div className={styles.verTodosWrap}>
+                    <p className={styles.verTodosContador}>
+                      Mostrando {limite} de {dados.length} bairros
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setLimite(dados.length)}
+                      className={styles.verTodos}
+                    >
+                      Ver todos
+                    </button>
+                  </div>
+                )}
               </section>
             </main>
 
@@ -303,7 +341,7 @@ export default function HomePage() {
           <NeighborhoodModal
             bairro={modalBairro}
             resumo={modalResumo}
-            tamanhoImovel={filters.tamanhoImovel}
+            tamanhoImovel={TAMANHO_IMOVEL_FIXO}
             principal={modalResumo.modalPrincipal}
             onClose={() => setBairroModalId(null)}
             trabalhoSlug={filters.bairroTrabalho}

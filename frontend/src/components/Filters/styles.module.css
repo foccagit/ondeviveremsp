@@ -87,6 +87,12 @@
 }
 
 .triggerText {
+  /* Força font-body porque o pai é <button> e o rule global do site
+     (button { font-family: var(--font-mono) !important }) faria o texto
+     herdar mono. Aplicando aqui no span sobrescreve a herança. */
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-fg);
   flex: 0 1 auto;
   min-width: 0;
   text-align: left;
@@ -157,6 +163,16 @@
   transition: background var(--transition), color var(--transition);
   text-transform: none;
   letter-spacing: normal;
+}
+
+/* Texto interno das opções precisa de font-family explícita porque o pai
+   é <button> e o rule global do site força mono via !important. Os spans
+   internos (que carregam o texto "Metrô", "Vida noturna", etc.) escapam
+   da herança mono ao ter font-body declarada aqui. */
+.option > span,
+.checkOption > span,
+.preset > span {
+  font-family: var(--font-body);
 }
 
 .option:hover,
@@ -314,6 +330,48 @@
   color: var(--color-fg);
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+/* Slider de prioridade: labels "Preço" e "Tempo" nas pontas, com a track
+   passando ENTRE eles na mesma linha base. */
+.sliderPriority {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.rangePriority {
+  /* Cresce pra ocupar todo o espaço entre os dois labels. */
+  flex: 1;
+  min-width: 0;
+  /* Maior área clicável vertical pro thumb ficar fácil de arrastar. */
+  height: 24px;
+  background: transparent;
+  /* Track desenhada via gradient pra parecer 1px no centro mas com input
+     mais alto. */
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 11px,
+    var(--color-border) 11px,
+    var(--color-border) 13px,
+    transparent 13px,
+    transparent 100%
+  );
+}
+
+.sliderEndLabel {
+  /* Mesma tipografia dos valores das outras células (Pinheiros, Metrô,
+     Nenhuma) — font-body, tamanho base, cor preta. */
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-fg);
+  line-height: 1.3;
+}
+
+.sliderEndLabelRight {
+  text-align: right;
 }
 
 .range {

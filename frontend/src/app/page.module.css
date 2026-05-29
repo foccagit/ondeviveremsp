@@ -148,6 +148,41 @@
   flex-direction: column;
 }
 
+.verTodosWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-8) auto;
+}
+
+.verTodosContador {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.verTodos {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-4) var(--space-8);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.verTodos:hover {
+  background: var(--color-surface);
+  border-color: var(--color-fg);
+}
+
 .emptyGroup {
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -175,6 +210,11 @@
 @media (max-width: 767px) {
   .page {
     padding: 0 20px var(--space-12);
+  }
+  /* Botão "Ver todos" ocupa largura cheia no mobile pra ficar mais clicável. */
+  .verTodos {
+    width: 100%;
+    padding: var(--space-4);
   }
 
   /* Esconde a Stats (H1 introdutório) no mobile quando já há resultados. */
